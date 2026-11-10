@@ -1,0 +1,23 @@
+test_foreign_freed_and_forged_handles (test_ptx_module.LaunchTests.test_foreign_freed_and_forged_handles) ... ok
+test_high_addresses_padding_and_argument_snapshot (test_ptx_module.LaunchTests.test_high_addresses_padding_and_argument_snapshot) ... ok
+test_inflight_pins_and_repeat_completion (test_ptx_module.LaunchTests.test_inflight_pins_and_repeat_completion) ... ok
+test_ranges_and_access (test_ptx_module.LaunchTests.test_ranges_and_access) ... ok
+test_revalidate_at_submission_and_recovery_isolation (test_ptx_module.LaunchTests.test_revalidate_at_submission_and_recovery_isolation) ... ok
+test_scalar_and_dimension_rejection (test_ptx_module.LaunchTests.test_scalar_and_dimension_rejection) ... ok
+test_changed_build_recipe_rejected_even_after_rehash (test_ptx_module.ModuleTests.test_changed_build_recipe_rejected_even_after_rehash) ... ok
+test_content_corruption_and_rehashed_semantic_change (test_ptx_module.ModuleTests.test_content_corruption_and_rehashed_semantic_change) ... ok
+test_explicit_candidate_limit_and_names (test_ptx_module.ModuleTests.test_explicit_candidate_limit_and_names) ... ok
+test_manifest_layout_and_launch_cap_tampering (test_ptx_module.ModuleTests.test_manifest_layout_and_launch_cap_tampering) ... ok
+test_no_overwrite (test_ptx_module.ModuleTests.test_no_overwrite) ... ok
+test_paths_and_duplicate_json_keys_rejected (test_ptx_module.ModuleTests.test_paths_and_duplicate_json_keys_rejected) ... ok
+test_prepare_is_not_loadable (test_ptx_module.ModuleTests.test_prepare_is_not_loadable) ... ok
+test_target_and_missing_files_rejected (test_ptx_module.ModuleTests.test_target_and_missing_files_rejected) ... ok
+test_validated_image_is_an_immutable_snapshot (test_ptx_module.ModuleTests.test_validated_image_is_an_immutable_snapshot) ... ok
+test_vxbin_extent_and_entry_validation (test_ptx_module.ModuleTests.test_vxbin_extent_and_entry_validation) ... ok
+test_generated_wrapper_serial_host_mapping (test_ptx_module.WrapperHostTests.test_generated_wrapper_serial_host_mapping)
+Uses a TEST-ONLY CSR header. This is NOT Vortex compilation or SIMT. ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.712s
+
+OK

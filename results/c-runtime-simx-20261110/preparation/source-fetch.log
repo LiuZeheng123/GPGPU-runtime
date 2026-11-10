@@ -1,0 +1,3 @@
+["git", "-C", "/home/liuzeheng/gpgpu-c-20261110/vortex", "fetch", "--depth=1", "origin", "7fe19369587c087f902c3e2bc2add612aa910a95"]
+From https://github.com/vortexgpgpu/vortex
+ * branch            7fe19369587c087f902c3e2bc2add612aa910a95 -> FETCH_HEAD

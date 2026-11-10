@@ -1,0 +1,16 @@
+["git", "-C", "/home/liuzeheng/gpgpu-c-20261110/vortex", "submodule", "update", "--init", "--depth=1", "third_party/softfloat", "third_party/ramulator"]
+Submodule 'third_party/ramulator' (https://github.com/CMU-SAFARI/ramulator2.git) registered for path 'third_party/ramulator'
+Submodule 'third_party/softfloat' (https://github.com/ucb-bar/berkeley-softfloat-3.git) registered for path 'third_party/softfloat'
+Cloning into '/home/liuzeheng/gpgpu-c-20261110/vortex/third_party/ramulator'...
+fatal: unable to access 'https://github.com/CMU-SAFARI/ramulator2.git/': Failed to connect to github.com port 443 after 124284 ms: Couldn't connect to server
+fatal: clone of 'https://github.com/CMU-SAFARI/ramulator2.git' into submodule path '/home/liuzeheng/gpgpu-c-20261110/vortex/third_party/ramulator' failed
+Failed to clone 'third_party/ramulator'. Retry scheduled
+Cloning into '/home/liuzeheng/gpgpu-c-20261110/vortex/third_party/softfloat'...
+Cloning into '/home/liuzeheng/gpgpu-c-20261110/vortex/third_party/ramulator'...
+From https://github.com/CMU-SAFARI/ramulator2
+ * branch            e62c84a6f0e06566ba6e182d308434b4532068a5 -> FETCH_HEAD
+Submodule path 'third_party/ramulator': checked out 'e62c84a6f0e06566ba6e182d308434b4532068a5'
+From https://github.com/ucb-bar/berkeley-softfloat-3
+ * branch            b51ef8f3201669b2288104c28546fc72532a1ea4 -> FETCH_HEAD
+Submodule path 'third_party/softfloat': checked out 'b51ef8f3201669b2288104c28546fc72532a1ea4'
+Submodule path 'third_party/ramulator': checked out 'e62c84a6f0e06566ba6e182d308434b4532068a5'

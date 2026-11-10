@@ -1,0 +1,37 @@
+{
+  "run_id": "c-module-20261110-v2",
+  "status": "PASS",
+  "scope": "host module/launch checks and serial C++ wrapper only",
+  "python": "3.11.13",
+  "compiler": "g++ (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)",
+  "test_command": [
+    "/home/course/liuzeheng/my-rtl-agent/runtime-python/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests": {
+    "total": 136,
+    "passed": 122,
+    "skipped": 14,
+    "failed": 0,
+    "new_c_tests": 18,
+    "host_wrapper_cases": 84
+  },
+  "native_build": "NOT_RUN",
+  "simx": "NOT_RUN",
+  "rtlsim": "NOT_RUN",
+  "u280": "NOT_RUN",
+  "independent_acceptance": "NOT_RUN",
+  "files": {
+    "scripts/ptx_module.py": "8c9b10d1f6b693409951e8bbe3ea357b563232eb7e06e354a5c949aa7c06aa59",
+    "scripts/ptx_launch.py": "51fbc4017a01762858c5c574d56c64b51550400dcbd0b0790d530dd59c27058c",
+    "tests/test_ptx_module.py": "e016b78d2bf72675d168100c1608f45e654ee1b58ad4435a32402cbfdbd2ea0a"
+  },
+  "log_sha256": "f106d06b33a71d24104e29b14885783c86ec54c90e17651f06c21887e8f28fa2"
+}

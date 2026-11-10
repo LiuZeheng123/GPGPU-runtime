@@ -1,0 +1,127 @@
+{
+  "commit": "8c64cf921d3c6c456e80f00d24482d0aa2153a82",
+  "components": {
+    "libc64": {
+      "archive": "libc64.tar.bz2",
+      "archive_bytes": 799142,
+      "archive_sha256": "8945c302b88779c5d2888e8a70f511d3fa3eafb9a82a04e118d2e81fdec31575",
+      "parts": [
+        {
+          "actual_bytes": 799142,
+          "git_blob_sha1": "dcc666d6656e43b93310d4d872ca662af61a1e4c",
+          "path": "libc64.tar.bz2",
+          "sha256": "8945c302b88779c5d2888e8a70f511d3fa3eafb9a82a04e118d2e81fdec31575"
+        }
+      ]
+    },
+    "libcrt64": {
+      "archive": "libcrt64.tar.bz2",
+      "archive_bytes": 50923,
+      "archive_sha256": "2a3aaa6d1c0d4bd312249933783d88914444b9c0b51b8912c3a34525347d6ed9",
+      "parts": [
+        {
+          "actual_bytes": 50923,
+          "git_blob_sha1": "6b7bddd72edcd5b822319345fae4be545d95f5d1",
+          "path": "libcrt64.tar.bz2",
+          "sha256": "2a3aaa6d1c0d4bd312249933783d88914444b9c0b51b8912c3a34525347d6ed9"
+        }
+      ]
+    },
+    "llvm-vortex": {
+      "archive": "llvm-vortex.tar.bz2",
+      "archive_bytes": 108726342,
+      "archive_sha256": "cf0eec759f82741febc3c60ced8006f2e1570c7c3d0b1fa869ef104b0e4f5155",
+      "parts": [
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "d179a18dd8ed5376a536a95acdac34a3c3b7aa91",
+          "path": "llvm-vortex.tar.bz2.partaa",
+          "sha256": "4485cd27550a24f7998352b5a477203e805f7198900cf3858baaa6e81528e2f2"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "afd7225ab091724ab25ba87f67ba85d3b5ae27c5",
+          "path": "llvm-vortex.tar.bz2.partab",
+          "sha256": "451ff1af679ded7b1ccf630638ce652008264d2f70518a99a31af3a92540634b"
+        },
+        {
+          "actual_bytes": 3868742,
+          "git_blob_sha1": "a5a5355d00bd11dffdf20004c50db11e92f3b7e0",
+          "path": "llvm-vortex.tar.bz2.partac",
+          "sha256": "dd72ee75a1eb8162f06a32d237bc70f37c8ff4f1b3c0bd45be1b1a96afa4dab0"
+        }
+      ]
+    },
+    "riscv64-gnu-toolchain": {
+      "archive": "riscv64-gnu-toolchain.tar.bz2",
+      "archive_bytes": 497288955,
+      "archive_sha256": "b64e3097a31036058877a3cd6eb2fab1d31436659d29cdfb796325ecf769b95d",
+      "parts": [
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "bbb700890895a9b6f4146e81592e4f6e6c7d193c",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partaa",
+          "sha256": "ab28ceb0ae80c6bfbdac9b076dbe3759c9c5db95021b3e48d34378e84d4752df"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "78ba76bcf7d1a70216025836b1f463706728d7c0",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partab",
+          "sha256": "10b8dae14cb80c4b8d6596b2782bdefef74654876b7b274a879d2c7384493257"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "30d1fe5b0c5aae5e12b600a2e88bbe68720f6e61",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partac",
+          "sha256": "313a00282ed986fbcbb61c337565e61a777b5731ece961c38b87b5fe8063743b"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "569317e074d217166a332d7191d633410bfa0630",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partad",
+          "sha256": "a34dea811924209fdfdc8ffe1416f879ede25a12033a84903a01b0c6b48db4af"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "f8b39c4fb1c8c262bb5342646d5753861abfb08e",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partae",
+          "sha256": "b42f48dabf7dff376ae9139c8c3a7c2540c16a0005b874a8bd788451a107b68c"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "5e711209ed941ce451bd6af821c20e9a2def04e9",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partaf",
+          "sha256": "9721e46ead97abbc6df4f8d401dd5173ecfc30568a51d8eec932bcd006345634"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "70dc901836ae6f675450b378329bfd47cdc3b242",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partag",
+          "sha256": "d27f0a280598e321589f61d1494a656407930d6fbe16d0605fe3599db802fb0e"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "a30c7e4ea3ece265f83b9c706ca72e69b146a055",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partah",
+          "sha256": "850d7172ef0e1375afcbe2dc50ba1c75ee63bf0c1dc0ef79b9d8ac05328ac888"
+        },
+        {
+          "actual_bytes": 52428800,
+          "git_blob_sha1": "0a337c825511c30d542a699c616169e9557c76a8",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partai",
+          "sha256": "11a127da65c44fa7291768afd37576c358e56fccf76a5056c3f7b18f769507bf"
+        },
+        {
+          "actual_bytes": 25429755,
+          "git_blob_sha1": "74bbe40cd944651d176dcb1a7b6800d6acd806e2",
+          "path": "riscv64-gnu-toolchain.tar.bz2.partaj",
+          "sha256": "00bb22c0e299f37fd9414cd01a35a9069d5645201b224864f896d7fadfaadb61"
+        }
+      ]
+    }
+  },
+  "osversion": "ubuntu/focal",
+  "profile": "simx",
+  "repository": "vortexgpgpu/vortex-toolchain-prebuilt",
+  "schema_version": "vortex-toolchain-cache-v1"
+}

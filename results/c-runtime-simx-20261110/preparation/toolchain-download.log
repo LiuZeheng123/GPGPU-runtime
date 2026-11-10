@@ -1,0 +1,6 @@
+["/usr/bin/python3", "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/scripts/prepare_toolchain.py", "--run-id", "c-toolchain-download-v1", "--results-dir", "/home/liuzeheng/gpgpu-c-20261110/evidence", "--profile", "simx"]
+usage: prepare_toolchain.py [-h] --run-id RUN_ID [--results-dir RESULTS_DIR]
+                            [--reuse-cache REUSE_CACHE] [--tooldir TOOLDIR]
+                            [--profile {simx,rtlsim}]
+                            (--download | --extract-cache EXTRACT_CACHE)
+prepare_toolchain.py: error: one of the arguments --download --extract-cache is required

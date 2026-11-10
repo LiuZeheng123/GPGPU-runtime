@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "run_id": "c-toolchain-extract-v2",
+  "status": "PASS",
+  "started_at": "2026-11-10T03:59:21.679518+00:00",
+  "invocation": [
+    "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/scripts/prepare_toolchain.py",
+    "--run-id",
+    "c-toolchain-extract-v2",
+    "--results-dir",
+    "/home/liuzeheng/gpgpu-c-20261110/evidence",
+    "--extract-cache",
+    "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-download-v2",
+    "--tooldir",
+    "/home/liuzeheng/gpgpu-c-20261110/tools"
+  ],
+  "scope": "fixed toolchain acquisition/extraction only; Vortex execution NOT_RUN",
+  "expected_commit": "8c64cf921d3c6c456e80f00d24482d0aa2153a82",
+  "commands": [
+    {
+      "label": "extract_libc64",
+      "argv": [
+        "tar",
+        "-xjf",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-download-v2/libc64.tar.bz2",
+        "--no-same-owner",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/tools"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-extract-v2",
+      "started_at": "2026-11-10T03:59:21.800636+00:00",
+      "timeout_seconds": 600,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/01_extract_libc64.log",
+      "finished_at": "2026-11-10T03:59:21.927033+00:00",
+      "elapsed_seconds": 0.126,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "extract_libcrt64",
+      "argv": [
+        "tar",
+        "-xjf",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-download-v2/libcrt64.tar.bz2",
+        "--no-same-owner",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/tools"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-extract-v2",
+      "started_at": "2026-11-10T03:59:21.932935+00:00",
+      "timeout_seconds": 600,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/02_extract_libcrt64.log",
+      "finished_at": "2026-11-10T03:59:21.941259+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "extract_llvm-vortex",
+      "argv": [
+        "tar",
+        "-xjf",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-download-v2/llvm-vortex.tar.bz2",
+        "--no-same-owner",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/tools"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-extract-v2",
+      "started_at": "2026-11-10T03:59:32.195394+00:00",
+      "timeout_seconds": 600,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/03_extract_llvm-vortex.log",
+      "finished_at": "2026-11-10T03:59:42.798705+00:00",
+      "elapsed_seconds": 10.603,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "extract_riscv64-gnu-toolchain",
+      "argv": [
+        "tar",
+        "-xjf",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-download-v2/riscv64-gnu-toolchain.tar.bz2",
+        "--no-same-owner",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/tools"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-extract-v2",
+      "started_at": "2026-11-10T04:00:23.053856+00:00",
+      "timeout_seconds": 600,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/04_extract_riscv64-gnu-toolchain.log",
+      "finished_at": "2026-11-10T04:01:02.216767+00:00",
+      "elapsed_seconds": 41.45,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "downloads": [],
+  "script_sha256": "daa3906c45d04ff9a38e5d96d62cee61841f411850d7536e3f95ba911df66f8c",
+  "cache_manifest_sha256": "18e7f4503ba5e1c7993dcf08c29b7fde24c001675b32102ed357869ff753b2c8",
+  "cache": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-toolchain-download-v2",
+  "tooldir": "/home/liuzeheng/gpgpu-c-20261110/tools",
+  "finished_at": "2026-11-10T04:01:02.217583+00:00"
+}

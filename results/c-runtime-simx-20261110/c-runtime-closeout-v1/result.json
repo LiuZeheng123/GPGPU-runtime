@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "name": "unittests",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "unittests.log"
+    },
+    {
+      "name": "binding",
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/bind_simx_runtime.py",
+        "--summary",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/summary.json",
+        "--target-lock",
+        "configs/target_lock.json",
+        "--hardware",
+        "configs/native_smoke.json",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261110/runtime-binding-v2"
+      ],
+      "exit_code": 0,
+      "log": "binding.log"
+    },
+    {
+      "name": "ptx-simx",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/run_ptx_simx.py",
+        "--module",
+        "/home/liuzeheng/gpgpu-c-20261110/vadd-module-v2",
+        "--binding",
+        "/home/liuzeheng/gpgpu-c-20261110/runtime-binding-v2/binding.json",
+        "--target-lock",
+        "configs/target_lock.json",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-ptx-vadd-simx-v2"
+      ],
+      "exit_code": 0,
+      "log": "ptx-simx.log"
+    }
+  ],
+  "files": {
+    "scripts/ptx_runtime.py": "4273b84f37c80d47e26ab260c1174550e99ffeacbdddd1abf134abc65bb13959",
+    "scripts/ptx_launch.py": "51fbc4017a01762858c5c574d56c64b51550400dcbd0b0790d530dd59c27058c",
+    "scripts/ptx_module.py": "9ae064c99cae2c194dd7fa636ea34d392b21bc822f9dd413963cf98cc3a76b87",
+    "scripts/ptx_frontend.py": "46ca07dd0c3788ffc504df1c81b9285ebb30ca3d140e2fec458d33a174a03a06",
+    "scripts/run_ptx_simx.py": "edb0790914aef8091d8710bf96167e339f23fef4382f9a0b1fd23724568e38ae",
+    "scripts/bind_simx_runtime.py": "26c5728a58f29dee5aec7e2caeb44dd760ae29a970f815956bc1fad9b1c78c99",
+    "tests/test_ptx_runtime.py": "d3e5f0a70db99ecc534006c3e810fd0cf2abd61ea42f1dcbfdff9f3597bc7e14",
+    "tests/test_ptx_module.py": "d5054b23ff57d22f85f1c62635630de9b49d1aa0bfb6bc4f75a1868803bd7017"
+  }
+}

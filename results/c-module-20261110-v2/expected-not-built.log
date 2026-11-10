@@ -1,0 +1,2 @@
+{"status": "FAIL", "error": {"code": "E_MODULE_NOT_BUILT", "phase": "load", "message": "source preparation is not a loadable device module", "run_id": null, "event_id": null, "generation": null, "backend": null, "source_location": null, "native_status": null, "evidence_path": null}}
+exit_code=1

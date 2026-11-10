@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "run_id": "c-toolchain-download-v1",
+  "status": "RUNNING",
+  "started_at": "2026-11-10T03:49:41.358717+00:00",
+  "invocation": [
+    "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/scripts/prepare_toolchain.py",
+    "--run-id",
+    "c-toolchain-download-v1",
+    "--results-dir",
+    "/home/liuzeheng/gpgpu-c-20261110/evidence",
+    "--profile",
+    "simx",
+    "--download"
+  ],
+  "scope": "fixed toolchain acquisition/extraction only; Vortex execution NOT_RUN",
+  "expected_commit": "8c64cf921d3c6c456e80f00d24482d0aa2153a82",
+  "commands": [],
+  "downloads": [
+    {
+      "url": "https://raw.githubusercontent.com/vortexgpgpu/vortex-toolchain-prebuilt/8c64cf921d3c6c456e80f00d24482d0aa2153a82/riscv64-gnu-toolchain/ubuntu/focal/riscv64-gnu-toolchain.tar.bz2.partaa",
+      "path": "riscv64-gnu-toolchain.tar.bz2.partaa",
+      "git_blob_sha1": "bbb700890895a9b6f4146e81592e4f6e6c7d193c",
+      "expected_bytes": 52428800,
+      "status": "PASS",
+      "started_at": "2026-11-10T03:49:44.131490+00:00",
+      "attempts": [
+        {
+          "path": "riscv64-gnu-toolchain.tar.bz2.partaa.attempt1",
+          "started_at": "2026-11-10T03:49:44.131692+00:00",
+          "status": "FAIL",
+          "finished_at": "2026-11-10T03:51:08.955016+00:00",
+          "error": "TimeoutError: The read operation timed out"
+        },
+        {
+          "path": "riscv64-gnu-toolchain.tar.bz2.partaa.attempt2",
+          "started_at": "2026-11-10T03:51:08.955397+00:00",
+          "status": "FAIL",
+          "finished_at": "2026-11-10T03:52:35.575024+00:00",
+          "error": "TimeoutError: The read operation timed out"
+        },
+        {
+          "path": "riscv64-gnu-toolchain.tar.bz2.partaa.attempt3",
+          "started_at": "2026-11-10T03:52:35.575422+00:00",
+          "status": "PASS",
+          "finished_at": "2026-11-10T03:57:42.799640+00:00"
+        }
+      ],
+      "finished_at": "2026-11-10T03:57:42.801806+00:00",
+      "actual_bytes": 52428800,
+      "sha256": "ab28ceb0ae80c6bfbdac9b076dbe3759c9c5db95021b3e48d34378e84d4752df",
+      "actual_git_blob_sha1": "bbb700890895a9b6f4146e81592e4f6e6c7d193c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vortexgpgpu/vortex-toolchain-prebuilt/8c64cf921d3c6c456e80f00d24482d0aa2153a82/riscv64-gnu-toolchain/ubuntu/focal/riscv64-gnu-toolchain.tar.bz2.partab",
+      "path": "riscv64-gnu-toolchain.tar.bz2.partab",
+      "git_blob_sha1": "78ba76bcf7d1a70216025836b1f463706728d7c0",
+      "expected_bytes": 52428800,
+      "status": "RUNNING",
+      "started_at": "2026-11-10T03:57:42.892591+00:00",
+      "attempts": [
+        {
+          "path": "riscv64-gnu-toolchain.tar.bz2.partab.attempt1",
+          "started_at": "2026-11-10T03:57:42.893176+00:00"
+        }
+      ]
+    }
+  ],
+  "script_sha256": "daa3906c45d04ff9a38e5d96d62cee61841f411850d7536e3f95ba911df66f8c",
+  "tree_sha256": "d4b8ed88c64658aacf8073dc62d54150b1bdadca4bdfe6c3338a79cb88e9594c"
+}

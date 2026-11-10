@@ -1,0 +1,37 @@
+# Local Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.vscode/
+
+# Local credentials must never enter the project archive.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Downloaded tools and reproducible build products
+/tools/
+/build/
+/build-*/
+/tmp/
+
+# The pinned Vortex checkout is a Git submodule.
+
+# Keep experiment records and reference originals visible.
+
+# Local access, course materials and host files
+/environment/server-access/
+/environment/wsl/
+/references/
+*.vhdx
+*.xclbin
+*.dcp
+*.xo
+*.so
+*.tar.gz
+*.tar.bz2
