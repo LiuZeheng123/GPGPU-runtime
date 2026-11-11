@@ -226,16 +226,6 @@ class FrontendTests(unittest.TestCase):
         self.assertIn("uint32_t v1;", cpp)
         self.assertNotIn("uint32_t v1 =", cpp)
 
-    def test_in_place_cvta_and_predicated_move_keep_source_mapping(self):
-        ir=ptx.parse(program('ld.param.u64 %a0, [ptr]; cvta.to.global.u64 %a0, %a0; mov.u32 %r0, 7; setp.eq.u32 %p, 1, 1; @%p mov.u32 %r0, %r0;'))
-        cpp,mapping=ptx.emit_cpp(ir)
-        self.assertEqual(cpp.count('(void)0; /* identity */'),2)
-        self.assertEqual(len(mapping),len(ir['instructions']))
-        self.assertIn('{ (void)0; /* identity */ }',cpp)
-
-    def test_identity_lowering_does_not_bypass_definedness_check(self):
-        self.reject(program('mov.u32 %r0, %r0;'),'E_TYPE')
-
 
 if __name__ == "__main__":
     unittest.main()

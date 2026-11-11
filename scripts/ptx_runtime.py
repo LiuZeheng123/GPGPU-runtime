@@ -98,10 +98,15 @@ class Context:
         self.backend, self.run_id = backend, run_id
         self.registry, self.mutex = BufferRegistry(), RLock()
         self.state, self.active, self.first_error = "READY", None, None
+        self.device_fault = None
         self.buffers, self.modules, self.events = {}, set(), set()
         self.device, self.queue, self.sequence = P(), P(), 0
         self.lock_bytes = Path(target_lock).read_bytes()
         binding_path = Path(binding_path).resolve()
+        if backend == "u280-xrt":
+            from ptx_u280 import open_context
+            open_context(self, binding_path)
+            return
         binding = read_json(binding_path.read_bytes())
         if backend not in BACKENDS or binding.get("backend") != backend:
             self.fail("E_UNAVAILABLE", "requires an explicitly bound simulation backend", "open")
@@ -175,6 +180,11 @@ class Context:
             self.state = "NEEDS_RECOVERY"
             if self.first_error is None:
                 self.first_error = dict(native_status=status, phase=phase)
+            # Queue::finish clears its native async_error after reporting it.
+            # A later successful barrier does not prove the failed CP command
+            # stopped accessing memory. Never forget a non-timeout failure.
+            if status != 7 and getattr(self, "device_fault", None) is None:
+                self.device_fault = dict(native_status=status, phase=phase)
             self.fail("E_TIMEOUT" if status == 7 else "E_DEVICE", "native Vortex2 operation failed", phase, status)
 
     def ready(self, phase, *, allow_running=False):
@@ -193,7 +203,9 @@ class Context:
     def query_caps(self):
         return dict(self.caps, backend=self.backend, device_state=self.state,
                     generation=self.registry.generation, safe_abort=False,
+                    recovery_mode="unavailable" if self.backend == "u280-xrt" else "timeout-drain-only",
                     max_modules=1,
+                    device_fault=dict(self.device_fault) if getattr(self, "device_fault", None) else None,
                     first_error=dict(self.first_error) if self.first_error else None)
 
     @serialized
@@ -345,15 +357,25 @@ class Context:
     def recover(self, timeout_ms=60000):
         if self.state != "NEEDS_RECOVERY":
             self.fail("E_UNAVAILABLE", "recovery requires a failed or timed-out context", "recover")
+        if self.backend == "u280-xrt":
+            self.fail("E_UNAVAILABLE", "U280 fault isolation/recovery is not accepted; retain resources", "recover")
+        timeout = self.timeout_ns(timeout_ms)
+        if getattr(self, "device_fault", None):
+            self.fail("E_UNAVAILABLE", "native device fault requires external isolation; retain resources", "recover")
         # Drain only: no claim of safe abort or reset. On failure all resources
         # stay owned; in particular close must not release in-flight memory.
-        self.check(self.lib.vx_queue_finish(self.queue, self.timeout_ns(timeout_ms)), "recover")
+        self.check(self.lib.vx_queue_finish(self.queue, timeout), "recover")
+        # Verify the original launch, not just the trailing queue barrier.
+        if self.active and self.active.native:
+            self.check(self.lib.vx_event_wait_value(self.active.native, 1, 0), "recover_event")
         self.release_resources()
         self.registry.invalidate_after_isolation(isolated=True)
         self.events.clear()
         self.pending_transfer = None
         self.active, self.state = None, "READY"
-        return dict(status="RECOVERED", isolated=True, generation=self.registry.generation, device_state=self.state)
+        return dict(status="RECOVERED", isolated=True, generation=self.registry.generation,
+                    device_state=self.state, mechanism="successful-queue-and-event-drain",
+                    safe_abort=False)
 
     @serialized
     def close(self):
@@ -367,3 +389,5 @@ class Context:
         self.registry.invalidate_after_isolation(isolated=True)
         self.events.clear()
         self.state = "CLOSED"
+        if self.backend == "u280-xrt":
+            self.board_gate.closed()

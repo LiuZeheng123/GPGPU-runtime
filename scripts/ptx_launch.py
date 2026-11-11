@@ -6,7 +6,7 @@ may invalidate this registry ONLY after the backend has isolated old work.
 """
 from dataclasses import dataclass
 
-import ptx_frontend as frontend
+import ptx_frontend_v12 as frontend
 from ptx_module import ModuleError
 
 

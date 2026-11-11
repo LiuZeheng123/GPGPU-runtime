@@ -1,0 +1,829 @@
+{
+  "status": "PASS",
+  "backend": "simx",
+  "mode": "timeout",
+  "board_execution": "NOT_RUN",
+  "checks": [
+    {
+      "label": "real-event-timeout-0",
+      "error": {
+        "code": "E_TIMEOUT",
+        "phase": "wait",
+        "message": "native Vortex2 operation failed",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": 7,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 0.00013118199998984892
+    },
+    {
+      "label": "read",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "read",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 1.0329000019737578e-05
+    },
+    {
+      "label": "free",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "free",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 8.893000000398388e-06
+    },
+    {
+      "label": "unload",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "unload",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 1.289100001145016e-05
+    },
+    {
+      "label": "launch",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "launch",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 3.196100001900959e-05
+    },
+    {
+      "label": "close",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "close",
+        "message": "wait or successfully drain recovery before close",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 1.762100001201361e-05
+    },
+    {
+      "label": "real-drain-timeout-0",
+      "error": {
+        "code": "E_TIMEOUT",
+        "phase": "recover",
+        "message": "native Vortex2 operation failed",
+        "run_id": "simx-timeout",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": 7,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 0.00017075399998134344
+    },
+    {
+      "label": "stale-event",
+      "error": {
+        "code": "E_EVENT",
+        "phase": "wait",
+        "message": "foreign or stale event",
+        "run_id": "simx-timeout",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      },
+      "seconds": 3.405500001463224e-05
+    },
+    {
+      "label": "stale-buffer",
+      "error": {
+        "code": "E_INVALID_BUFFER",
+        "phase": "free",
+        "message": "foreign, retired or stale buffer",
+        "run_id": "simx-timeout",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      },
+      "seconds": 1.628600000458391e-05
+    },
+    {
+      "label": "stale-module",
+      "error": {
+        "code": "E_MODULE_CORRUPT",
+        "phase": "unload",
+        "message": "foreign or unloaded module",
+        "run_id": "simx-timeout",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      },
+      "seconds": 1.8655999980410343e-05
+    },
+    {
+      "label": "real-event-timeout-1",
+      "error": {
+        "code": "E_TIMEOUT",
+        "phase": "wait",
+        "message": "native Vortex2 operation failed",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": 7,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 0.00014335700001311125
+    },
+    {
+      "label": "read",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "read",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 1.0236999997914609e-05
+    },
+    {
+      "label": "free",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "free",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 1.3812999981155372e-05
+    },
+    {
+      "label": "unload",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "unload",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 1.1048999994045516e-05
+    },
+    {
+      "label": "launch",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "launch",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 8.567999998376763e-06
+    },
+    {
+      "label": "close",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "close",
+        "message": "wait or successfully drain recovery before close",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 6.995999996206592e-06
+    },
+    {
+      "label": "real-drain-timeout-1",
+      "error": {
+        "code": "E_TIMEOUT",
+        "phase": "recover",
+        "message": "native Vortex2 operation failed",
+        "run_id": "simx-timeout",
+        "event_id": 3,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": 7,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      },
+      "seconds": 0.00010151099999688995
+    },
+    {
+      "label": "stale-event",
+      "error": {
+        "code": "E_EVENT",
+        "phase": "wait",
+        "message": "foreign or stale event",
+        "run_id": "simx-timeout",
+        "event_id": null,
+        "generation": 2,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      },
+      "seconds": 2.036899999779962e-05
+    },
+    {
+      "label": "stale-buffer",
+      "error": {
+        "code": "E_INVALID_BUFFER",
+        "phase": "free",
+        "message": "foreign, retired or stale buffer",
+        "run_id": "simx-timeout",
+        "event_id": null,
+        "generation": 2,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      },
+      "seconds": 1.5265000001818407e-05
+    },
+    {
+      "label": "stale-module",
+      "error": {
+        "code": "E_MODULE_CORRUPT",
+        "phase": "unload",
+        "message": "foreign or unloaded module",
+        "run_id": "simx-timeout",
+        "event_id": null,
+        "generation": 2,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      },
+      "seconds": 7.895000010194053e-06
+    }
+  ],
+  "cycles": [
+    {
+      "label": "drain-0",
+      "result": {
+        "status": "RECOVERED",
+        "isolated": true,
+        "generation": 1,
+        "device_state": "READY",
+        "mechanism": "successful-queue-and-event-drain",
+        "safe_abort": false
+      },
+      "seconds": 0.3396497760000159
+    },
+    {
+      "label": "after-drain-0",
+      "status": "PASS",
+      "generation": 1
+    },
+    {
+      "label": "drain-1",
+      "result": {
+        "status": "RECOVERED",
+        "isolated": true,
+        "generation": 2,
+        "device_state": "READY",
+        "mechanism": "successful-queue-and-event-drain",
+        "safe_abort": false
+      },
+      "seconds": 0.34514412199999356
+    },
+    {
+      "label": "after-drain-1",
+      "status": "PASS",
+      "generation": 2
+    }
+  ],
+  "runtime_sha256": "17ec7272b8fd369841cd681d06cb4ddd30f03c19ceb6c70abcf7db3a53110431",
+  "image_sha256": "04b44af7a488005465f6842031b5f0614daa80adbcd140f1ae93f67f53eba2c8",
+  "binding_sha256": "6c7dce6a1d3c5a1bfb3d9562768672ad4838dd054ab061354ca688b748ea9d54",
+  "scope": "real native simulation only",
+  "diagnostic": {
+    "threads": 4,
+    "warps": 8,
+    "cores": 1,
+    "isa_flags": 221200257320,
+    "clusters": 1,
+    "backend": "simx",
+    "device_state": "CLOSED",
+    "generation": 3,
+    "safe_abort": false,
+    "recovery_mode": "timeout-drain-only",
+    "max_modules": 1,
+    "device_fault": null,
+    "first_error": {
+      "native_status": 7,
+      "phase": "wait"
+    }
+  },
+  "native_calls": [
+    {
+      "name": "vx_module_load_bytes",
+      "status": 0,
+      "seconds": 2.720599999861406e-05
+    },
+    {
+      "name": "vx_module_get_kernel",
+      "status": 0,
+      "seconds": 2.1600000081889448e-06
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 2.089000020077947e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 6.890000179282652e-07
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 1.273000009405223e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 4.510000053414842e-07
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 2.378900001076545e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 0.0001955309999743804
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 1.3913000003640263e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 0.00011313600001017221
+    },
+    {
+      "name": "vx_enqueue_launch",
+      "status": 0,
+      "seconds": 1.807800001074611e-05
+    },
+    {
+      "name": "vx_event_wait_value",
+      "status": 7,
+      "seconds": 7.210800001189455e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 7,
+      "seconds": 0.00015014499999210784
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 0.3395501130000014
+    },
+    {
+      "name": "vx_event_wait_value",
+      "status": 0,
+      "seconds": 1.2050999998791667e-05
+    },
+    {
+      "name": "vx_event_release",
+      "status": 0,
+      "seconds": 1.273000009405223e-06
+    },
+    {
+      "name": "vx_kernel_release",
+      "status": 0,
+      "seconds": 1.724999975749597e-06
+    },
+    {
+      "name": "vx_module_release",
+      "status": 0,
+      "seconds": 3.098999997064311e-06
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 1.687999997557199e-06
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 8.529999888651218e-07
+    },
+    {
+      "name": "vx_module_load_bytes",
+      "status": 0,
+      "seconds": 2.3147000007384122e-05
+    },
+    {
+      "name": "vx_module_get_kernel",
+      "status": 0,
+      "seconds": 1.7799999909584585e-06
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 2.057999978433145e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 8.110000067063083e-07
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 1.0460000225975818e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 4.3200000732213084e-07
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 1.6602999977521904e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 4.0173999991566234e-05
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 1.314100001081897e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 2.253299999210867e-05
+    },
+    {
+      "name": "vx_enqueue_launch",
+      "status": 0,
+      "seconds": 1.4208000010285105e-05
+    },
+    {
+      "name": "vx_event_wait_value",
+      "status": 0,
+      "seconds": 0.005213557999979912
+    },
+    {
+      "name": "vx_event_release",
+      "status": 0,
+      "seconds": 2.5439999831178284e-06
+    },
+    {
+      "name": "vx_enqueue_read",
+      "status": 0,
+      "seconds": 1.460100000372222e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 2.8525999994144513e-05
+    },
+    {
+      "name": "vx_enqueue_read",
+      "status": 0,
+      "seconds": 1.2645999987626055e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 2.1581000027026676e-05
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 2.5129999983164453e-06
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 6.740000060290186e-07
+    },
+    {
+      "name": "vx_kernel_release",
+      "status": 0,
+      "seconds": 7.079999875259091e-07
+    },
+    {
+      "name": "vx_module_release",
+      "status": 0,
+      "seconds": 8.540000067114306e-07
+    },
+    {
+      "name": "vx_module_load_bytes",
+      "status": 0,
+      "seconds": 2.035899998986679e-05
+    },
+    {
+      "name": "vx_module_get_kernel",
+      "status": 0,
+      "seconds": 1.4729999975315877e-06
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 2.6890000128787506e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 8.539999782897212e-07
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 1.026999996156519e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 4.46999990799668e-07
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 2.826599998684287e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 0.00013818800002241005
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 1.4052000011588461e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 7.243400000334077e-05
+    },
+    {
+      "name": "vx_enqueue_launch",
+      "status": 0,
+      "seconds": 1.666400001454349e-05
+    },
+    {
+      "name": "vx_event_wait_value",
+      "status": 7,
+      "seconds": 0.0001241429999936372
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 7,
+      "seconds": 8.35230000006959e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 0.3450763689999974
+    },
+    {
+      "name": "vx_event_wait_value",
+      "status": 0,
+      "seconds": 8.191999995688093e-06
+    },
+    {
+      "name": "vx_event_release",
+      "status": 0,
+      "seconds": 8.170000000973232e-07
+    },
+    {
+      "name": "vx_kernel_release",
+      "status": 0,
+      "seconds": 1.202999982297115e-06
+    },
+    {
+      "name": "vx_module_release",
+      "status": 0,
+      "seconds": 1.8309999916255038e-06
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 9.270000020933367e-07
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 3.5800002251562546e-07
+    },
+    {
+      "name": "vx_module_load_bytes",
+      "status": 0,
+      "seconds": 2.375399998300054e-05
+    },
+    {
+      "name": "vx_module_get_kernel",
+      "status": 0,
+      "seconds": 1.5599999869664316e-06
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 1.8000000068241206e-06
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 7.829999901787232e-07
+    },
+    {
+      "name": "vx_buffer_create",
+      "status": 0,
+      "seconds": 9.360000206015684e-07
+    },
+    {
+      "name": "vx_buffer_address",
+      "status": 0,
+      "seconds": 4.329999967467302e-07
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 2.1492000001899214e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 8.529500001941415e-05
+    },
+    {
+      "name": "vx_enqueue_write",
+      "status": 0,
+      "seconds": 1.3869000014210542e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 2.2243000017851955e-05
+    },
+    {
+      "name": "vx_enqueue_launch",
+      "status": 0,
+      "seconds": 1.470300000505631e-05
+    },
+    {
+      "name": "vx_event_wait_value",
+      "status": 0,
+      "seconds": 0.004755230000000665
+    },
+    {
+      "name": "vx_event_release",
+      "status": 0,
+      "seconds": 2.827999992405239e-06
+    },
+    {
+      "name": "vx_enqueue_read",
+      "status": 0,
+      "seconds": 1.536300001703239e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 2.291999999215477e-05
+    },
+    {
+      "name": "vx_enqueue_read",
+      "status": 0,
+      "seconds": 1.2328999986266354e-05
+    },
+    {
+      "name": "vx_queue_finish",
+      "status": 0,
+      "seconds": 2.1271999997907187e-05
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 2.3380000016004487e-06
+    },
+    {
+      "name": "vx_buffer_release",
+      "status": 0,
+      "seconds": 6.719999987581105e-07
+    },
+    {
+      "name": "vx_kernel_release",
+      "status": 0,
+      "seconds": 6.630000086715881e-07
+    },
+    {
+      "name": "vx_module_release",
+      "status": 0,
+      "seconds": 8.799999875463982e-07
+    },
+    {
+      "name": "vx_queue_release",
+      "status": 0,
+      "seconds": 5.396099999188664e-05
+    },
+    {
+      "name": "vx_device_release",
+      "status": 0,
+      "seconds": 0.0004575709999983246
+    }
+  ],
+  "exit_code": 0
+}

@@ -1,5 +1,6 @@
 """Bind a verified SimX, processor RTL or AFU model build to the runtime loader."""
 import argparse
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -31,7 +32,8 @@ def bind(summary_path, lock_path, hardware_path, output):
         if actual != summary['build_artifacts']['sw/runtime/'+name]['sha256']:
             raise ValueError('library changed after native validation: '+name)
         libraries[name] = actual
-        run = subprocess.run(['ldd',str(libdir/name)],capture_output=True,text=True)
+        environment = dict(os.environ, LD_LIBRARY_PATH=str(libdir), VORTEX_DRIVER=driver)
+        run = subprocess.run(['ldd',str(libdir/name)],capture_output=True,text=True,env=environment)
         if run.returncode or 'not found' in run.stdout:
             raise ValueError('unresolved library dependency: '+name)
         for dependency in re.findall(r'=> (/\S+) \(',run.stdout):

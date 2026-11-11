@@ -99,6 +99,7 @@ class RuntimeTests(unittest.TestCase):
         self.reject('E_TIMEOUT',lambda:self.ctx.recover(0))
         self.assertEqual(self.ctx.lib.calls.count('vx_buffer_release'),before)
         self.ctx.lib.finish_status = 0
+        self.ctx.lib.wait_status = 0
         result = self.ctx.recover(1)
         self.assertTrue(result['isolated'])
         self.assertEqual(result['generation'],1)
@@ -172,8 +173,43 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(self.ctx.query_caps()['first_error']['native_status'],7)
         self.assertEqual(self.ctx.query_caps()['device_state'],'NEEDS_RECOVERY')
         self.ctx.lib.finish_status=0
-        self.ctx.recover(1)
-        self.ctx.close()
+        before=list(self.ctx.lib.calls)
+        self.reject('E_UNAVAILABLE',lambda:self.ctx.recover(1))
+        self.assertEqual(self.ctx.lib.calls,before)
+        self.assertEqual(self.ctx.registry.generation,0)
+        self.assertIn(self.buffer,self.ctx.buffers)
+        self.reject('E_BUSY',self.ctx.close)
+
+    def test_barrier_success_does_not_override_failed_original_event(self):
+        event=self.launch()
+        self.ctx.lib.wait_status=7
+        self.reject('E_TIMEOUT',lambda:self.ctx.wait(event,0))
+        self.ctx.lib.wait_status=9
+        self.ctx.lib.finish_status=0
+        self.reject('E_DEVICE',lambda:self.ctx.recover(1))
+        self.assertEqual(self.ctx.query_caps()['device_fault'],dict(native_status=9,phase='recover_event'))
+        self.ctx.lib.wait_status=0
+        before=list(self.ctx.lib.calls)
+        for _ in range(3):self.reject('E_UNAVAILABLE',lambda:self.ctx.recover(1))
+        self.assertEqual(self.ctx.lib.calls,before)
+        self.assertEqual(self.ctx.registry.generation,0)
+        self.assertIsNotNone(event.payload)
+
+    def test_device_fault_blocks_all_recovery_retries_and_normal_operations(self):
+        event=self.launch()
+        self.ctx.lib.wait_status=9
+        self.reject('E_DEVICE',lambda:self.ctx.wait(event,1))
+        before=list(self.ctx.lib.calls)
+        self.ctx.lib.wait_status=self.ctx.lib.finish_status=0
+        for fn in (lambda:self.ctx.recover(1),lambda:self.ctx.alloc(4),
+                   lambda:self.ctx.read(self.buffer,0,4),lambda:self.ctx.free(self.buffer),
+                   lambda:self.ctx.unload(self.module),self.launch):
+            self.reject('E_UNAVAILABLE',fn)
+        self.reject('E_BUSY',self.ctx.close)
+        self.assertEqual(self.ctx.lib.calls,before)
+        caps=self.ctx.query_caps()
+        caps['device_fault']['native_status']=999
+        self.assertEqual(self.ctx.query_caps()['device_fault']['native_status'],9)
 
 
 @unittest.skipUnless(os.environ.get('VORTEX_SOURCE') and shutil.which('g++'), 'pinned native headers/compiler required')

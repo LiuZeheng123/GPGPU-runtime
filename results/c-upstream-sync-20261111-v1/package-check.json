@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "verified_archived_files": 1144,
+  "verified_source_files": 122,
+  "preserved_prior_results": true,
+  "receipts": {
+    "rtlsim-acceptance.json": {
+      "status": "PASS",
+      "cases": 48
+    },
+    "simx-acceptance.json": {
+      "status": "PASS",
+      "cases": 48
+    },
+    "xrtsim-acceptance.json": {
+      "status": "PASS",
+      "cases": 48
+    },
+    "rtlsim-canary-result.json": {
+      "status": "PASS",
+      "mode": "canary"
+    },
+    "rtlsim-cp-fault-result.json": {
+      "status": "PASS",
+      "mode": "cp-fault"
+    },
+    "rtlsim-timeout-result.json": {
+      "status": "PASS",
+      "mode": "timeout"
+    },
+    "simx-canary-result.json": {
+      "status": "PASS",
+      "mode": "canary"
+    },
+    "simx-cp-fault-result.json": {
+      "status": "PASS",
+      "mode": "cp-fault"
+    },
+    "simx-timeout-result.json": {
+      "status": "PASS",
+      "mode": "timeout"
+    },
+    "xrtsim-canary-result.json": {
+      "status": "PASS",
+      "mode": "canary"
+    },
+    "xrtsim-cp-fault-result.json": {
+      "status": "PASS",
+      "mode": "cp-fault"
+    },
+    "xrtsim-timeout-result.json": {
+      "status": "PASS",
+      "mode": "timeout"
+    }
+  }
+}

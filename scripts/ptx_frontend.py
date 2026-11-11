@@ -13,7 +13,7 @@ import sys
 
 PROJECT = Path(__file__).resolve().parents[1]
 PROFILE = "ptx-vx-p0-v0.2-draft"
-COMPILER = "ptx-vx-frontend-v1.2"
+COMPILER = "ptx-vx-frontend-v1"
 ABI = "ptx-vx-args-v1"
 SPECIALS = {"%tid.x": "thread_id", "%ntid.x": "block_size",
             "%ctaid.x": "block_id", "%nctaid.x": "grid_size"}
@@ -371,11 +371,9 @@ def emit_cpp(ir):
              "static inline uint64_t ptx_read64(const uint8_t* p) {",
              "  return uint64_t(ptx_read32(p)) | (uint64_t(ptx_read32(p + 4)) << 32);", "}",
              "template<class Memory>",
-             "static inline void ptx_body([[maybe_unused]] const uint8_t* payload, [[maybe_unused]] const PtxThread& thread, [[maybe_unused]] Memory& memory) {"]
+             "static inline void ptx_body(const uint8_t* payload, const PtxThread& thread, Memory& memory) {"]
     for item in registers.values():
-        # PTX permits unused declarations and dead register writes. Keep the
-        # semantics explicit without disabling the native compiler's warnings.
-        lines.append("  [[maybe_unused]] %s %s;" % ({"b32": "uint32_t", "b64": "uint64_t", "pred": "bool"}[item["type"]], item["c_name"]))
+        lines.append("  %s %s;" % ({"b32": "uint32_t", "b64": "uint64_t", "pred": "bool"}[item["type"]], item["c_name"]))
     source_map = []
     for ins in ir["instructions"]:
         op, operands = ins["opcode"], ins["operands"]
@@ -402,10 +400,7 @@ def emit_cpp(ir):
                 expression = "memory.load32(%s)" % src[0]
             else:
                 raise AssertionError(op)
-            # An in-place mov/cvta is already validated by the typed parser.
-            # Keep its source-map slot and predicate without emitting x = x,
-            # which the pinned Clang correctly rejects under -Werror.
-            statement = "(void)0; /* identity */" if dest == expression else dest + " = " + expression + ";"
+            statement = dest + " = " + expression + ";"
         predicate = ins["predicate"]
         if predicate:
             statement = "if (%s%s) { %s }" % ("!" if predicate["negated"] else "", reg(predicate["name"]), statement)

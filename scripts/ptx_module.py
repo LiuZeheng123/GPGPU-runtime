@@ -14,10 +14,13 @@ import struct
 import subprocess
 import sys
 
-import ptx_frontend as frontend
+import ptx_frontend_v12 as frontend
 
 COMMIT = "7fe19369587c087f902c3e2bc2add612aa910a95"
 SCHEMA = "ptx-vx-module-v1-draft"
+BOARD_SCHEMA = "ptx-vx-module-u280-v2-draft"
+BOARD_TARGET_ADAPTER = "u280-hbm32-target-v1"
+BOARD_LOCK_SHA = "e55719ecaa83d1b0f637cf212819716c58667443918f822eaed9ee2eb2aa7486"
 ADAPTER = "ptx-vx-vortex2-wrapper-v1"
 FORMAT = "vortex-v3-vxbin-symtab"
 MAKE_BLOB = "ed7a588772ed842fc3581a355259fcb1ff3238b6"
@@ -64,8 +67,14 @@ def target(lock_bytes, hardware_bytes):
         raise ModuleError("E_TARGET_MISMATCH", "requires matching pinned RV64 Vortex2 lock/config")
     defines = hardware.get("defines", {})
     names = {"VX_CFG_NUM_" + suffix for suffix in ("CLUSTERS", "CORES", "WARPS", "THREADS")}
-    if (set(defines) != names
-            or any(type(v) is not int or not 1 <= v <= 1024 for v in defines.values())):
+    board = hardware.get("target") == "hw"
+    if board:
+        if (digest(lock_bytes) != BOARD_LOCK_SHA
+                or set(defines) != names | {"PLATFORM_MERGED_MEMORY_INTERFACE"}
+                or defines.get("PLATFORM_MERGED_MEMORY_INTERFACE") is not True):
+            raise ModuleError("E_TARGET_MISMATCH", "requires the exact D10/D12 U280 target")
+    if (set(defines) != names and not board
+            or any(type(defines.get(k)) is not int or not 1 <= defines[k] <= 1024 for k in names)):
         raise ModuleError("E_TARGET_MISMATCH", "unsupported hardware candidate defines")
     # Native source limit, not a claim that the PTX wrapper is accepted on hardware.
     limits = dict(max_block_x=min(1024, defines["VX_CFG_NUM_WARPS"] * defines["VX_CFG_NUM_THREADS"]),
@@ -140,6 +149,8 @@ def prepare(source, output, lock_path, hardware_path):
                     known_limits=["not a memory sandbox", "single entry", "no shared memory or barriers"],
                     backend_execution="NOT_RUN", independent_acceptance="NOT_RUN")
     manifest["files"] = {p.name: digest(p.read_bytes()) for p in output.iterdir() if p.is_file()}
+    if read_json(hardware_bytes).get("target") == "hw":
+        manifest.update(schema_version=BOARD_SCHEMA, target_adapter_version=BOARD_TARGET_ADAPTER)
     write_json(output / "manifest.json", manifest)
     return manifest
 
@@ -175,7 +186,7 @@ def verify_sources(directory, expected_lock):
     directory = Path(directory).resolve()
     try:
         manifest = read_json((directory / "manifest.json").read_bytes())
-        if manifest.get("schema_version") != SCHEMA or manifest.get("compiler_id") != ADAPTER:
+        if manifest.get("schema_version") not in (SCHEMA, BOARD_SCHEMA) or manifest.get("compiler_id") != ADAPTER:
             raise ModuleError("E_MODULE_CORRUPT", "unknown module schema/compiler")
         files = manifest["files"]
         required = {"source.ptx", "ir.json", "kernel_body.hpp", "kernel.cpp", "source_map.json",
@@ -196,6 +207,10 @@ def verify_sources(directory, expected_lock):
                 or manifest.get("target_lock_hash") != digest(expected_lock)):
             raise ModuleError("E_TARGET_MISMATCH", "module target differs from requested target")
         lock, _, limits = target(expected_lock, blobs["hardware.json"])
+        board = read_json(blobs["hardware.json"]).get("target") == "hw"
+        if (manifest["schema_version"] != (BOARD_SCHEMA if board else SCHEMA)
+                or (board and manifest.get("target_adapter_version") != BOARD_TARGET_ADAPTER)):
+            raise ModuleError("E_TARGET_MISMATCH", "module target adapter/version differs")
         ir = frontend.parse(blobs["source.ptx"].decode("utf-8"), "source.ptx")
         cpp, source_map = frontend.emit_cpp(ir)
         if (read_json(blobs["ir.json"]) != ir or blobs["kernel_body.hpp"] != cpp.encode()
