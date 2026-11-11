@@ -1,0 +1,26 @@
+libvortex.so
+	linux-vdso.so.1 (0x00007ffe6abc3000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000077ef56c00000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000077ef56f7c000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000077ef56f4e000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077ef56800000)
+	/lib64/ld-linux-x86-64.so.2 (0x000077ef570ab000)
+
+libvortex-simx.so
+	linux-vdso.so.1 (0x00007ffd495ae000)
+	libsimx.so => /home/liuzeheng/gpgpu-c-20261111/build-native-block32-v1/sw/runtime/libsimx.so (0x00007f9b6b49a000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f9b6b200000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f9b6b1d2000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f9b6ae00000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f9b6b63c000)
+	libramulator.so => /home/liuzeheng/gpgpu-c-20261111/build-native-block32-v1/third_party/ramulator/libramulator.so (0x00007f9b6a800000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f9b6b0e9000)
+
+libsimx.so
+	linux-vdso.so.1 (0x00007fff54d0f000)
+	libramulator.so => /home/liuzeheng/gpgpu-c-20261111/build-native-block32-v1/third_party/ramulator/libramulator.so (0x000078febf000000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000078febec00000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000078febf621000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000078febf5f3000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000078febe800000)
+	/lib64/ld-linux-x86-64.so.2 (0x000078febf89e000)

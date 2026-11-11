@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "package_sha256": "ad3da118348170c44ef017cfc98a5da2b261eef7adcfcbb41d5248ed156d0489",
+  "apt_metadata": "Package: uuid-dev\nArchitecture: amd64\nVersion: 2.39.3-9ubuntu6\nMulti-Arch: same\nPriority: extra\nSection: libdevel\nSource: util-linux\nOrigin: Ubuntu\nMaintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>\nOriginal-Maintainer: util-linux packagers <util-linux@packages.debian.org>\nBugs: https://bugs.launchpad.net/ubuntu/+filebug\nInstalled-Size: 122\nDepends: libc6-dev | libc-dev, libuuid1 (= 2.39.3-9ubuntu6)\nFilename: pool/main/u/util-linux/uuid-dev_2.39.3-9ubuntu6_amd64.deb\nSize: 33534\nMD5sum: 0c1be881fd3fbb9df05cfb0ef9e8a9e3\nSHA1: cc94e0ae3460e1d903b3415e1ceac2cf5f3987f2\nSHA256: ad3da118348170c44ef017cfc98a5da2b261eef7adcfcbb41d5248ed156d0489\nSHA512: e458e0d4b3352eaa426f1e1f5a713bbee1c1140a60944c875bf2ad42a4fc8858f79775b491092f45521c3d91881857dc90f8ac3342b3b7484a544b0dcb854548\nHomepage: https://www.kernel.org/pub/linux/utils/util-linux/\nDescription-en: Universally Unique ID library - headers and static libraries\n The libuuid library generates and parses 128-bit Universally Unique IDs\n (UUIDs). See RFC 4122 for more information.\n .\n This package contains the development environment for the uuid library.\nDescription-md5: daeeb422c8be25af61a5fe52deff08a8\nTask: lubuntu-desktop, ubuntustudio-photography, ubuntu-unity-desktop\n\n",
+  "wrapper": "/home/liuzeheng/gpgpu-c-rtl-20261111/host-tools/bin/g++",
+  "wrapper_sha256": "2bb4ebd77891137e567e6ca68f0b79d81586559c72f52aa7efde8d1b3a497e9b",
+  "wrapper_text": "#!/bin/sh\nexec /usr/bin/g++ -I\"/home/liuzeheng/gpgpu-c-rtl-20261111/host-tools/usr/include\" \"$@\"\n",
+  "compiler": "/usr/bin/g++",
+  "compiler_sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+  "uuid_header_sha256": "b3de21e72b14b5a8f36b0684690df0e3fced3ba6f513e6863887fbf98a606265",
+  "scope": "private official UUID header for AFU; compiler only adds its include directory; fixed upstream source unchanged",
+  "prior_failure": "c-native-xrtsim-v1: missing uuid/uuid.h; preserved"
+}

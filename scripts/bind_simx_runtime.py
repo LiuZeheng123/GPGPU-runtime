@@ -1,10 +1,11 @@
-"""Bind a successful pinned native smoke build to the project runtime loader."""
+"""Bind a verified SimX, processor RTL or AFU model build to the runtime loader."""
 import argparse
 from pathlib import Path
 import re
 import subprocess
 
 from ptx_module import COMMIT, digest, read_json, target, write_json
+from runtime_backends import BACKENDS, validate_native
 
 
 def bind(summary_path, lock_path, hardware_path, output):
@@ -12,17 +13,20 @@ def bind(summary_path, lock_path, hardware_path, output):
     summary = read_json(summary_bytes)
     lock_bytes, hardware_bytes = Path(lock_path).read_bytes(), Path(hardware_path).read_bytes()
     _, defines, _ = target(lock_bytes, hardware_bytes)
-    if (summary.get('status') != 'PASS' or summary.get('demo_execution') != 'PASS'
-            or summary.get('backend') != 'simx' or summary.get('check_only') is not False
-            or summary.get('source',{}).get('source_commit') != COMMIT
-            or summary.get('config_file_sha256',{}).get('target_lock.json') != digest(lock_bytes)
-            or any(c.get('returncode') != 0 or c.get('timed_out') for c in summary['commands'])):
-        raise ValueError('requires a successful native SimX execution for the requested target')
+    backend = summary.get('backend')
+    validate_native(summary, backend, digest(lock_bytes))
+    driver, backend_library, simulator_library = BACKENDS[backend]
     libraries, dependencies = {}, {}
     build_root = Path(summary['build_path']).resolve()
     libdir = Path(summary['build_path']).resolve()/'sw/runtime'
     ldd = []
-    for name in ('libvortex.so','libvortex-simx.so','libsimx.so'):
+    if backend == 'xrtsim':
+        for stamp, flag in (('xrt_config.stamp', '-DXRTSIM'), ('xrtsim_config.stamp', '-DNOXRT')):
+            data = (libdir/stamp).read_bytes()
+            if (flag not in data.decode().split()
+                    or digest(data) != summary['build_artifacts']['sw/runtime/'+stamp]['sha256']):
+                raise ValueError('AFU simulation build stamp differs: '+stamp)
+    for name in ('libvortex.so',backend_library,simulator_library):
         actual = digest((libdir/name).read_bytes())
         if actual != summary['build_artifacts']['sw/runtime/'+name]['sha256']:
             raise ValueError('library changed after native validation: '+name)
@@ -41,7 +45,7 @@ def bind(summary_path, lock_path, hardware_path, output):
     (output/'target_lock.json').write_bytes(lock_bytes)
     (output/'native-summary.json').write_bytes(summary_bytes)
     (output/'ldd.log').write_text('\n'.join(ldd))
-    result = dict(schema_version='ptx-vx-runtime-binding-v2',backend='simx',source_commit=COMMIT,
+    result = dict(schema_version='ptx-vx-runtime-binding-v3',backend=backend,driver=driver,source_commit=COMMIT,
                   target_lock_hash=digest(lock_bytes),hardware_defines=defines,library_dir=str(libdir),
                   libraries=libraries,dependencies=dependencies,native_summary_sha256=digest(summary_bytes),
                   scope='native build identity; PTX validation is separate')
@@ -57,7 +61,7 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
     bind(args.summary,args.target_lock,args.hardware,args.output)
-    print('SimX runtime binding created:',args.output/'binding.json')
+    print('Verified simulation runtime binding created:',args.output/'binding.json')
 
 
 if __name__=='__main__':

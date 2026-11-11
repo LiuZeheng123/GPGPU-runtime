@@ -1,0 +1,14 @@
+CONFIGS: num_threads=4, num_warps=8, num_cores=1, num_clusters=1, socket_size=1, local_mem_base=0x1ffff0000, num_barriers=8
+PASS copy n= 0 cases= 14
+PASS copy n= 1 cases= 28
+PASS copy n= 7 cases= 42
+PASS copy n= 15 cases= 56
+PASS copy n= 16 cases= 70
+PASS copy n= 17 cases= 84
+PASS copy n= 31 cases= 98
+PASS copy n= 32 cases= 112
+PASS copy n= 33 cases= 126
+PASS copy n= 65 cases= 140
+PASS copy n= 257 cases= 154
+PASS copy n= 1024 cases= 168
+{"status": "PASS", "kernel": "copy", "passed": 168, "exit_code": 0}

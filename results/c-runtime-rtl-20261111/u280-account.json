@@ -1,0 +1,173 @@
+{
+  "schema_version": "c-u280-account-inspection-v1",
+  "collected_at": "2026-11-11T00:41:54.815200+00:00",
+  "scope": "Read-only inspection of current-account artifacts and visible U280 status.\n\nNo device open, programming, reset, HOST configuration or privilege escalation.\nKDS snapshots do not reserve a card or prove all users' file handles are absent.\n",
+  "device_open": "NOT_RUN",
+  "board_execution": "NOT_RUN",
+  "device_reservation": "NOT_CONFIRMED",
+  "project_root": "~/gpgpu_work",
+  "artifacts": [],
+  "cards": [
+    {
+      "bdf": "0000:3d:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t00000000-0000-0000-0000-000000000000\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD128",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:3e:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t49fb33b7-44a7-b8eb-4130-44720bc86a15\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD129",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:40:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t00000000-0000-0000-0000-000000000000\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD130",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:41:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t00000000-0000-0000-0000-000000000000\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD131",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:b1:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\tb60ca9fb-1506-3033-c156-e03ff687f492\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD132",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:b2:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t00000000-0000-0000-0000-000000000000\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD133",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:b4:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "268435456",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t00000000-0000-0000-0000-000000000000\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD134",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "bdf": "0000:b5:00.1",
+      "observations": {
+        "ready": "0x1",
+        "host_mem_size": "0",
+        "interface_uuids": "fb2b2c5a19ed63593fea95f51fbc8eb9",
+        "kdsstat": "xclbin:\t\t\t4fb658f0-2da7-d018-6a21-20083aa19633\noutstanding execs:\t0\ntotal execs:\t\t0\ncontexts:\t\t0\nclient pid:"
+      },
+      "render_nodes": [
+        {
+          "path": "/dev/dri/renderD135",
+          "readable": true,
+          "writable": true
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "name": "glibc",
+      "argv": [
+        "getconf",
+        "GNU_LIBC_VERSION"
+      ],
+      "exit_code": 0,
+      "stdout": "glibc 2.17\n",
+      "stderr": ""
+    },
+    {
+      "name": "compiler",
+      "argv": [
+        "/opt/rh/devtoolset-9/root/usr/bin/g++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "g++ (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)\nCopyright (C) 2019 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    },
+    {
+      "name": "xrt",
+      "argv": [
+        "/opt/xilinx/xrt/bin/xbutil",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Version              : 2.13.479\nBranch               : 2022.1\nHash                 : 5e92a513c6950e79638b1a879ddb882da34fc683\nHash Date            : 2022-06-25 09:05:04\nXOCL                 : 2.13.479, 5e92a513c6950e79638b1a879ddb882da34fc683\nXCLMGMT              : 2.13.479, 5e92a513c6950e79638b1a879ddb882da34fc683\n",
+      "stderr": ""
+    }
+  ],
+  "status": "COLLECTED"
+}

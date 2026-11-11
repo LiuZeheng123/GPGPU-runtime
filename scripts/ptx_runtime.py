@@ -1,6 +1,6 @@
-"""Single-queue Vortex2 adapter, initially enabled only for verified SimX builds.
+"""Single-queue Vortex2 adapter for explicitly verified simulation builds.
 
-The caller starts a dedicated process with VORTEX_DRIVER=simx and the binding's
+The caller starts a dedicated process with the selected driver and the binding's
 library directory first in LD_LIBRARY_PATH. No CPU fallback or hardware reset.
 """
 import ctypes as C
@@ -12,6 +12,7 @@ from threading import RLock
 
 from ptx_launch import BufferRegistry, BufferSlice
 from ptx_module import COMMIT, ModuleError, digest, read_json, validate
+from runtime_backends import BACKENDS, validate_native
 
 P = C.c_void_p
 U = C.c_uint32
@@ -102,12 +103,28 @@ class Context:
         self.lock_bytes = Path(target_lock).read_bytes()
         binding_path = Path(binding_path).resolve()
         binding = read_json(binding_path.read_bytes())
-        if backend != "simx" or binding.get("backend") != backend:
-            self.fail("E_UNAVAILABLE", "this adapter enables only an explicitly bound SimX backend", "open")
-        if (binding.get("schema_version") != "ptx-vx-runtime-binding-v2"
+        if backend not in BACKENDS or binding.get("backend") != backend:
+            self.fail("E_UNAVAILABLE", "requires an explicitly bound simulation backend", "open")
+        driver, backend_library, simulator_library = BACKENDS[backend]
+        schema = binding.get("schema_version")
+        if (schema not in ("ptx-vx-runtime-binding-v2", "ptx-vx-runtime-binding-v3")
+                or (schema == "ptx-vx-runtime-binding-v2" and backend != "simx")
                 or binding.get("source_commit") != COMMIT
                 or binding.get("target_lock_hash") != digest(self.lock_bytes)):
             self.fail("E_TARGET_MISMATCH", "runtime build binding differs from target", "open")
+        if schema == "ptx-vx-runtime-binding-v3":
+            native_bytes = (binding_path.parent / "native-summary.json").read_bytes()
+            if (digest(native_bytes) != binding.get("native_summary_sha256")
+                    or binding.get("driver") != driver):
+                self.fail("E_TARGET_MISMATCH", "native execution proof/driver differs", "open")
+            try:
+                native = read_json(native_bytes)
+                validate_native(native, backend, digest(self.lock_bytes))
+                for name in ('libvortex.so', backend_library, simulator_library):
+                    if native['build_artifacts']['sw/runtime/'+name]['sha256'] != binding['libraries'][name]:
+                        raise ValueError('bound library differs from native execution')
+            except (ValueError, KeyError, TypeError) as error:
+                self.fail("E_TARGET_MISMATCH", str(error), "open")
         hardware_bytes = (binding_path.parent / "hardware.json").read_bytes()
         if digest(hardware_bytes) != read_json(self.lock_bytes)["hardware_config_sha256"]:
             self.fail("E_TARGET_MISMATCH", "runtime hardware config differs from lock", "open")
@@ -115,10 +132,10 @@ class Context:
         if hardware["defines"] != binding.get("hardware_defines"):
             self.fail("E_TARGET_MISMATCH", "runtime defines differ from bound config", "open")
         libdir = (binding_path.parent / binding["library_dir"]).resolve()
-        if (os.environ.get("VORTEX_DRIVER") != backend
+        if (os.environ.get("VORTEX_DRIVER") != driver
                 or Path(os.environ.get("LD_LIBRARY_PATH", "").split(":")[0]).resolve() != libdir):
             self.fail("E_UNAVAILABLE", "start process with explicit backend and library search path", "open")
-        for name in ("libvortex.so", "libvortex-simx.so", "libsimx.so"):
+        for name in ("libvortex.so", backend_library, simulator_library):
             if digest((libdir / name).read_bytes()) != binding.get("libraries", {}).get(name):
                 self.fail("E_TARGET_MISMATCH", "runtime library hash mismatch: " + name, "open")
         for name, expected in binding["dependencies"].items():
@@ -140,7 +157,7 @@ class Context:
                 self.fail("E_TARGET_MISMATCH", "actual device geometry/XLEN differs", "open")
             # Verify the backend dlopen actually resolved the checked file.
             maps = Path('/proc/self/maps').read_text()
-            if str(libdir / "libvortex-simx.so") not in maps:
+            if any(str(libdir / name) not in maps for name in (backend_library, simulator_library)):
                 self.fail("E_TARGET_MISMATCH", "loaded backend does not match binding", "open")
             if any(name not in maps for name in binding["dependencies"]):
                 self.fail("E_TARGET_MISMATCH", "loaded simulator dependency differs from binding", "open")

@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "scope": "archive integrity, old-schema compatibility and deliberate corruption; not device execution",
+  "export_hashes": 159,
+  "checks": [
+    {
+      "mutation": "wrong-capture-hash",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "duplicate-case",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "wrong-recovery-result",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "mixed-backend",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "wrong-legacy-schema",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "different-module",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "duplicate-backend",
+      "status": "REJECTED"
+    }
+  ],
+  "legacy_cases": 1320,
+  "legacy_checks": [
+    {
+      "status": "PASS",
+      "run_id": "c-affine-block32-v1-v1",
+      "kernel": "affine",
+      "backend": "simx",
+      "cases": 504,
+      "block32_cases": 72,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-affine-smoke-v2",
+      "kernel": "affine",
+      "backend": "simx",
+      "cases": 288,
+      "block32_cases": 0,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-copy-block32-v1-v1",
+      "kernel": "copy",
+      "backend": "simx",
+      "cases": 168,
+      "block32_cases": 24,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-copy-smoke-v2",
+      "kernel": "copy",
+      "backend": "simx",
+      "cases": 96,
+      "block32_cases": 0,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-vadd-block32-v1-v1",
+      "kernel": "vadd",
+      "backend": "simx",
+      "cases": 168,
+      "block32_cases": 24,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-vadd-smoke-v2",
+      "kernel": "vadd",
+      "backend": "simx",
+      "cases": 96,
+      "block32_cases": 0,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    }
+  ],
+  "scripts": {
+    "verify_ptx_suite_results.py": "e2b05cee90cb15c7847bc37be2e01cb4f61892d71f8b7ae18c6f3068a35fd559",
+    "compare_ptx_backends.py": "26197b476dfc1be0ea2aaa560cc0c28ccb7d47dbf6d87f15ee2ae1efb39c601e"
+  }
+}

@@ -1,4 +1,4 @@
-"""Run copy/vadd/affine PTX on verified SimX, including an explicit block32 candidate.
+"""Run copy/vadd/affine PTX on verified simulators and an explicit block32 candidate.
 
 Author-owned oracle; neither independent E acceptance nor hardware performance.
 One process per module/binding avoids mixing dynamically loaded configurations.
@@ -51,6 +51,7 @@ def timing_summary(cases):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--kernel', choices=('copy','vadd','affine'), required=True)
+    parser.add_argument('--backend', choices=('simx','rtlsim','xrtsim'), default='simx')
     for name in ('module','binding','target-lock','output'):
         parser.add_argument('--'+name, type=Path, required=True)
     args = parser.parse_args(argv)
@@ -59,9 +60,9 @@ def main(argv=None):
     output = args.output
     output.mkdir(parents=True,exist_ok=False)
     (output/'cases').mkdir()
-    result = dict(schema_version='ptx-suite-simx-v1',run_id=output.name,status='RUNNING',kernel=args.kernel,
-        backend='simx',scope='author functional PTX execution and host wall-clock measurements',
-        independent_acceptance='NOT_RUN',rtlsim='NOT_RUN',u280='NOT_RUN',
+    result = dict(schema_version='ptx-suite-simulation-v2',run_id=output.name,status='RUNNING',kernel=args.kernel,
+        backend=args.backend,scope='author functional PTX execution and host wall-clock measurements; xrtsim is the NOXRT AFU model, not vendor hw_emu or a board',
+        independent_acceptance='NOT_RUN',u280='NOT_RUN',
         invocation=[sys.executable,str(Path(__file__).resolve()),*(argv if argv is not None else sys.argv[1:])],
         invocation_cwd=str(Path.cwd()),target_lock_hash=digest(args.target_lock.read_bytes()),
         binding_sha256=digest(args.binding.read_bytes()),module_manifest_sha256=digest((args.module/'manifest.json').read_bytes()),
@@ -78,7 +79,7 @@ def main(argv=None):
     save()
     os.chdir(output)
     try:
-        ctx=timed(result['setup_host_timing_ns'],'open',lambda:Context(args.binding,args.target_lock,run_id=output.name))
+        ctx=timed(result['setup_host_timing_ns'],'open',lambda:Context(args.binding,args.target_lock,backend=args.backend,run_id=output.name))
         result['caps']=ctx.query_caps()
         module=timed(result['setup_host_timing_ns'],'load',lambda:ctx.load(args.module))
         required={'copy':['u64','u64','u32'],'vadd':['u64','u64','u64','u32'],'affine':['u64','u64','u64','u32','u32']}[args.kernel]

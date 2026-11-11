@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "label": "commit",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "7fe19369587c087f902c3e2bc2add612aa910a95\n",
+      "stderr": ""
+    },
+    {
+      "label": "changes",
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--ignore-submodules=untracked",
+        "HEAD",
+        "--"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "status",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "submodules",
+      "argv": [
+        "git",
+        "submodule",
+        "status",
+        "--recursive"
+      ],
+      "exit_code": 0,
+      "stdout": "-b1befdb36df8af7ac9e2c96acaf81957aab5d107 third_party/cocogfx\n-79e453139072df42c9ec8f697132ba485d74e23d third_party/cvfpu\n-aaf5736dffa521603b681fd5853760c671446c85 third_party/hardfloat\n e62c84a6f0e06566ba6e182d308434b4532068a5 third_party/ramulator (e62c84a)\n b51ef8f3201669b2288104c28546fc72532a1ea4 third_party/softfloat (b51ef8f)\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "fixed upstream identity and clean source after isolated builds; no device execution"
+}

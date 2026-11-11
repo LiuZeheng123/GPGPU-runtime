@@ -1,5 +1,7 @@
 # 当前研究状态
 
+2026-11-11 C 第四批：**同一组三类 PTX 在 SimX、处理器 RTL、NOXRT/XRTSIM AFU 模型各 840/840，共 2520/2520 PASS；9 次实际超时排空与重新计算通过。** Linux 回归 143 通过、14 跳过、0 失败。新增显式仿真后端、v3 原生执行/库绑定与跨后端捕获比较。服务器只读实查：7/8 张卡已有 HOST，本人项目目录缺少 xclbin/对应物理 Runtime。U280、独立 E 接收、团队合并仍未完成；具体 A/B/E/D 交付清单见 [C RTL/AFU 交接](C_RUNTIME_RTL_20261111.md)。旧 HOST 全零观察是历史状态。
+
 2026-11-11 C 第三批：**copy/vadd/affine 的真实 PTX-SimX，16 线程基线 480/480、独立 32 线程候选 840/840，共 1320/1320 PASS；其中 block=32 为 120 组。六次实际超时恢复及重新执行通过。** Linux 回归 138 通过、14 跳过、0 失败。前端 v1.2 消除原地 mov/cvta 生成的自赋值警告；Runtime 限定单模块并暴露首个错误；新增主机耗时记录和归档核对器。固定源码、根 lock/caps 与旧证据保留；PTX RTL/AFU/U280、E 独立接收仍 NOT_RUN。见 [C 第三批交接](C_RUNTIME_SUITE_20261111.md)。
 
 2026-11-10 C 第二批：**真实 PTX vadd → Vortex2 Runtime → SimX，96/96 PASS，退出 0；实际超时排空恢复及重新计算 PASS。** 原生 demo、设备编译与 Runtime ABI 核验均通过。最终回归 130 通过、14 跳过；使用独立 Ubuntu 24.04 WSL 和固定源码/工具链，未运行 FPGA。见 [C SimX 交接](C_RUNTIME_SIMX_20261110.md)。

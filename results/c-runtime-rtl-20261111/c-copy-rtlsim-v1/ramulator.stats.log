@@ -1,0 +1,89 @@
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 10632
+  total_num_read_requests: 22800
+  memory_system_cycles: 1304905
+  DRAM:
+    impl: HBM2
+  AddrMapper:
+    impl: RoBaRaCoCh
+
+
+  Controller:
+    impl: Generic
+    id: Channel 0
+    avg_read_latency_0: 17.8903503
+    read_queue_len_avg_0: 0.147560939
+    write_queue_len_0: 243819
+    queue_len_0: 436372
+    num_other_reqs_0: 0
+    num_write_reqs_0: 7069
+    read_latency_0: 203950
+    priority_queue_len_avg_0: 0
+    row_hits_0: 14174
+    priority_queue_len_0: 0
+    row_misses_0: 54
+    row_conflicts_0: 2488
+    read_row_misses_0: 54
+    queue_len_avg_0: 0.334409028
+    read_row_conflicts_core_0: 1516
+    read_row_hits_0: 9830
+    write_queue_len_avg_0: 0.186848089
+    read_row_conflicts_0: 1516
+    write_row_misses_0: 0
+    write_row_conflicts_0: 972
+    read_queue_len_0: 192553
+    write_row_hits_0: 4344
+    read_row_hits_core_0: 9830
+    read_row_misses_core_0: 54
+    num_read_reqs_0: 11400
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: Generic
+    id: Channel 1
+    read_queue_len_avg_1: 0.149915889
+    priority_queue_len_1: 0
+    write_queue_len_1: 230217
+    num_write_reqs_1: 5329
+    row_hits_1: 14002
+    row_misses_1: 140
+    avg_read_latency_1: 18.2485962
+    queue_len_avg_1: 0.326340228
+    read_queue_len_1: 195626
+    read_row_misses_1: 140
+    priority_queue_len_avg_1: 0
+    read_row_hits_1: 9720
+    queue_len_1: 425843
+    read_row_conflicts_1: 1540
+    num_read_reqs_1: 11400
+    num_other_reqs_1: 0
+    row_conflicts_1: 2574
+    write_row_hits_1: 4282
+    write_queue_len_avg_1: 0.176424339
+    write_row_misses_1: 0
+    write_row_conflicts_1: 1034
+    read_row_hits_core_0: 9720
+    read_row_misses_core_0: 140
+    read_latency_1: 208034
+    read_row_conflicts_core_0: 1540
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+

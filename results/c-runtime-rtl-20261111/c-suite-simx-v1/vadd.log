@@ -1,0 +1,13 @@
+PASS vadd n= 0 cases= 14
+PASS vadd n= 1 cases= 28
+PASS vadd n= 7 cases= 42
+PASS vadd n= 15 cases= 56
+PASS vadd n= 16 cases= 70
+PASS vadd n= 17 cases= 84
+PASS vadd n= 31 cases= 98
+PASS vadd n= 32 cases= 112
+PASS vadd n= 33 cases= 126
+PASS vadd n= 65 cases= 140
+PASS vadd n= 257 cases= 154
+PASS vadd n= 1024 cases= 168
+{"status": "PASS", "kernel": "vadd", "passed": 168, "exit_code": 0}

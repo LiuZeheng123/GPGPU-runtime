@@ -1,0 +1,25 @@
+{
+  "schema_version": "ptx-vx-runtime-binding-v3",
+  "backend": "rtlsim",
+  "driver": "rtlsim",
+  "source_commit": "7fe19369587c087f902c3e2bc2add612aa910a95",
+  "target_lock_hash": "9bf1ecd89852e54dd402e669becbfd0910752ffd16ad9e7a9f9b20e77b6c4649",
+  "hardware_defines": {
+    "VX_CFG_NUM_CLUSTERS": 1,
+    "VX_CFG_NUM_CORES": 1,
+    "VX_CFG_NUM_THREADS": 4,
+    "VX_CFG_NUM_WARPS": 8
+  },
+  "library_dir": "/home/liuzeheng/gpgpu-c-rtl-20261111/build-native-rtlsim-v1/sw/runtime",
+  "libraries": {
+    "libvortex.so": "f78d1c225c502be7c480862134355a5e44dac6d259476e4b5039880ff507889d",
+    "libvortex-rtlsim.so": "89182d43d4f2a7a048805f0a8dba610bec720c5cb56fde1242b88c9dd020eee5",
+    "librtlsim.so": "4312ee268dd320185e750937ed1db444befe7771d34fac1ab3dbe5bc8b11f877"
+  },
+  "dependencies": {
+    "/home/liuzeheng/gpgpu-c-rtl-20261111/build-native-rtlsim-v1/sw/runtime/librtlsim.so": "4312ee268dd320185e750937ed1db444befe7771d34fac1ab3dbe5bc8b11f877",
+    "/home/liuzeheng/gpgpu-c-rtl-20261111/build-native-rtlsim-v1/third_party/ramulator/libramulator.so": "8ebfe0d7ec93f72a5b79c8a9f1a51002f33a3933b93f4490101f972e76a05986"
+  },
+  "native_summary_sha256": "3d2492860f71c0178f7f80b52889acddcf53d6af46510638d74652f1a9710f36",
+  "scope": "native build identity; PTX validation is separate"
+}

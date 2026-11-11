@@ -16,8 +16,13 @@ import zipfile
 def verify(directory):
     root=Path(directory)
     result=json.loads((root/'result.json').read_text(encoding='utf-8'))
-    assert result['schema_version']=='ptx-suite-simx-v1'
-    assert result['status']=='PASS' and result['exit_code']==0 and result['backend']=='simx'
+    backend=result['backend']
+    assert result['schema_version'] in ('ptx-suite-simx-v1','ptx-suite-simulation-v2')
+    assert backend in ('simx','rtlsim','xrtsim')
+    assert result['schema_version']!='ptx-suite-simx-v1' or backend=='simx'
+    assert result['status']=='PASS' and result['exit_code']==0
+    assert result['caps']['backend']==backend
+    assert result['u280']=='NOT_RUN' and result['independent_acceptance']=='NOT_RUN'
     kernel=result['kernel']
     assert kernel in ('copy','vadd','affine')
     blocks=result['blocks']
@@ -57,7 +62,7 @@ def verify(directory):
             actual.add(signature)
             assert case['grid']==max(1,(n+block-1)//block)
             assert case['offset_bytes']==(32 if dataset==0 else 16)
-            assert case['completion']['status']=='COMPLETE' and case['completion']['backend']=='simx'
+            assert case['completion']['status']=='COMPLETE' and case['completion']['backend']==backend
             files={name:read(case['id'],name) for name in case['files']}
             for name,data in files.items():
                 assert len(data)==1056*4 and hashlib.sha256(data).hexdigest()==case['files'][name],name
@@ -90,7 +95,7 @@ def verify(directory):
                            ('unaligned-pointer','E_ADDRESS_RANGE'),('stale-module','E_MODULE_CORRUPT'),
                            ('stale-buffer','E_INVALID_BUFFER'),('stale-event','E_EVENT')]:assert rejected[label]==code
         assert result['timeout_caps']['first_error']==dict(native_status=7,phase='wait')
-        return dict(status='PASS',run_id=result['run_id'],kernel=kernel,cases=len(wanted),
+        return dict(status='PASS',run_id=result['run_id'],kernel=kernel,backend=backend,cases=len(wanted),
                     block32_cases=sum(c['block']==32 for c in result['cases']),rejections=len(rejected),
                     scope='capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution')
     finally:

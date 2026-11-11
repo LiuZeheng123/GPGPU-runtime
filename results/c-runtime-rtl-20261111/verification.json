@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "status": "PASS",
+      "kernel": "copy",
+      "identical_cases": 168,
+      "backends": [
+        {
+          "status": "PASS",
+          "run_id": "c-copy-simx-v1",
+          "kernel": "copy",
+          "backend": "simx",
+          "cases": 168,
+          "block32_cases": 24,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "d7f1ddfa3a5cd2f30de2a749ff382814725e9f005dd6c95f61602cb7b22e4c0f"
+        },
+        {
+          "status": "PASS",
+          "run_id": "c-copy-rtlsim-v1",
+          "kernel": "copy",
+          "backend": "rtlsim",
+          "cases": 168,
+          "block32_cases": 24,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "f1f77932e104c7f0a84053279b5b477fffafff1dde1e2e6194907a6d6049b675"
+        },
+        {
+          "status": "PASS",
+          "run_id": "c-copy-xrtsim-v1",
+          "kernel": "copy",
+          "backend": "xrtsim",
+          "cases": 168,
+          "block32_cases": 24,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "b5e479b8a46801d9b51e1e7342cbb703dec40ac67c81ee80c45449cd916f6b54"
+        }
+      ],
+      "scope": "same module and target; identical raw inputs, expected outputs, observed inputs/outputs and guards; host timings excluded; not independent E or physical board acceptance"
+    },
+    {
+      "status": "PASS",
+      "kernel": "vadd",
+      "identical_cases": 168,
+      "backends": [
+        {
+          "status": "PASS",
+          "run_id": "c-vadd-simx-v1",
+          "kernel": "vadd",
+          "backend": "simx",
+          "cases": 168,
+          "block32_cases": 24,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "59b8263bf3f15215508d32b0eb8a96cd298e60ea4d7eb19430d6027809a6566b"
+        },
+        {
+          "status": "PASS",
+          "run_id": "c-vadd-rtlsim-v1",
+          "kernel": "vadd",
+          "backend": "rtlsim",
+          "cases": 168,
+          "block32_cases": 24,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "62ebac5185af2844f38617db0311dd8fddf1f7b7ee9d394af0de837412f4381f"
+        },
+        {
+          "status": "PASS",
+          "run_id": "c-vadd-xrtsim-v1",
+          "kernel": "vadd",
+          "backend": "xrtsim",
+          "cases": 168,
+          "block32_cases": 24,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "c9677abc7592b6f0e64ae428ad197cca6b1564a47e27b0e81eaab075919a6192"
+        }
+      ],
+      "scope": "same module and target; identical raw inputs, expected outputs, observed inputs/outputs and guards; host timings excluded; not independent E or physical board acceptance"
+    },
+    {
+      "status": "PASS",
+      "kernel": "affine",
+      "identical_cases": 504,
+      "backends": [
+        {
+          "status": "PASS",
+          "run_id": "c-affine-simx-v1",
+          "kernel": "affine",
+          "backend": "simx",
+          "cases": 504,
+          "block32_cases": 72,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "1648720354c5eb45e5a39a0b5e4ea2e56aa3d03a4e21c7ddbd1054368e25f27b"
+        },
+        {
+          "status": "PASS",
+          "run_id": "c-affine-rtlsim-v1",
+          "kernel": "affine",
+          "backend": "rtlsim",
+          "cases": 504,
+          "block32_cases": 72,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "5352fdbf3bb694408f2aa1e2823219d65002b46cec382f4deda68becb34f019b"
+        },
+        {
+          "status": "PASS",
+          "run_id": "c-affine-xrtsim-v1",
+          "kernel": "affine",
+          "backend": "xrtsim",
+          "cases": 504,
+          "block32_cases": 72,
+          "rejections": 19,
+          "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution",
+          "result_sha256": "1f76e4e660084bd550886cc172dabf7a24f35f2ee1c5c97c8e96e91efd77d6cb"
+        }
+      ],
+      "scope": "same module and target; identical raw inputs, expected outputs, observed inputs/outputs and guards; host timings excluded; not independent E or physical board acceptance"
+    }
+  ],
+  "total_executions": 2520,
+  "identical_cases_per_backend": 840,
+  "block32_executions": 360,
+  "recovery_runs": 9,
+  "source_binding": "Final Linux regression hashes match the current scripts and tests",
+  "modules": "Same exact three modules from results/c-runtime-suite-20261111/modules/*-block32-v1-v1; no recompilation between backends",
+  "scope": "author tests plus archive readback and differential consistency; independent E and U280 NOT_RUN"
+}

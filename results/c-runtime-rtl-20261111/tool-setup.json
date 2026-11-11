@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "packages": {
+    "ccache_4.9.1-1_amd64.deb": {
+      "sha256": "d76d042ad067648c03597a3a809544439861e2ed02224c9760f90c60f1735a65",
+      "identity": "ccache\t4.9.1-1",
+      "apt_metadata": "Package: ccache\nArchitecture: amd64\nVersion: 4.9.1-1\nPriority: optional\nSection: universe/devel\nOrigin: Ubuntu\nMaintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>\nOriginal-Maintainer: Joel Rosdahl <joel@debian.org>\nBugs: https://bugs.launchpad.net/ubuntu/+filebug\nInstalled-Size: 1579\nDepends: libc6 (>= 2.38), libgcc-s1 (>= 3.4), libhiredis1.1.0 (>= 1.2.0), libstdc++6 (>= 13.1), libzstd1 (>= 1.5.5)\nSuggests: distcc | icecc\nFilename: pool/universe/c/ccache/ccache_4.9.1-1_amd64.deb\nSize: 591638\nMD5sum: 94a6632cd0c9456c816c5927f544cf09\nSHA1: bfc48d0356daa99796b041ff19abee776a150070\nSHA256: d76d042ad067648c03597a3a809544439861e2ed02224c9760f90c60f1735a65\nSHA512: c78442633e75811b8e261f99b5e6871f1d6e202cb669630934d85e358f503dac2edf307c957225eb479547e3c8524515b2a8beccc34a05357d2e71d06ed3036f\nHomepage: https://ccache.dev\nDescription-en: Compiler cache for fast recompilation of C/C++ code\n Ccache is a compiler cache. It speeds up recompilation by caching\n previous compilations and detecting when the same compilation is\n being done again.\nDescription-md5: ee6cfd684c9def102ca8cd664767a949\n\n"
+    },
+    "libhiredis1.1.0_1.2.0-6ubuntu3_amd64.deb": {
+      "sha256": "912a25553f29a47d1524c0b58a3c5bff2d067109da2adae9fa9c4fb15efaa568",
+      "identity": "libhiredis1.1.0\t1.2.0-6ubuntu3",
+      "apt_metadata": "Package: libhiredis1.1.0\nArchitecture: amd64\nVersion: 1.2.0-6ubuntu3\nMulti-Arch: same\nPriority: optional\nSection: universe/libs\nSource: hiredis\nOrigin: Ubuntu\nMaintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>\nOriginal-Maintainer: Chris Lamb <lamby@debian.org>\nBugs: https://bugs.launchpad.net/ubuntu/+filebug\nInstalled-Size: 136\nDepends: libc6 (>= 2.14), libssl3t64 (>= 3.0.0)\nFilename: pool/universe/h/hiredis/libhiredis1.1.0_1.2.0-6ubuntu3_amd64.deb\nSize: 41380\nMD5sum: 514c187b8aacde04832f3f86e99c3f3c\nSHA1: c87f94a36215cc6ecf5c20e3dcb7d541607358d8\nSHA256: 912a25553f29a47d1524c0b58a3c5bff2d067109da2adae9fa9c4fb15efaa568\nSHA512: cd29fdc7da0f09e5b10b839e0e057f17ab122541003263c8a85da890d47af8e41384197fe3c9f786d0f1b02cf498991191432135b1ba766c27aedd5045691031\nHomepage: https://github.com/redis/hiredis\nDescription-en: minimalistic C client library for Redis\n Hiredis is a minimalistic C client library for the Redis database. It is\n minimalistic because it just adds minimal support for the protocol, but\n at the same time it uses an high level printf-alike API in order to make\n it much higher level than otherwise suggested by its minimal code base\n and the lack of explicit bindings for every Redis command.\n .\n Apart from supporting sending commands and receiving replies, it comes\n with a reply parser that is decoupled from the I/O layer. It is a stream\n parser designed for easy reusability, which can for instance be used in\n higher level language bindings for efficient reply parsing.\n .\n Hiredis only supports the binary-safe Redis protocol, so you can use it\n with any Redis version >= 1.2.0.\n .\n The library comes with multiple APIs. There is the synchronous API, the\n asynchronous API and the reply parsing API.\nDescription-md5: 30ca4f8691338e6fc959dcd64d39335e\n\n"
+    }
+  },
+  "archives": {
+    "verilator.tar.bz2": "5ecd02218ea0e2d4d63c3b3ecf349200f2fde273a75fbe6717142d94444ae0dd"
+  },
+  "reused_components": {
+    "llvm-vortex": "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex",
+    "riscv64-gnu-toolchain": "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain",
+    "libc64": "/home/liuzeheng/gpgpu-c-20261110/tools/libc64",
+    "libcrt64": "/home/liuzeheng/gpgpu-c-20261110/tools/libcrt64"
+  },
+  "ccache_wrapper_sha256": "582a99a6284f464ed22407d112036619bb1b467d2c7997e25222821c2ede59d1",
+  "ccache_version": "ccache version 4.9.1\nFeatures: file-storage http-storage redis+unix-storage redis-storage\n\nCopyright (C) 2002-2007 Andrew Tridgell\nCopyright (C) 2009-2024 Joel Rosdahl and other contributors\n\nSee <https://ccache.dev/credits.html> for a complete list of contributors.\n\nThis program is free software; you can redistribute it and/or modify it under\nthe terms of the GNU General Public License as published by the Free Software\nFoundation; either version 3 of the License, or (at your option) any later\nversion.\n",
+  "verilator_version": "Verilator 5.050 2026-07-01 rev v5.050\n"
+}
