@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "status": "PASS",
+      "run_id": "c-affine-block32-v1-v1",
+      "kernel": "affine",
+      "cases": 504,
+      "block32_cases": 72,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-affine-smoke-v2",
+      "kernel": "affine",
+      "cases": 288,
+      "block32_cases": 0,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-copy-block32-v1-v1",
+      "kernel": "copy",
+      "cases": 168,
+      "block32_cases": 24,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-copy-smoke-v2",
+      "kernel": "copy",
+      "cases": 96,
+      "block32_cases": 0,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-vadd-block32-v1-v1",
+      "kernel": "vadd",
+      "cases": 168,
+      "block32_cases": 24,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    },
+    {
+      "status": "PASS",
+      "run_id": "c-vadd-smoke-v2",
+      "kernel": "vadd",
+      "cases": 96,
+      "block32_cases": 0,
+      "rejections": 19,
+      "scope": "capture hashes, recomputed arithmetic, guards, coverage and recovery metadata; not independent device execution"
+    }
+  ],
+  "total_cases": 1320,
+  "block32_cases": 120,
+  "recovery_runs": 6,
+  "source_binding": "All files recorded by final Linux regression match the current checkout",
+  "scope": "archive readback and arithmetic consistency; not independent E acceptance"
+}

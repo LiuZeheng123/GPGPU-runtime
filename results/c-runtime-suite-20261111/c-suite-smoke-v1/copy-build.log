@@ -1,0 +1,1 @@
+{"status": "FAIL", "error": {"code": "E_BUILD_FAILED", "phase": "build", "message": "see compile.log and build.json", "run_id": null, "event_id": null, "generation": null, "backend": null, "source_location": null, "native_status": null, "evidence_path": null}}

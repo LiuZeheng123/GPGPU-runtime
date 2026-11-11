@@ -13,7 +13,7 @@ import sys
 
 PROJECT = Path(__file__).resolve().parents[1]
 PROFILE = "ptx-vx-p0-v0.2-draft"
-COMPILER = "ptx-vx-frontend-v1.1"
+COMPILER = "ptx-vx-frontend-v1.2"
 ABI = "ptx-vx-args-v1"
 SPECIALS = {"%tid.x": "thread_id", "%ntid.x": "block_size",
             "%ctaid.x": "block_id", "%nctaid.x": "grid_size"}
@@ -402,7 +402,10 @@ def emit_cpp(ir):
                 expression = "memory.load32(%s)" % src[0]
             else:
                 raise AssertionError(op)
-            statement = dest + " = " + expression + ";"
+            # An in-place mov/cvta is already validated by the typed parser.
+            # Keep its source-map slot and predicate without emitting x = x,
+            # which the pinned Clang correctly rejects under -Werror.
+            statement = "(void)0; /* identity */" if dest == expression else dest + " = " + expression + ";"
         predicate = ins["predicate"]
         if predicate:
             statement = "if (%s%s) { %s }" % ("!" if predicate["negated"] else "", reg(predicate["name"]), statement)

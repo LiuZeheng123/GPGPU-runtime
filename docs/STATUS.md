@@ -1,5 +1,7 @@
 # 当前研究状态
 
+2026-11-11 C 第三批：**copy/vadd/affine 的真实 PTX-SimX，16 线程基线 480/480、独立 32 线程候选 840/840，共 1320/1320 PASS；其中 block=32 为 120 组。六次实际超时恢复及重新执行通过。** Linux 回归 138 通过、14 跳过、0 失败。前端 v1.2 消除原地 mov/cvta 生成的自赋值警告；Runtime 限定单模块并暴露首个错误；新增主机耗时记录和归档核对器。固定源码、根 lock/caps 与旧证据保留；PTX RTL/AFU/U280、E 独立接收仍 NOT_RUN。见 [C 第三批交接](C_RUNTIME_SUITE_20261111.md)。
+
 2026-11-10 C 第二批：**真实 PTX vadd → Vortex2 Runtime → SimX，96/96 PASS，退出 0；实际超时排空恢复及重新计算 PASS。** 原生 demo、设备编译与 Runtime ABI 核验均通过。最终回归 130 通过、14 跳过；使用独立 Ubuntu 24.04 WSL 和固定源码/工具链，未运行 FPGA。见 [C SimX 交接](C_RUNTIME_SIMX_20261110.md)。
 
 2026-11-10 C 分支新增：Vortex2 设备包装、模块源包/加载校验及启动参数与 buffer 占用组件已实现；Linux 回归 122 通过、14 跳过，新增 C 测试 18/18 通过，含 84 组宿主包装执行。真实 native 编译、PTX-SimX/RTL/U280 与完整 runtime 尚未运行或完成；见 [C 交接](C_RUNTIME_PROGRESS_20261110.md)。以下 D13 等记录属于参考基线的历史证据。

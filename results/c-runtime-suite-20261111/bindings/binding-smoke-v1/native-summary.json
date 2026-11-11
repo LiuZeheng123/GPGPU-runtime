@@ -1,0 +1,1245 @@
+{
+  "schema_version": 7,
+  "run_id": "c-native-simx-v1",
+  "status": "PASS",
+  "started_at": "2026-11-10T04:02:15.728482+00:00",
+  "debug_level": 0,
+  "target_profile": "smoke",
+  "target_id": "vortex-v3-rv64-1c4w4t-smoke-draft",
+  "backend": "simx",
+  "check_only": false,
+  "upstream_smoke": "PASS",
+  "p0_three_kernels": "NOT_RUN",
+  "afu_verification": "NOT_RUN",
+  "hardware_verification": "NOT_RUN",
+  "demo_execution": "PASS",
+  "processor_rtl_verification": "NOT_RUN",
+  "afu_scope": "NOXRT/XRTSIM AFU RTL model only; no vendor runtime, hw_emu, shell or board acceptance",
+  "scope": "upstream demo only; vortex-v3-rv64-1c4w4t-smoke-draft; project P0 unverified",
+  "script_sha256": "c719c52f7816562325c8f35fcf36a08218dc4e9007dd2294278c3db5a1c0a45d",
+  "source": {
+    "path": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+    "expected_commit": "7fe19369587c087f902c3e2bc2add612aa910a95",
+    "captured_manifest_sha256": "02ca673d3df38418f607e868b016ad6482ed0c2fd791d406bdfcf8028b58375a",
+    "manifest_mismatches": [],
+    "source_commit": "7fe19369587c087f902c3e2bc2add612aa910a95",
+    "source_tree": "cbf4557e4c8b472746239bc3c6761b18e6879399",
+    "source_changes": "",
+    "submodule_status": "-b1befdb36df8af7ac9e2c96acaf81957aab5d107 third_party/cocogfx\n-79e453139072df42c9ec8f697132ba485d74e23d third_party/cvfpu\n-aaf5736dffa521603b681fd5853760c671446c85 third_party/hardfloat\n e62c84a6f0e06566ba6e182d308434b4532068a5 third_party/ramulator (e62c84a)\n b51ef8f3201669b2288104c28546fc72532a1ea4 third_party/softfloat (b51ef8f)",
+    "VERSION_sha256": "bdd9a1a6ec595aff3c410983b128f9a295d382dfb7731546a9f624c8678397b3",
+    "file_sha256": {
+      "configure": "5c95414e272f2ee91d03dc6e360091740cdfc987277b468832994c80fd5d2ad7",
+      "config.mk.in": "83f01b834110142a4fee05496b695a6c66b7b67595f91f39d6566fc759264375",
+      "VX_config.toml": "b0bba05aeef9bec1797c85f69978dc1f2a8bf5687e86834fc5bfe600333e1d0c",
+      "VX_types.toml": "363cbf95a0f55425da8fca2574290ea635c84f1304d114d42455242d4756ebe8",
+      "ci/blackbox.sh": "5fbbf65ade11b625f02d624c4c0b57e8f97389be947c149fdb3a34cb855ef71c",
+      "tests/regression/common.mk": "0e714aaf18e5845b6f9c65cef068fd7bcac79a377004ef7243bce74bd73c33c6",
+      "tests/regression/demo/Makefile": "9b236ee1aafa211af3c51c62803e2143610d44d9aa70831cf8a6551200b6b10a",
+      "tests/regression/demo/main.cpp": "5e1f43302d9638383610434d3f39b77f1a5d3891e233abfe526ed2f1e5ee4d3c",
+      "tests/regression/demo/kernel.cpp": "8a9d333e2b8c7eb98a384f6732e4b2beb90dc6083a6522c7f8ca3de732fa58f6"
+    }
+  },
+  "tooldir": "/home/liuzeheng/gpgpu-c-20261110/tools",
+  "expected_toolchain_revision": "v3.0.1",
+  "ramulator_deps": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-deps-v1/dependencies",
+  "build_path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+  "expected_toolchain_commit": "8c64cf921d3c6c456e80f00d24482d0aa2153a82",
+  "toolchain_provenance": "provided directory; version outputs and file hashes recorded, release archive identity not attested",
+  "commands": [
+    {
+      "label": "source_commit",
+      "argv": [
+        "git",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.714050+00:00",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/01_source_commit.log",
+      "finished_at": "2026-11-10T04:02:17.731712+00:00",
+      "elapsed_seconds": 0.017,
+      "log_sha256": "ff004e8e0b8781e070c3501985c760b7b850d38f9add0d9cac7990e731eb1559"
+    },
+    {
+      "label": "source_tree",
+      "argv": [
+        "git",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.732260+00:00",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/02_source_tree.log",
+      "finished_at": "2026-11-10T04:02:17.740983+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "ce19e7aa4e8750c51df2ec0e60baa53f7245fa972b694951e39401de4dd437af"
+    },
+    {
+      "label": "source_changes",
+      "argv": [
+        "git",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "diff",
+        "--exit-code",
+        "--ignore-submodules=untracked",
+        "HEAD",
+        "--"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.741305+00:00",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/03_source_changes.log",
+      "finished_at": "2026-11-10T04:02:17.774148+00:00",
+      "elapsed_seconds": 0.033,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "submodule_status",
+      "argv": [
+        "git",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "submodule",
+        "status",
+        "--recursive"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.774518+00:00",
+      "timeout_seconds": 120,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/04_submodule_status.log",
+      "finished_at": "2026-11-10T04:02:17.806842+00:00",
+      "elapsed_seconds": 0.032,
+      "log_sha256": "af67e68fc80d108266bf4cb40be421645391b26d2de0e9532ab3f6e21e6736ff"
+    },
+    {
+      "label": "glibc",
+      "argv": [
+        "getconf",
+        "GNU_LIBC_VERSION"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.807631+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/05_glibc.log",
+      "finished_at": "2026-11-10T04:02:17.809902+00:00",
+      "elapsed_seconds": 0.002,
+      "log_sha256": "e78219876cbb3a4271b8644a89d469ccdd95b82433f72784c61a9dd2f88b1192"
+    },
+    {
+      "label": "host_bash",
+      "argv": [
+        "/usr/bin/bash",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.811048+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/06_host_bash.log",
+      "finished_at": "2026-11-10T04:02:17.812721+00:00",
+      "elapsed_seconds": 0.001,
+      "log_sha256": "2863f49cc4f8660ba23be8f2a4d3468281ba704a263409e4e5179033c9a770f0"
+    },
+    {
+      "label": "host_git",
+      "argv": [
+        "/usr/bin/git",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.813053+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/07_host_git.log",
+      "finished_at": "2026-11-10T04:02:17.814691+00:00",
+      "elapsed_seconds": 0.001,
+      "log_sha256": "25f3602b5caaf92437be1e76b53698e8d73f14a6c71c2e91c8d5875f923ab29f"
+    },
+    {
+      "label": "host_gcc",
+      "argv": [
+        "/usr/bin/gcc",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.815030+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/08_host_gcc.log",
+      "finished_at": "2026-11-10T04:02:17.823346+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "8497f84b2b8334c413d9c6166bd39d009ba55d2ff60a8f23e66dfa5819c2b048"
+    },
+    {
+      "label": "host_gpp",
+      "argv": [
+        "/usr/bin/g++",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.823779+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/09_host_gpp.log",
+      "finished_at": "2026-11-10T04:02:17.832416+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8"
+    },
+    {
+      "label": "host_cmake",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/host-tools/cmake-3.31.10-linux-x86_64/bin/cmake",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.832891+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/10_host_cmake.log",
+      "finished_at": "2026-11-10T04:02:17.866842+00:00",
+      "elapsed_seconds": 0.034,
+      "log_sha256": "246a2f1394c1f89d947b498ec32196bac864589d0a4aa532c7990a6e011e9fa8"
+    },
+    {
+      "label": "host_make",
+      "argv": [
+        "/usr/bin/make",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.867410+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/11_host_make.log",
+      "finished_at": "2026-11-10T04:02:17.871664+00:00",
+      "elapsed_seconds": 0.004,
+      "log_sha256": "8ee498ee2fc27e8dcdf99191b454077df95e3840d841ec94321748b6d7f36819"
+    },
+    {
+      "label": "host_python3",
+      "argv": [
+        "/usr/bin/python3",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.872184+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/12_host_python3.log",
+      "finished_at": "2026-11-10T04:02:17.873873+00:00",
+      "elapsed_seconds": 0.001,
+      "log_sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366"
+    },
+    {
+      "label": "host_ar",
+      "argv": [
+        "/usr/bin/ar",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.874300+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/13_host_ar.log",
+      "finished_at": "2026-11-10T04:02:17.882503+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "7ac005d69683d0de20ba048eade500afe576c8e0e802f903f4e1a31428942755"
+    },
+    {
+      "label": "host_find",
+      "argv": [
+        "/usr/bin/find",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.883031+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/14_host_find.log",
+      "finished_at": "2026-11-10T04:02:17.884910+00:00",
+      "elapsed_seconds": 0.002,
+      "log_sha256": "d08f046698e57e162abb6d5172f3c9b90da69556b334f65104b7ba73d9fa51e9"
+    },
+    {
+      "label": "host_sed",
+      "argv": [
+        "/usr/bin/sed",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.885378+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/15_host_sed.log",
+      "finished_at": "2026-11-10T04:02:17.887135+00:00",
+      "elapsed_seconds": 0.001,
+      "log_sha256": "6796a7b30479c294a760bea9872efd9094f0f1298ddecd4607ce85e389bc90a7"
+    },
+    {
+      "label": "host_realpath",
+      "argv": [
+        "/usr/bin/realpath",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.887581+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/16_host_realpath.log",
+      "finished_at": "2026-11-10T04:02:17.889539+00:00",
+      "elapsed_seconds": 0.002,
+      "log_sha256": "8fb2b2e2d79b464efa7ab9f030f3c9a106ed4782342d8874a421d8490d7f54d1"
+    },
+    {
+      "label": "clang_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/clang",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:17.891113+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/17_clang_version.log",
+      "finished_at": "2026-11-10T04:02:18.119292+00:00",
+      "elapsed_seconds": 0.228,
+      "log_sha256": "2a208288454c9e1862dcc25183fe64542daabe82ad589c40b9c7f9e71fad415e"
+    },
+    {
+      "label": "clangpp_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/clang++",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:18.120488+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/18_clangpp_version.log",
+      "finished_at": "2026-11-10T04:02:18.154138+00:00",
+      "elapsed_seconds": 0.033,
+      "log_sha256": "2a208288454c9e1862dcc25183fe64542daabe82ad589c40b9c7f9e71fad415e"
+    },
+    {
+      "label": "llvm_objcopy_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/llvm-objcopy",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:18.155538+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/19_llvm_objcopy_version.log",
+      "finished_at": "2026-11-10T04:02:18.164347+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "735426035335350ae1afb64cab358324e66f6a319a3d48e86a716278b2ba7b91"
+    },
+    {
+      "label": "llvm_objdump_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/llvm-objdump",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:18.167028+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/20_llvm_objdump_version.log",
+      "finished_at": "2026-11-10T04:02:18.175471+00:00",
+      "elapsed_seconds": 0.008,
+      "log_sha256": "0d1f90249166be985ccd84cea8a951877cab0b268fde11c86ef96b55cb89fe7c"
+    },
+    {
+      "label": "riscv_gcc_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:18.184773+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/21_riscv_gcc_version.log",
+      "finished_at": "2026-11-10T04:02:18.189558+00:00",
+      "elapsed_seconds": 0.004,
+      "log_sha256": "1465dfea136403db376c980056ae4cbc568db1682230d28c19568814a0547451"
+    },
+    {
+      "label": "riscv_gcc_ar_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc-ar",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:18.190692+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/22_riscv_gcc_ar_version.log",
+      "finished_at": "2026-11-10T04:02:18.194789+00:00",
+      "elapsed_seconds": 0.004,
+      "log_sha256": "52d092533f1fcc0b16139119a06249c16adfffd7379a4f76088179d234029255"
+    },
+    {
+      "label": "riscv_objdump_version",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-objdump",
+        "--version"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/vortex",
+      "started_at": "2026-11-10T04:02:18.205451+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/23_riscv_objdump_version.log",
+      "finished_at": "2026-11-10T04:02:18.207687+00:00",
+      "elapsed_seconds": 0.002,
+      "log_sha256": "2823d4cf83a26759d22ee7494b62ca5cdce8551fb38ae6b383501bdf322264f1"
+    },
+    {
+      "label": "host_cxx20_compile",
+      "argv": [
+        "/usr/bin/g++",
+        "-std=c++20",
+        "probe.cpp",
+        "-o",
+        "host_probe"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/probes",
+      "started_at": "2026-11-10T04:02:18.482854+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/24_host_cxx20_compile.log",
+      "finished_at": "2026-11-10T04:02:19.553000+00:00",
+      "elapsed_seconds": 1.069,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "host_cxx20_run",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/probes/host_probe"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/probes",
+      "started_at": "2026-11-10T04:02:19.553953+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/25_host_cxx20_run.log",
+      "finished_at": "2026-11-10T04:02:19.556048+00:00",
+      "elapsed_seconds": 0.002,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "riscv_gcc_compile",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc",
+        "-march=rv64imafd",
+        "-mabi=lp64d",
+        "-c",
+        "probe.c",
+        "-o",
+        "gcc_probe.o"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/probes",
+      "started_at": "2026-11-10T04:02:19.556713+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/26_riscv_gcc_compile.log",
+      "finished_at": "2026-11-10T04:02:19.624869+00:00",
+      "elapsed_seconds": 0.068,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "vortex_clang_compile",
+      "argv": [
+        "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/clang",
+        "--target=riscv64-unknown-elf",
+        "-march=rv64imafd",
+        "-mabi=lp64d",
+        "-Xclang",
+        "-target-feature",
+        "-Xclang",
+        "+xvortex",
+        "-mllvm",
+        "-disable-loop-idiom-all",
+        "-c",
+        "probe.c",
+        "-o",
+        "clang_probe.o"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/probes",
+      "started_at": "2026-11-10T04:02:19.625666+00:00",
+      "timeout_seconds": 30,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/27_vortex_clang_compile.log",
+      "finished_at": "2026-11-10T04:02:19.749802+00:00",
+      "elapsed_seconds": 0.122,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "configure",
+      "argv": [
+        "bash",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex/configure",
+        "--xlen=64",
+        "--tooldir=/home/liuzeheng/gpgpu-c-20261110/tools"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:02:19.750825+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/28_configure.log",
+      "finished_at": "2026-11-10T04:02:21.332609+00:00",
+      "elapsed_seconds": 1.581,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "resolve_backend_configuration",
+      "argv": [
+        "python3",
+        "-B",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/ci/gen_config.py",
+        "--config=/home/liuzeheng/gpgpu-c-20261110/vortex/VX_config.toml",
+        "--cflags=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4 -DVX_CFG_XLEN=64",
+        "--format=cflags"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:02:21.333556+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/29_resolve_backend_configuration.log",
+      "finished_at": "2026-11-10T04:02:21.403528+00:00",
+      "elapsed_seconds": 0.068,
+      "log_sha256": "05083a74896dc022f3ed74d13439274e0b22328cf28346c4163bd70a36411755"
+    },
+    {
+      "label": "ramulator_configure_offline",
+      "argv": [
+        "cmake",
+        "-S",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party/ramulator",
+        "-B",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party/ramulator/build",
+        "-DFETCHCONTENT_FULLY_DISCONNECTED=ON",
+        "-DFETCHCONTENT_UPDATES_DISCONNECTED=ON"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:02:21.643472+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/30_ramulator_configure_offline.log",
+      "finished_at": "2026-11-10T04:02:30.614272+00:00",
+      "elapsed_seconds": 8.97,
+      "log_sha256": "8fbd318c4faee4c549b8540c48c59bcff5ef68d2e07fbe08f5a65c15c46a73a0"
+    },
+    {
+      "label": "third_party",
+      "argv": [
+        "make",
+        "-j2",
+        "CONFIGS=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+        "XLEN=64",
+        "THREADS=2",
+        "THIRD_PARTY_DIR=/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "softfloat",
+        "ramulator"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:02:30.615236+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/31_third_party.log",
+      "finished_at": "2026-11-10T04:05:00.929171+00:00",
+      "elapsed_seconds": 162.087,
+      "log_sha256": "fae8142e345d22b146fd6813c2928c8c9537677b502c4afd917809618dd68a63"
+    },
+    {
+      "label": "kernel_libraries",
+      "argv": [
+        "make",
+        "-j2",
+        "CONFIGS=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+        "XLEN=64",
+        "THREADS=2",
+        "THIRD_PARTY_DIR=/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/kernel"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:05:00.931203+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/32_kernel_libraries.log",
+      "finished_at": "2026-11-10T04:05:01.315470+00:00",
+      "elapsed_seconds": 0.382,
+      "log_sha256": "ebb5667ee5d56bd166272f9cd56b1b1fc21706df78c7dccb2059407ec66c46c4"
+    },
+    {
+      "label": "runtime_stub",
+      "argv": [
+        "make",
+        "-j2",
+        "CONFIGS=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+        "XLEN=64",
+        "THREADS=2",
+        "THIRD_PARTY_DIR=/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/runtime/stub"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:05:01.316709+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/33_runtime_stub.log",
+      "finished_at": "2026-11-10T04:05:10.708341+00:00",
+      "elapsed_seconds": 9.39,
+      "log_sha256": "011803910956ab67eba5ea978722c9198ab91ac40615e42a7ffc4ad21c15f95d"
+    },
+    {
+      "label": "demo_build",
+      "argv": [
+        "make",
+        "-j2",
+        "CONFIGS=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+        "XLEN=64",
+        "THREADS=2",
+        "THIRD_PARTY_DIR=/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:05:10.709467+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/34_demo_build.log",
+      "finished_at": "2026-11-10T04:05:12.300954+00:00",
+      "elapsed_seconds": 1.59,
+      "log_sha256": "9d4abbfbffab07584b132a406d45d462a1d41c65efea384b91939dc716a83f06"
+    },
+    {
+      "label": "runtime_build",
+      "argv": [
+        "make",
+        "-j2",
+        "CONFIGS=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+        "XLEN=64",
+        "THREADS=2",
+        "THIRD_PARTY_DIR=/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo",
+        "runtime-simx"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:05:12.302033+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/35_runtime_build.log",
+      "finished_at": "2026-11-10T04:05:46.033103+00:00",
+      "elapsed_seconds": 36.077,
+      "log_sha256": "570289e93cf129cf0e40d7c21772f4534ee497e9aa4f24dd7c34cab1cfd20ac0"
+    },
+    {
+      "label": "demo_run",
+      "argv": [
+        "make",
+        "-j2",
+        "CONFIGS=-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+        "XLEN=64",
+        "THREADS=2",
+        "THIRD_PARTY_DIR=/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/third_party",
+        "-C",
+        "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo",
+        "run-simx",
+        "OPTS=-n1"
+      ],
+      "cwd": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1",
+      "started_at": "2026-11-10T04:05:46.034177+00:00",
+      "timeout_seconds": 1800,
+      "returncode": 0,
+      "timed_out": false,
+      "log": "logs/36_demo_run.log",
+      "finished_at": "2026-11-10T04:05:46.689403+00:00",
+      "elapsed_seconds": 0.653,
+      "log_sha256": "31aa4ed33aeaa7334b49e0f23ff986ddcf9c58e8f35bacccd373ca1ea296a7a1"
+    }
+  ],
+  "preflight": [
+    {
+      "name": "config_native_smoke.json",
+      "ok": true,
+      "detail": "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/configs/native_smoke.json"
+    },
+    {
+      "name": "config_target_lock.json",
+      "ok": true,
+      "detail": "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/configs/target_lock.json"
+    },
+    {
+      "name": "config_target_caps.json",
+      "ok": true,
+      "detail": "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/configs/target_caps.json"
+    },
+    {
+      "name": "fixed_target",
+      "ok": true,
+      "detail": "expected vortex-v3-rv64-1c4w4t-smoke-draft, RV64, fixed profile defines, timing simx"
+    },
+    {
+      "name": "locked_source",
+      "ok": true,
+      "detail": "lock must refer to 7fe19369587c087f902c3e2bc2add612aa910a95"
+    },
+    {
+      "name": "config_lock_hash",
+      "ok": true,
+      "detail": "native_smoke.json must match target_lock.json"
+    },
+    {
+      "name": "caps_lock_hash",
+      "ok": true,
+      "detail": "target_caps.json must match target_lock.json"
+    },
+    {
+      "name": "target_native_smoke.json",
+      "ok": true,
+      "detail": "all config artifacts must describe the same RV64 smoke candidate"
+    },
+    {
+      "name": "target_target_lock.json",
+      "ok": true,
+      "detail": "all config artifacts must describe the same RV64 smoke candidate"
+    },
+    {
+      "name": "target_target_caps.json",
+      "ok": true,
+      "detail": "all config artifacts must describe the same RV64 smoke candidate"
+    },
+    {
+      "name": "source_config_hash",
+      "ok": true,
+      "detail": "source VX_config.toml must match captured candidate"
+    },
+    {
+      "name": "source_manifest",
+      "ok": true,
+      "detail": "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/results/ab-d1-source-20261107-v2/source_manifest.json"
+    },
+    {
+      "name": "source_manifest_hash",
+      "ok": true,
+      "detail": "source manifest must match target lock"
+    },
+    {
+      "name": "captured_source_files",
+      "ok": true,
+      "detail": "all captured source file hashes must match; mismatch count=0"
+    },
+    {
+      "name": "source_directory",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/vortex"
+    },
+    {
+      "name": "source_commit",
+      "ok": true,
+      "detail": "see logs/01_source_commit.log"
+    },
+    {
+      "name": "source_tree",
+      "ok": true,
+      "detail": "see logs/02_source_tree.log"
+    },
+    {
+      "name": "source_changes",
+      "ok": true,
+      "detail": "see logs/03_source_changes.log"
+    },
+    {
+      "name": "submodule_status",
+      "ok": true,
+      "detail": "see logs/04_submodule_status.log"
+    },
+    {
+      "name": "pinned_commit",
+      "ok": true,
+      "detail": "expected 7fe19369587c087f902c3e2bc2add612aa910a95"
+    },
+    {
+      "name": "toolchain_revision",
+      "ok": true,
+      "detail": "required prebuilt revision v3.0.1"
+    },
+    {
+      "name": "platform",
+      "ok": true,
+      "detail": "Linux x86_64; requires Linux x86_64"
+    },
+    {
+      "name": "source_path",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/vortex"
+    },
+    {
+      "name": "tooldir_path",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools"
+    },
+    {
+      "name": "run_path",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1"
+    },
+    {
+      "name": "build_path",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1"
+    },
+    {
+      "name": "fresh_build_directory",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1"
+    },
+    {
+      "name": "glibc",
+      "ok": true,
+      "detail": "glibc 2.39; pinned ubuntu/focal bundle requires glibc >= 2.35"
+    },
+    {
+      "name": "host_bash",
+      "ok": true,
+      "detail": "/usr/bin/bash"
+    },
+    {
+      "name": "executable_bash",
+      "ok": true,
+      "detail": "see logs/06_host_bash.log"
+    },
+    {
+      "name": "host_git",
+      "ok": true,
+      "detail": "/usr/bin/git"
+    },
+    {
+      "name": "executable_git",
+      "ok": true,
+      "detail": "see logs/07_host_git.log"
+    },
+    {
+      "name": "host_gcc",
+      "ok": true,
+      "detail": "/usr/bin/gcc"
+    },
+    {
+      "name": "executable_gcc",
+      "ok": true,
+      "detail": "see logs/08_host_gcc.log"
+    },
+    {
+      "name": "host_g++",
+      "ok": true,
+      "detail": "/usr/bin/g++"
+    },
+    {
+      "name": "executable_g++",
+      "ok": true,
+      "detail": "see logs/09_host_gpp.log"
+    },
+    {
+      "name": "host_cmake",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/host-tools/cmake-3.31.10-linux-x86_64/bin/cmake"
+    },
+    {
+      "name": "executable_cmake",
+      "ok": true,
+      "detail": "see logs/10_host_cmake.log"
+    },
+    {
+      "name": "host_make",
+      "ok": true,
+      "detail": "/usr/bin/make"
+    },
+    {
+      "name": "executable_make",
+      "ok": true,
+      "detail": "see logs/11_host_make.log"
+    },
+    {
+      "name": "host_python3",
+      "ok": true,
+      "detail": "/usr/bin/python3"
+    },
+    {
+      "name": "executable_python3",
+      "ok": true,
+      "detail": "see logs/12_host_python3.log"
+    },
+    {
+      "name": "host_ar",
+      "ok": true,
+      "detail": "/usr/bin/ar"
+    },
+    {
+      "name": "executable_ar",
+      "ok": true,
+      "detail": "see logs/13_host_ar.log"
+    },
+    {
+      "name": "host_find",
+      "ok": true,
+      "detail": "/usr/bin/find"
+    },
+    {
+      "name": "executable_find",
+      "ok": true,
+      "detail": "see logs/14_host_find.log"
+    },
+    {
+      "name": "host_sed",
+      "ok": true,
+      "detail": "/usr/bin/sed"
+    },
+    {
+      "name": "executable_sed",
+      "ok": true,
+      "detail": "see logs/15_host_sed.log"
+    },
+    {
+      "name": "host_realpath",
+      "ok": true,
+      "detail": "/usr/bin/realpath"
+    },
+    {
+      "name": "executable_realpath",
+      "ok": true,
+      "detail": "see logs/16_host_realpath.log"
+    },
+    {
+      "name": "clang",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/clang"
+    },
+    {
+      "name": "clang_runnable",
+      "ok": true,
+      "detail": "see logs/17_clang_version.log"
+    },
+    {
+      "name": "clangpp",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/clang++"
+    },
+    {
+      "name": "clangpp_runnable",
+      "ok": true,
+      "detail": "see logs/18_clangpp_version.log"
+    },
+    {
+      "name": "llvm_objcopy",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/llvm-objcopy"
+    },
+    {
+      "name": "llvm_objcopy_runnable",
+      "ok": true,
+      "detail": "see logs/19_llvm_objcopy_version.log"
+    },
+    {
+      "name": "llvm_objdump",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin/llvm-objdump"
+    },
+    {
+      "name": "llvm_objdump_runnable",
+      "ok": true,
+      "detail": "see logs/20_llvm_objdump_version.log"
+    },
+    {
+      "name": "riscv_gcc",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc"
+    },
+    {
+      "name": "riscv_gcc_runnable",
+      "ok": true,
+      "detail": "see logs/21_riscv_gcc_version.log"
+    },
+    {
+      "name": "riscv_gcc_ar",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc-ar"
+    },
+    {
+      "name": "riscv_gcc_ar_runnable",
+      "ok": true,
+      "detail": "see logs/22_riscv_gcc_ar_version.log"
+    },
+    {
+      "name": "riscv_objdump",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/riscv64-gnu-toolchain/bin/riscv64-unknown-elf-objdump"
+    },
+    {
+      "name": "riscv_objdump_runnable",
+      "ok": true,
+      "detail": "see logs/23_riscv_objdump_version.log"
+    },
+    {
+      "name": "toolchain_file",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/libc64/lib/libc.a"
+    },
+    {
+      "name": "toolchain_file",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/libc64/lib/libm.a"
+    },
+    {
+      "name": "toolchain_file",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/libc64/include/stdio.h"
+    },
+    {
+      "name": "toolchain_file",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/tools/libcrt64/lib/baremetal/libclang_rt.builtins-riscv64.a"
+    },
+    {
+      "name": "riscv_sysroot",
+      "ok": true,
+      "detail": "RV64 GNU sysroot is required"
+    },
+    {
+      "name": "submodule_softfloat",
+      "ok": true,
+      "detail": " b51ef8f3201669b2288104c28546fc72532a1ea4 third_party/softfloat (b51ef8f)"
+    },
+    {
+      "name": "submodule_ramulator",
+      "ok": true,
+      "detail": " e62c84a6f0e06566ba6e182d308434b4532068a5 third_party/ramulator (e62c84a)"
+    },
+    {
+      "name": "ramulator_deps_outside_source",
+      "ok": true,
+      "detail": "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-deps-v1/dependencies; dependencies must stay outside the fixed source tree"
+    },
+    {
+      "name": "ramulator_dependencies",
+      "ok": true,
+      "detail": "all pinned dependency file hashes match"
+    },
+    {
+      "name": "host_cxx20_compile",
+      "ok": true,
+      "detail": "see logs/24_host_cxx20_compile.log"
+    },
+    {
+      "name": "host_cxx20_run",
+      "ok": true,
+      "detail": "see logs/25_host_cxx20_run.log"
+    },
+    {
+      "name": "riscv_gcc_compile",
+      "ok": true,
+      "detail": "see logs/26_riscv_gcc_compile.log"
+    },
+    {
+      "name": "vortex_clang_compile",
+      "ok": true,
+      "detail": "see logs/27_vortex_clang_compile.log"
+    }
+  ],
+  "blockers": [],
+  "software_versions": {
+    "runner_python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "glibc": "glibc 2.39",
+    "bash": "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)\nCopyright (C) 2022 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n\nThis is free software; you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.",
+    "git": "git version 2.43.0",
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "g++": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "cmake": "cmake version 3.31.10\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "make": "GNU Make 4.3\nBuilt for x86_64-pc-linux-gnu\nCopyright (C) 1988-2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.",
+    "python3": "Python 3.12.3",
+    "ar": "GNU ar (GNU Binutils for Ubuntu) 2.42\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.",
+    "find": "find (GNU findutils) 4.9.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Eric B. Decker, James Youngman, and Kevin Dalley.\nFeatures enabled: D_TYPE O_NOFOLLOW(enabled) LEAF_OPTIMISATION FTS(FTS_CWDFD) CBO(level=2)",
+    "sed": "/usr/bin/sed (GNU sed) 4.9\nPackaged by Debian\nCopyright (C) 2022 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Jay Fenlason, Tom Lord, Ken Pizzini,\nPaolo Bonzini, Jim Meyering, and Assaf Gordon.\n\nThis sed program was built with SELinux support.\nSELinux is disabled on this system.\n\nGNU sed home page: <https://www.gnu.org/software/sed/>.\nGeneral help using GNU software: <https://www.gnu.org/gethelp/>.\nE-mail bug reports to: <bug-sed@gnu.org>.",
+    "realpath": "realpath (GNU coreutils) 9.4\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Pádraig Brady.",
+    "clang": "clang version 20.1.8 (https://github.com/vortexgpgpu/llvm.git 1e6610b8e5eda3865da9935c9b55c33a99a623eb)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin",
+    "clangpp": "clang version 20.1.8 (https://github.com/vortexgpgpu/llvm.git 1e6610b8e5eda3865da9935c9b55c33a99a623eb)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /home/liuzeheng/gpgpu-c-20261110/tools/llvm-vortex/bin",
+    "llvm_objcopy": "llvm-objcopy, compatible with GNU objcopy\nLLVM (http://llvm.org/):\n  LLVM version 20.1.8\n  Optimized build.",
+    "llvm_objdump": "LLVM (http://llvm.org/):\n  LLVM version 20.1.8\n  Optimized build.\n\n\n  Registered Targets:\n    riscv32 - 32-bit RISC-V\n    riscv64 - 64-bit RISC-V\n    x86     - 32-bit X86: Pentium-Pro and above\n    x86-64  - 64-bit X86: EM64T and AMD64",
+    "riscv_gcc": "riscv64-unknown-elf-gcc (g2ee5e430018-dirty) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "riscv_gcc_ar": "GNU ar (GNU Binutils) 2.40.0.20230214\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.",
+    "riscv_objdump": "GNU objdump (GNU Binutils) 2.40.0.20230214\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty."
+  },
+  "toolchain_file_sha256": {
+    "llvm-vortex/bin/clang": "92f2fbf93bb013f414871b9dde08174f42832b169389f59cd373451d373cf3cf",
+    "llvm-vortex/bin/clang++": "92f2fbf93bb013f414871b9dde08174f42832b169389f59cd373451d373cf3cf",
+    "llvm-vortex/bin/llvm-objcopy": "31fab24ae51dc48a17e6a899001fc3238e2736831f0f87c6b833411df36e73ac",
+    "llvm-vortex/bin/llvm-objdump": "b7fd1a8c8d365ffb4fa28316e9cdd9d635b0a5ac1934a04f4ea0da80f03de449",
+    "riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc": "1d45ae00898529ef4781942ffa2ac403abc2fe2dc559b4eb01014d170d52e408",
+    "riscv64-gnu-toolchain/bin/riscv64-unknown-elf-gcc-ar": "afc1c8f4f9255aacf3b644d227f1a76b5712f1ad34f785fe33957f22a59f9f54",
+    "riscv64-gnu-toolchain/bin/riscv64-unknown-elf-objdump": "9287eaec3b3dc0393f793e62834c897b6d08f2b9a032260397dc0c8f42dccf5e",
+    "libc64/lib/libc.a": "7eb0e3b5bdc7397b6fa4d93637b29379d01107111148e8f0372a5c999e359a94",
+    "libc64/lib/libm.a": "f0a17a43c74d2fe5474fa2fd29c8f14799e777d7d75a2cc4d11c20a6e7b161c5",
+    "libc64/include/stdio.h": "36dda63d91161ecdd42755393bc7ff827dbfe82e512b630d2f2386c1acb8dbfa",
+    "libcrt64/lib/baremetal/libclang_rt.builtins-riscv64.a": "3879b774af20a252d708fb4486eb8ef7acd567ddc900d54ef866858cad436f16"
+  },
+  "config_file_sha256": {
+    "native_smoke.json": "046ca59d289390bc1d0424fc35df0d552cc7a2f92c6c649d8c318d284c433b87",
+    "target_lock.json": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+    "target_caps.json": "b48d0e940a27ff53bf0708320067c31b7560c7fc489b9ad52319b1a0adf126ec"
+  },
+  "configs": "-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+  "ramulator_dependencies": {
+    "bundle_sha256": "bd785f1b71fcd54162cdb6041c184fe152cfd599110cf0c58cc18f26c42de5cd",
+    "dependencies": {
+      "argparse": {
+        "commit": "997da9255618311d1fcb0135ce86022729d1f1cb",
+        "file_count": 62
+      },
+      "spdlog": {
+        "commit": "ad0e89cbfb4d0c1ce4d097e134eb7be67baebb36",
+        "file_count": 164
+      },
+      "yaml-cpp": {
+        "commit": "0579ae3d976091d7d664aa9d2527e0d0cff25763",
+        "file_count": 399
+      }
+    }
+  },
+  "effective_backend_configuration": {
+    "raw_configs": "-DVX_CFG_NUM_CLUSTERS=1 -DVX_CFG_NUM_CORES=1 -DVX_CFG_NUM_THREADS=4 -DVX_CFG_NUM_WARPS=4",
+    "resolved_cflags": "resolved_backend.cflags",
+    "sha256": "05083a74896dc022f3ed74d13439274e0b22328cf28346c4163bd70a36411755",
+    "source": "common hardware defines; SimX timing backend",
+    "simulation_controls": []
+  },
+  "third_party_sources_sha256": "a1429699a0ffcd6ebfa7f457226afcb81b558c2935f65605788785568f06961b",
+  "demo_exit_code": 0,
+  "demo_marker_found": true,
+  "last_step": "demo_run",
+  "build_artifacts": {
+    "config.mk": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/config.mk",
+      "sha256": "c3d433e7dd6c7471b616f0ade8ebb61ef95331ee97b303be975b09dfa99e4dac",
+      "bytes": 1980,
+      "review_copy": "artifacts/config.mk"
+    },
+    "sw/VX_config.h": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/VX_config.h",
+      "sha256": "c6590b5d2395454140cd19cd51d23f1603c9f7bb951c992fd608c09be185c2ba",
+      "bytes": 30351,
+      "review_copy": "artifacts/sw/VX_config.h"
+    },
+    "hw/VX_config.vh": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/hw/VX_config.vh",
+      "sha256": "02b2be2769951f6f2e3d9ff2b24b7a5859817b7924854881b21f1848b4f8993e",
+      "bytes": 30085,
+      "review_copy": "artifacts/hw/VX_config.vh"
+    },
+    "sw/runtime/simx_config.stamp": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/runtime/simx_config.stamp",
+      "sha256": "be7a3c278eec61a4811efd7d4302107825dbe661025c88cdd2c5fc6a146332d6",
+      "bytes": 1466,
+      "review_copy": "artifacts/sw/runtime/simx_config.stamp"
+    },
+    "sw/runtime/simx_rt_config.stamp": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/runtime/simx_rt_config.stamp",
+      "sha256": "032f130ddbddc44d87a4b2cbaf78228c185db7702fcc87aee9e8faa8386612dc",
+      "bytes": 6962,
+      "review_copy": "artifacts/sw/runtime/simx_rt_config.stamp"
+    },
+    "sw/runtime/libvortex.so": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/runtime/libvortex.so",
+      "sha256": "f78d1c225c502be7c480862134355a5e44dac6d259476e4b5039880ff507889d",
+      "bytes": 309800,
+      "review_copy": "artifacts/sw/runtime/libvortex.so"
+    },
+    "sw/runtime/libsimx.so": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/runtime/libsimx.so",
+      "sha256": "2ae2486c11253487173e689d43e73991b77fed258273f7f521edff506372af1e",
+      "bytes": 1931760,
+      "review_copy": "artifacts/sw/runtime/libsimx.so"
+    },
+    "sw/runtime/libvortex-simx.so": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/sw/runtime/libvortex-simx.so",
+      "sha256": "c2aeaf227c7c78a704c2903345b97b9e7c2fdd7114bfdfac4f611d3372b80a10",
+      "bytes": 111856,
+      "review_copy": "artifacts/sw/runtime/libvortex-simx.so"
+    },
+    "tests/regression/demo/demo": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo/demo",
+      "sha256": "10eea5d79093761f2e4432ceef8e89758878459be9de6da3d0394eed1a0936d2",
+      "bytes": 27112,
+      "review_copy": "artifacts/tests/regression/demo/demo"
+    },
+    "tests/regression/demo/kernel.vxbin": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo/kernel.vxbin",
+      "sha256": "fe1e13ecb9b98be36ccf628d5e245283e7223ffdd703a0bdd043723195af6553",
+      "bytes": 4336,
+      "review_copy": "artifacts/tests/regression/demo/kernel.vxbin"
+    },
+    "tests/regression/demo/kernel.dump": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo/kernel.dump",
+      "sha256": "273ca27855c76abc85ae0e68d3f6b51a0d660a5121eebbb401bdfc9e8dfe6022",
+      "bytes": 13825,
+      "review_copy": "artifacts/tests/regression/demo/kernel.dump"
+    },
+    "tests/regression/demo/kernel.elf": {
+      "path": "/home/liuzeheng/gpgpu-c-20261110/build-native-simx-v1/tests/regression/demo/kernel.elf",
+      "sha256": "b91c80f4b9354c2b12403735322fb5eae15865b281f28a2352794b1f4e23beca",
+      "bytes": 5816,
+      "review_copy": "artifacts/tests/regression/demo/kernel.elf"
+    }
+  },
+  "finished_at": "2026-11-10T04:05:46.701979+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "ptx-vx-frontend-artifacts-v1",
+  "compiler_id": "ptx-vx-frontend-v1.2",
+  "profile": "ptx-vx-p0-v0.2-draft",
+  "abi_version": "ptx-vx-args-v1",
+  "entry": "affine_u32",
+  "compiler_sha256": "30fa692c0c2117858e720ab015c457325bfa095b6a25add2ef3c397bbbef5045",
+  "params": [
+    {
+      "name": "x",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 0
+    },
+    {
+      "name": "y",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 8
+    },
+    {
+      "name": "z",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 16
+    },
+    {
+      "name": "n",
+      "type": "u32",
+      "kind": "scalar",
+      "space": null,
+      "size": 4,
+      "align": 4,
+      "offset": 24
+    },
+    {
+      "name": "alpha",
+      "type": "u32",
+      "kind": "scalar",
+      "space": null,
+      "size": 4,
+      "align": 4,
+      "offset": 28
+    }
+  ],
+  "params_size": 32,
+  "params_align": 8,
+  "status": "FRONTEND_ONLY",
+  "loadable": false,
+  "image_file": null,
+  "target_lock_hash": "9bf1ecd89852e54dd402e669becbfd0910752ffd16ad9e7a9f9b20e77b6c4649",
+  "backend_execution": "NOT_RUN",
+  "independent_acceptance": "NOT_RUN",
+  "files": {
+    "source.ptx": "51065e89d9aba0bd58c01e250186835acf1f9f99e0ff23e85b3201d58c25b0c3",
+    "ir.json": "10ffac73fe88b44bb4fb967abfcaf11959da78ece76bca8f667058c9ce37af1b",
+    "kernel_body.hpp": "a056efb0cd3861baae2df35fc190e9f1df787e97591d0336b47cf650c2489800",
+    "source_map.json": "b5d11abcf5de22104461429f2bf8cb68f75ee1dbd1863d6e33091b0598c4f472",
+    "target_lock.json": "9bf1ecd89852e54dd402e669becbfd0910752ffd16ad9e7a9f9b20e77b6c4649",
+    "profile.json": "c9728b0faa726d9b59c215de9febd9efeb2072d09c58d819a3fc5dcd1d432041",
+    "abi.json": "0c7aee793286a2db2bd75f6522a89a2cab686d6b083bce214e7d9fa710959404"
+  }
+}

@@ -175,7 +175,9 @@ class Context:
     @serialized
     def query_caps(self):
         return dict(self.caps, backend=self.backend, device_state=self.state,
-                    generation=self.registry.generation, safe_abort=False)
+                    generation=self.registry.generation, safe_abort=False,
+                    max_modules=1,
+                    first_error=dict(self.first_error) if self.first_error else None)
 
     @serialized
     def alloc(self, size, alignment=4):
@@ -233,6 +235,10 @@ class Context:
     @serialized
     def load(self, directory):
         self.ready("load")
+        # Fixed images can overlap in device address space. Until relocation or
+        # concurrent module ownership is supported, reject before native loading.
+        if self.modules:
+            self.fail("E_BUSY", "unload the current module before loading another", "load")
         manifest, image = validate(directory, self.lock_bytes)
         if manifest["launch_limits"]["max_block_x"] > self.caps["threads"] * self.caps["warps"]:
             self.fail("E_TARGET_MISMATCH", "module launch limit exceeds actual device", "load")

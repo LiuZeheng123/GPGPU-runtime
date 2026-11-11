@@ -1,0 +1,107 @@
+{
+  "schema_version": "ptx-vx-module-v1-draft",
+  "compiler_id": "ptx-vx-vortex2-wrapper-v1",
+  "build_id": "a28c78db980dcb7c94a3",
+  "status": "BUILT",
+  "loadable": true,
+  "image_file": "kernel.vxbin",
+  "image_sha256": "7ee8195d2a47c30ccf6e823c835a05bcb3a6b17e856956919bfb4d09f21bfce7",
+  "image_format": "vortex-v3-vxbin-symtab",
+  "entry": "vadd_u32",
+  "native_entry": "main",
+  "source_sha256": "d5cb5a0a6d3745fede0c4375d5fb11e77babec02baa6b57a03ed914228aa7bc1",
+  "source_ptx_version": "7.0",
+  "source_target": "sm_70",
+  "source_address_bits": 64,
+  "profile": "ptx-vx-p0-v0.2-draft",
+  "abi_version": "ptx-vx-args-v1",
+  "params": [
+    {
+      "name": "x",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 0
+    },
+    {
+      "name": "y",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 8
+    },
+    {
+      "name": "z",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 16
+    },
+    {
+      "name": "n",
+      "type": "u32",
+      "kind": "scalar",
+      "space": null,
+      "size": 4,
+      "align": 4,
+      "offset": 24
+    }
+  ],
+  "params_size": 32,
+  "params_align": 8,
+  "target_lock_hash": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+  "target_id": "vortex-v3-rv64-1c4w4t-smoke-draft",
+  "required_features": [
+    "rv64",
+    "little-endian",
+    "logical-1d-threads",
+    "predicated-memory"
+  ],
+  "logical_launch_model": "ptx-1d-v1",
+  "launch_limits": {
+    "max_block_x": 16,
+    "max_grid_x": 2147483647,
+    "max_total_threads": 4294967296,
+    "provenance": "pinned native resident-thread limit; PTX execution NOT_RUN"
+  },
+  "static_shared_bytes": 0,
+  "dynamic_shared_policy": "forbidden",
+  "numeric_mode": "u32 modulo 2^32",
+  "memory_assumptions": [
+    "live global buffers",
+    "u32 access alignment 4",
+    "all active accesses in declared allocation",
+    "no data races"
+  ],
+  "known_limits": [
+    "not a memory sandbox",
+    "single entry",
+    "no shared memory or barriers"
+  ],
+  "backend_execution": "NOT_RUN",
+  "independent_acceptance": "NOT_RUN",
+  "files": {
+    "source.ptx": "d5cb5a0a6d3745fede0c4375d5fb11e77babec02baa6b57a03ed914228aa7bc1",
+    "abi.json": "0c7aee793286a2db2bd75f6522a89a2cab686d6b083bce214e7d9fa710959404",
+    "frontend_manifest.json": "b9b2bff02b9c65e643cdb6c93a67b0d1a698421630f1dc4ca91724b3d7e3304d",
+    "source_map.json": "a3d25e047ad6465ca445eb8ea3b49b32898ea721d42e08c69c8bc4340a523721",
+    "ir.json": "60a89114c7a1668a0c8726306bb962e986eed8395954db51d59d08745d5e46e9",
+    "profile.json": "c9728b0faa726d9b59c215de9febd9efeb2072d09c58d819a3fc5dcd1d432041",
+    "kernel_body.hpp": "ed9907db690be18247a75c33a08faba0b9c5db41d624c0ea963d0bbb80bf5ff0",
+    "target_lock.json": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+    "Makefile": "aef0009a0b6364339615061c3d9bacaf32e0c7184711d9a00ab1ba68caaa3c41",
+    "hardware.json": "046ca59d289390bc1d0424fc35df0d552cc7a2f92c6c649d8c318d284c433b87",
+    "kernel.cpp": "691881b7d67f4a65c3f29ae99c28b37aef9e18edbb2a0ba68f9d7292611fc17f",
+    "kernel.vxbin": "7ee8195d2a47c30ccf6e823c835a05bcb3a6b17e856956919bfb4d09f21bfce7",
+    "kernel.elf": "45ca46a7513f0a0b3e17c2c2666f2869afbf6e7c659616d7502436b96eab3615",
+    "program.disasm": "addb4de930f944232b16b2da3d9b2eea3418201dd6234fd5d64877aaf732d930",
+    "compile.log": "b61356a854946a2cf877669a171c48f933e05387c73847624a144dae9d53ea77",
+    "build.json": "6ccd4812107f845355ea71bae49e5e23ccb4250828f0a5a45c4adeb2cd52b402"
+  }
+}

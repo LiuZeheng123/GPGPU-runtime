@@ -153,6 +153,28 @@ class RuntimeTests(unittest.TestCase):
         self.ctx.close()
         self.reject('E_UNAVAILABLE',lambda:self.ctx.alloc(4))
 
+    def test_second_module_is_rejected_before_io_or_native_load(self):
+        before=list(self.ctx.lib.calls)
+        self.reject('E_BUSY',lambda:self.ctx.load('/does-not-exist/module'))
+        self.assertEqual(self.ctx.lib.calls,before)
+        self.assertEqual(self.ctx.query_caps()['max_modules'],1)
+        self.ctx.close()
+
+    def test_first_fault_is_queryable_and_cannot_be_mutated_by_caller(self):
+        event=self.launch()
+        self.ctx.lib.wait_status=7
+        self.reject('E_TIMEOUT',lambda:self.ctx.wait(event,0))
+        caps=self.ctx.query_caps()
+        self.assertEqual(caps['first_error'],dict(native_status=7,phase='wait'))
+        caps['first_error']['native_status']=999
+        self.ctx.lib.finish_status=4
+        self.reject('E_DEVICE',lambda:self.ctx.recover(1))
+        self.assertEqual(self.ctx.query_caps()['first_error']['native_status'],7)
+        self.assertEqual(self.ctx.query_caps()['device_state'],'NEEDS_RECOVERY')
+        self.ctx.lib.finish_status=0
+        self.ctx.recover(1)
+        self.ctx.close()
+
 
 @unittest.skipUnless(os.environ.get('VORTEX_SOURCE') and shutil.which('g++'), 'pinned native headers/compiler required')
 class NativeABITests(unittest.TestCase):

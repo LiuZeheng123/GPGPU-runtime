@@ -1,0 +1,3507 @@
+{
+  "schema_version": "ptx-suite-simx-v1",
+  "run_id": "c-vadd-smoke-v2",
+  "status": "PASS",
+  "kernel": "vadd",
+  "backend": "simx",
+  "scope": "author functional PTX execution and host wall-clock measurements",
+  "independent_acceptance": "NOT_RUN",
+  "rtlsim": "NOT_RUN",
+  "u280": "NOT_RUN",
+  "invocation": [
+    "/usr/bin/python3",
+    "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/scripts/run_ptx_suite.py",
+    "--kernel",
+    "vadd",
+    "--module",
+    "/home/liuzeheng/gpgpu-c-20261111/vadd-smoke-v2",
+    "--binding",
+    "/home/liuzeheng/gpgpu-c-20261111/binding-smoke-v2/binding.json",
+    "--target-lock",
+    "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/configs/target_lock.json",
+    "--output",
+    "/home/liuzeheng/gpgpu-c-20261111/evidence/c-vadd-smoke-v2"
+  ],
+  "invocation_cwd": "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026",
+  "target_lock_hash": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+  "binding_sha256": "2a8b873298e221e18c1f7c5366b2319583eda46fe56a14797c570fcffbc820af",
+  "module_manifest_sha256": "53653b98f25e5ac8625976849436d0335215e55d4ea15ebaf29c8ad3498aeaca",
+  "timing_scope": "perf_counter_ns on host; synchronous transfers; launch+wait includes simulator/host overhead; no warmup exclusion; not device cycles or FPGA throughput",
+  "cases": [
+    {
+      "id": "0000",
+      "n": 0,
+      "block": 1,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 308597,
+        "launch": 92292,
+        "wait": 1282489,
+        "d2h": 194525,
+        "compare": 880
+      },
+      "files": {
+        "observed_x.bin": "e14f14f5033cc6d485103a9e1fcf0e5e682b3fd28a41b4054045696bf56e28fa",
+        "observed_z.bin": "ac651ef02803d64cd328f8e708be258ba8457410d5eab2d51fb197688fb30284",
+        "observed_y.bin": "75dd084a68f8b7daccc01a77382f3324383a26cfed1bd6ce0bd2e28e3a3646d6",
+        "z.bin": "ac651ef02803d64cd328f8e708be258ba8457410d5eab2d51fb197688fb30284",
+        "expected.bin": "ac651ef02803d64cd328f8e708be258ba8457410d5eab2d51fb197688fb30284",
+        "y.bin": "75dd084a68f8b7daccc01a77382f3324383a26cfed1bd6ce0bd2e28e3a3646d6",
+        "x.bin": "e14f14f5033cc6d485103a9e1fcf0e5e682b3fd28a41b4054045696bf56e28fa"
+      }
+    },
+    {
+      "id": "0001",
+      "n": 0,
+      "block": 1,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 2,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 263196,
+        "launch": 56181,
+        "wait": 1035396,
+        "d2h": 220439,
+        "compare": 1149
+      },
+      "files": {
+        "observed_x.bin": "b52007c9668c6f85d7dc56fcfa974f7e3edc07ea66d9eaa17f4627668bc65363",
+        "observed_z.bin": "bc48b0d5aaf9b19fcaa8729ea8b69426dd1f9ceb543f25ffbf9cec8a795af542",
+        "observed_y.bin": "6e82fb0b70677f71ba1bb55966001398b217578cd3bcf3075a697532c235a85c",
+        "z.bin": "bc48b0d5aaf9b19fcaa8729ea8b69426dd1f9ceb543f25ffbf9cec8a795af542",
+        "expected.bin": "bc48b0d5aaf9b19fcaa8729ea8b69426dd1f9ceb543f25ffbf9cec8a795af542",
+        "y.bin": "6e82fb0b70677f71ba1bb55966001398b217578cd3bcf3075a697532c235a85c",
+        "x.bin": "b52007c9668c6f85d7dc56fcfa974f7e3edc07ea66d9eaa17f4627668bc65363"
+      }
+    },
+    {
+      "id": "0002",
+      "n": 0,
+      "block": 4,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 3,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 721398,
+        "launch": 50042,
+        "wait": 892160,
+        "d2h": 154490,
+        "compare": 793
+      },
+      "files": {
+        "observed_x.bin": "d536696a0a0d93d85916f3cc3b5bd62c1a04fc8027924d11f5d3a5b7d0bc349e",
+        "observed_z.bin": "9d926f2f17d8700224950a53990d55d8487d25c1ab69aedc7398761f5ccd6539",
+        "observed_y.bin": "04371021b751248c3ce00ed1a778e55a6d3ba5af0352c5426f55ddc26c128de3",
+        "z.bin": "9d926f2f17d8700224950a53990d55d8487d25c1ab69aedc7398761f5ccd6539",
+        "expected.bin": "9d926f2f17d8700224950a53990d55d8487d25c1ab69aedc7398761f5ccd6539",
+        "y.bin": "04371021b751248c3ce00ed1a778e55a6d3ba5af0352c5426f55ddc26c128de3",
+        "x.bin": "d536696a0a0d93d85916f3cc3b5bd62c1a04fc8027924d11f5d3a5b7d0bc349e"
+      }
+    },
+    {
+      "id": "0003",
+      "n": 0,
+      "block": 4,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 4,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 267657,
+        "launch": 44541,
+        "wait": 1006994,
+        "d2h": 494258,
+        "compare": 1235
+      },
+      "files": {
+        "observed_x.bin": "7785dfb951e06ad35c73da54f2affa11500475ea1972a17b60070d92470c7012",
+        "observed_z.bin": "69675ee72a2549c78c2bf900c9f6d24a899e92db17a2372347f8c890b31c9790",
+        "observed_y.bin": "3664ac16d5988b32e3518baea42e4f1633c408c45e3e56b75e2f8ffb06a97daf",
+        "z.bin": "69675ee72a2549c78c2bf900c9f6d24a899e92db17a2372347f8c890b31c9790",
+        "expected.bin": "69675ee72a2549c78c2bf900c9f6d24a899e92db17a2372347f8c890b31c9790",
+        "y.bin": "3664ac16d5988b32e3518baea42e4f1633c408c45e3e56b75e2f8ffb06a97daf",
+        "x.bin": "7785dfb951e06ad35c73da54f2affa11500475ea1972a17b60070d92470c7012"
+      }
+    },
+    {
+      "id": "0004",
+      "n": 0,
+      "block": 7,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 5,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 436939,
+        "launch": 65639,
+        "wait": 1239249,
+        "d2h": 211543,
+        "compare": 1247
+      },
+      "files": {
+        "observed_x.bin": "7b3a535d1373d23d2baf36bc1c3bcbbbd1b58fb73f3447d7b625651e2ed7b2fa",
+        "observed_z.bin": "5cdf789f244d7627c7b148ee49015c52403ec0dbe66118ceee4b0949d432bf42",
+        "observed_y.bin": "68c0e89b9fe59735ac43da6f5d139a623d566bc6f83e6602c279ab5ffa6f8f02",
+        "z.bin": "5cdf789f244d7627c7b148ee49015c52403ec0dbe66118ceee4b0949d432bf42",
+        "expected.bin": "5cdf789f244d7627c7b148ee49015c52403ec0dbe66118ceee4b0949d432bf42",
+        "y.bin": "68c0e89b9fe59735ac43da6f5d139a623d566bc6f83e6602c279ab5ffa6f8f02",
+        "x.bin": "7b3a535d1373d23d2baf36bc1c3bcbbbd1b58fb73f3447d7b625651e2ed7b2fa"
+      }
+    },
+    {
+      "id": "0005",
+      "n": 0,
+      "block": 7,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 6,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 203323,
+        "launch": 48372,
+        "wait": 1285324,
+        "d2h": 283169,
+        "compare": 858
+      },
+      "files": {
+        "observed_x.bin": "1b7da4ddb5cbf0f011cf4040e7b5b220adcadab20bc5d35082c76d34c54ec8ec",
+        "observed_z.bin": "7d9e8b4fc24d05a7046e5634a7784a7c32bcb45fe9b393a018c632a0e8029d90",
+        "observed_y.bin": "a40b8bb398e0299675109c61185fc096376c0e52fa24c67d168ce8209f8cba2c",
+        "z.bin": "7d9e8b4fc24d05a7046e5634a7784a7c32bcb45fe9b393a018c632a0e8029d90",
+        "expected.bin": "7d9e8b4fc24d05a7046e5634a7784a7c32bcb45fe9b393a018c632a0e8029d90",
+        "y.bin": "a40b8bb398e0299675109c61185fc096376c0e52fa24c67d168ce8209f8cba2c",
+        "x.bin": "1b7da4ddb5cbf0f011cf4040e7b5b220adcadab20bc5d35082c76d34c54ec8ec"
+      }
+    },
+    {
+      "id": "0006",
+      "n": 0,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 7,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 263329,
+        "launch": 50651,
+        "wait": 1633505,
+        "d2h": 224393,
+        "compare": 1409
+      },
+      "files": {
+        "observed_x.bin": "5309dc8bb1e4dea3335e8d1e4bf5dc57b5dbc692339e600835de859b99aeaeda",
+        "observed_z.bin": "bdb696712ae70f5f4f45bf583d7e8790f5f557e7953daf99ee1e329a5ae9960f",
+        "observed_y.bin": "116028c4a26178ba71608aa4f804fd0962bd9af310e4340bd2e05631ddd5a966",
+        "z.bin": "bdb696712ae70f5f4f45bf583d7e8790f5f557e7953daf99ee1e329a5ae9960f",
+        "expected.bin": "bdb696712ae70f5f4f45bf583d7e8790f5f557e7953daf99ee1e329a5ae9960f",
+        "y.bin": "116028c4a26178ba71608aa4f804fd0962bd9af310e4340bd2e05631ddd5a966",
+        "x.bin": "5309dc8bb1e4dea3335e8d1e4bf5dc57b5dbc692339e600835de859b99aeaeda"
+      }
+    },
+    {
+      "id": "0007",
+      "n": 0,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 8,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 321456,
+        "launch": 48821,
+        "wait": 1607319,
+        "d2h": 156520,
+        "compare": 794
+      },
+      "files": {
+        "observed_x.bin": "4c062ffc251f8196306b5d04509c8324cb5b4b1030a9a3b4b6dea6d292a63597",
+        "observed_z.bin": "11c114ff33848c1bae7bcd0bd543b352557e09b6ac68a9b5c8a6c8ad92d646d5",
+        "observed_y.bin": "746e246895b271244b7e95abb5e97d26746e20b07ebeaed6e283cfcd9cf27d7f",
+        "z.bin": "11c114ff33848c1bae7bcd0bd543b352557e09b6ac68a9b5c8a6c8ad92d646d5",
+        "expected.bin": "11c114ff33848c1bae7bcd0bd543b352557e09b6ac68a9b5c8a6c8ad92d646d5",
+        "y.bin": "746e246895b271244b7e95abb5e97d26746e20b07ebeaed6e283cfcd9cf27d7f",
+        "x.bin": "4c062ffc251f8196306b5d04509c8324cb5b4b1030a9a3b4b6dea6d292a63597"
+      }
+    },
+    {
+      "id": "0008",
+      "n": 1,
+      "block": 1,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 9,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 235622,
+        "launch": 51650,
+        "wait": 1044196,
+        "d2h": 179230,
+        "compare": 786
+      },
+      "files": {
+        "observed_x.bin": "2939edcd7d49ba2e1fe1761309f5cd7be3ad1d153b1ee79e4d360f134e6f6fdd",
+        "observed_z.bin": "c61a7d73e3af7e1c5df18c1aea9c9285001e4b4a67c0335f12741f4f85532916",
+        "observed_y.bin": "6ed8ca1b0e64a572435b956be403170bb013114d7407be512635c7257f70565c",
+        "z.bin": "475d1df99e7374d55f139bb580d24d6eb4db32b3750583f925b52a7015a9ce68",
+        "expected.bin": "c61a7d73e3af7e1c5df18c1aea9c9285001e4b4a67c0335f12741f4f85532916",
+        "y.bin": "6ed8ca1b0e64a572435b956be403170bb013114d7407be512635c7257f70565c",
+        "x.bin": "2939edcd7d49ba2e1fe1761309f5cd7be3ad1d153b1ee79e4d360f134e6f6fdd"
+      }
+    },
+    {
+      "id": "0009",
+      "n": 1,
+      "block": 1,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 10,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 180122,
+        "launch": 45831,
+        "wait": 1030144,
+        "d2h": 154087,
+        "compare": 859
+      },
+      "files": {
+        "observed_x.bin": "78f2f90008957fca38743ec314632a131e397ae0a7213dd3308ed1c5ed218096",
+        "observed_z.bin": "48f50b7ad9ebc1d10b7817d27e401e5404f6eb79ae9750c869a42687ef87e9dc",
+        "observed_y.bin": "01e5ffb483c871ac2747a90bf45b1c8395003994fea93292ec0ab601c9790df7",
+        "z.bin": "2757a7091178021ea2dfc3367eb9dd99c243fee77cff67053810901adea70937",
+        "expected.bin": "48f50b7ad9ebc1d10b7817d27e401e5404f6eb79ae9750c869a42687ef87e9dc",
+        "y.bin": "01e5ffb483c871ac2747a90bf45b1c8395003994fea93292ec0ab601c9790df7",
+        "x.bin": "78f2f90008957fca38743ec314632a131e397ae0a7213dd3308ed1c5ed218096"
+      }
+    },
+    {
+      "id": "0010",
+      "n": 1,
+      "block": 4,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 11,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 183685,
+        "launch": 44354,
+        "wait": 1394066,
+        "d2h": 267103,
+        "compare": 908
+      },
+      "files": {
+        "observed_x.bin": "55afb11cb9265cc1e32c6db864f178207d8d83be4356f90816b2a998da29b32c",
+        "observed_z.bin": "29f7d70221d7324c026362a174bab107aba3f3932425a4adb2f14bd25637b4c9",
+        "observed_y.bin": "fdf896df7a0f6c232b4aad9f45d212aa7b20e58631955dd479b18c7189b5dbd3",
+        "z.bin": "f2c4b931f0919c798a050d0cb438863a2658a215eb65d8525d60a39c5da63d74",
+        "expected.bin": "29f7d70221d7324c026362a174bab107aba3f3932425a4adb2f14bd25637b4c9",
+        "y.bin": "fdf896df7a0f6c232b4aad9f45d212aa7b20e58631955dd479b18c7189b5dbd3",
+        "x.bin": "55afb11cb9265cc1e32c6db864f178207d8d83be4356f90816b2a998da29b32c"
+      }
+    },
+    {
+      "id": "0011",
+      "n": 1,
+      "block": 4,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 12,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 300244,
+        "launch": 63879,
+        "wait": 1140747,
+        "d2h": 227052,
+        "compare": 999
+      },
+      "files": {
+        "observed_x.bin": "2e69d4b3b7b649bd5c55027fc85bbf43fc7188e9785b7536e316a9f6fcce70c4",
+        "observed_z.bin": "8627413e67968cdb35b26e469d94d9e99441583082b366ae18b1f125cf8cb416",
+        "observed_y.bin": "f77591db815e290b24842dd5201ae281e8160a38972dba846fbcf526b6e28ed8",
+        "z.bin": "e09f13e0c2becaed538faaa149f0d4447cc36bd2d14a91774cc3d1b085c55fe5",
+        "expected.bin": "8627413e67968cdb35b26e469d94d9e99441583082b366ae18b1f125cf8cb416",
+        "y.bin": "f77591db815e290b24842dd5201ae281e8160a38972dba846fbcf526b6e28ed8",
+        "x.bin": "2e69d4b3b7b649bd5c55027fc85bbf43fc7188e9785b7536e316a9f6fcce70c4"
+      }
+    },
+    {
+      "id": "0012",
+      "n": 1,
+      "block": 7,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 13,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 177469,
+        "launch": 48069,
+        "wait": 1414326,
+        "d2h": 186183,
+        "compare": 864
+      },
+      "files": {
+        "observed_x.bin": "5fea859d16954c9df6a1fefb961a594b55e1d521d193fb059dadde9a4ee02188",
+        "observed_z.bin": "4e4f4593e809d298eedef8e0b0e546b9f792c96a66eb6b4a5763f89337765aad",
+        "observed_y.bin": "b7e63a6ccd73d594f48148d90a0e29ecfe766b207f1d90cd9ebf81f2cae63c9d",
+        "z.bin": "9bee2d1a925a839f77b2416d1b8661da93e8d41260e6dd225b2276d10eae4790",
+        "expected.bin": "4e4f4593e809d298eedef8e0b0e546b9f792c96a66eb6b4a5763f89337765aad",
+        "y.bin": "b7e63a6ccd73d594f48148d90a0e29ecfe766b207f1d90cd9ebf81f2cae63c9d",
+        "x.bin": "5fea859d16954c9df6a1fefb961a594b55e1d521d193fb059dadde9a4ee02188"
+      }
+    },
+    {
+      "id": "0013",
+      "n": 1,
+      "block": 7,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 14,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 260379,
+        "launch": 47916,
+        "wait": 1345517,
+        "d2h": 182839,
+        "compare": 855
+      },
+      "files": {
+        "observed_x.bin": "7ec6aab6938123427e385981ce575b59ed9886b378cec2cb16ef6c114da21896",
+        "observed_z.bin": "cd1dc5b8cbba3247c901efe5f75bcd8e2dbf614c3726dce2559bb599e14e1807",
+        "observed_y.bin": "a8759f078616c9c5b3ea6d33a7c2c2f4e7497d1b09de7572ec635a46a7fc84bb",
+        "z.bin": "e900b6e4d15760fc2b223838c733d2ce8c265a6d035f55d51f1ca529407dbf06",
+        "expected.bin": "cd1dc5b8cbba3247c901efe5f75bcd8e2dbf614c3726dce2559bb599e14e1807",
+        "y.bin": "a8759f078616c9c5b3ea6d33a7c2c2f4e7497d1b09de7572ec635a46a7fc84bb",
+        "x.bin": "7ec6aab6938123427e385981ce575b59ed9886b378cec2cb16ef6c114da21896"
+      }
+    },
+    {
+      "id": "0014",
+      "n": 1,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 15,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 233092,
+        "launch": 46315,
+        "wait": 1850549,
+        "d2h": 156212,
+        "compare": 810
+      },
+      "files": {
+        "observed_x.bin": "2b09b07a1d46b4edca99d9655401f687b62d93adb9a659f0b9d4740614e0f313",
+        "observed_z.bin": "5a62e5f628c70272b2d76c2a97766e2744279745191e5e6d5bf3a7238c03e27d",
+        "observed_y.bin": "2fe8c3124c9147fb33ca6dd24b0bb36d52bbff39c057d7589c77dfa632f43285",
+        "z.bin": "c4f6d5cc20531dfb4891027ba0899617512b796c9263effb127ba0838203a6e0",
+        "expected.bin": "5a62e5f628c70272b2d76c2a97766e2744279745191e5e6d5bf3a7238c03e27d",
+        "y.bin": "2fe8c3124c9147fb33ca6dd24b0bb36d52bbff39c057d7589c77dfa632f43285",
+        "x.bin": "2b09b07a1d46b4edca99d9655401f687b62d93adb9a659f0b9d4740614e0f313"
+      }
+    },
+    {
+      "id": "0015",
+      "n": 1,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 16,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 389125,
+        "launch": 83078,
+        "wait": 2032079,
+        "d2h": 299487,
+        "compare": 1249
+      },
+      "files": {
+        "observed_x.bin": "7ed405816248c95f1ce56fb2a84816b5c62fd2b91b7b539daf90da1927432c40",
+        "observed_z.bin": "7586444a260fca5ef6bccf667762b24b72fd2eb3d61ebd7d77acd42d18f5c705",
+        "observed_y.bin": "ac9f4abee125441c41109da8568a795f300dc1a2f75e771c4a4ec92fb4044043",
+        "z.bin": "30749a5ebe6ad3ee246c2d1d5c3d5fe68d2e5f0765c2f37af358a61e45c508eb",
+        "expected.bin": "7586444a260fca5ef6bccf667762b24b72fd2eb3d61ebd7d77acd42d18f5c705",
+        "y.bin": "ac9f4abee125441c41109da8568a795f300dc1a2f75e771c4a4ec92fb4044043",
+        "x.bin": "7ed405816248c95f1ce56fb2a84816b5c62fd2b91b7b539daf90da1927432c40"
+      }
+    },
+    {
+      "id": "0016",
+      "n": 7,
+      "block": 1,
+      "grid": 7,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 17,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 212049,
+        "launch": 45832,
+        "wait": 3012832,
+        "d2h": 280336,
+        "compare": 1006
+      },
+      "files": {
+        "observed_x.bin": "946f3be2e3611b4fc1b452196d44cc9db3ebfcee77b665a5cebb9596ec10df78",
+        "observed_z.bin": "b9b5dba9b10a23064129b0e80e0a025cc3449f375ce0c689015093038219aff8",
+        "observed_y.bin": "f76323e47834ae19f25a713fc794f623f2859688b00b150dd8c98bc71c95e927",
+        "z.bin": "62eae7a130de99bcc66119f8c975d16a549f8551fe666db55d85b703e0e90947",
+        "expected.bin": "b9b5dba9b10a23064129b0e80e0a025cc3449f375ce0c689015093038219aff8",
+        "y.bin": "f76323e47834ae19f25a713fc794f623f2859688b00b150dd8c98bc71c95e927",
+        "x.bin": "946f3be2e3611b4fc1b452196d44cc9db3ebfcee77b665a5cebb9596ec10df78"
+      }
+    },
+    {
+      "id": "0017",
+      "n": 7,
+      "block": 1,
+      "grid": 7,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 18,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 201374,
+        "launch": 51689,
+        "wait": 3142764,
+        "d2h": 373063,
+        "compare": 851
+      },
+      "files": {
+        "observed_x.bin": "6233df4b399442a8e84bba0275b6f0672f55ad36768cf9792c9721c8d830038f",
+        "observed_z.bin": "7d0639eae71d187805bbb8cd4e3e84617308f616e738f4c2e6464b3b1e0280ce",
+        "observed_y.bin": "38c83e42ee7e0fe9e0f369e702b0209adf1bceaac5fcd74136cec4a9b2dc2c32",
+        "z.bin": "2a708b21aa3ae57ce292f65cce3507025ea5242dcbf1e49f7383c5c097e21915",
+        "expected.bin": "7d0639eae71d187805bbb8cd4e3e84617308f616e738f4c2e6464b3b1e0280ce",
+        "y.bin": "38c83e42ee7e0fe9e0f369e702b0209adf1bceaac5fcd74136cec4a9b2dc2c32",
+        "x.bin": "6233df4b399442a8e84bba0275b6f0672f55ad36768cf9792c9721c8d830038f"
+      }
+    },
+    {
+      "id": "0018",
+      "n": 7,
+      "block": 4,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 19,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 298512,
+        "launch": 65332,
+        "wait": 1461087,
+        "d2h": 161710,
+        "compare": 839
+      },
+      "files": {
+        "observed_x.bin": "78a9683844d290a01aa103f1a800a2145533ed4ddecdb6ec2182f638123278dd",
+        "observed_z.bin": "47f34196fd345b0d63f58789bd5feaf03d9eb0b8a6256e47370586761a6c6f64",
+        "observed_y.bin": "5a8c4f41468994f164729249bd8fabfb85e6043d024a7522b3c458201e0a77dc",
+        "z.bin": "2910f3f94153f0d3cb417ab5d7460ba1181475c8adcbf1b75a1f4279e0137c52",
+        "expected.bin": "47f34196fd345b0d63f58789bd5feaf03d9eb0b8a6256e47370586761a6c6f64",
+        "y.bin": "5a8c4f41468994f164729249bd8fabfb85e6043d024a7522b3c458201e0a77dc",
+        "x.bin": "78a9683844d290a01aa103f1a800a2145533ed4ddecdb6ec2182f638123278dd"
+      }
+    },
+    {
+      "id": "0019",
+      "n": 7,
+      "block": 4,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 20,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 198290,
+        "launch": 45176,
+        "wait": 1498431,
+        "d2h": 157048,
+        "compare": 985
+      },
+      "files": {
+        "observed_x.bin": "b2b165488d3de91986e4959eeac8ed8436576cdf6dc21e9d466478520974044e",
+        "observed_z.bin": "af4d69dc456b52034140e81b33f25513c6313d80e0ff2e981712b8b3af8bf55d",
+        "observed_y.bin": "920d5173cb665e91def2cd410412a88e0c4f39cd09301f5d9b83fd56485b0c1d",
+        "z.bin": "11f9792dec2d78ab7a103e581feb14a97ab1dc0b00aa397a6017ce58c4ac35ed",
+        "expected.bin": "af4d69dc456b52034140e81b33f25513c6313d80e0ff2e981712b8b3af8bf55d",
+        "y.bin": "920d5173cb665e91def2cd410412a88e0c4f39cd09301f5d9b83fd56485b0c1d",
+        "x.bin": "b2b165488d3de91986e4959eeac8ed8436576cdf6dc21e9d466478520974044e"
+      }
+    },
+    {
+      "id": "0020",
+      "n": 7,
+      "block": 7,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 21,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 201504,
+        "launch": 45644,
+        "wait": 1391987,
+        "d2h": 360412,
+        "compare": 848
+      },
+      "files": {
+        "observed_x.bin": "c61ce94b4c0510b04cfbc35a2ac7d9576221b5c54c5ca310949bb1364586ab6e",
+        "observed_z.bin": "d75ab88ca21023f68c8cd789a0a46c9c86eeb3d30738f03c58ed79ae1cdbf2a1",
+        "observed_y.bin": "74703ad86a8c1fe597aaf6eb4c9b6ddcbc42bd5fb1b066f1d0f6fd4b5b60df62",
+        "z.bin": "9cbc9540253dbaa1fc7360f04059a67381f1995a13eed32eddad968c768f60cc",
+        "expected.bin": "d75ab88ca21023f68c8cd789a0a46c9c86eeb3d30738f03c58ed79ae1cdbf2a1",
+        "y.bin": "74703ad86a8c1fe597aaf6eb4c9b6ddcbc42bd5fb1b066f1d0f6fd4b5b60df62",
+        "x.bin": "c61ce94b4c0510b04cfbc35a2ac7d9576221b5c54c5ca310949bb1364586ab6e"
+      }
+    },
+    {
+      "id": "0021",
+      "n": 7,
+      "block": 7,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 22,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 187122,
+        "launch": 46810,
+        "wait": 1414271,
+        "d2h": 152672,
+        "compare": 892
+      },
+      "files": {
+        "observed_x.bin": "0177c4ea2e77efcc7b5e450ef8a962063e689c54ac3c741845ea3591f6e78719",
+        "observed_z.bin": "831bd758f41360a05792abaf60c159dd6d760c6414e159670f32ede45e440fa8",
+        "observed_y.bin": "b9c9dab7796e5417e8fecd9ee3b21e1dc4e9ad586c06e0c3d6349ca4d92db9db",
+        "z.bin": "eb7be0de9922438282976f87a368e702bece714e4973b58f6d9bde9b81641b8e",
+        "expected.bin": "831bd758f41360a05792abaf60c159dd6d760c6414e159670f32ede45e440fa8",
+        "y.bin": "b9c9dab7796e5417e8fecd9ee3b21e1dc4e9ad586c06e0c3d6349ca4d92db9db",
+        "x.bin": "0177c4ea2e77efcc7b5e450ef8a962063e689c54ac3c741845ea3591f6e78719"
+      }
+    },
+    {
+      "id": "0022",
+      "n": 7,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 23,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 194645,
+        "launch": 47465,
+        "wait": 1989292,
+        "d2h": 171181,
+        "compare": 667
+      },
+      "files": {
+        "observed_x.bin": "382d92f4880c0555133f86e959e9672b9e63fafc300b77598b148e9310aaf73b",
+        "observed_z.bin": "69eacd9053e80458b8d63f98326a21b1c08be06ec89700ef97cf91e71f3bd967",
+        "observed_y.bin": "8f59a12b8fa445a50691bac76dd8aed24e049e0c7bf73271133921121e1ef997",
+        "z.bin": "13d2445327e3d41605dfac6b06875195989d744669496a44f93c2272282c404d",
+        "expected.bin": "69eacd9053e80458b8d63f98326a21b1c08be06ec89700ef97cf91e71f3bd967",
+        "y.bin": "8f59a12b8fa445a50691bac76dd8aed24e049e0c7bf73271133921121e1ef997",
+        "x.bin": "382d92f4880c0555133f86e959e9672b9e63fafc300b77598b148e9310aaf73b"
+      }
+    },
+    {
+      "id": "0023",
+      "n": 7,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 24,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 216506,
+        "launch": 45090,
+        "wait": 1926914,
+        "d2h": 158260,
+        "compare": 910
+      },
+      "files": {
+        "observed_x.bin": "9bf3b9542c10e112fcf92bc470b7a33fed37ab8fa6f30bcb6aed5d5db913aea4",
+        "observed_z.bin": "1772439858089265257d7bc0c7a14cd3c8a509859587b0a29739d3a80ffef47e",
+        "observed_y.bin": "61ef866d5e9358f17c82a3a72d8d08b3cdc36423912b6666a8c0a711219693fc",
+        "z.bin": "d7f48e2d31fa57e46ed792c2a929b7ed9e4a2a60e0aec29478a33d3fa2d8cbae",
+        "expected.bin": "1772439858089265257d7bc0c7a14cd3c8a509859587b0a29739d3a80ffef47e",
+        "y.bin": "61ef866d5e9358f17c82a3a72d8d08b3cdc36423912b6666a8c0a711219693fc",
+        "x.bin": "9bf3b9542c10e112fcf92bc470b7a33fed37ab8fa6f30bcb6aed5d5db913aea4"
+      }
+    },
+    {
+      "id": "0024",
+      "n": 15,
+      "block": 1,
+      "grid": 15,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 25,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 205330,
+        "launch": 49389,
+        "wait": 5788924,
+        "d2h": 161614,
+        "compare": 840
+      },
+      "files": {
+        "observed_x.bin": "9e1dc3b62dca428983ef0ca447a40924b0a2e7853f41af427cfe9f60efbb4f6a",
+        "observed_z.bin": "3aff818c7cd5206ed05d0d0ef9dd5199486091145afe349d5d4e3c1e9d2f0a07",
+        "observed_y.bin": "6e3b932cf811d06b79b44ea0e998bb191821dd4820086d423f485526cc53799c",
+        "z.bin": "17c101ff317d454ca40ccd23c1378b91999c057b69821975fc660a5713ac5593",
+        "expected.bin": "3aff818c7cd5206ed05d0d0ef9dd5199486091145afe349d5d4e3c1e9d2f0a07",
+        "y.bin": "6e3b932cf811d06b79b44ea0e998bb191821dd4820086d423f485526cc53799c",
+        "x.bin": "9e1dc3b62dca428983ef0ca447a40924b0a2e7853f41af427cfe9f60efbb4f6a"
+      }
+    },
+    {
+      "id": "0025",
+      "n": 15,
+      "block": 1,
+      "grid": 15,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 26,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 180309,
+        "launch": 45661,
+        "wait": 6234468,
+        "d2h": 187269,
+        "compare": 1688
+      },
+      "files": {
+        "observed_x.bin": "feca69f68e5149f0aad61e94c062b371cf20eb73d675ce2ed0bd30dbed7b6d48",
+        "observed_z.bin": "c8094544c6e82c93adffa1981eaca1a5a162f402513fed4f23151b592483406f",
+        "observed_y.bin": "50b501e22935f6d7ae136aea11f0ecac19ef5133332dcbfafc747cd0760f7ce6",
+        "z.bin": "1d9bdddcb7f4431cbca57f692aa392834f9b1219955a95321b46a20f7b65b7da",
+        "expected.bin": "c8094544c6e82c93adffa1981eaca1a5a162f402513fed4f23151b592483406f",
+        "y.bin": "50b501e22935f6d7ae136aea11f0ecac19ef5133332dcbfafc747cd0760f7ce6",
+        "x.bin": "feca69f68e5149f0aad61e94c062b371cf20eb73d675ce2ed0bd30dbed7b6d48"
+      }
+    },
+    {
+      "id": "0026",
+      "n": 15,
+      "block": 4,
+      "grid": 4,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 27,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 233815,
+        "launch": 57585,
+        "wait": 2272181,
+        "d2h": 176990,
+        "compare": 1030
+      },
+      "files": {
+        "observed_x.bin": "cb8cc1cb31dbb4695e963d19e0662b40177dd5eaa07be9eac6c09fb56426fc17",
+        "observed_z.bin": "dae674cc01e24f9dce04ded1d9ad4450b667c1d771634d491d0c3bc1e848f182",
+        "observed_y.bin": "cef8a54dd7f9a5a3c9de89accf2a5da8d9fd560c2cb749da665e4c573bc65d59",
+        "z.bin": "64228509b68fd076fa83cc897772f129ee892e19e0b05966a8324403b36a8354",
+        "expected.bin": "dae674cc01e24f9dce04ded1d9ad4450b667c1d771634d491d0c3bc1e848f182",
+        "y.bin": "cef8a54dd7f9a5a3c9de89accf2a5da8d9fd560c2cb749da665e4c573bc65d59",
+        "x.bin": "cb8cc1cb31dbb4695e963d19e0662b40177dd5eaa07be9eac6c09fb56426fc17"
+      }
+    },
+    {
+      "id": "0027",
+      "n": 15,
+      "block": 4,
+      "grid": 4,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 28,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 268713,
+        "launch": 56467,
+        "wait": 2359479,
+        "d2h": 196425,
+        "compare": 888
+      },
+      "files": {
+        "observed_x.bin": "63c1916391b375867db8f51d688d90907da7af07ffd896af86351c3e742d8382",
+        "observed_z.bin": "75a2b523badd615154c4bc75d0aa505e513cd84f674d606dd4e52595cca1b2bd",
+        "observed_y.bin": "4c607926a52b1ed9219b695671636ab27d38ef01db22b423b7042ffb1d2b11d7",
+        "z.bin": "6785a8f39f8819409c300118727416c1917d3938573b41c6920b1dcc34b1fbba",
+        "expected.bin": "75a2b523badd615154c4bc75d0aa505e513cd84f674d606dd4e52595cca1b2bd",
+        "y.bin": "4c607926a52b1ed9219b695671636ab27d38ef01db22b423b7042ffb1d2b11d7",
+        "x.bin": "63c1916391b375867db8f51d688d90907da7af07ffd896af86351c3e742d8382"
+      }
+    },
+    {
+      "id": "0028",
+      "n": 15,
+      "block": 7,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 29,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 181315,
+        "launch": 50166,
+        "wait": 3164103,
+        "d2h": 266598,
+        "compare": 946
+      },
+      "files": {
+        "observed_x.bin": "d6bbd16a7e51a306edd7b733557a5175fc9bc7487d99fe5af449fd7adebd500f",
+        "observed_z.bin": "17b43ed093d2c2355519c50b43f4336ec538a422386b3b9fb8efbb36fd994c80",
+        "observed_y.bin": "dbe483c49905fa33d43b9ae5a02d6f04cef24e87d8cf57ff97291c89d341d8c3",
+        "z.bin": "74ef30d8907c28b528b2d92ba630bdc6764624d4e88e4d0755229bfa5357052e",
+        "expected.bin": "17b43ed093d2c2355519c50b43f4336ec538a422386b3b9fb8efbb36fd994c80",
+        "y.bin": "dbe483c49905fa33d43b9ae5a02d6f04cef24e87d8cf57ff97291c89d341d8c3",
+        "x.bin": "d6bbd16a7e51a306edd7b733557a5175fc9bc7487d99fe5af449fd7adebd500f"
+      }
+    },
+    {
+      "id": "0029",
+      "n": 15,
+      "block": 7,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 30,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 191218,
+        "launch": 51039,
+        "wait": 3011592,
+        "d2h": 235030,
+        "compare": 911
+      },
+      "files": {
+        "observed_x.bin": "c3b6537bbf0f83303f1c1967c1dc0a1474e72a51b69199ab355518dbe39d689e",
+        "observed_z.bin": "cf5cac0cca8d2a5c1e2ef45dcb4841cf43fa0e6d5e6659a704733b37ac6c4bdb",
+        "observed_y.bin": "d8f7077de5ce7e58870c946f559a9e97ac39137b6c9cfb214c4620c48603bc1e",
+        "z.bin": "b49dd9f29234009761bf1180707bd4b09d3dfbe799952b17ad62e136ea1f633c",
+        "expected.bin": "cf5cac0cca8d2a5c1e2ef45dcb4841cf43fa0e6d5e6659a704733b37ac6c4bdb",
+        "y.bin": "d8f7077de5ce7e58870c946f559a9e97ac39137b6c9cfb214c4620c48603bc1e",
+        "x.bin": "c3b6537bbf0f83303f1c1967c1dc0a1474e72a51b69199ab355518dbe39d689e"
+      }
+    },
+    {
+      "id": "0030",
+      "n": 15,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 31,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 208208,
+        "launch": 46489,
+        "wait": 2387544,
+        "d2h": 164443,
+        "compare": 819
+      },
+      "files": {
+        "observed_x.bin": "8aab4f2e1a0cc70bb6d74b37a63fd4180d29a9b1bdffe9090c6cf4b9a0137942",
+        "observed_z.bin": "f17e61bfeeb929c8e5af334daf4b7a6af9e015e0c04e8b69476f15139043c998",
+        "observed_y.bin": "2e3f8129063f6ec4f7930e0c6d8de9878d28080ed15219bcf3339b6918f49961",
+        "z.bin": "cc418cee9dfbca10a79162db131780f5ff494c08a5464894a2750974d10952ef",
+        "expected.bin": "f17e61bfeeb929c8e5af334daf4b7a6af9e015e0c04e8b69476f15139043c998",
+        "y.bin": "2e3f8129063f6ec4f7930e0c6d8de9878d28080ed15219bcf3339b6918f49961",
+        "x.bin": "8aab4f2e1a0cc70bb6d74b37a63fd4180d29a9b1bdffe9090c6cf4b9a0137942"
+      }
+    },
+    {
+      "id": "0031",
+      "n": 15,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 32,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 213422,
+        "launch": 63151,
+        "wait": 2392569,
+        "d2h": 195105,
+        "compare": 1661
+      },
+      "files": {
+        "observed_x.bin": "4dfbf42b9cc09572df25c23ee0a3ac60d2724a64c9169c45143bbe4520edc95c",
+        "observed_z.bin": "519269c8662af582be5e6e10d8921a4de98fdd1c2025da41e19d95830f4eaa5c",
+        "observed_y.bin": "a1c21f1df2cef200ffd3a3394c1da85b550f82a1baacd1271a79f6a80771108f",
+        "z.bin": "60e3eef839bdf1151621f1b44af7ded4d5c481a09f712b8500b692f8c3f75a2b",
+        "expected.bin": "519269c8662af582be5e6e10d8921a4de98fdd1c2025da41e19d95830f4eaa5c",
+        "y.bin": "a1c21f1df2cef200ffd3a3394c1da85b550f82a1baacd1271a79f6a80771108f",
+        "x.bin": "4dfbf42b9cc09572df25c23ee0a3ac60d2724a64c9169c45143bbe4520edc95c"
+      }
+    },
+    {
+      "id": "0032",
+      "n": 16,
+      "block": 1,
+      "grid": 16,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 33,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 225263,
+        "launch": 46784,
+        "wait": 5894179,
+        "d2h": 188228,
+        "compare": 903
+      },
+      "files": {
+        "observed_x.bin": "5fa091b9e0320bdcc9e74c7ee928ab57419c7d4415567eb84e6c3f6219171314",
+        "observed_z.bin": "ab108e04319b13ae5d80bdb14e5ca5c23b5f124245610b5811d1beb38d1834f6",
+        "observed_y.bin": "ccc4d59db24392d6658ccc6523ced8a103b9dacaabbaa2b77536449abfc50e9f",
+        "z.bin": "8346a104c9fefc77ca763afaff1f8d12e7df758c2113cbf8bcd11307d93a37bf",
+        "expected.bin": "ab108e04319b13ae5d80bdb14e5ca5c23b5f124245610b5811d1beb38d1834f6",
+        "y.bin": "ccc4d59db24392d6658ccc6523ced8a103b9dacaabbaa2b77536449abfc50e9f",
+        "x.bin": "5fa091b9e0320bdcc9e74c7ee928ab57419c7d4415567eb84e6c3f6219171314"
+      }
+    },
+    {
+      "id": "0033",
+      "n": 16,
+      "block": 1,
+      "grid": 16,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 34,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 208698,
+        "launch": 45248,
+        "wait": 5921033,
+        "d2h": 175955,
+        "compare": 1342
+      },
+      "files": {
+        "observed_x.bin": "d2a1217c8f17bd83fc6dc0bd0d1fb2493d7141d56a584c608c1e927599918c08",
+        "observed_z.bin": "e7a0a42006f5850f65262cd6762073b4877f1fd599a74f6e5183b7ce9b8b9538",
+        "observed_y.bin": "e21cc58f1e5e70e00782e048d646c9248b58a9041fc0143ee915f09d2ffa9647",
+        "z.bin": "a8bfaffb32d0b4bac3ab997b3a371538f9af64a91ac864671a403b1ed6c54a6f",
+        "expected.bin": "e7a0a42006f5850f65262cd6762073b4877f1fd599a74f6e5183b7ce9b8b9538",
+        "y.bin": "e21cc58f1e5e70e00782e048d646c9248b58a9041fc0143ee915f09d2ffa9647",
+        "x.bin": "d2a1217c8f17bd83fc6dc0bd0d1fb2493d7141d56a584c608c1e927599918c08"
+      }
+    },
+    {
+      "id": "0034",
+      "n": 16,
+      "block": 4,
+      "grid": 4,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 35,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 205384,
+        "launch": 57707,
+        "wait": 2147906,
+        "d2h": 418154,
+        "compare": 1425
+      },
+      "files": {
+        "observed_x.bin": "cc0d98938e62e260c29b81fe8abd28190547339b3ac8a959828414e918a97da4",
+        "observed_z.bin": "98f11a93f519bb2a2273c1341c0ebb8d547f5a523bc062c948b140c76b852f96",
+        "observed_y.bin": "aa63e2c5a86c6126addd3e560f16a299f4a8b9dacf4216dd0ee815a2892e06af",
+        "z.bin": "5f8628dae34bfb3c411ec9273813366719a84377041c2bd41933e5695efb8b20",
+        "expected.bin": "98f11a93f519bb2a2273c1341c0ebb8d547f5a523bc062c948b140c76b852f96",
+        "y.bin": "aa63e2c5a86c6126addd3e560f16a299f4a8b9dacf4216dd0ee815a2892e06af",
+        "x.bin": "cc0d98938e62e260c29b81fe8abd28190547339b3ac8a959828414e918a97da4"
+      }
+    },
+    {
+      "id": "0035",
+      "n": 16,
+      "block": 4,
+      "grid": 4,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 36,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 275489,
+        "launch": 55012,
+        "wait": 9168324,
+        "d2h": 303786,
+        "compare": 1409
+      },
+      "files": {
+        "observed_x.bin": "792ae91b0537e3388c51f8bf71593dfa50271e0a66dda9c2275df23a3c158ddf",
+        "observed_z.bin": "cd5a4c2d925f0df3038edd7b73dee177444d6b8b8b17af0041214f24d6f02700",
+        "observed_y.bin": "128ce05b6b8b37b0f89b61f75e2a0a967f866c130700637d2265577dc9c35429",
+        "z.bin": "3cd2c6f3364590883d2271efad7a6118481cb2d8a16cd75a95dd8d2c6df58d3c",
+        "expected.bin": "cd5a4c2d925f0df3038edd7b73dee177444d6b8b8b17af0041214f24d6f02700",
+        "y.bin": "128ce05b6b8b37b0f89b61f75e2a0a967f866c130700637d2265577dc9c35429",
+        "x.bin": "792ae91b0537e3388c51f8bf71593dfa50271e0a66dda9c2275df23a3c158ddf"
+      }
+    },
+    {
+      "id": "0036",
+      "n": 16,
+      "block": 7,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 37,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 246687,
+        "launch": 51169,
+        "wait": 3095088,
+        "d2h": 166956,
+        "compare": 995
+      },
+      "files": {
+        "observed_x.bin": "da9117c79f87840786fe9957993bf59e5f2da62563d5abf9792443d86eb57035",
+        "observed_z.bin": "c93066631f2f61b69806d28bc6e38ccd7f2327827e47877a398dc9b3772bd6f9",
+        "observed_y.bin": "79e0afb857ec054177abcc0f2e84e32b72c4d799c456cae7d950e66d61b2cb7c",
+        "z.bin": "a3070a185e39f2e5c1862f72ef6303948313e26b8cfa15597a7503ed9eb85f5f",
+        "expected.bin": "c93066631f2f61b69806d28bc6e38ccd7f2327827e47877a398dc9b3772bd6f9",
+        "y.bin": "79e0afb857ec054177abcc0f2e84e32b72c4d799c456cae7d950e66d61b2cb7c",
+        "x.bin": "da9117c79f87840786fe9957993bf59e5f2da62563d5abf9792443d86eb57035"
+      }
+    },
+    {
+      "id": "0037",
+      "n": 16,
+      "block": 7,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 38,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 204371,
+        "launch": 53212,
+        "wait": 3086723,
+        "d2h": 159869,
+        "compare": 938
+      },
+      "files": {
+        "observed_x.bin": "66fdae5044b739f6bacd6ede80bbb4ea9bba587bde1d9f9a5b8b1bacea7c8250",
+        "observed_z.bin": "18117dc7f424045f560830cde0966ff70a6d294611fe169facc99b747c080dd5",
+        "observed_y.bin": "f55305c26caac44b9ade89ebdd6bb53f6d4e941f371027089e79084c30673070",
+        "z.bin": "bc5878b542864c71e0e523c4738bf03b0baa70f3cfda6aa31b7f58f81c4afc70",
+        "expected.bin": "18117dc7f424045f560830cde0966ff70a6d294611fe169facc99b747c080dd5",
+        "y.bin": "f55305c26caac44b9ade89ebdd6bb53f6d4e941f371027089e79084c30673070",
+        "x.bin": "66fdae5044b739f6bacd6ede80bbb4ea9bba587bde1d9f9a5b8b1bacea7c8250"
+      }
+    },
+    {
+      "id": "0038",
+      "n": 16,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 39,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 230105,
+        "launch": 53099,
+        "wait": 2930957,
+        "d2h": 276638,
+        "compare": 920
+      },
+      "files": {
+        "observed_x.bin": "29d73e1fbcb2e789b4f2000550637b60415da8902267d64dd0192554b7c2c6cc",
+        "observed_z.bin": "909c6841eef8e02d7ed47c00c59fc85aefb840ee36c78cea09b13ab9908c47fe",
+        "observed_y.bin": "de761ce80872188bcc828ae82c88e5f7027e774df5e9f1920d559c6fe02f3445",
+        "z.bin": "b8e7ea2bc70d0622a8a8b531b18d1f7c84f0e61133f492e9aa695835244c499f",
+        "expected.bin": "909c6841eef8e02d7ed47c00c59fc85aefb840ee36c78cea09b13ab9908c47fe",
+        "y.bin": "de761ce80872188bcc828ae82c88e5f7027e774df5e9f1920d559c6fe02f3445",
+        "x.bin": "29d73e1fbcb2e789b4f2000550637b60415da8902267d64dd0192554b7c2c6cc"
+      }
+    },
+    {
+      "id": "0039",
+      "n": 16,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 40,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 176923,
+        "launch": 49432,
+        "wait": 2125489,
+        "d2h": 257388,
+        "compare": 1193
+      },
+      "files": {
+        "observed_x.bin": "9309162b4265e3d505481d4f1dfecc9bfa363199215ae8524fb2c0fba89192f8",
+        "observed_z.bin": "2f5f450ae00e19fb5e5e00da9d9684b30416061f84879538531b5c51081c02f9",
+        "observed_y.bin": "eda88e3bd7b6ea88aaa83aff1ebdeacefd32a7949a7b1d702ed1e4e98c783fed",
+        "z.bin": "1dc4fdc6a9c84bd032184074745f3adb34f5ef45922a9ccd8ae092fcc95409da",
+        "expected.bin": "2f5f450ae00e19fb5e5e00da9d9684b30416061f84879538531b5c51081c02f9",
+        "y.bin": "eda88e3bd7b6ea88aaa83aff1ebdeacefd32a7949a7b1d702ed1e4e98c783fed",
+        "x.bin": "9309162b4265e3d505481d4f1dfecc9bfa363199215ae8524fb2c0fba89192f8"
+      }
+    },
+    {
+      "id": "0040",
+      "n": 17,
+      "block": 1,
+      "grid": 17,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 41,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 248389,
+        "launch": 53153,
+        "wait": 6602577,
+        "d2h": 192324,
+        "compare": 1126
+      },
+      "files": {
+        "observed_x.bin": "8ca4f4ce66ebcd043a199e52b3b0203f9b74809fd9930652b1ae2088ad687af5",
+        "observed_z.bin": "1309f8986dbe6dc41f77b9d726adaa3f284cf8e6e0ccbf6e6a89e2917b644e65",
+        "observed_y.bin": "19df7cd41b470d6638ab571eb0fbb69ddf7a4974a27a82b3c09fd17c1ed32720",
+        "z.bin": "9be01caf694a9d2ea5304eac30c3243a6928c71897feebbf21ed37a686cba72a",
+        "expected.bin": "1309f8986dbe6dc41f77b9d726adaa3f284cf8e6e0ccbf6e6a89e2917b644e65",
+        "y.bin": "19df7cd41b470d6638ab571eb0fbb69ddf7a4974a27a82b3c09fd17c1ed32720",
+        "x.bin": "8ca4f4ce66ebcd043a199e52b3b0203f9b74809fd9930652b1ae2088ad687af5"
+      }
+    },
+    {
+      "id": "0041",
+      "n": 17,
+      "block": 1,
+      "grid": 17,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 42,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 250389,
+        "launch": 53378,
+        "wait": 6732061,
+        "d2h": 170949,
+        "compare": 1033
+      },
+      "files": {
+        "observed_x.bin": "2b8587c85c40b3f992fd68770a5031a61aa74cfd1effaa13646506b8d5922618",
+        "observed_z.bin": "53152ab80e44089cb57d02a72ac9d792f4707b0c48a690ae2cd78bdb9256d971",
+        "observed_y.bin": "3db5941673630c4f3888db3a8d61ba33f0283de6ce777ed82b7676ceb9e466a4",
+        "z.bin": "a5900a0ba611b01bdbce929be8dbff7a5e5b1643d7bb25e18acc691e75e7981a",
+        "expected.bin": "53152ab80e44089cb57d02a72ac9d792f4707b0c48a690ae2cd78bdb9256d971",
+        "y.bin": "3db5941673630c4f3888db3a8d61ba33f0283de6ce777ed82b7676ceb9e466a4",
+        "x.bin": "2b8587c85c40b3f992fd68770a5031a61aa74cfd1effaa13646506b8d5922618"
+      }
+    },
+    {
+      "id": "0042",
+      "n": 17,
+      "block": 4,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 43,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 212714,
+        "launch": 67085,
+        "wait": 3031252,
+        "d2h": 179484,
+        "compare": 819
+      },
+      "files": {
+        "observed_x.bin": "c5e49744f10381b379bd390d9dfd6a2b7b580052c5c2569569f26b3b4b7a3aef",
+        "observed_z.bin": "734248debb8e174f8b483c631c9a622165c9ddb69b0094032858f595ad4ce907",
+        "observed_y.bin": "e0e8618b0150cff6773db9f71426039f9962812c752ebe9121f45f1a6dcd6194",
+        "z.bin": "6c5a914ca9c59fda536a1c1a1a28946517bb09db8062a61ce57aa9ae719a9adb",
+        "expected.bin": "734248debb8e174f8b483c631c9a622165c9ddb69b0094032858f595ad4ce907",
+        "y.bin": "e0e8618b0150cff6773db9f71426039f9962812c752ebe9121f45f1a6dcd6194",
+        "x.bin": "c5e49744f10381b379bd390d9dfd6a2b7b580052c5c2569569f26b3b4b7a3aef"
+      }
+    },
+    {
+      "id": "0043",
+      "n": 17,
+      "block": 4,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 44,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 224207,
+        "launch": 53148,
+        "wait": 2898101,
+        "d2h": 180498,
+        "compare": 1057
+      },
+      "files": {
+        "observed_x.bin": "34b8238db69eeacc1b745a1b24d90883bea26a4c6bc7194e72664a8c40e85841",
+        "observed_z.bin": "4c209817d13a8d94f72690de9fd459dcaf887551901deb7ab69a9e5ad973ee11",
+        "observed_y.bin": "9227e9095ea69fa91b96afc1eece30500d9cb00284a6e7de259bd0b85042e3d7",
+        "z.bin": "dcd56d0de2bb534911a8d6659329739429323c9db43a9b72e8531b31798b20c0",
+        "expected.bin": "4c209817d13a8d94f72690de9fd459dcaf887551901deb7ab69a9e5ad973ee11",
+        "y.bin": "9227e9095ea69fa91b96afc1eece30500d9cb00284a6e7de259bd0b85042e3d7",
+        "x.bin": "34b8238db69eeacc1b745a1b24d90883bea26a4c6bc7194e72664a8c40e85841"
+      }
+    },
+    {
+      "id": "0044",
+      "n": 17,
+      "block": 7,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 45,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 182222,
+        "launch": 51704,
+        "wait": 3203372,
+        "d2h": 176291,
+        "compare": 892
+      },
+      "files": {
+        "observed_x.bin": "24b3f3afb12f9fca06a333265b5bc01238e5ee8a1642bba43a8bc4bbc7200d0d",
+        "observed_z.bin": "979035f733eb40c2f0aa270beb6a5de905b372ad2b8cd850dcd7f497377b3aa2",
+        "observed_y.bin": "aebb63263ae42199a3c833eeec6fa947451f9d81936fc321cfe4162a0f2ff2c5",
+        "z.bin": "a81837c2562ef2a1100bbe7e2d1ec775612f73b978183d08108e457fd4bbece6",
+        "expected.bin": "979035f733eb40c2f0aa270beb6a5de905b372ad2b8cd850dcd7f497377b3aa2",
+        "y.bin": "aebb63263ae42199a3c833eeec6fa947451f9d81936fc321cfe4162a0f2ff2c5",
+        "x.bin": "24b3f3afb12f9fca06a333265b5bc01238e5ee8a1642bba43a8bc4bbc7200d0d"
+      }
+    },
+    {
+      "id": "0045",
+      "n": 17,
+      "block": 7,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 46,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 183246,
+        "launch": 48945,
+        "wait": 3221789,
+        "d2h": 161138,
+        "compare": 992
+      },
+      "files": {
+        "observed_x.bin": "1ae2fd5c219998fd6b7d75e2a9dc8e7d6acf75a6ee51f7008f0be7544578f69b",
+        "observed_z.bin": "8d12e584f7053ee4baf9ba6228df5c3859a04ea447265d96f888a8550513bf9e",
+        "observed_y.bin": "233163fb6da7762a51949dfd474b97c6d8ce9b8895450a614ce7a4f2b58c4df0",
+        "z.bin": "61acf707574c7c4de1ced606a5e2b4a724633a32f0489cdb84e1307a93d7adb3",
+        "expected.bin": "8d12e584f7053ee4baf9ba6228df5c3859a04ea447265d96f888a8550513bf9e",
+        "y.bin": "233163fb6da7762a51949dfd474b97c6d8ce9b8895450a614ce7a4f2b58c4df0",
+        "x.bin": "1ae2fd5c219998fd6b7d75e2a9dc8e7d6acf75a6ee51f7008f0be7544578f69b"
+      }
+    },
+    {
+      "id": "0046",
+      "n": 17,
+      "block": 16,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 47,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 246305,
+        "launch": 49562,
+        "wait": 3610473,
+        "d2h": 164859,
+        "compare": 1301
+      },
+      "files": {
+        "observed_x.bin": "b02aa624728391a198312fc8260134bea65d35b0cc56f3714f2a73fcd7896b3d",
+        "observed_z.bin": "365f8af431369ec0d641baaf682c8435f6ab341ca337ab1854603926e9efd336",
+        "observed_y.bin": "57abecc62f9cebd81c39c23f14bece4ba65e1c474621d90349adf9488abc7327",
+        "z.bin": "f61a948b0df2702261dd373dbf5ce50fcf825d340576f4f5de4818d17ee67007",
+        "expected.bin": "365f8af431369ec0d641baaf682c8435f6ab341ca337ab1854603926e9efd336",
+        "y.bin": "57abecc62f9cebd81c39c23f14bece4ba65e1c474621d90349adf9488abc7327",
+        "x.bin": "b02aa624728391a198312fc8260134bea65d35b0cc56f3714f2a73fcd7896b3d"
+      }
+    },
+    {
+      "id": "0047",
+      "n": 17,
+      "block": 16,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 48,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 228116,
+        "launch": 58712,
+        "wait": 5752527,
+        "d2h": 200983,
+        "compare": 2292
+      },
+      "files": {
+        "observed_x.bin": "c15e3d332d7d12707138a1c3274223804d89e2015a92e73e14a003d2d0e667a6",
+        "observed_z.bin": "bf691e3ba6531a83c6e56ea5aa52c05ec6879578eddd3aff0d7dc6c7f5a0853e",
+        "observed_y.bin": "1e386fa1ca2ee4590afeb6affae0a2085b6db33272b17f558e932cb7b18ebebd",
+        "z.bin": "804e3b47cadfec5e09f7a48bb0d5fbb8b1e9eec65f9180b410d57f0b354453db",
+        "expected.bin": "bf691e3ba6531a83c6e56ea5aa52c05ec6879578eddd3aff0d7dc6c7f5a0853e",
+        "y.bin": "1e386fa1ca2ee4590afeb6affae0a2085b6db33272b17f558e932cb7b18ebebd",
+        "x.bin": "c15e3d332d7d12707138a1c3274223804d89e2015a92e73e14a003d2d0e667a6"
+      }
+    },
+    {
+      "id": "0048",
+      "n": 31,
+      "block": 1,
+      "grid": 31,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 49,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 256708,
+        "launch": 64207,
+        "wait": 11285626,
+        "d2h": 278264,
+        "compare": 1957
+      },
+      "files": {
+        "observed_x.bin": "33c63768e98323ac806bb8a4f8a9370a4b8311031cb28fc2b013bb43bf8109e3",
+        "observed_z.bin": "9ec4769d63738c33a119a7f2d13c61160c26f1626e7ca28684fedcf61d9a1c50",
+        "observed_y.bin": "6aae38e77c35d9fada94fbb7b150d076f79e047175d39b80223c83254a843c4e",
+        "z.bin": "20034e316801ef898ff651fd0aac10d44cf459b534951713f5dcda345e6ba904",
+        "expected.bin": "9ec4769d63738c33a119a7f2d13c61160c26f1626e7ca28684fedcf61d9a1c50",
+        "y.bin": "6aae38e77c35d9fada94fbb7b150d076f79e047175d39b80223c83254a843c4e",
+        "x.bin": "33c63768e98323ac806bb8a4f8a9370a4b8311031cb28fc2b013bb43bf8109e3"
+      }
+    },
+    {
+      "id": "0049",
+      "n": 31,
+      "block": 1,
+      "grid": 31,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 50,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 322400,
+        "launch": 62089,
+        "wait": 11195992,
+        "d2h": 165591,
+        "compare": 1075
+      },
+      "files": {
+        "observed_x.bin": "340fc0ebbfabf4361f8f197707eac3b9437e0fa44f4fced2fcd5566426e6c9a2",
+        "observed_z.bin": "cec3cf16c5f4735cf4b9c4388a60d17cebe7267052734ed3a07c178266b82f2c",
+        "observed_y.bin": "2e2e604c15fea2654228c7c2e57e5bf416ed7b511d81cd7bfe65f1c2b1f28969",
+        "z.bin": "b4ce30724b1e5587d252199bc89e71206d2fc37d0d46bc40860ddefd127969b8",
+        "expected.bin": "cec3cf16c5f4735cf4b9c4388a60d17cebe7267052734ed3a07c178266b82f2c",
+        "y.bin": "2e2e604c15fea2654228c7c2e57e5bf416ed7b511d81cd7bfe65f1c2b1f28969",
+        "x.bin": "340fc0ebbfabf4361f8f197707eac3b9437e0fa44f4fced2fcd5566426e6c9a2"
+      }
+    },
+    {
+      "id": "0050",
+      "n": 31,
+      "block": 4,
+      "grid": 8,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 51,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 224877,
+        "launch": 52110,
+        "wait": 3813675,
+        "d2h": 197369,
+        "compare": 955
+      },
+      "files": {
+        "observed_x.bin": "0d7d7af2d71f829ab14a7b7d250533c769deb5e4c006482f52715bfcd670a91d",
+        "observed_z.bin": "3608a154114f8bbcc31f6c78fe12099f7f445af483c3a165878d5993de7e1d25",
+        "observed_y.bin": "0ba44a99d59350501b2c809697549f5cd8eb8081ece5beb4efeb0196a346af64",
+        "z.bin": "d6c2e11dc91ca5451c277535843affffc4ada80d38289db6d1c58b132b06fb81",
+        "expected.bin": "3608a154114f8bbcc31f6c78fe12099f7f445af483c3a165878d5993de7e1d25",
+        "y.bin": "0ba44a99d59350501b2c809697549f5cd8eb8081ece5beb4efeb0196a346af64",
+        "x.bin": "0d7d7af2d71f829ab14a7b7d250533c769deb5e4c006482f52715bfcd670a91d"
+      }
+    },
+    {
+      "id": "0051",
+      "n": 31,
+      "block": 4,
+      "grid": 8,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 52,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 252691,
+        "launch": 47998,
+        "wait": 4014816,
+        "d2h": 292251,
+        "compare": 1119
+      },
+      "files": {
+        "observed_x.bin": "48424f1e0e657d6871c50a5ed8b3cc27194f740f870a7c7bfb37093a81fb47e4",
+        "observed_z.bin": "3b7e6f905fcdb5d451f88534a2982668835de77222a74254f4d9c0bffe97c9fe",
+        "observed_y.bin": "0cd57fdb24a899105b0616816ed9c52be4362636581b6ec75e64934002bc54b8",
+        "z.bin": "e3c84af834677102f5249dee010f78f124a683a58d042d315f6406ed03c7c141",
+        "expected.bin": "3b7e6f905fcdb5d451f88534a2982668835de77222a74254f4d9c0bffe97c9fe",
+        "y.bin": "0cd57fdb24a899105b0616816ed9c52be4362636581b6ec75e64934002bc54b8",
+        "x.bin": "48424f1e0e657d6871c50a5ed8b3cc27194f740f870a7c7bfb37093a81fb47e4"
+      }
+    },
+    {
+      "id": "0052",
+      "n": 31,
+      "block": 7,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 53,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 221279,
+        "launch": 49800,
+        "wait": 4634334,
+        "d2h": 231156,
+        "compare": 926
+      },
+      "files": {
+        "observed_x.bin": "7faf7ff48dd92d7f819c21dd6458be5a5ebe66830ef60a43fe42afac1d78cfcb",
+        "observed_z.bin": "22b6c6d17a3ee47a510645cef0e0f9ee2f01b505c4f9d4d0b9ddc6621e0bdaf0",
+        "observed_y.bin": "bc6201c37537eb9c4b387abf780919ca31a0e9e255f914a5a2a103f628264017",
+        "z.bin": "254b9a357501a4d925edd605e9ff05b9d5a70805acea9a9fdbd97f1dd1316347",
+        "expected.bin": "22b6c6d17a3ee47a510645cef0e0f9ee2f01b505c4f9d4d0b9ddc6621e0bdaf0",
+        "y.bin": "bc6201c37537eb9c4b387abf780919ca31a0e9e255f914a5a2a103f628264017",
+        "x.bin": "7faf7ff48dd92d7f819c21dd6458be5a5ebe66830ef60a43fe42afac1d78cfcb"
+      }
+    },
+    {
+      "id": "0053",
+      "n": 31,
+      "block": 7,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 54,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 199212,
+        "launch": 53820,
+        "wait": 4840646,
+        "d2h": 194123,
+        "compare": 1283
+      },
+      "files": {
+        "observed_x.bin": "a28a6317594889d3ce88ceb3b930bc0ac4521952fd6c84e92845b1add538a235",
+        "observed_z.bin": "10cb1a86b05c57e2ff40cbeb936d528760e6bd9cf25bfe4ae046c4cede712bc0",
+        "observed_y.bin": "1e085f92c1dc573346142d977a816b4d8f9205e668d4141b65b848a07461055b",
+        "z.bin": "dece72b8f7081e98746070a624d56ee8e4602816b8938de1334b3c81b59541c7",
+        "expected.bin": "10cb1a86b05c57e2ff40cbeb936d528760e6bd9cf25bfe4ae046c4cede712bc0",
+        "y.bin": "1e085f92c1dc573346142d977a816b4d8f9205e668d4141b65b848a07461055b",
+        "x.bin": "a28a6317594889d3ce88ceb3b930bc0ac4521952fd6c84e92845b1add538a235"
+      }
+    },
+    {
+      "id": "0054",
+      "n": 31,
+      "block": 16,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 55,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 229310,
+        "launch": 48753,
+        "wait": 3708118,
+        "d2h": 158535,
+        "compare": 903
+      },
+      "files": {
+        "observed_x.bin": "2a5dc63ec137373ce2a9b34239417ed7972dafe46c006289ef1431a4132c4ab1",
+        "observed_z.bin": "3fa74bf3f4a9bbf9e77f60e40d4ea6321d8983f42ee3ef97f210a02d15110a13",
+        "observed_y.bin": "d3feafb9b73a7d51d36b3921e2aeb6138003554c60708d2836d1a1dfa144dcc1",
+        "z.bin": "a3955da9c49f96cf6681fe089ac3aa027bc08793339a03bc2c30925886531a0f",
+        "expected.bin": "3fa74bf3f4a9bbf9e77f60e40d4ea6321d8983f42ee3ef97f210a02d15110a13",
+        "y.bin": "d3feafb9b73a7d51d36b3921e2aeb6138003554c60708d2836d1a1dfa144dcc1",
+        "x.bin": "2a5dc63ec137373ce2a9b34239417ed7972dafe46c006289ef1431a4132c4ab1"
+      }
+    },
+    {
+      "id": "0055",
+      "n": 31,
+      "block": 16,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 56,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 254478,
+        "launch": 55138,
+        "wait": 3839895,
+        "d2h": 210123,
+        "compare": 1069
+      },
+      "files": {
+        "observed_x.bin": "ad3a6b524844c4423076c76d26d1cba5e728c182a4a345e02347ac3684de8401",
+        "observed_z.bin": "322a9a249adf0c144f4bb09af3ea978c3ce3401dd5902bbb24023b4098066c79",
+        "observed_y.bin": "8b412007c3e123e91acf7d66ac9ed16dc04c5bd93127ff7ef6fd2fad2629dacf",
+        "z.bin": "cad95e26de48c6da07a1ba45723aa234ce9a49ca702476b63e6a3e9c639bcef1",
+        "expected.bin": "322a9a249adf0c144f4bb09af3ea978c3ce3401dd5902bbb24023b4098066c79",
+        "y.bin": "8b412007c3e123e91acf7d66ac9ed16dc04c5bd93127ff7ef6fd2fad2629dacf",
+        "x.bin": "ad3a6b524844c4423076c76d26d1cba5e728c182a4a345e02347ac3684de8401"
+      }
+    },
+    {
+      "id": "0056",
+      "n": 32,
+      "block": 1,
+      "grid": 32,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 57,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 243268,
+        "launch": 59827,
+        "wait": 11534551,
+        "d2h": 185355,
+        "compare": 1497
+      },
+      "files": {
+        "observed_x.bin": "119d318431aa12c10849cf22f03104d34c5cbda186bdafc61d842272c53115ab",
+        "observed_z.bin": "ca567c37eddb31922a4581f0b4a2115cbf083d669fb2afe26c73de94380d27b9",
+        "observed_y.bin": "a18a3b51997481fee6d86f92cbc60604d0dad111ae1dfb03fb9a905e8f1552ab",
+        "z.bin": "9378fd83cbbd5e8349cf190a1ff89fb595cf8cda84412838577f4be2f3e9b2d6",
+        "expected.bin": "ca567c37eddb31922a4581f0b4a2115cbf083d669fb2afe26c73de94380d27b9",
+        "y.bin": "a18a3b51997481fee6d86f92cbc60604d0dad111ae1dfb03fb9a905e8f1552ab",
+        "x.bin": "119d318431aa12c10849cf22f03104d34c5cbda186bdafc61d842272c53115ab"
+      }
+    },
+    {
+      "id": "0057",
+      "n": 32,
+      "block": 1,
+      "grid": 32,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 58,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 280410,
+        "launch": 69534,
+        "wait": 12170415,
+        "d2h": 278201,
+        "compare": 1966
+      },
+      "files": {
+        "observed_x.bin": "962b5b9008d346a912e65e83ede57c07a8fc364932df05aaf51045a78a1456d5",
+        "observed_z.bin": "9893e4c63c964f15ffcbcb8960a2d02a57075b0bc3d8c0b3ea7fb717540381d8",
+        "observed_y.bin": "cdc525cfb8eda2e350e7927dcff5ddd1a78ecf0bf40474e576103c7a3ad20757",
+        "z.bin": "64b235c0e252e59535c685083dc3ba1895404d2f11deef69394665bfea6b14d9",
+        "expected.bin": "9893e4c63c964f15ffcbcb8960a2d02a57075b0bc3d8c0b3ea7fb717540381d8",
+        "y.bin": "cdc525cfb8eda2e350e7927dcff5ddd1a78ecf0bf40474e576103c7a3ad20757",
+        "x.bin": "962b5b9008d346a912e65e83ede57c07a8fc364932df05aaf51045a78a1456d5"
+      }
+    },
+    {
+      "id": "0058",
+      "n": 32,
+      "block": 4,
+      "grid": 8,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 59,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 222797,
+        "launch": 66556,
+        "wait": 3882149,
+        "d2h": 234347,
+        "compare": 1378
+      },
+      "files": {
+        "observed_x.bin": "795255fb357398c141f6a939f0c7fea3875e1eabfe080751ad91a45c2669990e",
+        "observed_z.bin": "542b96aa27a25d3aa87b65b5fe6bbc358b8b048f931794674e6af3381a14ce21",
+        "observed_y.bin": "fd904594e27a07d080b3755e47d35bdf281774203afe7577faf26a7ed9377fa5",
+        "z.bin": "f70143df19b9acc7c7f6775b288bc830437c6619bd1797334fbf7a454059464a",
+        "expected.bin": "542b96aa27a25d3aa87b65b5fe6bbc358b8b048f931794674e6af3381a14ce21",
+        "y.bin": "fd904594e27a07d080b3755e47d35bdf281774203afe7577faf26a7ed9377fa5",
+        "x.bin": "795255fb357398c141f6a939f0c7fea3875e1eabfe080751ad91a45c2669990e"
+      }
+    },
+    {
+      "id": "0059",
+      "n": 32,
+      "block": 4,
+      "grid": 8,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 60,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 182207,
+        "launch": 51599,
+        "wait": 3861505,
+        "d2h": 167103,
+        "compare": 1102
+      },
+      "files": {
+        "observed_x.bin": "8199df986e2a4221cb28bc73f9a825d51e40d3322c49adedc5327b045393ae3e",
+        "observed_z.bin": "b90d45bbbeb85af70c7777848da924082a11e722dcdeade9871a3d8727aee549",
+        "observed_y.bin": "5d60eea32cdf27b59e5df7b9825ac84101b39322ff8b9fd4db8662eba1755c0a",
+        "z.bin": "dc7bc2486ffadec62986d1b5b5d6484cf487307083da1d225bd2b497e836ec06",
+        "expected.bin": "b90d45bbbeb85af70c7777848da924082a11e722dcdeade9871a3d8727aee549",
+        "y.bin": "5d60eea32cdf27b59e5df7b9825ac84101b39322ff8b9fd4db8662eba1755c0a",
+        "x.bin": "8199df986e2a4221cb28bc73f9a825d51e40d3322c49adedc5327b045393ae3e"
+      }
+    },
+    {
+      "id": "0060",
+      "n": 32,
+      "block": 7,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 61,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 345303,
+        "launch": 79486,
+        "wait": 4769193,
+        "d2h": 199911,
+        "compare": 1360
+      },
+      "files": {
+        "observed_x.bin": "67ee8f6a9751b4b0c4d5c544d62fca3883ed5fd8101b56b582149fbb3742614f",
+        "observed_z.bin": "85de4b22b3c5326f5c930f976246d73b9d8e32fa3524837e065729d55d369ce7",
+        "observed_y.bin": "7343176823504f9fb46321cc6d8e2474a3c75ef6abd001b27c7f4200bbbfb0cb",
+        "z.bin": "48903aaccec60cf802def4131f9d0cba265f84dcbcb35f3ac98c11a5e65cb55a",
+        "expected.bin": "85de4b22b3c5326f5c930f976246d73b9d8e32fa3524837e065729d55d369ce7",
+        "y.bin": "7343176823504f9fb46321cc6d8e2474a3c75ef6abd001b27c7f4200bbbfb0cb",
+        "x.bin": "67ee8f6a9751b4b0c4d5c544d62fca3883ed5fd8101b56b582149fbb3742614f"
+      }
+    },
+    {
+      "id": "0061",
+      "n": 32,
+      "block": 7,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 62,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 224642,
+        "launch": 61181,
+        "wait": 4556081,
+        "d2h": 170293,
+        "compare": 1400
+      },
+      "files": {
+        "observed_x.bin": "a7110aada7ce3c5ae700caff5c13558febb063df5437e6faef9efe98b5da904a",
+        "observed_z.bin": "7c5ee016583af7b0db39e1fecc37c0bc270006646334220e22fca496d68baeb4",
+        "observed_y.bin": "34c1bbec4b39c724a444e86f84a5af1a487de7bf68c0ba857d419ce9bdaca86f",
+        "z.bin": "4853de9122f3f59d18d181e66ab31f85b929df8ea50406aca58a0ae9ef3a0bdb",
+        "expected.bin": "7c5ee016583af7b0db39e1fecc37c0bc270006646334220e22fca496d68baeb4",
+        "y.bin": "34c1bbec4b39c724a444e86f84a5af1a487de7bf68c0ba857d419ce9bdaca86f",
+        "x.bin": "a7110aada7ce3c5ae700caff5c13558febb063df5437e6faef9efe98b5da904a"
+      }
+    },
+    {
+      "id": "0062",
+      "n": 32,
+      "block": 16,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 63,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 225988,
+        "launch": 57099,
+        "wait": 5054033,
+        "d2h": 288050,
+        "compare": 1329
+      },
+      "files": {
+        "observed_x.bin": "7fe717cc71a495b85b5337e7d4c383508b749702bb79b0357f28431afaac160a",
+        "observed_z.bin": "87581256aa30bd7a50ba5610cffcd61123ed74a4fec39b81c3ed50400aa53149",
+        "observed_y.bin": "df7aadb2335b34e237310430724867955e08642427db6eb891c8b5086e78ea27",
+        "z.bin": "e7bbc46322fe4522eca6b938445145384cc527c5c113abf3efcedc95d6b219fe",
+        "expected.bin": "87581256aa30bd7a50ba5610cffcd61123ed74a4fec39b81c3ed50400aa53149",
+        "y.bin": "df7aadb2335b34e237310430724867955e08642427db6eb891c8b5086e78ea27",
+        "x.bin": "7fe717cc71a495b85b5337e7d4c383508b749702bb79b0357f28431afaac160a"
+      }
+    },
+    {
+      "id": "0063",
+      "n": 32,
+      "block": 16,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 64,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 183054,
+        "launch": 56488,
+        "wait": 3559430,
+        "d2h": 160102,
+        "compare": 1082
+      },
+      "files": {
+        "observed_x.bin": "7e9e998bb427c3db00d34358dacfb6513eaeba544bd40d467c90c5385b33c677",
+        "observed_z.bin": "de21f05c413eca21e98cc7d6f267cde98cdd4c02548ac7481719dd626fe07f5f",
+        "observed_y.bin": "16f7ce99cd28006d086a3ea428942a11e1a921d8406a5dd3e7f92df7bfc19c2e",
+        "z.bin": "fe6bee3236fcef0039bbf52469a5694eaeda545fd2534a06b335108793500045",
+        "expected.bin": "de21f05c413eca21e98cc7d6f267cde98cdd4c02548ac7481719dd626fe07f5f",
+        "y.bin": "16f7ce99cd28006d086a3ea428942a11e1a921d8406a5dd3e7f92df7bfc19c2e",
+        "x.bin": "7e9e998bb427c3db00d34358dacfb6513eaeba544bd40d467c90c5385b33c677"
+      }
+    },
+    {
+      "id": "0064",
+      "n": 33,
+      "block": 1,
+      "grid": 33,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 65,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 360392,
+        "launch": 68247,
+        "wait": 12618885,
+        "d2h": 187101,
+        "compare": 1461
+      },
+      "files": {
+        "observed_x.bin": "db9e933e089efb6b6514905ce4e5f76f7d9a0cb814797f99a8d76e3a32d4a786",
+        "observed_z.bin": "4be708f1371bc43a168f86589cbad7024f3a4d6a4a79792f00c1e98efa53fd27",
+        "observed_y.bin": "b5983739075ebf04fa0de40465d510548a574005d47ed14466f33db77822474d",
+        "z.bin": "12dce5a984fe51e6d78db3f2233ea1c758ee56940e2f4499d55d0fcc09e3e89b",
+        "expected.bin": "4be708f1371bc43a168f86589cbad7024f3a4d6a4a79792f00c1e98efa53fd27",
+        "y.bin": "b5983739075ebf04fa0de40465d510548a574005d47ed14466f33db77822474d",
+        "x.bin": "db9e933e089efb6b6514905ce4e5f76f7d9a0cb814797f99a8d76e3a32d4a786"
+      }
+    },
+    {
+      "id": "0065",
+      "n": 33,
+      "block": 1,
+      "grid": 33,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 66,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 227512,
+        "launch": 74994,
+        "wait": 12205248,
+        "d2h": 208016,
+        "compare": 1717
+      },
+      "files": {
+        "observed_x.bin": "7087454b50c773275594b277e2acc6bd1d2a6dd52f050349018de5306b9686a5",
+        "observed_z.bin": "91fb318483946a5a522af086b2af640854563e4d9c38d0c610ba74e214894fae",
+        "observed_y.bin": "8b9130931cd32c1086074c02af16ad323d102bdb5de0edbf9832ea616bac2f2d",
+        "z.bin": "95696ea6805ec49f68764c6a01b104abd863aa069854fd6533e31b4a28a51185",
+        "expected.bin": "91fb318483946a5a522af086b2af640854563e4d9c38d0c610ba74e214894fae",
+        "y.bin": "8b9130931cd32c1086074c02af16ad323d102bdb5de0edbf9832ea616bac2f2d",
+        "x.bin": "7087454b50c773275594b277e2acc6bd1d2a6dd52f050349018de5306b9686a5"
+      }
+    },
+    {
+      "id": "0066",
+      "n": 33,
+      "block": 4,
+      "grid": 9,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 67,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 241337,
+        "launch": 55894,
+        "wait": 4718333,
+        "d2h": 211300,
+        "compare": 1142
+      },
+      "files": {
+        "observed_x.bin": "24d2bfb4273b8b5addada9454b11e416a7a4fa836b5dc8050e6ddfd99fb6a440",
+        "observed_z.bin": "c7487d05d814b5152bd1efe57faf8a637922689e0a6dab19990a618994ac8aec",
+        "observed_y.bin": "977bcfd0ce661c1ed4e022acd570419788b905efafd4b02c5053133ead8ccd65",
+        "z.bin": "673bbda9e657684e19b7f2b4bf9fe1f340bfbd8e92512895e70b3ab2404919cf",
+        "expected.bin": "c7487d05d814b5152bd1efe57faf8a637922689e0a6dab19990a618994ac8aec",
+        "y.bin": "977bcfd0ce661c1ed4e022acd570419788b905efafd4b02c5053133ead8ccd65",
+        "x.bin": "24d2bfb4273b8b5addada9454b11e416a7a4fa836b5dc8050e6ddfd99fb6a440"
+      }
+    },
+    {
+      "id": "0067",
+      "n": 33,
+      "block": 4,
+      "grid": 9,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 68,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 238666,
+        "launch": 61524,
+        "wait": 4654717,
+        "d2h": 167659,
+        "compare": 902
+      },
+      "files": {
+        "observed_x.bin": "cccb9073fa30a3eae336f73b5470b627bc9525dd7593c34063ef4514b517e83f",
+        "observed_z.bin": "08c766acda28f7cba2ecc7017951e149c2e7f2e66a1b75dd1498abc78bd6e9b0",
+        "observed_y.bin": "62cf95f75ab51dfdbf10f6f94c06fcc6b5c213c8cc73fe3a086500df5ecd599c",
+        "z.bin": "ca67d6c023a9b0c3770667e858e0546dbe3d71cda4acdfbf3453bdb597877a0e",
+        "expected.bin": "08c766acda28f7cba2ecc7017951e149c2e7f2e66a1b75dd1498abc78bd6e9b0",
+        "y.bin": "62cf95f75ab51dfdbf10f6f94c06fcc6b5c213c8cc73fe3a086500df5ecd599c",
+        "x.bin": "cccb9073fa30a3eae336f73b5470b627bc9525dd7593c34063ef4514b517e83f"
+      }
+    },
+    {
+      "id": "0068",
+      "n": 33,
+      "block": 7,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 69,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 325815,
+        "launch": 66266,
+        "wait": 5136891,
+        "d2h": 193583,
+        "compare": 842
+      },
+      "files": {
+        "observed_x.bin": "d52b7cd8ecd03678ce08441013c2aa9b3668b0c937b30211a96b3e5d73b1b255",
+        "observed_z.bin": "9acdef3a7455d03b93790b76c20f5ab0786bee3f7de964761fd92cc6bb5e4fed",
+        "observed_y.bin": "e9d972e291778a055feed52b86b0597008ec5433fb8ffd7d63edfb8bab25cc60",
+        "z.bin": "9891f6e09ff1236d50d6b0d0b34a3634d129053eb01e1bd4887249171de0feba",
+        "expected.bin": "9acdef3a7455d03b93790b76c20f5ab0786bee3f7de964761fd92cc6bb5e4fed",
+        "y.bin": "e9d972e291778a055feed52b86b0597008ec5433fb8ffd7d63edfb8bab25cc60",
+        "x.bin": "d52b7cd8ecd03678ce08441013c2aa9b3668b0c937b30211a96b3e5d73b1b255"
+      }
+    },
+    {
+      "id": "0069",
+      "n": 33,
+      "block": 7,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 70,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 741263,
+        "launch": 77085,
+        "wait": 4870694,
+        "d2h": 164259,
+        "compare": 815
+      },
+      "files": {
+        "observed_x.bin": "570df6df5232bb9b46a36aea37c9fa271775cbab011925206d4068349f73fdfa",
+        "observed_z.bin": "819833b24962f63c2535917534bd0bd804c4015c355700231082bf7623816424",
+        "observed_y.bin": "5494e86f0fdebaef3ec5c74eb012b0673dec79d164e0ea2165be0cb7de31e370",
+        "z.bin": "92d64edc4e65e8acc1a476f8d49cd5acb11d8929323578612ed63a2b818284a1",
+        "expected.bin": "819833b24962f63c2535917534bd0bd804c4015c355700231082bf7623816424",
+        "y.bin": "5494e86f0fdebaef3ec5c74eb012b0673dec79d164e0ea2165be0cb7de31e370",
+        "x.bin": "570df6df5232bb9b46a36aea37c9fa271775cbab011925206d4068349f73fdfa"
+      }
+    },
+    {
+      "id": "0070",
+      "n": 33,
+      "block": 16,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 71,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 207769,
+        "launch": 58444,
+        "wait": 5017086,
+        "d2h": 171411,
+        "compare": 1886
+      },
+      "files": {
+        "observed_x.bin": "95dc5ec1c56b424c1951afb6da9d715ca5dd733969a7462bdb6b4e6d991f3048",
+        "observed_z.bin": "a6a5350c2e517af86c81dadb1dc69b715b77f6a9e1145f6aca02eb5d79fd3f26",
+        "observed_y.bin": "035b87760374a2f2a2060b88242ea299f14f882269632d762cc256b0b4b7229d",
+        "z.bin": "700d4c3c18ed3e0f65de5777fde3646ab905c21c2836b90acc32d46929a516e3",
+        "expected.bin": "a6a5350c2e517af86c81dadb1dc69b715b77f6a9e1145f6aca02eb5d79fd3f26",
+        "y.bin": "035b87760374a2f2a2060b88242ea299f14f882269632d762cc256b0b4b7229d",
+        "x.bin": "95dc5ec1c56b424c1951afb6da9d715ca5dd733969a7462bdb6b4e6d991f3048"
+      }
+    },
+    {
+      "id": "0071",
+      "n": 33,
+      "block": 16,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 72,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 199170,
+        "launch": 61556,
+        "wait": 5087961,
+        "d2h": 234031,
+        "compare": 896
+      },
+      "files": {
+        "observed_x.bin": "7e2eb6e1ad20826f1364d4f7fdf481b0daec6fd385f5cda087e4d45b7961e7bb",
+        "observed_z.bin": "facc0814d3f64bf06659ac3b6ab716cf39ec566b7c1e78401a21f26daa740fbf",
+        "observed_y.bin": "c13bc46616f6cd3041f968875bceac55049c37c4dc70fc1a14cd9ec4e8e634b9",
+        "z.bin": "b7b34bf22c4893355e5cd25d4d645f4f92e4a58cb27060b1470ac0c309541dbc",
+        "expected.bin": "facc0814d3f64bf06659ac3b6ab716cf39ec566b7c1e78401a21f26daa740fbf",
+        "y.bin": "c13bc46616f6cd3041f968875bceac55049c37c4dc70fc1a14cd9ec4e8e634b9",
+        "x.bin": "7e2eb6e1ad20826f1364d4f7fdf481b0daec6fd385f5cda087e4d45b7961e7bb"
+      }
+    },
+    {
+      "id": "0072",
+      "n": 65,
+      "block": 1,
+      "grid": 65,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 73,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 212885,
+        "launch": 64438,
+        "wait": 25996230,
+        "d2h": 593482,
+        "compare": 7324
+      },
+      "files": {
+        "observed_x.bin": "ada09e2f04080d4c2eb118909c4843a06d9a3c8260fbbe6b61b9b2531db762bd",
+        "observed_z.bin": "2adcebe7c664a6563ae146dbae991d54c18a4337674ab4d1740d842363380a91",
+        "observed_y.bin": "428b4d97224fb7f01a8f248e96d217dedb836e3441c8450011a7bfee3e9b397e",
+        "z.bin": "8cfc5926790ec35360b0092c5e553e00fbdac7f80d38dd8148926358b0324410",
+        "expected.bin": "2adcebe7c664a6563ae146dbae991d54c18a4337674ab4d1740d842363380a91",
+        "y.bin": "428b4d97224fb7f01a8f248e96d217dedb836e3441c8450011a7bfee3e9b397e",
+        "x.bin": "ada09e2f04080d4c2eb118909c4843a06d9a3c8260fbbe6b61b9b2531db762bd"
+      }
+    },
+    {
+      "id": "0073",
+      "n": 65,
+      "block": 1,
+      "grid": 65,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 74,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 4332851,
+        "launch": 77513,
+        "wait": 24216232,
+        "d2h": 219749,
+        "compare": 1286
+      },
+      "files": {
+        "observed_x.bin": "c9e84d25fe2f0316216f5a8a23c8f1dce59f7455d5b712aa51264f09830f9ba6",
+        "observed_z.bin": "205fbaf7081d4308cfd61397b2aaef049a81e2033616598d50f280c2e1b5d3c7",
+        "observed_y.bin": "002c629b97a1415532638371c9d4ea2e771c7faec6e7c3e074e8c2467b194b92",
+        "z.bin": "bffd217d3089bf2cdea13d18b8250e12be9025faa38e9a2b776b60daa19ca210",
+        "expected.bin": "205fbaf7081d4308cfd61397b2aaef049a81e2033616598d50f280c2e1b5d3c7",
+        "y.bin": "002c629b97a1415532638371c9d4ea2e771c7faec6e7c3e074e8c2467b194b92",
+        "x.bin": "c9e84d25fe2f0316216f5a8a23c8f1dce59f7455d5b712aa51264f09830f9ba6"
+      }
+    },
+    {
+      "id": "0074",
+      "n": 65,
+      "block": 4,
+      "grid": 17,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 75,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 220755,
+        "launch": 69831,
+        "wait": 7762343,
+        "d2h": 167159,
+        "compare": 1087
+      },
+      "files": {
+        "observed_x.bin": "62178cbfadf118b81bebcc93454a1555f30acb90a23c695f0dc21caaf1f629dd",
+        "observed_z.bin": "69880f99dd0c80059eb1fd031837581c6286900058c22af8b703a3b386b599e7",
+        "observed_y.bin": "8a61004a6803a551f6cfb98f2100e78dce0a647ec1b607d0012e0eb6b62d052f",
+        "z.bin": "7b340ddcdaa6b6f01ec66828f1cf5fcadeba374131d4672c718230c7b0cd175a",
+        "expected.bin": "69880f99dd0c80059eb1fd031837581c6286900058c22af8b703a3b386b599e7",
+        "y.bin": "8a61004a6803a551f6cfb98f2100e78dce0a647ec1b607d0012e0eb6b62d052f",
+        "x.bin": "62178cbfadf118b81bebcc93454a1555f30acb90a23c695f0dc21caaf1f629dd"
+      }
+    },
+    {
+      "id": "0075",
+      "n": 65,
+      "block": 4,
+      "grid": 17,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 76,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 193778,
+        "launch": 56178,
+        "wait": 8410705,
+        "d2h": 247228,
+        "compare": 1509
+      },
+      "files": {
+        "observed_x.bin": "f184eb36db8af1219538cb8af8fc0a11587656234fcf2850d1fcb8d1d9285b6c",
+        "observed_z.bin": "ca586007cb6254ad76a0fe2ccfc897b07df360c8b97b92bbb30863dd220dbebf",
+        "observed_y.bin": "6710ff32da736b9caf315ce7286067bb9ab98cc7a63ac67e0602cb520db245c0",
+        "z.bin": "b382e066610bc00b3871e44946072c5b83b2f574276c77ceadcf5569bfd6f191",
+        "expected.bin": "ca586007cb6254ad76a0fe2ccfc897b07df360c8b97b92bbb30863dd220dbebf",
+        "y.bin": "6710ff32da736b9caf315ce7286067bb9ab98cc7a63ac67e0602cb520db245c0",
+        "x.bin": "f184eb36db8af1219538cb8af8fc0a11587656234fcf2850d1fcb8d1d9285b6c"
+      }
+    },
+    {
+      "id": "0076",
+      "n": 65,
+      "block": 7,
+      "grid": 10,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 77,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 511132,
+        "launch": 78357,
+        "wait": 8522541,
+        "d2h": 223327,
+        "compare": 1263
+      },
+      "files": {
+        "observed_x.bin": "0fe7b15921357e9074de4ee78f45e29925fc5ce44adbafce48094c2e66d67eb5",
+        "observed_z.bin": "14be069adefc87b544152e159598a328a152435c34fce64f4dbdba660c8fe067",
+        "observed_y.bin": "b2cc8ceea4fb1caeace32f10129ab47136fb06a9bc199abbe8dbc8426dc346c1",
+        "z.bin": "6ad1ef76baa05f084dd0d0a073fac2fcb3688a89b9b9cb24b917f8c605012b31",
+        "expected.bin": "14be069adefc87b544152e159598a328a152435c34fce64f4dbdba660c8fe067",
+        "y.bin": "b2cc8ceea4fb1caeace32f10129ab47136fb06a9bc199abbe8dbc8426dc346c1",
+        "x.bin": "0fe7b15921357e9074de4ee78f45e29925fc5ce44adbafce48094c2e66d67eb5"
+      }
+    },
+    {
+      "id": "0077",
+      "n": 65,
+      "block": 7,
+      "grid": 10,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 78,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 272357,
+        "launch": 65672,
+        "wait": 8592797,
+        "d2h": 183816,
+        "compare": 1128
+      },
+      "files": {
+        "observed_x.bin": "d637d4ca3598a8be7eac5038754c1e7cd4e60e565997ca55471abdb106f033b4",
+        "observed_z.bin": "d9756908330a0721c2920e05a9cf807f47bdf31b58228ad40e6100a2119bbe87",
+        "observed_y.bin": "237416f91eae6465369cd09387f875561ed7f8e1c2f9637857cb6d607e0e33ca",
+        "z.bin": "72d609f3f38831e6e9d352bc020e8401815b5e9f4f73a3b28d590575648eb221",
+        "expected.bin": "d9756908330a0721c2920e05a9cf807f47bdf31b58228ad40e6100a2119bbe87",
+        "y.bin": "237416f91eae6465369cd09387f875561ed7f8e1c2f9637857cb6d607e0e33ca",
+        "x.bin": "d637d4ca3598a8be7eac5038754c1e7cd4e60e565997ca55471abdb106f033b4"
+      }
+    },
+    {
+      "id": "0078",
+      "n": 65,
+      "block": 16,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 79,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 223151,
+        "launch": 67034,
+        "wait": 10060552,
+        "d2h": 262059,
+        "compare": 1756
+      },
+      "files": {
+        "observed_x.bin": "5c89339d20126d3bc79d060c1cfc1440f6b1b5322ea4afdcb441c7781f14a478",
+        "observed_z.bin": "173251563f60f2d79e278f2bbdd6c31fe8c2611d9ce874bf22b009ae13e62194",
+        "observed_y.bin": "bb5e410ad0b8601d06576b64e4ee7ca82eed0dd15c839753f4d32bfd59f78c7f",
+        "z.bin": "8ddca35f7ef8d088c84f88b802e1d9586680f83258984263a37a61a739571746",
+        "expected.bin": "173251563f60f2d79e278f2bbdd6c31fe8c2611d9ce874bf22b009ae13e62194",
+        "y.bin": "bb5e410ad0b8601d06576b64e4ee7ca82eed0dd15c839753f4d32bfd59f78c7f",
+        "x.bin": "5c89339d20126d3bc79d060c1cfc1440f6b1b5322ea4afdcb441c7781f14a478"
+      }
+    },
+    {
+      "id": "0079",
+      "n": 65,
+      "block": 16,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 80,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 193675,
+        "launch": 62703,
+        "wait": 7907355,
+        "d2h": 165623,
+        "compare": 1262
+      },
+      "files": {
+        "observed_x.bin": "1c1779cb165cf7493b60d6913d1553477097cb6c6f3d5f70a50b15943d0dc0d9",
+        "observed_z.bin": "57c2372be4aa765c093642c1fb2fe612d2fc1fe45647fdffead462a2bc9af9f2",
+        "observed_y.bin": "81e0f6c93ac250af2f513b48d7d2c7cb29f926b268b35b783041459c2430959d",
+        "z.bin": "1dcd5aabd006b8f4e448917c25ae8a1575af31efcb6226ef2fac5bd099d6524b",
+        "expected.bin": "57c2372be4aa765c093642c1fb2fe612d2fc1fe45647fdffead462a2bc9af9f2",
+        "y.bin": "81e0f6c93ac250af2f513b48d7d2c7cb29f926b268b35b783041459c2430959d",
+        "x.bin": "1c1779cb165cf7493b60d6913d1553477097cb6c6f3d5f70a50b15943d0dc0d9"
+      }
+    },
+    {
+      "id": "0080",
+      "n": 257,
+      "block": 1,
+      "grid": 257,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 81,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 256795,
+        "launch": 54492,
+        "wait": 94030817,
+        "d2h": 390029,
+        "compare": 1620
+      },
+      "files": {
+        "observed_x.bin": "004aa82d77aba4ba4c00c0032f634d9e57a84cbd6f662ac589935a60e6639197",
+        "observed_z.bin": "1c02ec39fda7f5b799760c9bc8480abc13b5d94cf68534fd7417517c8cc62e29",
+        "observed_y.bin": "432cce237f8857a7ca9303f7b94cd8cc35da1b25e339f7eda6e8cba7b561bde7",
+        "z.bin": "61a3061e75f510a34c5014e7530c4cf6fa41d9f810bea9fbf39f22692f5a4d3e",
+        "expected.bin": "1c02ec39fda7f5b799760c9bc8480abc13b5d94cf68534fd7417517c8cc62e29",
+        "y.bin": "432cce237f8857a7ca9303f7b94cd8cc35da1b25e339f7eda6e8cba7b561bde7",
+        "x.bin": "004aa82d77aba4ba4c00c0032f634d9e57a84cbd6f662ac589935a60e6639197"
+      }
+    },
+    {
+      "id": "0081",
+      "n": 257,
+      "block": 1,
+      "grid": 257,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 82,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 275118,
+        "launch": 81334,
+        "wait": 92317265,
+        "d2h": 288377,
+        "compare": 1747
+      },
+      "files": {
+        "observed_x.bin": "82c3ffdb682e74900d6e63d7972a876efb91015a10dd4a5759db5375275cf6d7",
+        "observed_z.bin": "88fc016c0c16e8a8466b3d441c1f9f22e532bf1bb13311031442cbe42e0c0021",
+        "observed_y.bin": "15a0d9989407d6ecfdd5f8eafccbc7a62fa1602425a9c5b33205a89e64b60f57",
+        "z.bin": "4d1010371acb73a63aca912e93f6b9b2c01d5539342affe472dc8253a04de6b7",
+        "expected.bin": "88fc016c0c16e8a8466b3d441c1f9f22e532bf1bb13311031442cbe42e0c0021",
+        "y.bin": "15a0d9989407d6ecfdd5f8eafccbc7a62fa1602425a9c5b33205a89e64b60f57",
+        "x.bin": "82c3ffdb682e74900d6e63d7972a876efb91015a10dd4a5759db5375275cf6d7"
+      }
+    },
+    {
+      "id": "0082",
+      "n": 257,
+      "block": 4,
+      "grid": 65,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 83,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 311671,
+        "launch": 102221,
+        "wait": 28984198,
+        "d2h": 331871,
+        "compare": 1703
+      },
+      "files": {
+        "observed_x.bin": "2432a5b843444c87dcd42a327eb2e4baba047969242669d30abe0e7ffddcdde4",
+        "observed_z.bin": "9a803b520193e6f3be6997d017cbf74f4a4e68b83f10417c791979c61f534ad8",
+        "observed_y.bin": "4a873afcdb2dcf21295987a5e9edec0593e00231cdc16d4966988de86eef9927",
+        "z.bin": "4e130d0a84ef8cb08d65939bed03a7903832566692fe9cedf7ce5fce2680afa2",
+        "expected.bin": "9a803b520193e6f3be6997d017cbf74f4a4e68b83f10417c791979c61f534ad8",
+        "y.bin": "4a873afcdb2dcf21295987a5e9edec0593e00231cdc16d4966988de86eef9927",
+        "x.bin": "2432a5b843444c87dcd42a327eb2e4baba047969242669d30abe0e7ffddcdde4"
+      }
+    },
+    {
+      "id": "0083",
+      "n": 257,
+      "block": 4,
+      "grid": 65,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 84,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 259563,
+        "launch": 59522,
+        "wait": 31332008,
+        "d2h": 217774,
+        "compare": 1406
+      },
+      "files": {
+        "observed_x.bin": "f975fffa988b36c737c02cdf0132c81058096b4eca32f5c5eb0bc8575bf0c21b",
+        "observed_z.bin": "a785eab14190c960a82c9a04f0df3dc24ff52227f0e5e6fa7f35817e579de5f2",
+        "observed_y.bin": "b6cddac49017fc462b65068e8d4adf49b6f55f9be2eeb76c0d41d636d4ca72ec",
+        "z.bin": "2595143e6f88dc1ee708e53f196e88fda5334b437038fa751072520d9aabdedb",
+        "expected.bin": "a785eab14190c960a82c9a04f0df3dc24ff52227f0e5e6fa7f35817e579de5f2",
+        "y.bin": "b6cddac49017fc462b65068e8d4adf49b6f55f9be2eeb76c0d41d636d4ca72ec",
+        "x.bin": "f975fffa988b36c737c02cdf0132c81058096b4eca32f5c5eb0bc8575bf0c21b"
+      }
+    },
+    {
+      "id": "0084",
+      "n": 257,
+      "block": 7,
+      "grid": 37,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 85,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 260254,
+        "launch": 67993,
+        "wait": 32846599,
+        "d2h": 339727,
+        "compare": 1787
+      },
+      "files": {
+        "observed_x.bin": "e33b9985d82b8715957ce106fe7d5beb127eca9f294e5536e418aa376a6de314",
+        "observed_z.bin": "405f040f999ff5e51bac3bc998968d475ef152a1f0e9694113cee19dc84e9d9e",
+        "observed_y.bin": "58a9629318ed30804db4144856a94a654dce4cac08bf0a509f96ce537852b5f6",
+        "z.bin": "fb35d4878ab592c2e66d0db57e8c674cdc4aa9810c06d0c8a9a9e4c5be53e44d",
+        "expected.bin": "405f040f999ff5e51bac3bc998968d475ef152a1f0e9694113cee19dc84e9d9e",
+        "y.bin": "58a9629318ed30804db4144856a94a654dce4cac08bf0a509f96ce537852b5f6",
+        "x.bin": "e33b9985d82b8715957ce106fe7d5beb127eca9f294e5536e418aa376a6de314"
+      }
+    },
+    {
+      "id": "0085",
+      "n": 257,
+      "block": 7,
+      "grid": 37,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 86,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 368079,
+        "launch": 74782,
+        "wait": 30565040,
+        "d2h": 285673,
+        "compare": 1916
+      },
+      "files": {
+        "observed_x.bin": "58362cc9818b03c010b369ef519221b0a82972b15813383e327ea954f679dce9",
+        "observed_z.bin": "116a66ca6c39dfdf2b762021c6b8bcd2697310f0ae81d6d7aa6257b7d3d5444e",
+        "observed_y.bin": "8263212f4acc7f329140ebba8c5c7bf16a6826c12da4e9ae228899614d73980d",
+        "z.bin": "af6b8d2fca5471bf2c82741a7d2ed17f6edc2c065c3470b1b8869e2857df4a5b",
+        "expected.bin": "116a66ca6c39dfdf2b762021c6b8bcd2697310f0ae81d6d7aa6257b7d3d5444e",
+        "y.bin": "8263212f4acc7f329140ebba8c5c7bf16a6826c12da4e9ae228899614d73980d",
+        "x.bin": "58362cc9818b03c010b369ef519221b0a82972b15813383e327ea954f679dce9"
+      }
+    },
+    {
+      "id": "0086",
+      "n": 257,
+      "block": 16,
+      "grid": 17,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 87,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 248300,
+        "launch": 72682,
+        "wait": 27147366,
+        "d2h": 204588,
+        "compare": 1463
+      },
+      "files": {
+        "observed_x.bin": "cb4e99b8b1959f9ac364469fcfcb15f9718f093955c918a0c52d6d9582993817",
+        "observed_z.bin": "4b8de621241fa297599b7b92c19ae02f913b54aa2cbe584af33710e7b3e44163",
+        "observed_y.bin": "67ce0e879bb702b718f5a55b94bed53ad78c8e0eba0dfe54accfafce4952bd90",
+        "z.bin": "a573596fad4388c2b13eb32506bdfbba003ff064d93976606df7f10e0b4e073e",
+        "expected.bin": "4b8de621241fa297599b7b92c19ae02f913b54aa2cbe584af33710e7b3e44163",
+        "y.bin": "67ce0e879bb702b718f5a55b94bed53ad78c8e0eba0dfe54accfafce4952bd90",
+        "x.bin": "cb4e99b8b1959f9ac364469fcfcb15f9718f093955c918a0c52d6d9582993817"
+      }
+    },
+    {
+      "id": "0087",
+      "n": 257,
+      "block": 16,
+      "grid": 17,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 88,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 219824,
+        "launch": 60793,
+        "wait": 28276969,
+        "d2h": 315838,
+        "compare": 1750
+      },
+      "files": {
+        "observed_x.bin": "5ead09713cc992d7da9be7c18112975553723ed20ab56b437bf4397d9f91aded",
+        "observed_z.bin": "8894d432219c885684bf41db780f7df80671ee9bde3f55c7389a9ed91f7395e3",
+        "observed_y.bin": "ad2e7b45bc65cd57860d58ed792cb72d8536a2734c52ecfbd9bc7aff35a53462",
+        "z.bin": "6153f77770b4c3f99b0f044f16bb2f36d448c80a8d4de8ff56731e3a3738bad6",
+        "expected.bin": "8894d432219c885684bf41db780f7df80671ee9bde3f55c7389a9ed91f7395e3",
+        "y.bin": "ad2e7b45bc65cd57860d58ed792cb72d8536a2734c52ecfbd9bc7aff35a53462",
+        "x.bin": "5ead09713cc992d7da9be7c18112975553723ed20ab56b437bf4397d9f91aded"
+      }
+    },
+    {
+      "id": "0088",
+      "n": 1024,
+      "block": 1,
+      "grid": 1024,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 89,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 204628,
+        "launch": 66550,
+        "wait": 373219960,
+        "d2h": 313206,
+        "compare": 1743
+      },
+      "files": {
+        "observed_x.bin": "e1b620123613bcc6a7789f3feb4fc8552d4d39e05955e6241573f65f82cc3ef3",
+        "observed_z.bin": "ebca847ed384578fd2a71c7919c83794e2581c2bfe3b4f4fcee56c3ea0b97292",
+        "observed_y.bin": "5371d2d32af037d8148419679e38eb9d62a3517b1ed6b68a059d8ed914a16324",
+        "z.bin": "723490637519f2c1710332297ff01e67b4eea92d59ec253d7af69c8257fbaafd",
+        "expected.bin": "ebca847ed384578fd2a71c7919c83794e2581c2bfe3b4f4fcee56c3ea0b97292",
+        "y.bin": "5371d2d32af037d8148419679e38eb9d62a3517b1ed6b68a059d8ed914a16324",
+        "x.bin": "e1b620123613bcc6a7789f3feb4fc8552d4d39e05955e6241573f65f82cc3ef3"
+      }
+    },
+    {
+      "id": "0089",
+      "n": 1024,
+      "block": 1,
+      "grid": 1024,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 90,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 263593,
+        "launch": 61045,
+        "wait": 362911753,
+        "d2h": 207934,
+        "compare": 1328
+      },
+      "files": {
+        "observed_x.bin": "d43aef1559c6fd386b048852a8d451e878566472eab81f4db08ea9feba4b6339",
+        "observed_z.bin": "c81b419b7911ac4f8f3f936b0eab86751cdfdb4a6b41c6a9afd4b89efe481369",
+        "observed_y.bin": "f391da1cdfb8eb39b2b7ef7187e8c56c28aff3c3d4ffe52687b27a05752a3bba",
+        "z.bin": "a5ee9335733fe68d5e8ba172f0e18039ccd171daf06ecc50cfbc5287d9688f81",
+        "expected.bin": "c81b419b7911ac4f8f3f936b0eab86751cdfdb4a6b41c6a9afd4b89efe481369",
+        "y.bin": "f391da1cdfb8eb39b2b7ef7187e8c56c28aff3c3d4ffe52687b27a05752a3bba",
+        "x.bin": "d43aef1559c6fd386b048852a8d451e878566472eab81f4db08ea9feba4b6339"
+      }
+    },
+    {
+      "id": "0090",
+      "n": 1024,
+      "block": 4,
+      "grid": 256,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 91,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 349048,
+        "launch": 83558,
+        "wait": 107650235,
+        "d2h": 272264,
+        "compare": 1584
+      },
+      "files": {
+        "observed_x.bin": "efab8ac9078a4fbf1441795c40219ec2210aeddce12b923cb5be74aef55a3ead",
+        "observed_z.bin": "25d2403f0e47780ac6b4ec58e7980477eadcb77ac7c09bc6bec0249787c4ccb0",
+        "observed_y.bin": "843a14338e26dce183c4ae806785dee29e09a02d22d887f732f7a2c73463553a",
+        "z.bin": "7f02b983dbd294ade18c54247b8f06e1c22cbdcf09d73e4477dfb669c35126ef",
+        "expected.bin": "25d2403f0e47780ac6b4ec58e7980477eadcb77ac7c09bc6bec0249787c4ccb0",
+        "y.bin": "843a14338e26dce183c4ae806785dee29e09a02d22d887f732f7a2c73463553a",
+        "x.bin": "efab8ac9078a4fbf1441795c40219ec2210aeddce12b923cb5be74aef55a3ead"
+      }
+    },
+    {
+      "id": "0091",
+      "n": 1024,
+      "block": 4,
+      "grid": 256,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 92,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 264568,
+        "launch": 72375,
+        "wait": 106988874,
+        "d2h": 201152,
+        "compare": 1371
+      },
+      "files": {
+        "observed_x.bin": "64d8472870f9a9420fa1ac46b666bfc762ff58ecbab5e03470a28647c1af4636",
+        "observed_z.bin": "689d874113cbec395132d9a6143df62dd836af0811c5e5455d8a85ef524c4981",
+        "observed_y.bin": "c0b64b5b410462b9c631940c23a42d0987f8fd248301a4b716719f74d1f23563",
+        "z.bin": "9cf7c5b84b800fde33ee63a821865ebad7da76647d24b6088dea9135f4e5c925",
+        "expected.bin": "689d874113cbec395132d9a6143df62dd836af0811c5e5455d8a85ef524c4981",
+        "y.bin": "c0b64b5b410462b9c631940c23a42d0987f8fd248301a4b716719f74d1f23563",
+        "x.bin": "64d8472870f9a9420fa1ac46b666bfc762ff58ecbab5e03470a28647c1af4636"
+      }
+    },
+    {
+      "id": "0092",
+      "n": 1024,
+      "block": 7,
+      "grid": 147,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 93,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 235467,
+        "launch": 65301,
+        "wait": 123324323,
+        "d2h": 349004,
+        "compare": 1640
+      },
+      "files": {
+        "observed_x.bin": "de536be9cad7cfc4a7d409c952f58ebac58dd3a62a04bc7f3d14a51cb83b3832",
+        "observed_z.bin": "eed625db21d26380ba2b0d59dd9cec86909eec5b29d9de7a75f9e3d855f325ef",
+        "observed_y.bin": "7be9cff360e84faf7aae4d09ccb6103ffd3e79720789155855316474776053d6",
+        "z.bin": "5b851cc646ae0abba5343fcd72fa8ae8420b6e3014d54f4d787132da111bd869",
+        "expected.bin": "eed625db21d26380ba2b0d59dd9cec86909eec5b29d9de7a75f9e3d855f325ef",
+        "y.bin": "7be9cff360e84faf7aae4d09ccb6103ffd3e79720789155855316474776053d6",
+        "x.bin": "de536be9cad7cfc4a7d409c952f58ebac58dd3a62a04bc7f3d14a51cb83b3832"
+      }
+    },
+    {
+      "id": "0093",
+      "n": 1024,
+      "block": 7,
+      "grid": 147,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 94,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 273454,
+        "launch": 77640,
+        "wait": 125247763,
+        "d2h": 217705,
+        "compare": 1399
+      },
+      "files": {
+        "observed_x.bin": "d100ed63245e14109ac26d87336609588577c1d30038fb0d1f1958ea87424da3",
+        "observed_z.bin": "f9ddfc5a6457eabe4f69e486ecc1428db210e4a944ee203770697bf671ece53e",
+        "observed_y.bin": "de6439da26f966532277645a3ba43c6f2b50f910c5c39cbeb0af2ad5a5a08dbb",
+        "z.bin": "64794a87f390b4f7a162b131b32172cf891ec570cb7296a22309c486ca7c299d",
+        "expected.bin": "f9ddfc5a6457eabe4f69e486ecc1428db210e4a944ee203770697bf671ece53e",
+        "y.bin": "de6439da26f966532277645a3ba43c6f2b50f910c5c39cbeb0af2ad5a5a08dbb",
+        "x.bin": "d100ed63245e14109ac26d87336609588577c1d30038fb0d1f1958ea87424da3"
+      }
+    },
+    {
+      "id": "0094",
+      "n": 1024,
+      "block": 16,
+      "grid": 64,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 95,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 288149,
+        "launch": 137730,
+        "wait": 104012806,
+        "d2h": 244600,
+        "compare": 1323
+      },
+      "files": {
+        "observed_x.bin": "d13e7ab7a8580c9d5a9ec65595a911ace42ca3d643661c0c983902ff1e5b5bb1",
+        "observed_z.bin": "f036c46bd28034fd41a64e4c8b3e8df6c832f35a9a3ae421e2f5b51231d9df61",
+        "observed_y.bin": "0ed2daebb957e0f784d013ffe09a4941e88f92b8f21254e544e7372b6195268b",
+        "z.bin": "ffc6c06792bca52caa19fad99e6a091186db0bbbb9c005a0023b7e0ab7848f91",
+        "expected.bin": "f036c46bd28034fd41a64e4c8b3e8df6c832f35a9a3ae421e2f5b51231d9df61",
+        "y.bin": "0ed2daebb957e0f784d013ffe09a4941e88f92b8f21254e544e7372b6195268b",
+        "x.bin": "d13e7ab7a8580c9d5a9ec65595a911ace42ca3d643661c0c983902ff1e5b5bb1"
+      }
+    },
+    {
+      "id": "0095",
+      "n": 1024,
+      "block": 16,
+      "grid": 64,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 96,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 386676,
+        "launch": 74538,
+        "wait": 107533415,
+        "d2h": 204515,
+        "compare": 1246
+      },
+      "files": {
+        "observed_x.bin": "ec0908e78fe6080a1ceb877c824cb0b5ee655501fe1611fff6359e701e4cf7c2",
+        "observed_z.bin": "b13a5a59e08490b5c29306197eb4388e720ead87c9f583e1ebc03f9d37c14e1c",
+        "observed_y.bin": "a77c141f89db396091744b812297399598316347f1d44aee81da81904e247c0d",
+        "z.bin": "b2222eb0439476d8e10dd810a8beef3361a5f91746890a7b43378caaef14c1a1",
+        "expected.bin": "b13a5a59e08490b5c29306197eb4388e720ead87c9f583e1ebc03f9d37c14e1c",
+        "y.bin": "a77c141f89db396091744b812297399598316347f1d44aee81da81904e247c0d",
+        "x.bin": "ec0908e78fe6080a1ceb877c824cb0b5ee655501fe1611fff6359e701e4cf7c2"
+      }
+    }
+  ],
+  "rejections": [
+    {
+      "check": "block-17",
+      "error": {
+        "code": "E_LAUNCH_LIMIT",
+        "phase": "launch",
+        "message": "launch exceeds target/profile limits",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "block-64",
+      "error": {
+        "code": "E_LAUNCH_LIMIT",
+        "phase": "launch",
+        "message": "launch exceeds target/profile limits",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "second-module",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "load",
+        "message": "unload the current module before loading another",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "write-out-of-range",
+      "error": {
+        "code": "E_ADDRESS_RANGE",
+        "phase": "transfer",
+        "message": "transfer exceeds allocation",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "read-out-of-range",
+      "error": {
+        "code": "E_ADDRESS_RANGE",
+        "phase": "transfer",
+        "message": "transfer exceeds allocation",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "foreign-buffer",
+      "error": {
+        "code": "E_INVALID_BUFFER",
+        "phase": "read",
+        "message": "foreign, retired or stale buffer",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "unaligned-pointer",
+      "error": {
+        "code": "E_ADDRESS_RANGE",
+        "phase": "launch",
+        "message": "invalid pointer range/alignment/access",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "missing-parameter",
+      "error": {
+        "code": "E_PARAM_LAYOUT",
+        "phase": "launch",
+        "message": "argument count mismatch",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "in-flight-free",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "free",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-unload",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "unload",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-read",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "read",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-write",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "write",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-second-launch",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "launch",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-close",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "close",
+        "message": "wait or successfully drain recovery before close",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "timeout-close",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "close",
+        "message": "wait or successfully drain recovery before close",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 97,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      }
+    },
+    {
+      "check": "timeout-alloc",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "alloc",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": 97,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      }
+    },
+    {
+      "check": "stale-buffer",
+      "error": {
+        "code": "E_INVALID_BUFFER",
+        "phase": "free",
+        "message": "foreign, retired or stale buffer",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "stale-event",
+      "error": {
+        "code": "E_EVENT",
+        "phase": "wait",
+        "message": "foreign or stale event",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "stale-module",
+      "error": {
+        "code": "E_MODULE_CORRUPT",
+        "phase": "launch",
+        "message": "foreign or unloaded module",
+        "run_id": "c-vadd-smoke-v2",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    }
+  ],
+  "recovery": {
+    "status": "PASS",
+    "timeout": {
+      "code": "E_TIMEOUT",
+      "phase": "wait",
+      "message": "native Vortex2 operation failed",
+      "run_id": "c-vadd-smoke-v2",
+      "event_id": 97,
+      "generation": 0,
+      "backend": "simx",
+      "source_location": null,
+      "native_status": 7,
+      "evidence_path": null,
+      "device_state": "NEEDS_RECOVERY"
+    },
+    "drained": {
+      "status": "RECOVERED",
+      "isolated": true,
+      "generation": 1,
+      "device_state": "READY"
+    },
+    "observed_hex": "01000000",
+    "expected_hex": "01000000"
+  },
+  "setup_host_timing_ns": {
+    "open": 46066057,
+    "load": 4182549
+  },
+  "caps": {
+    "threads": 4,
+    "warps": 4,
+    "cores": 1,
+    "isa_flags": 221200257320,
+    "clusters": 1,
+    "backend": "simx",
+    "device_state": "READY",
+    "generation": 0,
+    "safe_abort": false,
+    "max_modules": 1,
+    "first_error": null
+  },
+  "blocks": [
+    1,
+    4,
+    7,
+    16
+  ],
+  "timeout_caps": {
+    "threads": 4,
+    "warps": 4,
+    "cores": 1,
+    "isa_flags": 221200257320,
+    "clusters": 1,
+    "backend": "simx",
+    "device_state": "NEEDS_RECOVERY",
+    "generation": 0,
+    "safe_abort": false,
+    "max_modules": 1,
+    "first_error": {
+      "native_status": 7,
+      "phase": "wait"
+    }
+  },
+  "exit_code": 0,
+  "passed": 96,
+  "host_timing_summary": {
+    "h2d": {
+      "count": 96,
+      "min_ns": 176923,
+      "median_ns": 233453.5,
+      "max_ns": 4332851
+    },
+    "launch": {
+      "count": 96,
+      "min_ns": 44354,
+      "median_ns": 56477.5,
+      "max_ns": 137730
+    },
+    "wait": {
+      "count": 96,
+      "min_ns": 892160,
+      "median_ns": 4595207.5,
+      "max_ns": 373219960
+    },
+    "d2h": {
+      "count": 96,
+      "min_ns": 152672,
+      "median_ns": 201067.5,
+      "max_ns": 593482
+    },
+    "compare": {
+      "count": 96,
+      "min_ns": 667,
+      "median_ns": 1127.0,
+      "max_ns": 7324
+    }
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "schema_version": "ptx-vx-ir-v1",
+  "compiler_id": "ptx-vx-frontend-v1.2",
+  "profile": "ptx-vx-p0-v0.2-draft",
+  "abi_version": "ptx-vx-args-v1",
+  "source_file": "source.ptx",
+  "source_sha256": "63d4ff7f35588af1617ba96d479cbf80c59893f4d96935508dc5c19ac26fd05c",
+  "source_ptx_version": "7.0",
+  "source_target": "sm_70",
+  "source_address_bits": 64,
+  "entry": "copy_u32",
+  "params": [
+    {
+      "name": "x",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 0
+    },
+    {
+      "name": "z",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 8
+    },
+    {
+      "name": "n",
+      "type": "u32",
+      "kind": "scalar",
+      "space": null,
+      "size": 4,
+      "align": 4,
+      "offset": 16
+    }
+  ],
+  "params_align": 8,
+  "params_size": 24,
+  "registers": {
+    "%p": {
+      "type": "pred",
+      "bit_width": 1,
+      "c_name": "v0",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 5,
+        "column": 14
+      }
+    },
+    "%r0": {
+      "type": "b32",
+      "bit_width": 32,
+      "c_name": "v1",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 6,
+        "column": 13
+      }
+    },
+    "%r1": {
+      "type": "b32",
+      "bit_width": 32,
+      "c_name": "v2",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 6,
+        "column": 13
+      }
+    },
+    "%r2": {
+      "type": "b32",
+      "bit_width": 32,
+      "c_name": "v3",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 6,
+        "column": 13
+      }
+    },
+    "%r3": {
+      "type": "b32",
+      "bit_width": 32,
+      "c_name": "v4",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 6,
+        "column": 13
+      }
+    },
+    "%r4": {
+      "type": "b32",
+      "bit_width": 32,
+      "c_name": "v5",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 6,
+        "column": 13
+      }
+    },
+    "%a0": {
+      "type": "b64",
+      "bit_width": 64,
+      "c_name": "v6",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 7,
+        "column": 13
+      }
+    },
+    "%a1": {
+      "type": "b64",
+      "bit_width": 64,
+      "c_name": "v7",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 7,
+        "column": 13
+      }
+    },
+    "%a2": {
+      "type": "b64",
+      "bit_width": 64,
+      "c_name": "v8",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 7,
+        "column": 13
+      }
+    },
+    "%a3": {
+      "type": "b64",
+      "bit_width": 64,
+      "c_name": "v9",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 7,
+        "column": 13
+      }
+    },
+    "%a4": {
+      "type": "b64",
+      "bit_width": 64,
+      "c_name": "v10",
+      "source_location": {
+        "file": "source.ptx",
+        "line": 7,
+        "column": 13
+      }
+    }
+  },
+  "instructions": [
+    {
+      "opcode": "ld.param.u64",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a0",
+          "type": "b64"
+        },
+        {
+          "kind": "parameter",
+          "name": "x",
+          "offset": 0,
+          "type": "u64"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 8,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "ld.param.u64",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a1",
+          "type": "b64"
+        },
+        {
+          "kind": "parameter",
+          "name": "z",
+          "offset": 8,
+          "type": "u64"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 9,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "ld.param.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r0",
+          "type": "b32"
+        },
+        {
+          "kind": "parameter",
+          "name": "n",
+          "offset": 16,
+          "type": "u32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 10,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "mov.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "special",
+          "name": "%ctaid.x",
+          "type": "u32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 11,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "mov.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r2",
+          "type": "b32"
+        },
+        {
+          "kind": "special",
+          "name": "%ntid.x",
+          "type": "u32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 12,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "mul.lo.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "register",
+          "name": "%r2",
+          "type": "b32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 13,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "mov.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r2",
+          "type": "b32"
+        },
+        {
+          "kind": "special",
+          "name": "%tid.x",
+          "type": "u32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 14,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "add.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "register",
+          "name": "%r2",
+          "type": "b32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 15,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "setp.lt.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%p",
+          "type": "pred"
+        },
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "register",
+          "name": "%r0",
+          "type": "b32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 16,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "mul.wide.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a2",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%r1",
+          "type": "b32"
+        },
+        {
+          "kind": "immediate",
+          "value": 4,
+          "type": "u32"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 17,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "cvta.to.global.u64",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a0",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%a0",
+          "type": "b64"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 18,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "cvta.to.global.u64",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a1",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%a1",
+          "type": "b64"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 19,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "add.u64",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a3",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%a0",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%a2",
+          "type": "b64"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 20,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "add.u64",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%a4",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%a1",
+          "type": "b64"
+        },
+        {
+          "kind": "register",
+          "name": "%a2",
+          "type": "b64"
+        }
+      ],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 21,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "ld.global.u32",
+      "operands": [
+        {
+          "kind": "register",
+          "name": "%r3",
+          "type": "b32"
+        },
+        {
+          "kind": "address",
+          "name": "%a3",
+          "offset": 0,
+          "space": "global",
+          "type": "u64"
+        }
+      ],
+      "predicate": {
+        "name": "%p",
+        "negated": false
+      },
+      "source_location": {
+        "file": "source.ptx",
+        "line": 22,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "st.global.u32",
+      "operands": [
+        {
+          "kind": "address",
+          "name": "%a4",
+          "offset": 0,
+          "space": "global",
+          "type": "u64"
+        },
+        {
+          "kind": "register",
+          "name": "%r3",
+          "type": "b32"
+        }
+      ],
+      "predicate": {
+        "name": "%p",
+        "negated": false
+      },
+      "source_location": {
+        "file": "source.ptx",
+        "line": 23,
+        "column": 3
+      }
+    },
+    {
+      "opcode": "ret",
+      "operands": [],
+      "predicate": null,
+      "source_location": {
+        "file": "source.ptx",
+        "line": 24,
+        "column": 3
+      }
+    }
+  ],
+  "logical_launch_model": "ptx-1d-v1",
+  "static_shared_bytes": 0,
+  "required_features": [
+    "rv64",
+    "little-endian",
+    "logical-1d-threads",
+    "predicated-memory"
+  ],
+  "memory_assumptions": [
+    "live global buffers",
+    "u32 access alignment 4",
+    "all active accesses in declared allocation",
+    "no data races"
+  ],
+  "status": "FRONTEND_ONLY",
+  "device_image": "NOT_RUN"
+}

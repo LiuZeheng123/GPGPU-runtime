@@ -1,0 +1,13 @@
+PASS affine n= 0 cases= 24
+PASS affine n= 1 cases= 48
+PASS affine n= 7 cases= 72
+PASS affine n= 15 cases= 96
+PASS affine n= 16 cases= 120
+PASS affine n= 17 cases= 144
+PASS affine n= 31 cases= 168
+PASS affine n= 32 cases= 192
+PASS affine n= 33 cases= 216
+PASS affine n= 65 cases= 240
+PASS affine n= 257 cases= 264
+PASS affine n= 1024 cases= 288
+{"status": "PASS", "kernel": "affine", "passed": 288, "exit_code": 0}

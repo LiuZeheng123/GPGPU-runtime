@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "archive integrity and deliberate corruption checks, not device execution",
+  "export_hashes": 225,
+  "checks": [
+    {
+      "mutation": "wrong-capture-hash",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "duplicate-case",
+      "status": "REJECTED"
+    },
+    {
+      "mutation": "wrong-recovery-result",
+      "status": "REJECTED"
+    }
+  ],
+  "verifier_sha256": "73801e1dbdd98608b6d01ea4a31b530ca8dcb93c93a693d510e4791c87c5a147"
+}

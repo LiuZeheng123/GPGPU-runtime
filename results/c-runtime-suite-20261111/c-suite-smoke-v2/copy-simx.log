@@ -1,0 +1,13 @@
+PASS copy n= 0 cases= 8
+PASS copy n= 1 cases= 16
+PASS copy n= 7 cases= 24
+PASS copy n= 15 cases= 32
+PASS copy n= 16 cases= 40
+PASS copy n= 17 cases= 48
+PASS copy n= 31 cases= 56
+PASS copy n= 32 cases= 64
+PASS copy n= 33 cases= 72
+PASS copy n= 65 cases= 80
+PASS copy n= 257 cases= 88
+PASS copy n= 1024 cases= 96
+{"status": "PASS", "kernel": "copy", "passed": 96, "exit_code": 0}

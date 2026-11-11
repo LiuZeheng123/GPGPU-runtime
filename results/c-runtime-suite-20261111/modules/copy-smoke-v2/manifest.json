@@ -1,0 +1,98 @@
+{
+  "schema_version": "ptx-vx-module-v1-draft",
+  "compiler_id": "ptx-vx-vortex2-wrapper-v1",
+  "build_id": "f2469a09013a8ac1bb26",
+  "status": "BUILT",
+  "loadable": true,
+  "image_file": "kernel.vxbin",
+  "image_sha256": "04b44af7a488005465f6842031b5f0614daa80adbcd140f1ae93f67f53eba2c8",
+  "image_format": "vortex-v3-vxbin-symtab",
+  "entry": "copy_u32",
+  "native_entry": "main",
+  "source_sha256": "63d4ff7f35588af1617ba96d479cbf80c59893f4d96935508dc5c19ac26fd05c",
+  "source_ptx_version": "7.0",
+  "source_target": "sm_70",
+  "source_address_bits": 64,
+  "profile": "ptx-vx-p0-v0.2-draft",
+  "abi_version": "ptx-vx-args-v1",
+  "params": [
+    {
+      "name": "x",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 0
+    },
+    {
+      "name": "z",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 8
+    },
+    {
+      "name": "n",
+      "type": "u32",
+      "kind": "scalar",
+      "space": null,
+      "size": 4,
+      "align": 4,
+      "offset": 16
+    }
+  ],
+  "params_size": 24,
+  "params_align": 8,
+  "target_lock_hash": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+  "target_id": "vortex-v3-rv64-1c4w4t-smoke-draft",
+  "required_features": [
+    "rv64",
+    "little-endian",
+    "logical-1d-threads",
+    "predicated-memory"
+  ],
+  "logical_launch_model": "ptx-1d-v1",
+  "launch_limits": {
+    "max_block_x": 16,
+    "max_grid_x": 2147483647,
+    "max_total_threads": 4294967296,
+    "provenance": "pinned native resident-thread limit; PTX execution NOT_RUN"
+  },
+  "static_shared_bytes": 0,
+  "dynamic_shared_policy": "forbidden",
+  "numeric_mode": "u32 modulo 2^32",
+  "memory_assumptions": [
+    "live global buffers",
+    "u32 access alignment 4",
+    "all active accesses in declared allocation",
+    "no data races"
+  ],
+  "known_limits": [
+    "not a memory sandbox",
+    "single entry",
+    "no shared memory or barriers"
+  ],
+  "backend_execution": "NOT_RUN",
+  "independent_acceptance": "NOT_RUN",
+  "files": {
+    "source.ptx": "63d4ff7f35588af1617ba96d479cbf80c59893f4d96935508dc5c19ac26fd05c",
+    "abi.json": "0c7aee793286a2db2bd75f6522a89a2cab686d6b083bce214e7d9fa710959404",
+    "frontend_manifest.json": "b57fcc984da0403912e32f9123b440e7a427f8748667f41837ea83a2042a43bb",
+    "source_map.json": "0570ddc4a261f509467d58b7e626d837034427256a5f4baa5330a57e27357076",
+    "ir.json": "b5f7fa7f92075831d4594a48b1541205188a70c4f21644e34ce873871218f8ad",
+    "profile.json": "c9728b0faa726d9b59c215de9febd9efeb2072d09c58d819a3fc5dcd1d432041",
+    "kernel_body.hpp": "ea5f5eee6d801e0d6bf9a717569675feb85a23f03ac7d598a7fae0a537d45224",
+    "target_lock.json": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+    "Makefile": "aef0009a0b6364339615061c3d9bacaf32e0c7184711d9a00ab1ba68caaa3c41",
+    "hardware.json": "046ca59d289390bc1d0424fc35df0d552cc7a2f92c6c649d8c318d284c433b87",
+    "kernel.cpp": "691881b7d67f4a65c3f29ae99c28b37aef9e18edbb2a0ba68f9d7292611fc17f",
+    "kernel.vxbin": "04b44af7a488005465f6842031b5f0614daa80adbcd140f1ae93f67f53eba2c8",
+    "kernel.elf": "6986c2e5caaaa63252573e06930e443a1dc902f01fa34bab8b7cc37d3da589fd",
+    "program.disasm": "a07e440fe8e1fb4359342f0ed65d60a864bec1e25db1e7ef82289bbd31f2c776",
+    "compile.log": "07c468c56ed358f2355d1efe96d887aeb56c2be154e572af3e3c4f7df371b363",
+    "build.json": "a9669e2da995e4c5fa07ecdf4541cd251f2425fec64b520b8388662fa477095d"
+  }
+}

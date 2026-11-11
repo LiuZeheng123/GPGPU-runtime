@@ -1,0 +1,24 @@
+{
+  "schema_version": "ptx-vx-runtime-binding-v2",
+  "backend": "simx",
+  "source_commit": "7fe19369587c087f902c3e2bc2add612aa910a95",
+  "target_lock_hash": "9bf1ecd89852e54dd402e669becbfd0910752ffd16ad9e7a9f9b20e77b6c4649",
+  "hardware_defines": {
+    "VX_CFG_NUM_CLUSTERS": 1,
+    "VX_CFG_NUM_CORES": 1,
+    "VX_CFG_NUM_THREADS": 4,
+    "VX_CFG_NUM_WARPS": 8
+  },
+  "library_dir": "/home/liuzeheng/gpgpu-c-20261111/build-native-block32-v1/sw/runtime",
+  "libraries": {
+    "libvortex.so": "f78d1c225c502be7c480862134355a5e44dac6d259476e4b5039880ff507889d",
+    "libvortex-simx.so": "6049c18907d2f8f2b06a2a6166e32755bec8d25cb3bd83ba120214acc7bfc333",
+    "libsimx.so": "3f56194ee4491a8e5fb43ccdcce9a6e20c0f814be6cac25328bba2db883812aa"
+  },
+  "dependencies": {
+    "/home/liuzeheng/gpgpu-c-20261111/build-native-block32-v1/sw/runtime/libsimx.so": "3f56194ee4491a8e5fb43ccdcce9a6e20c0f814be6cac25328bba2db883812aa",
+    "/home/liuzeheng/gpgpu-c-20261111/build-native-block32-v1/third_party/ramulator/libramulator.so": "8ebfe0d7ec93f72a5b79c8a9f1a51002f33a3933b93f4490101f972e76a05986"
+  },
+  "native_summary_sha256": "1692e69c91dda7a8da0e8458037ca45df8c81b4e67ebef5685a22a3f9cd97561",
+  "scope": "native build identity; PTX validation is separate"
+}

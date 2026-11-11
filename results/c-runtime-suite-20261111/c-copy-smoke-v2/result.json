@@ -1,0 +1,3315 @@
+{
+  "schema_version": "ptx-suite-simx-v1",
+  "run_id": "c-copy-smoke-v2",
+  "status": "PASS",
+  "kernel": "copy",
+  "backend": "simx",
+  "scope": "author functional PTX execution and host wall-clock measurements",
+  "independent_acceptance": "NOT_RUN",
+  "rtlsim": "NOT_RUN",
+  "u280": "NOT_RUN",
+  "invocation": [
+    "/usr/bin/python3",
+    "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/scripts/run_ptx_suite.py",
+    "--kernel",
+    "copy",
+    "--module",
+    "/home/liuzeheng/gpgpu-c-20261111/copy-smoke-v2",
+    "--binding",
+    "/home/liuzeheng/gpgpu-c-20261111/binding-smoke-v2/binding.json",
+    "--target-lock",
+    "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026/configs/target_lock.json",
+    "--output",
+    "/home/liuzeheng/gpgpu-c-20261111/evidence/c-copy-smoke-v2"
+  ],
+  "invocation_cwd": "/mnt/c/Users/Lenovo/Desktop/思政大课项目/work/GPGPU_U280_winter2026",
+  "target_lock_hash": "924b17abadbbda710ead2053ac0873fb0698161c983f8ff1feb9b96a16a19ffe",
+  "binding_sha256": "2a8b873298e221e18c1f7c5366b2319583eda46fe56a14797c570fcffbc820af",
+  "module_manifest_sha256": "e6d1feaed79ea07b0487a8f51a98362ad6caeff0d3f0e3ecd140945c0be4032d",
+  "timing_scope": "perf_counter_ns on host; synchronous transfers; launch+wait includes simulator/host overhead; no warmup exclusion; not device cycles or FPGA throughput",
+  "cases": [
+    {
+      "id": "0000",
+      "n": 0,
+      "block": 1,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 323047,
+        "launch": 93957,
+        "wait": 2527440,
+        "d2h": 149851,
+        "compare": 701
+      },
+      "files": {
+        "observed_x.bin": "e14f14f5033cc6d485103a9e1fcf0e5e682b3fd28a41b4054045696bf56e28fa",
+        "observed_z.bin": "ac651ef02803d64cd328f8e708be258ba8457410d5eab2d51fb197688fb30284",
+        "z.bin": "ac651ef02803d64cd328f8e708be258ba8457410d5eab2d51fb197688fb30284",
+        "expected.bin": "ac651ef02803d64cd328f8e708be258ba8457410d5eab2d51fb197688fb30284",
+        "x.bin": "e14f14f5033cc6d485103a9e1fcf0e5e682b3fd28a41b4054045696bf56e28fa"
+      }
+    },
+    {
+      "id": "0001",
+      "n": 0,
+      "block": 1,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 2,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 154893,
+        "launch": 61864,
+        "wait": 748842,
+        "d2h": 147607,
+        "compare": 1102
+      },
+      "files": {
+        "observed_x.bin": "b52007c9668c6f85d7dc56fcfa974f7e3edc07ea66d9eaa17f4627668bc65363",
+        "observed_z.bin": "bc48b0d5aaf9b19fcaa8729ea8b69426dd1f9ceb543f25ffbf9cec8a795af542",
+        "z.bin": "bc48b0d5aaf9b19fcaa8729ea8b69426dd1f9ceb543f25ffbf9cec8a795af542",
+        "expected.bin": "bc48b0d5aaf9b19fcaa8729ea8b69426dd1f9ceb543f25ffbf9cec8a795af542",
+        "x.bin": "b52007c9668c6f85d7dc56fcfa974f7e3edc07ea66d9eaa17f4627668bc65363"
+      }
+    },
+    {
+      "id": "0002",
+      "n": 0,
+      "block": 4,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 3,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 214683,
+        "launch": 47407,
+        "wait": 761558,
+        "d2h": 111407,
+        "compare": 684
+      },
+      "files": {
+        "observed_x.bin": "d536696a0a0d93d85916f3cc3b5bd62c1a04fc8027924d11f5d3a5b7d0bc349e",
+        "observed_z.bin": "9d926f2f17d8700224950a53990d55d8487d25c1ab69aedc7398761f5ccd6539",
+        "z.bin": "9d926f2f17d8700224950a53990d55d8487d25c1ab69aedc7398761f5ccd6539",
+        "expected.bin": "9d926f2f17d8700224950a53990d55d8487d25c1ab69aedc7398761f5ccd6539",
+        "x.bin": "d536696a0a0d93d85916f3cc3b5bd62c1a04fc8027924d11f5d3a5b7d0bc349e"
+      }
+    },
+    {
+      "id": "0003",
+      "n": 0,
+      "block": 4,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 4,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 168392,
+        "launch": 45446,
+        "wait": 824855,
+        "d2h": 210192,
+        "compare": 968
+      },
+      "files": {
+        "observed_x.bin": "7785dfb951e06ad35c73da54f2affa11500475ea1972a17b60070d92470c7012",
+        "observed_z.bin": "69675ee72a2549c78c2bf900c9f6d24a899e92db17a2372347f8c890b31c9790",
+        "z.bin": "69675ee72a2549c78c2bf900c9f6d24a899e92db17a2372347f8c890b31c9790",
+        "expected.bin": "69675ee72a2549c78c2bf900c9f6d24a899e92db17a2372347f8c890b31c9790",
+        "x.bin": "7785dfb951e06ad35c73da54f2affa11500475ea1972a17b60070d92470c7012"
+      }
+    },
+    {
+      "id": "0004",
+      "n": 0,
+      "block": 7,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 5,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 266883,
+        "launch": 87732,
+        "wait": 1291478,
+        "d2h": 673020,
+        "compare": 1006
+      },
+      "files": {
+        "observed_x.bin": "7b3a535d1373d23d2baf36bc1c3bcbbbd1b58fb73f3447d7b625651e2ed7b2fa",
+        "observed_z.bin": "5cdf789f244d7627c7b148ee49015c52403ec0dbe66118ceee4b0949d432bf42",
+        "z.bin": "5cdf789f244d7627c7b148ee49015c52403ec0dbe66118ceee4b0949d432bf42",
+        "expected.bin": "5cdf789f244d7627c7b148ee49015c52403ec0dbe66118ceee4b0949d432bf42",
+        "x.bin": "7b3a535d1373d23d2baf36bc1c3bcbbbd1b58fb73f3447d7b625651e2ed7b2fa"
+      }
+    },
+    {
+      "id": "0005",
+      "n": 0,
+      "block": 7,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 6,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 160499,
+        "launch": 47999,
+        "wait": 962160,
+        "d2h": 114093,
+        "compare": 683
+      },
+      "files": {
+        "observed_x.bin": "1b7da4ddb5cbf0f011cf4040e7b5b220adcadab20bc5d35082c76d34c54ec8ec",
+        "observed_z.bin": "7d9e8b4fc24d05a7046e5634a7784a7c32bcb45fe9b393a018c632a0e8029d90",
+        "z.bin": "7d9e8b4fc24d05a7046e5634a7784a7c32bcb45fe9b393a018c632a0e8029d90",
+        "expected.bin": "7d9e8b4fc24d05a7046e5634a7784a7c32bcb45fe9b393a018c632a0e8029d90",
+        "x.bin": "1b7da4ddb5cbf0f011cf4040e7b5b220adcadab20bc5d35082c76d34c54ec8ec"
+      }
+    },
+    {
+      "id": "0006",
+      "n": 0,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 7,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 235350,
+        "launch": 66049,
+        "wait": 1582950,
+        "d2h": 191485,
+        "compare": 985
+      },
+      "files": {
+        "observed_x.bin": "5309dc8bb1e4dea3335e8d1e4bf5dc57b5dbc692339e600835de859b99aeaeda",
+        "observed_z.bin": "bdb696712ae70f5f4f45bf583d7e8790f5f557e7953daf99ee1e329a5ae9960f",
+        "z.bin": "bdb696712ae70f5f4f45bf583d7e8790f5f557e7953daf99ee1e329a5ae9960f",
+        "expected.bin": "bdb696712ae70f5f4f45bf583d7e8790f5f557e7953daf99ee1e329a5ae9960f",
+        "x.bin": "5309dc8bb1e4dea3335e8d1e4bf5dc57b5dbc692339e600835de859b99aeaeda"
+      }
+    },
+    {
+      "id": "0007",
+      "n": 0,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 8,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 145335,
+        "launch": 63374,
+        "wait": 1295336,
+        "d2h": 119533,
+        "compare": 920
+      },
+      "files": {
+        "observed_x.bin": "4c062ffc251f8196306b5d04509c8324cb5b4b1030a9a3b4b6dea6d292a63597",
+        "observed_z.bin": "11c114ff33848c1bae7bcd0bd543b352557e09b6ac68a9b5c8a6c8ad92d646d5",
+        "z.bin": "11c114ff33848c1bae7bcd0bd543b352557e09b6ac68a9b5c8a6c8ad92d646d5",
+        "expected.bin": "11c114ff33848c1bae7bcd0bd543b352557e09b6ac68a9b5c8a6c8ad92d646d5",
+        "x.bin": "4c062ffc251f8196306b5d04509c8324cb5b4b1030a9a3b4b6dea6d292a63597"
+      }
+    },
+    {
+      "id": "0008",
+      "n": 1,
+      "block": 1,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 9,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 141683,
+        "launch": 54884,
+        "wait": 948386,
+        "d2h": 278251,
+        "compare": 981
+      },
+      "files": {
+        "observed_x.bin": "2939edcd7d49ba2e1fe1761309f5cd7be3ad1d153b1ee79e4d360f134e6f6fdd",
+        "observed_z.bin": "db432b9d81d7731178464bf2816ec7acf6284989561eaed3d13c0e202c64566a",
+        "z.bin": "475d1df99e7374d55f139bb580d24d6eb4db32b3750583f925b52a7015a9ce68",
+        "expected.bin": "db432b9d81d7731178464bf2816ec7acf6284989561eaed3d13c0e202c64566a",
+        "x.bin": "2939edcd7d49ba2e1fe1761309f5cd7be3ad1d153b1ee79e4d360f134e6f6fdd"
+      }
+    },
+    {
+      "id": "0009",
+      "n": 1,
+      "block": 1,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 10,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 170718,
+        "launch": 59792,
+        "wait": 961351,
+        "d2h": 160171,
+        "compare": 705
+      },
+      "files": {
+        "observed_x.bin": "78f2f90008957fca38743ec314632a131e397ae0a7213dd3308ed1c5ed218096",
+        "observed_z.bin": "b42a7adcd4e988cdfeec484bbe04a3b8d5fd93b8bcd664d225adddcf1ef81f90",
+        "z.bin": "2757a7091178021ea2dfc3367eb9dd99c243fee77cff67053810901adea70937",
+        "expected.bin": "b42a7adcd4e988cdfeec484bbe04a3b8d5fd93b8bcd664d225adddcf1ef81f90",
+        "x.bin": "78f2f90008957fca38743ec314632a131e397ae0a7213dd3308ed1c5ed218096"
+      }
+    },
+    {
+      "id": "0010",
+      "n": 1,
+      "block": 4,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 11,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 127578,
+        "launch": 49752,
+        "wait": 965539,
+        "d2h": 119552,
+        "compare": 777
+      },
+      "files": {
+        "observed_x.bin": "55afb11cb9265cc1e32c6db864f178207d8d83be4356f90816b2a998da29b32c",
+        "observed_z.bin": "119bf62c8eda7f384d0deee5e1433301954fbe648c3e640d55c5162a0c0fb815",
+        "z.bin": "f2c4b931f0919c798a050d0cb438863a2658a215eb65d8525d60a39c5da63d74",
+        "expected.bin": "119bf62c8eda7f384d0deee5e1433301954fbe648c3e640d55c5162a0c0fb815",
+        "x.bin": "55afb11cb9265cc1e32c6db864f178207d8d83be4356f90816b2a998da29b32c"
+      }
+    },
+    {
+      "id": "0011",
+      "n": 1,
+      "block": 4,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 12,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 151827,
+        "launch": 47597,
+        "wait": 931849,
+        "d2h": 190258,
+        "compare": 1140
+      },
+      "files": {
+        "observed_x.bin": "2e69d4b3b7b649bd5c55027fc85bbf43fc7188e9785b7536e316a9f6fcce70c4",
+        "observed_z.bin": "dd9e3b8a5b485de89f8e3e478db24e8bf1b208e67acb5140bbda9610d879430b",
+        "z.bin": "e09f13e0c2becaed538faaa149f0d4447cc36bd2d14a91774cc3d1b085c55fe5",
+        "expected.bin": "dd9e3b8a5b485de89f8e3e478db24e8bf1b208e67acb5140bbda9610d879430b",
+        "x.bin": "2e69d4b3b7b649bd5c55027fc85bbf43fc7188e9785b7536e316a9f6fcce70c4"
+      }
+    },
+    {
+      "id": "0012",
+      "n": 1,
+      "block": 7,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 13,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 138521,
+        "launch": 51340,
+        "wait": 1456728,
+        "d2h": 150247,
+        "compare": 963
+      },
+      "files": {
+        "observed_x.bin": "5fea859d16954c9df6a1fefb961a594b55e1d521d193fb059dadde9a4ee02188",
+        "observed_z.bin": "2a8243450379ace196205231a6cf21d00ed13abf0e1a47ca73c3ff28a7294d6c",
+        "z.bin": "9bee2d1a925a839f77b2416d1b8661da93e8d41260e6dd225b2276d10eae4790",
+        "expected.bin": "2a8243450379ace196205231a6cf21d00ed13abf0e1a47ca73c3ff28a7294d6c",
+        "x.bin": "5fea859d16954c9df6a1fefb961a594b55e1d521d193fb059dadde9a4ee02188"
+      }
+    },
+    {
+      "id": "0013",
+      "n": 1,
+      "block": 7,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 14,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 235911,
+        "launch": 47956,
+        "wait": 1223433,
+        "d2h": 173609,
+        "compare": 989
+      },
+      "files": {
+        "observed_x.bin": "7ec6aab6938123427e385981ce575b59ed9886b378cec2cb16ef6c114da21896",
+        "observed_z.bin": "8870b26b04df6588b8693dd4c1cb1407e979bdeae8d5af0a15699fd8c187748d",
+        "z.bin": "e900b6e4d15760fc2b223838c733d2ce8c265a6d035f55d51f1ca529407dbf06",
+        "expected.bin": "8870b26b04df6588b8693dd4c1cb1407e979bdeae8d5af0a15699fd8c187748d",
+        "x.bin": "7ec6aab6938123427e385981ce575b59ed9886b378cec2cb16ef6c114da21896"
+      }
+    },
+    {
+      "id": "0014",
+      "n": 1,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 15,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 172822,
+        "launch": 48078,
+        "wait": 1461328,
+        "d2h": 133074,
+        "compare": 1044
+      },
+      "files": {
+        "observed_x.bin": "2b09b07a1d46b4edca99d9655401f687b62d93adb9a659f0b9d4740614e0f313",
+        "observed_z.bin": "1d35a472f5e82d7719efb840bbeb63987a6dd00f322da9e2e4dcff773507d959",
+        "z.bin": "c4f6d5cc20531dfb4891027ba0899617512b796c9263effb127ba0838203a6e0",
+        "expected.bin": "1d35a472f5e82d7719efb840bbeb63987a6dd00f322da9e2e4dcff773507d959",
+        "x.bin": "2b09b07a1d46b4edca99d9655401f687b62d93adb9a659f0b9d4740614e0f313"
+      }
+    },
+    {
+      "id": "0015",
+      "n": 1,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 16,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 156577,
+        "launch": 47627,
+        "wait": 1532719,
+        "d2h": 134400,
+        "compare": 845
+      },
+      "files": {
+        "observed_x.bin": "7ed405816248c95f1ce56fb2a84816b5c62fd2b91b7b539daf90da1927432c40",
+        "observed_z.bin": "9f16e97cbb847bfb10c00daef7cfed7ef042bce520170ee246dbf2ff70aa6fc3",
+        "z.bin": "30749a5ebe6ad3ee246c2d1d5c3d5fe68d2e5f0765c2f37af358a61e45c508eb",
+        "expected.bin": "9f16e97cbb847bfb10c00daef7cfed7ef042bce520170ee246dbf2ff70aa6fc3",
+        "x.bin": "7ed405816248c95f1ce56fb2a84816b5c62fd2b91b7b539daf90da1927432c40"
+      }
+    },
+    {
+      "id": "0016",
+      "n": 7,
+      "block": 1,
+      "grid": 7,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 17,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 223285,
+        "launch": 47814,
+        "wait": 2440063,
+        "d2h": 116144,
+        "compare": 837
+      },
+      "files": {
+        "observed_x.bin": "946f3be2e3611b4fc1b452196d44cc9db3ebfcee77b665a5cebb9596ec10df78",
+        "observed_z.bin": "3ea75a16e745fe5233ca8cded5319c2b13c2a74283950b497e7c09d8468ed70c",
+        "z.bin": "62eae7a130de99bcc66119f8c975d16a549f8551fe666db55d85b703e0e90947",
+        "expected.bin": "3ea75a16e745fe5233ca8cded5319c2b13c2a74283950b497e7c09d8468ed70c",
+        "x.bin": "946f3be2e3611b4fc1b452196d44cc9db3ebfcee77b665a5cebb9596ec10df78"
+      }
+    },
+    {
+      "id": "0017",
+      "n": 7,
+      "block": 1,
+      "grid": 7,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 18,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 144007,
+        "launch": 84310,
+        "wait": 3471885,
+        "d2h": 208027,
+        "compare": 850
+      },
+      "files": {
+        "observed_x.bin": "6233df4b399442a8e84bba0275b6f0672f55ad36768cf9792c9721c8d830038f",
+        "observed_z.bin": "4ffd7a37a74ee75fd84cc98647323fb0cbaf59eb8f46e0f627bb6810073f6b43",
+        "z.bin": "2a708b21aa3ae57ce292f65cce3507025ea5242dcbf1e49f7383c5c097e21915",
+        "expected.bin": "4ffd7a37a74ee75fd84cc98647323fb0cbaf59eb8f46e0f627bb6810073f6b43",
+        "x.bin": "6233df4b399442a8e84bba0275b6f0672f55ad36768cf9792c9721c8d830038f"
+      }
+    },
+    {
+      "id": "0018",
+      "n": 7,
+      "block": 4,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 19,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 168516,
+        "launch": 58734,
+        "wait": 2020973,
+        "d2h": 114447,
+        "compare": 993
+      },
+      "files": {
+        "observed_x.bin": "78a9683844d290a01aa103f1a800a2145533ed4ddecdb6ec2182f638123278dd",
+        "observed_z.bin": "a551a7718ec05812c6adc752073104c7b93f60855c419e84feb448441b539ed5",
+        "z.bin": "2910f3f94153f0d3cb417ab5d7460ba1181475c8adcbf1b75a1f4279e0137c52",
+        "expected.bin": "a551a7718ec05812c6adc752073104c7b93f60855c419e84feb448441b539ed5",
+        "x.bin": "78a9683844d290a01aa103f1a800a2145533ed4ddecdb6ec2182f638123278dd"
+      }
+    },
+    {
+      "id": "0019",
+      "n": 7,
+      "block": 4,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 20,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 180417,
+        "launch": 47698,
+        "wait": 1213799,
+        "d2h": 116263,
+        "compare": 848
+      },
+      "files": {
+        "observed_x.bin": "b2b165488d3de91986e4959eeac8ed8436576cdf6dc21e9d466478520974044e",
+        "observed_z.bin": "0c6a55525429cecf3192417613f643c757bf5a5a438af0bcbcb46ec09d7e4f03",
+        "z.bin": "11f9792dec2d78ab7a103e581feb14a97ab1dc0b00aa397a6017ce58c4ac35ed",
+        "expected.bin": "0c6a55525429cecf3192417613f643c757bf5a5a438af0bcbcb46ec09d7e4f03",
+        "x.bin": "b2b165488d3de91986e4959eeac8ed8436576cdf6dc21e9d466478520974044e"
+      }
+    },
+    {
+      "id": "0020",
+      "n": 7,
+      "block": 7,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 21,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 1037510,
+        "launch": 79803,
+        "wait": 1164313,
+        "d2h": 204682,
+        "compare": 624
+      },
+      "files": {
+        "observed_x.bin": "c61ce94b4c0510b04cfbc35a2ac7d9576221b5c54c5ca310949bb1364586ab6e",
+        "observed_z.bin": "661691f53c0086ee94bcf962e17d9fe234b70039708185f07ad4e0e4fc394223",
+        "z.bin": "9cbc9540253dbaa1fc7360f04059a67381f1995a13eed32eddad968c768f60cc",
+        "expected.bin": "661691f53c0086ee94bcf962e17d9fe234b70039708185f07ad4e0e4fc394223",
+        "x.bin": "c61ce94b4c0510b04cfbc35a2ac7d9576221b5c54c5ca310949bb1364586ab6e"
+      }
+    },
+    {
+      "id": "0021",
+      "n": 7,
+      "block": 7,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 22,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 153081,
+        "launch": 47082,
+        "wait": 1200684,
+        "d2h": 108928,
+        "compare": 665
+      },
+      "files": {
+        "observed_x.bin": "0177c4ea2e77efcc7b5e450ef8a962063e689c54ac3c741845ea3591f6e78719",
+        "observed_z.bin": "1923339efa19f5af1112f72a5622707941026afd788f9a163d555362a4f27ee5",
+        "z.bin": "eb7be0de9922438282976f87a368e702bece714e4973b58f6d9bde9b81641b8e",
+        "expected.bin": "1923339efa19f5af1112f72a5622707941026afd788f9a163d555362a4f27ee5",
+        "x.bin": "0177c4ea2e77efcc7b5e450ef8a962063e689c54ac3c741845ea3591f6e78719"
+      }
+    },
+    {
+      "id": "0022",
+      "n": 7,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 23,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 148997,
+        "launch": 58309,
+        "wait": 1628862,
+        "d2h": 110168,
+        "compare": 615
+      },
+      "files": {
+        "observed_x.bin": "382d92f4880c0555133f86e959e9672b9e63fafc300b77598b148e9310aaf73b",
+        "observed_z.bin": "83a35b59c106d3c969baa7b39679580c2f6a9abb309021e6260e9ee2bc688507",
+        "z.bin": "13d2445327e3d41605dfac6b06875195989d744669496a44f93c2272282c404d",
+        "expected.bin": "83a35b59c106d3c969baa7b39679580c2f6a9abb309021e6260e9ee2bc688507",
+        "x.bin": "382d92f4880c0555133f86e959e9672b9e63fafc300b77598b148e9310aaf73b"
+      }
+    },
+    {
+      "id": "0023",
+      "n": 7,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 24,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 147980,
+        "launch": 46636,
+        "wait": 3886587,
+        "d2h": 161350,
+        "compare": 1538
+      },
+      "files": {
+        "observed_x.bin": "9bf3b9542c10e112fcf92bc470b7a33fed37ab8fa6f30bcb6aed5d5db913aea4",
+        "observed_z.bin": "fbafc557fb7f3fef2fe207bf2aa9007a9eb158a3a368bc2aa513575f3afb4cd5",
+        "z.bin": "d7f48e2d31fa57e46ed792c2a929b7ed9e4a2a60e0aec29478a33d3fa2d8cbae",
+        "expected.bin": "fbafc557fb7f3fef2fe207bf2aa9007a9eb158a3a368bc2aa513575f3afb4cd5",
+        "x.bin": "9bf3b9542c10e112fcf92bc470b7a33fed37ab8fa6f30bcb6aed5d5db913aea4"
+      }
+    },
+    {
+      "id": "0024",
+      "n": 15,
+      "block": 1,
+      "grid": 15,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 25,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 143274,
+        "launch": 53796,
+        "wait": 4553616,
+        "d2h": 147245,
+        "compare": 984
+      },
+      "files": {
+        "observed_x.bin": "9e1dc3b62dca428983ef0ca447a40924b0a2e7853f41af427cfe9f60efbb4f6a",
+        "observed_z.bin": "69755b1fab929f24a4f1d6d312734ba38101d1c76766042609811ddc06687f0c",
+        "z.bin": "17c101ff317d454ca40ccd23c1378b91999c057b69821975fc660a5713ac5593",
+        "expected.bin": "69755b1fab929f24a4f1d6d312734ba38101d1c76766042609811ddc06687f0c",
+        "x.bin": "9e1dc3b62dca428983ef0ca447a40924b0a2e7853f41af427cfe9f60efbb4f6a"
+      }
+    },
+    {
+      "id": "0025",
+      "n": 15,
+      "block": 1,
+      "grid": 15,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 26,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 139941,
+        "launch": 58728,
+        "wait": 4506862,
+        "d2h": 250937,
+        "compare": 1107
+      },
+      "files": {
+        "observed_x.bin": "feca69f68e5149f0aad61e94c062b371cf20eb73d675ce2ed0bd30dbed7b6d48",
+        "observed_z.bin": "819d61a985b05b125d3d984be217b7099123478be2f60f091936ed334e145046",
+        "z.bin": "1d9bdddcb7f4431cbca57f692aa392834f9b1219955a95321b46a20f7b65b7da",
+        "expected.bin": "819d61a985b05b125d3d984be217b7099123478be2f60f091936ed334e145046",
+        "x.bin": "feca69f68e5149f0aad61e94c062b371cf20eb73d675ce2ed0bd30dbed7b6d48"
+      }
+    },
+    {
+      "id": "0026",
+      "n": 15,
+      "block": 4,
+      "grid": 4,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 27,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 138374,
+        "launch": 54811,
+        "wait": 1881811,
+        "d2h": 110810,
+        "compare": 790
+      },
+      "files": {
+        "observed_x.bin": "cb8cc1cb31dbb4695e963d19e0662b40177dd5eaa07be9eac6c09fb56426fc17",
+        "observed_z.bin": "377d6a9547d3c63335261b3e9bb25f420fbfa77bd7f52c26f6782bad2800a64a",
+        "z.bin": "64228509b68fd076fa83cc897772f129ee892e19e0b05966a8324403b36a8354",
+        "expected.bin": "377d6a9547d3c63335261b3e9bb25f420fbfa77bd7f52c26f6782bad2800a64a",
+        "x.bin": "cb8cc1cb31dbb4695e963d19e0662b40177dd5eaa07be9eac6c09fb56426fc17"
+      }
+    },
+    {
+      "id": "0027",
+      "n": 15,
+      "block": 4,
+      "grid": 4,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 28,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 150224,
+        "launch": 53692,
+        "wait": 1761830,
+        "d2h": 122851,
+        "compare": 860
+      },
+      "files": {
+        "observed_x.bin": "63c1916391b375867db8f51d688d90907da7af07ffd896af86351c3e742d8382",
+        "observed_z.bin": "81e8c6750ccab862e0e01d723d02c6ad48fbb8e65199385c00051c4ad55065ff",
+        "z.bin": "6785a8f39f8819409c300118727416c1917d3938573b41c6920b1dcc34b1fbba",
+        "expected.bin": "81e8c6750ccab862e0e01d723d02c6ad48fbb8e65199385c00051c4ad55065ff",
+        "x.bin": "63c1916391b375867db8f51d688d90907da7af07ffd896af86351c3e742d8382"
+      }
+    },
+    {
+      "id": "0028",
+      "n": 15,
+      "block": 7,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 29,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 210487,
+        "launch": 59046,
+        "wait": 2504996,
+        "d2h": 127427,
+        "compare": 741
+      },
+      "files": {
+        "observed_x.bin": "d6bbd16a7e51a306edd7b733557a5175fc9bc7487d99fe5af449fd7adebd500f",
+        "observed_z.bin": "8f69ad051696cdc37113f90e2c30f12955aae502e6c55beb41d2456d39dceeab",
+        "z.bin": "74ef30d8907c28b528b2d92ba630bdc6764624d4e88e4d0755229bfa5357052e",
+        "expected.bin": "8f69ad051696cdc37113f90e2c30f12955aae502e6c55beb41d2456d39dceeab",
+        "x.bin": "d6bbd16a7e51a306edd7b733557a5175fc9bc7487d99fe5af449fd7adebd500f"
+      }
+    },
+    {
+      "id": "0029",
+      "n": 15,
+      "block": 7,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 30,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 327357,
+        "launch": 91863,
+        "wait": 2529250,
+        "d2h": 132510,
+        "compare": 750
+      },
+      "files": {
+        "observed_x.bin": "c3b6537bbf0f83303f1c1967c1dc0a1474e72a51b69199ab355518dbe39d689e",
+        "observed_z.bin": "d5c70330e68d874ebd957c7f22c17a8d4e771de2c04c1b2898234b5faf9b5b54",
+        "z.bin": "b49dd9f29234009761bf1180707bd4b09d3dfbe799952b17ad62e136ea1f633c",
+        "expected.bin": "d5c70330e68d874ebd957c7f22c17a8d4e771de2c04c1b2898234b5faf9b5b54",
+        "x.bin": "c3b6537bbf0f83303f1c1967c1dc0a1474e72a51b69199ab355518dbe39d689e"
+      }
+    },
+    {
+      "id": "0030",
+      "n": 15,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 31,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 130714,
+        "launch": 46677,
+        "wait": 1701822,
+        "d2h": 149950,
+        "compare": 767
+      },
+      "files": {
+        "observed_x.bin": "8aab4f2e1a0cc70bb6d74b37a63fd4180d29a9b1bdffe9090c6cf4b9a0137942",
+        "observed_z.bin": "ea0bea3a66fc764a253b44565b976d5657400985266afa2d0fa7f4e47b33cca6",
+        "z.bin": "cc418cee9dfbca10a79162db131780f5ff494c08a5464894a2750974d10952ef",
+        "expected.bin": "ea0bea3a66fc764a253b44565b976d5657400985266afa2d0fa7f4e47b33cca6",
+        "x.bin": "8aab4f2e1a0cc70bb6d74b37a63fd4180d29a9b1bdffe9090c6cf4b9a0137942"
+      }
+    },
+    {
+      "id": "0031",
+      "n": 15,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 32,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 151841,
+        "launch": 48434,
+        "wait": 1806550,
+        "d2h": 111369,
+        "compare": 1447
+      },
+      "files": {
+        "observed_x.bin": "4dfbf42b9cc09572df25c23ee0a3ac60d2724a64c9169c45143bbe4520edc95c",
+        "observed_z.bin": "c5f3b8e7bcb97f8a433c88aff0b2ff3f62f19ce31da21951579b0dd7c0717e4a",
+        "z.bin": "60e3eef839bdf1151621f1b44af7ded4d5c481a09f712b8500b692f8c3f75a2b",
+        "expected.bin": "c5f3b8e7bcb97f8a433c88aff0b2ff3f62f19ce31da21951579b0dd7c0717e4a",
+        "x.bin": "4dfbf42b9cc09572df25c23ee0a3ac60d2724a64c9169c45143bbe4520edc95c"
+      }
+    },
+    {
+      "id": "0032",
+      "n": 16,
+      "block": 1,
+      "grid": 16,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 33,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 129158,
+        "launch": 47375,
+        "wait": 4687862,
+        "d2h": 129782,
+        "compare": 780
+      },
+      "files": {
+        "observed_x.bin": "5fa091b9e0320bdcc9e74c7ee928ab57419c7d4415567eb84e6c3f6219171314",
+        "observed_z.bin": "ce4cf3d71dbe3598c3ef0bc23d7206d9a4626491c3749cfeef56d9210d9b45f2",
+        "z.bin": "8346a104c9fefc77ca763afaff1f8d12e7df758c2113cbf8bcd11307d93a37bf",
+        "expected.bin": "ce4cf3d71dbe3598c3ef0bc23d7206d9a4626491c3749cfeef56d9210d9b45f2",
+        "x.bin": "5fa091b9e0320bdcc9e74c7ee928ab57419c7d4415567eb84e6c3f6219171314"
+      }
+    },
+    {
+      "id": "0033",
+      "n": 16,
+      "block": 1,
+      "grid": 16,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 34,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 192042,
+        "launch": 51143,
+        "wait": 4926762,
+        "d2h": 189585,
+        "compare": 1009
+      },
+      "files": {
+        "observed_x.bin": "d2a1217c8f17bd83fc6dc0bd0d1fb2493d7141d56a584c608c1e927599918c08",
+        "observed_z.bin": "ceeecfeb9bbeffcbf7ade761ccd815a9483097daf4a1eafb743df727c7822266",
+        "z.bin": "a8bfaffb32d0b4bac3ab997b3a371538f9af64a91ac864671a403b1ed6c54a6f",
+        "expected.bin": "ceeecfeb9bbeffcbf7ade761ccd815a9483097daf4a1eafb743df727c7822266",
+        "x.bin": "d2a1217c8f17bd83fc6dc0bd0d1fb2493d7141d56a584c608c1e927599918c08"
+      }
+    },
+    {
+      "id": "0034",
+      "n": 16,
+      "block": 4,
+      "grid": 4,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 35,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 155124,
+        "launch": 52408,
+        "wait": 1801729,
+        "d2h": 142674,
+        "compare": 774
+      },
+      "files": {
+        "observed_x.bin": "cc0d98938e62e260c29b81fe8abd28190547339b3ac8a959828414e918a97da4",
+        "observed_z.bin": "0a53f48de11e244164d477308a79709f32f9a35b109dee0f7eaf7469f6cd3a5c",
+        "z.bin": "5f8628dae34bfb3c411ec9273813366719a84377041c2bd41933e5695efb8b20",
+        "expected.bin": "0a53f48de11e244164d477308a79709f32f9a35b109dee0f7eaf7469f6cd3a5c",
+        "x.bin": "cc0d98938e62e260c29b81fe8abd28190547339b3ac8a959828414e918a97da4"
+      }
+    },
+    {
+      "id": "0035",
+      "n": 16,
+      "block": 4,
+      "grid": 4,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 36,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 145624,
+        "launch": 54450,
+        "wait": 1764700,
+        "d2h": 113103,
+        "compare": 1044
+      },
+      "files": {
+        "observed_x.bin": "792ae91b0537e3388c51f8bf71593dfa50271e0a66dda9c2275df23a3c158ddf",
+        "observed_z.bin": "fc2e2103a7f3a83465e86ce6788444d3b6354f92c8911ab8681d07ff9d0564b5",
+        "z.bin": "3cd2c6f3364590883d2271efad7a6118481cb2d8a16cd75a95dd8d2c6df58d3c",
+        "expected.bin": "fc2e2103a7f3a83465e86ce6788444d3b6354f92c8911ab8681d07ff9d0564b5",
+        "x.bin": "792ae91b0537e3388c51f8bf71593dfa50271e0a66dda9c2275df23a3c158ddf"
+      }
+    },
+    {
+      "id": "0036",
+      "n": 16,
+      "block": 7,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 37,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 164474,
+        "launch": 56713,
+        "wait": 2338113,
+        "d2h": 230259,
+        "compare": 1058
+      },
+      "files": {
+        "observed_x.bin": "da9117c79f87840786fe9957993bf59e5f2da62563d5abf9792443d86eb57035",
+        "observed_z.bin": "4122b56ab1003d9e9786fced68de45b64acf8d69834c4e402e7f4b77e375ebc8",
+        "z.bin": "a3070a185e39f2e5c1862f72ef6303948313e26b8cfa15597a7503ed9eb85f5f",
+        "expected.bin": "4122b56ab1003d9e9786fced68de45b64acf8d69834c4e402e7f4b77e375ebc8",
+        "x.bin": "da9117c79f87840786fe9957993bf59e5f2da62563d5abf9792443d86eb57035"
+      }
+    },
+    {
+      "id": "0037",
+      "n": 16,
+      "block": 7,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 38,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 217416,
+        "launch": 69622,
+        "wait": 2393648,
+        "d2h": 135744,
+        "compare": 774
+      },
+      "files": {
+        "observed_x.bin": "66fdae5044b739f6bacd6ede80bbb4ea9bba587bde1d9f9a5b8b1bacea7c8250",
+        "observed_z.bin": "0dea958c7b91d16a3832ca81e9af017e67124ed713b14c68b1ff6031bf940881",
+        "z.bin": "bc5878b542864c71e0e523c4738bf03b0baa70f3cfda6aa31b7f58f81c4afc70",
+        "expected.bin": "0dea958c7b91d16a3832ca81e9af017e67124ed713b14c68b1ff6031bf940881",
+        "x.bin": "66fdae5044b739f6bacd6ede80bbb4ea9bba587bde1d9f9a5b8b1bacea7c8250"
+      }
+    },
+    {
+      "id": "0038",
+      "n": 16,
+      "block": 16,
+      "grid": 1,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 39,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 173971,
+        "launch": 54715,
+        "wait": 1747485,
+        "d2h": 119595,
+        "compare": 784
+      },
+      "files": {
+        "observed_x.bin": "29d73e1fbcb2e789b4f2000550637b60415da8902267d64dd0192554b7c2c6cc",
+        "observed_z.bin": "2902266f54a4e03d5f2e205426b5292bdabba3db8131d2ae2994c5a16aa49f89",
+        "z.bin": "b8e7ea2bc70d0622a8a8b531b18d1f7c84f0e61133f492e9aa695835244c499f",
+        "expected.bin": "2902266f54a4e03d5f2e205426b5292bdabba3db8131d2ae2994c5a16aa49f89",
+        "x.bin": "29d73e1fbcb2e789b4f2000550637b60415da8902267d64dd0192554b7c2c6cc"
+      }
+    },
+    {
+      "id": "0039",
+      "n": 16,
+      "block": 16,
+      "grid": 1,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 40,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 143007,
+        "launch": 50332,
+        "wait": 1817044,
+        "d2h": 209661,
+        "compare": 1160
+      },
+      "files": {
+        "observed_x.bin": "9309162b4265e3d505481d4f1dfecc9bfa363199215ae8524fb2c0fba89192f8",
+        "observed_z.bin": "df77902f40af19dfa25bbcbc21287a5f9f0a3ab42073380b2a4f0d83c53cf6b1",
+        "z.bin": "1dc4fdc6a9c84bd032184074745f3adb34f5ef45922a9ccd8ae092fcc95409da",
+        "expected.bin": "df77902f40af19dfa25bbcbc21287a5f9f0a3ab42073380b2a4f0d83c53cf6b1",
+        "x.bin": "9309162b4265e3d505481d4f1dfecc9bfa363199215ae8524fb2c0fba89192f8"
+      }
+    },
+    {
+      "id": "0040",
+      "n": 17,
+      "block": 1,
+      "grid": 17,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 41,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 164802,
+        "launch": 47554,
+        "wait": 5248053,
+        "d2h": 133958,
+        "compare": 638
+      },
+      "files": {
+        "observed_x.bin": "8ca4f4ce66ebcd043a199e52b3b0203f9b74809fd9930652b1ae2088ad687af5",
+        "observed_z.bin": "8a8f0ccc25612917c97a09147ebb421999b626641a0eaf93ad1b990f2607d7d1",
+        "z.bin": "9be01caf694a9d2ea5304eac30c3243a6928c71897feebbf21ed37a686cba72a",
+        "expected.bin": "8a8f0ccc25612917c97a09147ebb421999b626641a0eaf93ad1b990f2607d7d1",
+        "x.bin": "8ca4f4ce66ebcd043a199e52b3b0203f9b74809fd9930652b1ae2088ad687af5"
+      }
+    },
+    {
+      "id": "0041",
+      "n": 17,
+      "block": 1,
+      "grid": 17,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 42,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 140450,
+        "launch": 55676,
+        "wait": 5764675,
+        "d2h": 126563,
+        "compare": 722
+      },
+      "files": {
+        "observed_x.bin": "2b8587c85c40b3f992fd68770a5031a61aa74cfd1effaa13646506b8d5922618",
+        "observed_z.bin": "c31a2033b8722b40ea973afc353d7deab184202d4d8d504a33d6b505d9c1b63e",
+        "z.bin": "a5900a0ba611b01bdbce929be8dbff7a5e5b1643d7bb25e18acc691e75e7981a",
+        "expected.bin": "c31a2033b8722b40ea973afc353d7deab184202d4d8d504a33d6b505d9c1b63e",
+        "x.bin": "2b8587c85c40b3f992fd68770a5031a61aa74cfd1effaa13646506b8d5922618"
+      }
+    },
+    {
+      "id": "0042",
+      "n": 17,
+      "block": 4,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 43,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 212074,
+        "launch": 73050,
+        "wait": 2264227,
+        "d2h": 111360,
+        "compare": 716
+      },
+      "files": {
+        "observed_x.bin": "c5e49744f10381b379bd390d9dfd6a2b7b580052c5c2569569f26b3b4b7a3aef",
+        "observed_z.bin": "77d7f6444287f2066f65fa5b9f666e482156491316e9e931219147a5ff7b7b28",
+        "z.bin": "6c5a914ca9c59fda536a1c1a1a28946517bb09db8062a61ce57aa9ae719a9adb",
+        "expected.bin": "77d7f6444287f2066f65fa5b9f666e482156491316e9e931219147a5ff7b7b28",
+        "x.bin": "c5e49744f10381b379bd390d9dfd6a2b7b580052c5c2569569f26b3b4b7a3aef"
+      }
+    },
+    {
+      "id": "0043",
+      "n": 17,
+      "block": 4,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 44,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 201623,
+        "launch": 56155,
+        "wait": 2293319,
+        "d2h": 151828,
+        "compare": 781
+      },
+      "files": {
+        "observed_x.bin": "34b8238db69eeacc1b745a1b24d90883bea26a4c6bc7194e72664a8c40e85841",
+        "observed_z.bin": "18573ada26d8f4493524aa3340c9ebd880bb83233b87912499916f556baedc27",
+        "z.bin": "dcd56d0de2bb534911a8d6659329739429323c9db43a9b72e8531b31798b20c0",
+        "expected.bin": "18573ada26d8f4493524aa3340c9ebd880bb83233b87912499916f556baedc27",
+        "x.bin": "34b8238db69eeacc1b745a1b24d90883bea26a4c6bc7194e72664a8c40e85841"
+      }
+    },
+    {
+      "id": "0044",
+      "n": 17,
+      "block": 7,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 45,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 174110,
+        "launch": 54429,
+        "wait": 2429891,
+        "d2h": 202698,
+        "compare": 1500
+      },
+      "files": {
+        "observed_x.bin": "24b3f3afb12f9fca06a333265b5bc01238e5ee8a1642bba43a8bc4bbc7200d0d",
+        "observed_z.bin": "964ee3b21d6320f4bcf715aed3c94427fec672a9f9a413ac348218637557a087",
+        "z.bin": "a81837c2562ef2a1100bbe7e2d1ec775612f73b978183d08108e457fd4bbece6",
+        "expected.bin": "964ee3b21d6320f4bcf715aed3c94427fec672a9f9a413ac348218637557a087",
+        "x.bin": "24b3f3afb12f9fca06a333265b5bc01238e5ee8a1642bba43a8bc4bbc7200d0d"
+      }
+    },
+    {
+      "id": "0045",
+      "n": 17,
+      "block": 7,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 46,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 149158,
+        "launch": 82494,
+        "wait": 2358604,
+        "d2h": 139833,
+        "compare": 787
+      },
+      "files": {
+        "observed_x.bin": "1ae2fd5c219998fd6b7d75e2a9dc8e7d6acf75a6ee51f7008f0be7544578f69b",
+        "observed_z.bin": "fa781db57aaa12f60354ee496abc402d6d8763ffcb2b39bf1a0cca40b717dc96",
+        "z.bin": "61acf707574c7c4de1ced606a5e2b4a724633a32f0489cdb84e1307a93d7adb3",
+        "expected.bin": "fa781db57aaa12f60354ee496abc402d6d8763ffcb2b39bf1a0cca40b717dc96",
+        "x.bin": "1ae2fd5c219998fd6b7d75e2a9dc8e7d6acf75a6ee51f7008f0be7544578f69b"
+      }
+    },
+    {
+      "id": "0046",
+      "n": 17,
+      "block": 16,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 47,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 188842,
+        "launch": 67158,
+        "wait": 2661587,
+        "d2h": 190285,
+        "compare": 1664
+      },
+      "files": {
+        "observed_x.bin": "b02aa624728391a198312fc8260134bea65d35b0cc56f3714f2a73fcd7896b3d",
+        "observed_z.bin": "4b23c1371c1d61975aaea5cca270103a1bb359bb129c1b689bb7794b690747d7",
+        "z.bin": "f61a948b0df2702261dd373dbf5ce50fcf825d340576f4f5de4818d17ee67007",
+        "expected.bin": "4b23c1371c1d61975aaea5cca270103a1bb359bb129c1b689bb7794b690747d7",
+        "x.bin": "b02aa624728391a198312fc8260134bea65d35b0cc56f3714f2a73fcd7896b3d"
+      }
+    },
+    {
+      "id": "0047",
+      "n": 17,
+      "block": 16,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 48,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 154957,
+        "launch": 47283,
+        "wait": 2577605,
+        "d2h": 119579,
+        "compare": 823
+      },
+      "files": {
+        "observed_x.bin": "c15e3d332d7d12707138a1c3274223804d89e2015a92e73e14a003d2d0e667a6",
+        "observed_z.bin": "b6f342b8767611944ca6b9ef5db7359404ccf5f1e47cf1a18544bbcba0dabbc3",
+        "z.bin": "804e3b47cadfec5e09f7a48bb0d5fbb8b1e9eec65f9180b410d57f0b354453db",
+        "expected.bin": "b6f342b8767611944ca6b9ef5db7359404ccf5f1e47cf1a18544bbcba0dabbc3",
+        "x.bin": "c15e3d332d7d12707138a1c3274223804d89e2015a92e73e14a003d2d0e667a6"
+      }
+    },
+    {
+      "id": "0048",
+      "n": 31,
+      "block": 1,
+      "grid": 31,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 49,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 129901,
+        "launch": 48426,
+        "wait": 8476560,
+        "d2h": 125009,
+        "compare": 1112
+      },
+      "files": {
+        "observed_x.bin": "33c63768e98323ac806bb8a4f8a9370a4b8311031cb28fc2b013bb43bf8109e3",
+        "observed_z.bin": "fa8941b68712ffe8cfe3c8cbe2f2ea0d4f9ce137dbd762ff5f9f0e0874a581c0",
+        "z.bin": "20034e316801ef898ff651fd0aac10d44cf459b534951713f5dcda345e6ba904",
+        "expected.bin": "fa8941b68712ffe8cfe3c8cbe2f2ea0d4f9ce137dbd762ff5f9f0e0874a581c0",
+        "x.bin": "33c63768e98323ac806bb8a4f8a9370a4b8311031cb28fc2b013bb43bf8109e3"
+      }
+    },
+    {
+      "id": "0049",
+      "n": 31,
+      "block": 1,
+      "grid": 31,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 50,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 306407,
+        "launch": 67924,
+        "wait": 9157118,
+        "d2h": 128735,
+        "compare": 836
+      },
+      "files": {
+        "observed_x.bin": "340fc0ebbfabf4361f8f197707eac3b9437e0fa44f4fced2fcd5566426e6c9a2",
+        "observed_z.bin": "d9a9e22ba24f29c6a5344fb68d85bc2366b6c6a996fcd568a98170fd5d0d1414",
+        "z.bin": "b4ce30724b1e5587d252199bc89e71206d2fc37d0d46bc40860ddefd127969b8",
+        "expected.bin": "d9a9e22ba24f29c6a5344fb68d85bc2366b6c6a996fcd568a98170fd5d0d1414",
+        "x.bin": "340fc0ebbfabf4361f8f197707eac3b9437e0fa44f4fced2fcd5566426e6c9a2"
+      }
+    },
+    {
+      "id": "0050",
+      "n": 31,
+      "block": 4,
+      "grid": 8,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 51,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 140168,
+        "launch": 58871,
+        "wait": 3214892,
+        "d2h": 124422,
+        "compare": 1157
+      },
+      "files": {
+        "observed_x.bin": "0d7d7af2d71f829ab14a7b7d250533c769deb5e4c006482f52715bfcd670a91d",
+        "observed_z.bin": "9d99e91935250de3b0ff37baff0a779178abf433cdff7002e3419d7133bbc99a",
+        "z.bin": "d6c2e11dc91ca5451c277535843affffc4ada80d38289db6d1c58b132b06fb81",
+        "expected.bin": "9d99e91935250de3b0ff37baff0a779178abf433cdff7002e3419d7133bbc99a",
+        "x.bin": "0d7d7af2d71f829ab14a7b7d250533c769deb5e4c006482f52715bfcd670a91d"
+      }
+    },
+    {
+      "id": "0051",
+      "n": 31,
+      "block": 4,
+      "grid": 8,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 52,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 262157,
+        "launch": 62423,
+        "wait": 3095983,
+        "d2h": 125195,
+        "compare": 733
+      },
+      "files": {
+        "observed_x.bin": "48424f1e0e657d6871c50a5ed8b3cc27194f740f870a7c7bfb37093a81fb47e4",
+        "observed_z.bin": "a7a6bf89e3a216c7e87f4681b5e60634a9d13ee67cdc24878793f3c26faca2c3",
+        "z.bin": "e3c84af834677102f5249dee010f78f124a683a58d042d315f6406ed03c7c141",
+        "expected.bin": "a7a6bf89e3a216c7e87f4681b5e60634a9d13ee67cdc24878793f3c26faca2c3",
+        "x.bin": "48424f1e0e657d6871c50a5ed8b3cc27194f740f870a7c7bfb37093a81fb47e4"
+      }
+    },
+    {
+      "id": "0052",
+      "n": 31,
+      "block": 7,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 53,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 144773,
+        "launch": 55425,
+        "wait": 3557007,
+        "d2h": 167081,
+        "compare": 1754
+      },
+      "files": {
+        "observed_x.bin": "7faf7ff48dd92d7f819c21dd6458be5a5ebe66830ef60a43fe42afac1d78cfcb",
+        "observed_z.bin": "3da77f0c0f47b372e62109edef332c966c105a9c470ba98a3683110438fdff9c",
+        "z.bin": "254b9a357501a4d925edd605e9ff05b9d5a70805acea9a9fdbd97f1dd1316347",
+        "expected.bin": "3da77f0c0f47b372e62109edef332c966c105a9c470ba98a3683110438fdff9c",
+        "x.bin": "7faf7ff48dd92d7f819c21dd6458be5a5ebe66830ef60a43fe42afac1d78cfcb"
+      }
+    },
+    {
+      "id": "0053",
+      "n": 31,
+      "block": 7,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 54,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 146843,
+        "launch": 52550,
+        "wait": 3833673,
+        "d2h": 171318,
+        "compare": 755
+      },
+      "files": {
+        "observed_x.bin": "a28a6317594889d3ce88ceb3b930bc0ac4521952fd6c84e92845b1add538a235",
+        "observed_z.bin": "9d3d7073e2c1157e564b051d0196b936b3d10ad9e06793fde1f83554cb22abca",
+        "z.bin": "dece72b8f7081e98746070a624d56ee8e4602816b8938de1334b3c81b59541c7",
+        "expected.bin": "9d3d7073e2c1157e564b051d0196b936b3d10ad9e06793fde1f83554cb22abca",
+        "x.bin": "a28a6317594889d3ce88ceb3b930bc0ac4521952fd6c84e92845b1add538a235"
+      }
+    },
+    {
+      "id": "0054",
+      "n": 31,
+      "block": 16,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 55,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 502265,
+        "launch": 71512,
+        "wait": 2991726,
+        "d2h": 140610,
+        "compare": 738
+      },
+      "files": {
+        "observed_x.bin": "2a5dc63ec137373ce2a9b34239417ed7972dafe46c006289ef1431a4132c4ab1",
+        "observed_z.bin": "87650c3284f6907927aa7c402b063b178070632d96e24ef6d15f11c50064797e",
+        "z.bin": "a3955da9c49f96cf6681fe089ac3aa027bc08793339a03bc2c30925886531a0f",
+        "expected.bin": "87650c3284f6907927aa7c402b063b178070632d96e24ef6d15f11c50064797e",
+        "x.bin": "2a5dc63ec137373ce2a9b34239417ed7972dafe46c006289ef1431a4132c4ab1"
+      }
+    },
+    {
+      "id": "0055",
+      "n": 31,
+      "block": 16,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 56,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 140164,
+        "launch": 46887,
+        "wait": 3132352,
+        "d2h": 126660,
+        "compare": 1066
+      },
+      "files": {
+        "observed_x.bin": "ad3a6b524844c4423076c76d26d1cba5e728c182a4a345e02347ac3684de8401",
+        "observed_z.bin": "5a0a32976bfd2e7c33468b6a78c2e0d92b3244a3bdaade0802736cbf5a128e13",
+        "z.bin": "cad95e26de48c6da07a1ba45723aa234ce9a49ca702476b63e6a3e9c639bcef1",
+        "expected.bin": "5a0a32976bfd2e7c33468b6a78c2e0d92b3244a3bdaade0802736cbf5a128e13",
+        "x.bin": "ad3a6b524844c4423076c76d26d1cba5e728c182a4a345e02347ac3684de8401"
+      }
+    },
+    {
+      "id": "0056",
+      "n": 32,
+      "block": 1,
+      "grid": 32,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 57,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 146635,
+        "launch": 54880,
+        "wait": 10000407,
+        "d2h": 245341,
+        "compare": 1113
+      },
+      "files": {
+        "observed_x.bin": "119d318431aa12c10849cf22f03104d34c5cbda186bdafc61d842272c53115ab",
+        "observed_z.bin": "86621f326475f787228e7589cb15f34d76a1c7cd4e476ad0fc6359b8055896db",
+        "z.bin": "9378fd83cbbd5e8349cf190a1ff89fb595cf8cda84412838577f4be2f3e9b2d6",
+        "expected.bin": "86621f326475f787228e7589cb15f34d76a1c7cd4e476ad0fc6359b8055896db",
+        "x.bin": "119d318431aa12c10849cf22f03104d34c5cbda186bdafc61d842272c53115ab"
+      }
+    },
+    {
+      "id": "0057",
+      "n": 32,
+      "block": 1,
+      "grid": 32,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 58,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 270434,
+        "launch": 60458,
+        "wait": 9887322,
+        "d2h": 181069,
+        "compare": 1789
+      },
+      "files": {
+        "observed_x.bin": "962b5b9008d346a912e65e83ede57c07a8fc364932df05aaf51045a78a1456d5",
+        "observed_z.bin": "4263a5e91e7c1dc0df2e7c30b2f9f40611b63848bf2c8ff237502e8d63641897",
+        "z.bin": "64b235c0e252e59535c685083dc3ba1895404d2f11deef69394665bfea6b14d9",
+        "expected.bin": "4263a5e91e7c1dc0df2e7c30b2f9f40611b63848bf2c8ff237502e8d63641897",
+        "x.bin": "962b5b9008d346a912e65e83ede57c07a8fc364932df05aaf51045a78a1456d5"
+      }
+    },
+    {
+      "id": "0058",
+      "n": 32,
+      "block": 4,
+      "grid": 8,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 59,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 240910,
+        "launch": 68998,
+        "wait": 4633543,
+        "d2h": 192315,
+        "compare": 1111
+      },
+      "files": {
+        "observed_x.bin": "795255fb357398c141f6a939f0c7fea3875e1eabfe080751ad91a45c2669990e",
+        "observed_z.bin": "4a9b69bf6c33838891e527f57c74c03c8facb0a9f52fd8042c093b8188ec9c76",
+        "z.bin": "f70143df19b9acc7c7f6775b288bc830437c6619bd1797334fbf7a454059464a",
+        "expected.bin": "4a9b69bf6c33838891e527f57c74c03c8facb0a9f52fd8042c093b8188ec9c76",
+        "x.bin": "795255fb357398c141f6a939f0c7fea3875e1eabfe080751ad91a45c2669990e"
+      }
+    },
+    {
+      "id": "0059",
+      "n": 32,
+      "block": 4,
+      "grid": 8,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 60,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 195865,
+        "launch": 56926,
+        "wait": 3350659,
+        "d2h": 131131,
+        "compare": 864
+      },
+      "files": {
+        "observed_x.bin": "8199df986e2a4221cb28bc73f9a825d51e40d3322c49adedc5327b045393ae3e",
+        "observed_z.bin": "6a82edf4b48b3a37132b66d44687c246088adacae78c90ba2a7f0e44bf8f049e",
+        "z.bin": "dc7bc2486ffadec62986d1b5b5d6484cf487307083da1d225bd2b497e836ec06",
+        "expected.bin": "6a82edf4b48b3a37132b66d44687c246088adacae78c90ba2a7f0e44bf8f049e",
+        "x.bin": "8199df986e2a4221cb28bc73f9a825d51e40d3322c49adedc5327b045393ae3e"
+      }
+    },
+    {
+      "id": "0060",
+      "n": 32,
+      "block": 7,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 61,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 253142,
+        "launch": 61559,
+        "wait": 4192526,
+        "d2h": 154373,
+        "compare": 1003
+      },
+      "files": {
+        "observed_x.bin": "67ee8f6a9751b4b0c4d5c544d62fca3883ed5fd8101b56b582149fbb3742614f",
+        "observed_z.bin": "68a052be4364c58de26e99641e64d0c7f3b2b4ade1b366aa2b79eaf43ab1f0e7",
+        "z.bin": "48903aaccec60cf802def4131f9d0cba265f84dcbcb35f3ac98c11a5e65cb55a",
+        "expected.bin": "68a052be4364c58de26e99641e64d0c7f3b2b4ade1b366aa2b79eaf43ab1f0e7",
+        "x.bin": "67ee8f6a9751b4b0c4d5c544d62fca3883ed5fd8101b56b582149fbb3742614f"
+      }
+    },
+    {
+      "id": "0061",
+      "n": 32,
+      "block": 7,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 62,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 146824,
+        "launch": 53322,
+        "wait": 3579336,
+        "d2h": 150857,
+        "compare": 808
+      },
+      "files": {
+        "observed_x.bin": "a7110aada7ce3c5ae700caff5c13558febb063df5437e6faef9efe98b5da904a",
+        "observed_z.bin": "ed602a8efec2b18a2b45bfcca37f9fe8f276cad47dd9413bdd1f655224b97aa9",
+        "z.bin": "4853de9122f3f59d18d181e66ab31f85b929df8ea50406aca58a0ae9ef3a0bdb",
+        "expected.bin": "ed602a8efec2b18a2b45bfcca37f9fe8f276cad47dd9413bdd1f655224b97aa9",
+        "x.bin": "a7110aada7ce3c5ae700caff5c13558febb063df5437e6faef9efe98b5da904a"
+      }
+    },
+    {
+      "id": "0062",
+      "n": 32,
+      "block": 16,
+      "grid": 2,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 63,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 143187,
+        "launch": 58595,
+        "wait": 2938532,
+        "d2h": 232491,
+        "compare": 1071
+      },
+      "files": {
+        "observed_x.bin": "7fe717cc71a495b85b5337e7d4c383508b749702bb79b0357f28431afaac160a",
+        "observed_z.bin": "5e7c36e5eddf0aff5887e63d7a1cdda52b8f03de9ed6ac02617b5fbae6a2885c",
+        "z.bin": "e7bbc46322fe4522eca6b938445145384cc527c5c113abf3efcedc95d6b219fe",
+        "expected.bin": "5e7c36e5eddf0aff5887e63d7a1cdda52b8f03de9ed6ac02617b5fbae6a2885c",
+        "x.bin": "7fe717cc71a495b85b5337e7d4c383508b749702bb79b0357f28431afaac160a"
+      }
+    },
+    {
+      "id": "0063",
+      "n": 32,
+      "block": 16,
+      "grid": 2,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 64,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 150923,
+        "launch": 55951,
+        "wait": 2788941,
+        "d2h": 137100,
+        "compare": 816
+      },
+      "files": {
+        "observed_x.bin": "7e9e998bb427c3db00d34358dacfb6513eaeba544bd40d467c90c5385b33c677",
+        "observed_z.bin": "2c2a7fc73f6fe0f8b0349e0f87dca00b04734fb8780fc30f9c084dcc56ae0051",
+        "z.bin": "fe6bee3236fcef0039bbf52469a5694eaeda545fd2534a06b335108793500045",
+        "expected.bin": "2c2a7fc73f6fe0f8b0349e0f87dca00b04734fb8780fc30f9c084dcc56ae0051",
+        "x.bin": "7e9e998bb427c3db00d34358dacfb6513eaeba544bd40d467c90c5385b33c677"
+      }
+    },
+    {
+      "id": "0064",
+      "n": 33,
+      "block": 1,
+      "grid": 33,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 65,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 135293,
+        "launch": 51673,
+        "wait": 9095586,
+        "d2h": 293179,
+        "compare": 1602
+      },
+      "files": {
+        "observed_x.bin": "db9e933e089efb6b6514905ce4e5f76f7d9a0cb814797f99a8d76e3a32d4a786",
+        "observed_z.bin": "de384e3a5c10941c3e9f81c8f21d24b6a7382c0888b10ee8510ef621a7731f30",
+        "z.bin": "12dce5a984fe51e6d78db3f2233ea1c758ee56940e2f4499d55d0fcc09e3e89b",
+        "expected.bin": "de384e3a5c10941c3e9f81c8f21d24b6a7382c0888b10ee8510ef621a7731f30",
+        "x.bin": "db9e933e089efb6b6514905ce4e5f76f7d9a0cb814797f99a8d76e3a32d4a786"
+      }
+    },
+    {
+      "id": "0065",
+      "n": 33,
+      "block": 1,
+      "grid": 33,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 66,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 174298,
+        "launch": 69709,
+        "wait": 9338803,
+        "d2h": 133483,
+        "compare": 1372
+      },
+      "files": {
+        "observed_x.bin": "7087454b50c773275594b277e2acc6bd1d2a6dd52f050349018de5306b9686a5",
+        "observed_z.bin": "3a6bb645128447a7025a5d50f251418ac7218690e36472a61698c2cefe02a8d7",
+        "z.bin": "95696ea6805ec49f68764c6a01b104abd863aa069854fd6533e31b4a28a51185",
+        "expected.bin": "3a6bb645128447a7025a5d50f251418ac7218690e36472a61698c2cefe02a8d7",
+        "x.bin": "7087454b50c773275594b277e2acc6bd1d2a6dd52f050349018de5306b9686a5"
+      }
+    },
+    {
+      "id": "0066",
+      "n": 33,
+      "block": 4,
+      "grid": 9,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 67,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 138161,
+        "launch": 59223,
+        "wait": 3551568,
+        "d2h": 127552,
+        "compare": 856
+      },
+      "files": {
+        "observed_x.bin": "24d2bfb4273b8b5addada9454b11e416a7a4fa836b5dc8050e6ddfd99fb6a440",
+        "observed_z.bin": "906502728049580fd61636b663a3e6cadc42d02a93d717d9db0b6ff2c1c4ca0a",
+        "z.bin": "673bbda9e657684e19b7f2b4bf9fe1f340bfbd8e92512895e70b3ab2404919cf",
+        "expected.bin": "906502728049580fd61636b663a3e6cadc42d02a93d717d9db0b6ff2c1c4ca0a",
+        "x.bin": "24d2bfb4273b8b5addada9454b11e416a7a4fa836b5dc8050e6ddfd99fb6a440"
+      }
+    },
+    {
+      "id": "0067",
+      "n": 33,
+      "block": 4,
+      "grid": 9,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 68,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 205410,
+        "launch": 60641,
+        "wait": 3540750,
+        "d2h": 125163,
+        "compare": 606
+      },
+      "files": {
+        "observed_x.bin": "cccb9073fa30a3eae336f73b5470b627bc9525dd7593c34063ef4514b517e83f",
+        "observed_z.bin": "89410c15c6d75b0dfdaf991b86ccaa8285a66b06b4029b49fca9b61a4488582d",
+        "z.bin": "ca67d6c023a9b0c3770667e858e0546dbe3d71cda4acdfbf3453bdb597877a0e",
+        "expected.bin": "89410c15c6d75b0dfdaf991b86ccaa8285a66b06b4029b49fca9b61a4488582d",
+        "x.bin": "cccb9073fa30a3eae336f73b5470b627bc9525dd7593c34063ef4514b517e83f"
+      }
+    },
+    {
+      "id": "0068",
+      "n": 33,
+      "block": 7,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 69,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 142789,
+        "launch": 55369,
+        "wait": 3625769,
+        "d2h": 116108,
+        "compare": 834
+      },
+      "files": {
+        "observed_x.bin": "d52b7cd8ecd03678ce08441013c2aa9b3668b0c937b30211a96b3e5d73b1b255",
+        "observed_z.bin": "d3c23c5522c056ecece32d1d6596898b88b5c3e41264a351656ea31d3a5a4c2b",
+        "z.bin": "9891f6e09ff1236d50d6b0d0b34a3634d129053eb01e1bd4887249171de0feba",
+        "expected.bin": "d3c23c5522c056ecece32d1d6596898b88b5c3e41264a351656ea31d3a5a4c2b",
+        "x.bin": "d52b7cd8ecd03678ce08441013c2aa9b3668b0c937b30211a96b3e5d73b1b255"
+      }
+    },
+    {
+      "id": "0069",
+      "n": 33,
+      "block": 7,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 70,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 212392,
+        "launch": 54212,
+        "wait": 3623087,
+        "d2h": 154591,
+        "compare": 1333
+      },
+      "files": {
+        "observed_x.bin": "570df6df5232bb9b46a36aea37c9fa271775cbab011925206d4068349f73fdfa",
+        "observed_z.bin": "7ff0da9b693b1f85a460179485aa659734e02f510fcad6d63ead725aa9c9dda3",
+        "z.bin": "92d64edc4e65e8acc1a476f8d49cd5acb11d8929323578612ed63a2b818284a1",
+        "expected.bin": "7ff0da9b693b1f85a460179485aa659734e02f510fcad6d63ead725aa9c9dda3",
+        "x.bin": "570df6df5232bb9b46a36aea37c9fa271775cbab011925206d4068349f73fdfa"
+      }
+    },
+    {
+      "id": "0070",
+      "n": 33,
+      "block": 16,
+      "grid": 3,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 71,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 157106,
+        "launch": 54861,
+        "wait": 3841382,
+        "d2h": 320911,
+        "compare": 955
+      },
+      "files": {
+        "observed_x.bin": "95dc5ec1c56b424c1951afb6da9d715ca5dd733969a7462bdb6b4e6d991f3048",
+        "observed_z.bin": "af50c4fbccdac67f4755252cf36117bcec2d0d26b6a5d58c109629aa35374acf",
+        "z.bin": "700d4c3c18ed3e0f65de5777fde3646ab905c21c2836b90acc32d46929a516e3",
+        "expected.bin": "af50c4fbccdac67f4755252cf36117bcec2d0d26b6a5d58c109629aa35374acf",
+        "x.bin": "95dc5ec1c56b424c1951afb6da9d715ca5dd733969a7462bdb6b4e6d991f3048"
+      }
+    },
+    {
+      "id": "0071",
+      "n": 33,
+      "block": 16,
+      "grid": 3,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 72,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 259616,
+        "launch": 74907,
+        "wait": 3938908,
+        "d2h": 196480,
+        "compare": 1290
+      },
+      "files": {
+        "observed_x.bin": "7e2eb6e1ad20826f1364d4f7fdf481b0daec6fd385f5cda087e4d45b7961e7bb",
+        "observed_z.bin": "f3fdc7e72123b3e6e819907fd4afb4046c15a97363939740fd55c9b2ef6c8086",
+        "z.bin": "b7b34bf22c4893355e5cd25d4d645f4f92e4a58cb27060b1470ac0c309541dbc",
+        "expected.bin": "f3fdc7e72123b3e6e819907fd4afb4046c15a97363939740fd55c9b2ef6c8086",
+        "x.bin": "7e2eb6e1ad20826f1364d4f7fdf481b0daec6fd385f5cda087e4d45b7961e7bb"
+      }
+    },
+    {
+      "id": "0072",
+      "n": 65,
+      "block": 1,
+      "grid": 65,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 73,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 140770,
+        "launch": 52595,
+        "wait": 17209503,
+        "d2h": 140244,
+        "compare": 1628
+      },
+      "files": {
+        "observed_x.bin": "ada09e2f04080d4c2eb118909c4843a06d9a3c8260fbbe6b61b9b2531db762bd",
+        "observed_z.bin": "86008e71b94372f1be062ff11580cbf337089f0aa4e93e46ac22f19226e24e5e",
+        "z.bin": "8cfc5926790ec35360b0092c5e553e00fbdac7f80d38dd8148926358b0324410",
+        "expected.bin": "86008e71b94372f1be062ff11580cbf337089f0aa4e93e46ac22f19226e24e5e",
+        "x.bin": "ada09e2f04080d4c2eb118909c4843a06d9a3c8260fbbe6b61b9b2531db762bd"
+      }
+    },
+    {
+      "id": "0073",
+      "n": 65,
+      "block": 1,
+      "grid": 65,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 74,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 167946,
+        "launch": 56339,
+        "wait": 17336952,
+        "d2h": 152766,
+        "compare": 1047
+      },
+      "files": {
+        "observed_x.bin": "c9e84d25fe2f0316216f5a8a23c8f1dce59f7455d5b712aa51264f09830f9ba6",
+        "observed_z.bin": "22cbf21f8a2d0e325541af2a35b099d98783fed9d59daf9b9b02da8d57896b49",
+        "z.bin": "bffd217d3089bf2cdea13d18b8250e12be9025faa38e9a2b776b60daa19ca210",
+        "expected.bin": "22cbf21f8a2d0e325541af2a35b099d98783fed9d59daf9b9b02da8d57896b49",
+        "x.bin": "c9e84d25fe2f0316216f5a8a23c8f1dce59f7455d5b712aa51264f09830f9ba6"
+      }
+    },
+    {
+      "id": "0074",
+      "n": 65,
+      "block": 4,
+      "grid": 17,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 75,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 176430,
+        "launch": 74818,
+        "wait": 5789808,
+        "d2h": 130876,
+        "compare": 1712
+      },
+      "files": {
+        "observed_x.bin": "62178cbfadf118b81bebcc93454a1555f30acb90a23c695f0dc21caaf1f629dd",
+        "observed_z.bin": "63bc1eeccf2dc5a2d581c7223f523bdb5faedc5696156ea457be832eeb0a61a8",
+        "z.bin": "7b340ddcdaa6b6f01ec66828f1cf5fcadeba374131d4672c718230c7b0cd175a",
+        "expected.bin": "63bc1eeccf2dc5a2d581c7223f523bdb5faedc5696156ea457be832eeb0a61a8",
+        "x.bin": "62178cbfadf118b81bebcc93454a1555f30acb90a23c695f0dc21caaf1f629dd"
+      }
+    },
+    {
+      "id": "0075",
+      "n": 65,
+      "block": 4,
+      "grid": 17,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 76,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 193607,
+        "launch": 69688,
+        "wait": 5875727,
+        "d2h": 156373,
+        "compare": 2813
+      },
+      "files": {
+        "observed_x.bin": "f184eb36db8af1219538cb8af8fc0a11587656234fcf2850d1fcb8d1d9285b6c",
+        "observed_z.bin": "e1978f8707ba0bb8f26f32ab98f95fc9297d5e6467a339cd3117259f45b2b1ea",
+        "z.bin": "b382e066610bc00b3871e44946072c5b83b2f574276c77ceadcf5569bfd6f191",
+        "expected.bin": "e1978f8707ba0bb8f26f32ab98f95fc9297d5e6467a339cd3117259f45b2b1ea",
+        "x.bin": "f184eb36db8af1219538cb8af8fc0a11587656234fcf2850d1fcb8d1d9285b6c"
+      }
+    },
+    {
+      "id": "0076",
+      "n": 65,
+      "block": 7,
+      "grid": 10,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 77,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 164435,
+        "launch": 64863,
+        "wait": 6479410,
+        "d2h": 159151,
+        "compare": 1340
+      },
+      "files": {
+        "observed_x.bin": "0fe7b15921357e9074de4ee78f45e29925fc5ce44adbafce48094c2e66d67eb5",
+        "observed_z.bin": "d7b661231fd5df9df9e7514276bef1a7b28e65e774403eb19a0e2ad690cf9bef",
+        "z.bin": "6ad1ef76baa05f084dd0d0a073fac2fcb3688a89b9b9cb24b917f8c605012b31",
+        "expected.bin": "d7b661231fd5df9df9e7514276bef1a7b28e65e774403eb19a0e2ad690cf9bef",
+        "x.bin": "0fe7b15921357e9074de4ee78f45e29925fc5ce44adbafce48094c2e66d67eb5"
+      }
+    },
+    {
+      "id": "0077",
+      "n": 65,
+      "block": 7,
+      "grid": 10,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 78,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 132886,
+        "launch": 54844,
+        "wait": 6464418,
+        "d2h": 128855,
+        "compare": 805
+      },
+      "files": {
+        "observed_x.bin": "d637d4ca3598a8be7eac5038754c1e7cd4e60e565997ca55471abdb106f033b4",
+        "observed_z.bin": "985ec8f36dd75daba793054e868a1fb2d7c9f21564c5d37f19137d6e234d09b6",
+        "z.bin": "72d609f3f38831e6e9d352bc020e8401815b5e9f4f73a3b28d590575648eb221",
+        "expected.bin": "985ec8f36dd75daba793054e868a1fb2d7c9f21564c5d37f19137d6e234d09b6",
+        "x.bin": "d637d4ca3598a8be7eac5038754c1e7cd4e60e565997ca55471abdb106f033b4"
+      }
+    },
+    {
+      "id": "0078",
+      "n": 65,
+      "block": 16,
+      "grid": 5,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 79,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 153901,
+        "launch": 63215,
+        "wait": 6019158,
+        "d2h": 125811,
+        "compare": 907
+      },
+      "files": {
+        "observed_x.bin": "5c89339d20126d3bc79d060c1cfc1440f6b1b5322ea4afdcb441c7781f14a478",
+        "observed_z.bin": "e24b1dbbfda6eadcdd621a9c9d895d9a8eb4ef52cc481f7fedd788b0675acefc",
+        "z.bin": "8ddca35f7ef8d088c84f88b802e1d9586680f83258984263a37a61a739571746",
+        "expected.bin": "e24b1dbbfda6eadcdd621a9c9d895d9a8eb4ef52cc481f7fedd788b0675acefc",
+        "x.bin": "5c89339d20126d3bc79d060c1cfc1440f6b1b5322ea4afdcb441c7781f14a478"
+      }
+    },
+    {
+      "id": "0079",
+      "n": 65,
+      "block": 16,
+      "grid": 5,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 80,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 178920,
+        "launch": 53791,
+        "wait": 6087429,
+        "d2h": 120351,
+        "compare": 724
+      },
+      "files": {
+        "observed_x.bin": "1c1779cb165cf7493b60d6913d1553477097cb6c6f3d5f70a50b15943d0dc0d9",
+        "observed_z.bin": "886c30592eb97975c3bb7aa25f61c97e398c7d9e5489c8e48e114fa60108e466",
+        "z.bin": "1dcd5aabd006b8f4e448917c25ae8a1575af31efcb6226ef2fac5bd099d6524b",
+        "expected.bin": "886c30592eb97975c3bb7aa25f61c97e398c7d9e5489c8e48e114fa60108e466",
+        "x.bin": "1c1779cb165cf7493b60d6913d1553477097cb6c6f3d5f70a50b15943d0dc0d9"
+      }
+    },
+    {
+      "id": "0080",
+      "n": 257,
+      "block": 1,
+      "grid": 257,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 81,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 178062,
+        "launch": 52135,
+        "wait": 67942653,
+        "d2h": 220899,
+        "compare": 1322
+      },
+      "files": {
+        "observed_x.bin": "004aa82d77aba4ba4c00c0032f634d9e57a84cbd6f662ac589935a60e6639197",
+        "observed_z.bin": "58909bb09fa8a27a58bf4a7511cfe0dc5dc80ffc684ea7c837c933401fd92f00",
+        "z.bin": "61a3061e75f510a34c5014e7530c4cf6fa41d9f810bea9fbf39f22692f5a4d3e",
+        "expected.bin": "58909bb09fa8a27a58bf4a7511cfe0dc5dc80ffc684ea7c837c933401fd92f00",
+        "x.bin": "004aa82d77aba4ba4c00c0032f634d9e57a84cbd6f662ac589935a60e6639197"
+      }
+    },
+    {
+      "id": "0081",
+      "n": 257,
+      "block": 1,
+      "grid": 257,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 82,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 287303,
+        "launch": 72601,
+        "wait": 73241287,
+        "d2h": 175339,
+        "compare": 1128
+      },
+      "files": {
+        "observed_x.bin": "82c3ffdb682e74900d6e63d7972a876efb91015a10dd4a5759db5375275cf6d7",
+        "observed_z.bin": "08d430b36c7c2f230ec876fa215face7736a8a6895486b6be107d8b6417fb82f",
+        "z.bin": "4d1010371acb73a63aca912e93f6b9b2c01d5539342affe472dc8253a04de6b7",
+        "expected.bin": "08d430b36c7c2f230ec876fa215face7736a8a6895486b6be107d8b6417fb82f",
+        "x.bin": "82c3ffdb682e74900d6e63d7972a876efb91015a10dd4a5759db5375275cf6d7"
+      }
+    },
+    {
+      "id": "0082",
+      "n": 257,
+      "block": 4,
+      "grid": 65,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 83,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 286961,
+        "launch": 84527,
+        "wait": 21856254,
+        "d2h": 149023,
+        "compare": 1173
+      },
+      "files": {
+        "observed_x.bin": "2432a5b843444c87dcd42a327eb2e4baba047969242669d30abe0e7ffddcdde4",
+        "observed_z.bin": "c9f87194e8a821eb03a8cd66f84abc77de5db03f6151debc48ecc32c2e78d813",
+        "z.bin": "4e130d0a84ef8cb08d65939bed03a7903832566692fe9cedf7ce5fce2680afa2",
+        "expected.bin": "c9f87194e8a821eb03a8cd66f84abc77de5db03f6151debc48ecc32c2e78d813",
+        "x.bin": "2432a5b843444c87dcd42a327eb2e4baba047969242669d30abe0e7ffddcdde4"
+      }
+    },
+    {
+      "id": "0083",
+      "n": 257,
+      "block": 4,
+      "grid": 65,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 84,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 237015,
+        "launch": 92305,
+        "wait": 20040000,
+        "d2h": 233935,
+        "compare": 1591
+      },
+      "files": {
+        "observed_x.bin": "f975fffa988b36c737c02cdf0132c81058096b4eca32f5c5eb0bc8575bf0c21b",
+        "observed_z.bin": "10f351c2a5c7f156a06a37f94a223762eea51be7ac011425cb02dac971abbdf1",
+        "z.bin": "2595143e6f88dc1ee708e53f196e88fda5334b437038fa751072520d9aabdedb",
+        "expected.bin": "10f351c2a5c7f156a06a37f94a223762eea51be7ac011425cb02dac971abbdf1",
+        "x.bin": "f975fffa988b36c737c02cdf0132c81058096b4eca32f5c5eb0bc8575bf0c21b"
+      }
+    },
+    {
+      "id": "0084",
+      "n": 257,
+      "block": 7,
+      "grid": 37,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 85,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 151900,
+        "launch": 63939,
+        "wait": 22081572,
+        "d2h": 145069,
+        "compare": 1099
+      },
+      "files": {
+        "observed_x.bin": "e33b9985d82b8715957ce106fe7d5beb127eca9f294e5536e418aa376a6de314",
+        "observed_z.bin": "e0c6479b5b2975d7fd0a0ffc2ea6e82530332cd04c167440b83d1157dbc152d4",
+        "z.bin": "fb35d4878ab592c2e66d0db57e8c674cdc4aa9810c06d0c8a9a9e4c5be53e44d",
+        "expected.bin": "e0c6479b5b2975d7fd0a0ffc2ea6e82530332cd04c167440b83d1157dbc152d4",
+        "x.bin": "e33b9985d82b8715957ce106fe7d5beb127eca9f294e5536e418aa376a6de314"
+      }
+    },
+    {
+      "id": "0085",
+      "n": 257,
+      "block": 7,
+      "grid": 37,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 86,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 190106,
+        "launch": 68017,
+        "wait": 22495875,
+        "d2h": 157835,
+        "compare": 1468
+      },
+      "files": {
+        "observed_x.bin": "58362cc9818b03c010b369ef519221b0a82972b15813383e327ea954f679dce9",
+        "observed_z.bin": "929441397520dbc2cca89eb3bd318ff7bc264f06da830c587a61f84393a95390",
+        "z.bin": "af6b8d2fca5471bf2c82741a7d2ed17f6edc2c065c3470b1b8869e2857df4a5b",
+        "expected.bin": "929441397520dbc2cca89eb3bd318ff7bc264f06da830c587a61f84393a95390",
+        "x.bin": "58362cc9818b03c010b369ef519221b0a82972b15813383e327ea954f679dce9"
+      }
+    },
+    {
+      "id": "0086",
+      "n": 257,
+      "block": 16,
+      "grid": 17,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 87,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 208780,
+        "launch": 57695,
+        "wait": 20293193,
+        "d2h": 152453,
+        "compare": 1135
+      },
+      "files": {
+        "observed_x.bin": "cb4e99b8b1959f9ac364469fcfcb15f9718f093955c918a0c52d6d9582993817",
+        "observed_z.bin": "8cd976eee6752fc9a59b7cb01671ec78c8420c7ee4feb2fdda899933d1102030",
+        "z.bin": "a573596fad4388c2b13eb32506bdfbba003ff064d93976606df7f10e0b4e073e",
+        "expected.bin": "8cd976eee6752fc9a59b7cb01671ec78c8420c7ee4feb2fdda899933d1102030",
+        "x.bin": "cb4e99b8b1959f9ac364469fcfcb15f9718f093955c918a0c52d6d9582993817"
+      }
+    },
+    {
+      "id": "0087",
+      "n": 257,
+      "block": 16,
+      "grid": 17,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 88,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 150715,
+        "launch": 60038,
+        "wait": 20555951,
+        "d2h": 222352,
+        "compare": 1130
+      },
+      "files": {
+        "observed_x.bin": "5ead09713cc992d7da9be7c18112975553723ed20ab56b437bf4397d9f91aded",
+        "observed_z.bin": "62dd7490d22db111d2ff4f9b38feb8befb9f88a55eb9b4bf8a549f149c36787c",
+        "z.bin": "6153f77770b4c3f99b0f044f16bb2f36d448c80a8d4de8ff56731e3a3738bad6",
+        "expected.bin": "62dd7490d22db111d2ff4f9b38feb8befb9f88a55eb9b4bf8a549f149c36787c",
+        "x.bin": "5ead09713cc992d7da9be7c18112975553723ed20ab56b437bf4397d9f91aded"
+      }
+    },
+    {
+      "id": "0088",
+      "n": 1024,
+      "block": 1,
+      "grid": 1024,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 89,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 252141,
+        "launch": 83547,
+        "wait": 284690867,
+        "d2h": 195350,
+        "compare": 952
+      },
+      "files": {
+        "observed_x.bin": "e1b620123613bcc6a7789f3feb4fc8552d4d39e05955e6241573f65f82cc3ef3",
+        "observed_z.bin": "2c600919c48e369cf15c16acd9c0d948ef1f4258f307bc4ac8cc6a7cfc0d4c8c",
+        "z.bin": "723490637519f2c1710332297ff01e67b4eea92d59ec253d7af69c8257fbaafd",
+        "expected.bin": "2c600919c48e369cf15c16acd9c0d948ef1f4258f307bc4ac8cc6a7cfc0d4c8c",
+        "x.bin": "e1b620123613bcc6a7789f3feb4fc8552d4d39e05955e6241573f65f82cc3ef3"
+      }
+    },
+    {
+      "id": "0089",
+      "n": 1024,
+      "block": 1,
+      "grid": 1024,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 90,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 165081,
+        "launch": 57773,
+        "wait": 255718752,
+        "d2h": 183654,
+        "compare": 948
+      },
+      "files": {
+        "observed_x.bin": "d43aef1559c6fd386b048852a8d451e878566472eab81f4db08ea9feba4b6339",
+        "observed_z.bin": "4391cdce1a77961809fece5eb15e78996f12182bc0087a1f46019b39161a6617",
+        "z.bin": "a5ee9335733fe68d5e8ba172f0e18039ccd171daf06ecc50cfbc5287d9688f81",
+        "expected.bin": "4391cdce1a77961809fece5eb15e78996f12182bc0087a1f46019b39161a6617",
+        "x.bin": "d43aef1559c6fd386b048852a8d451e878566472eab81f4db08ea9feba4b6339"
+      }
+    },
+    {
+      "id": "0090",
+      "n": 1024,
+      "block": 4,
+      "grid": 256,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 91,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 164502,
+        "launch": 111596,
+        "wait": 73225139,
+        "d2h": 173963,
+        "compare": 1137
+      },
+      "files": {
+        "observed_x.bin": "efab8ac9078a4fbf1441795c40219ec2210aeddce12b923cb5be74aef55a3ead",
+        "observed_z.bin": "aa0acaca8ccf7a6c2146de98320343b84efcd69f856e128030a5206992e9e050",
+        "z.bin": "7f02b983dbd294ade18c54247b8f06e1c22cbdcf09d73e4477dfb669c35126ef",
+        "expected.bin": "aa0acaca8ccf7a6c2146de98320343b84efcd69f856e128030a5206992e9e050",
+        "x.bin": "efab8ac9078a4fbf1441795c40219ec2210aeddce12b923cb5be74aef55a3ead"
+      }
+    },
+    {
+      "id": "0091",
+      "n": 1024,
+      "block": 4,
+      "grid": 256,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 92,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 256251,
+        "launch": 64240,
+        "wait": 73230654,
+        "d2h": 156222,
+        "compare": 1026
+      },
+      "files": {
+        "observed_x.bin": "64d8472870f9a9420fa1ac46b666bfc762ff58ecbab5e03470a28647c1af4636",
+        "observed_z.bin": "0acab41c0561a165eecf632dabaf7416cd9911918d3c845fe57d58443e757622",
+        "z.bin": "9cf7c5b84b800fde33ee63a821865ebad7da76647d24b6088dea9135f4e5c925",
+        "expected.bin": "0acab41c0561a165eecf632dabaf7416cd9911918d3c845fe57d58443e757622",
+        "x.bin": "64d8472870f9a9420fa1ac46b666bfc762ff58ecbab5e03470a28647c1af4636"
+      }
+    },
+    {
+      "id": "0092",
+      "n": 1024,
+      "block": 7,
+      "grid": 147,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 93,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 165772,
+        "launch": 58434,
+        "wait": 86416261,
+        "d2h": 238233,
+        "compare": 1366
+      },
+      "files": {
+        "observed_x.bin": "de536be9cad7cfc4a7d409c952f58ebac58dd3a62a04bc7f3d14a51cb83b3832",
+        "observed_z.bin": "572dce368f7476514ebc22f2c189a2f620d8847f417e177be72f2a2c58e24658",
+        "z.bin": "5b851cc646ae0abba5343fcd72fa8ae8420b6e3014d54f4d787132da111bd869",
+        "expected.bin": "572dce368f7476514ebc22f2c189a2f620d8847f417e177be72f2a2c58e24658",
+        "x.bin": "de536be9cad7cfc4a7d409c952f58ebac58dd3a62a04bc7f3d14a51cb83b3832"
+      }
+    },
+    {
+      "id": "0093",
+      "n": 1024,
+      "block": 7,
+      "grid": 147,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 94,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 149117,
+        "launch": 64743,
+        "wait": 89293783,
+        "d2h": 421097,
+        "compare": 1049
+      },
+      "files": {
+        "observed_x.bin": "d100ed63245e14109ac26d87336609588577c1d30038fb0d1f1958ea87424da3",
+        "observed_z.bin": "2cbe96885609c861a3683b7b27adda1f2c3d6c989dab741043331c5bc67b603c",
+        "z.bin": "64794a87f390b4f7a162b131b32172cf891ec570cb7296a22309c486ca7c299d",
+        "expected.bin": "2cbe96885609c861a3683b7b27adda1f2c3d6c989dab741043331c5bc67b603c",
+        "x.bin": "d100ed63245e14109ac26d87336609588577c1d30038fb0d1f1958ea87424da3"
+      }
+    },
+    {
+      "id": "0094",
+      "n": 1024,
+      "block": 16,
+      "grid": 64,
+      "dataset": 0,
+      "alpha": 1,
+      "offset_bytes": 32,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 95,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 316354,
+        "launch": 76621,
+        "wait": 78908408,
+        "d2h": 234070,
+        "compare": 1084
+      },
+      "files": {
+        "observed_x.bin": "d13e7ab7a8580c9d5a9ec65595a911ace42ca3d643661c0c983902ff1e5b5bb1",
+        "observed_z.bin": "8922f73fe6dca715aec6f2604452e262f7de84850601b1dfe49c7956cc8cba11",
+        "z.bin": "ffc6c06792bca52caa19fad99e6a091186db0bbbb9c005a0023b7e0ab7848f91",
+        "expected.bin": "8922f73fe6dca715aec6f2604452e262f7de84850601b1dfe49c7956cc8cba11",
+        "x.bin": "d13e7ab7a8580c9d5a9ec65595a911ace42ca3d643661c0c983902ff1e5b5bb1"
+      }
+    },
+    {
+      "id": "0095",
+      "n": 1024,
+      "block": 16,
+      "grid": 64,
+      "dataset": 1,
+      "alpha": 1,
+      "offset_bytes": 16,
+      "status": "PASS",
+      "completion": {
+        "status": "COMPLETE",
+        "event_id": 96,
+        "generation": 0,
+        "backend": "simx"
+      },
+      "host_timing_ns": {
+        "h2d": 284298,
+        "launch": 71920,
+        "wait": 78078484,
+        "d2h": 172878,
+        "compare": 1207
+      },
+      "files": {
+        "observed_x.bin": "ec0908e78fe6080a1ceb877c824cb0b5ee655501fe1611fff6359e701e4cf7c2",
+        "observed_z.bin": "a1dd135ac5a00cf4691198c9135bdfeba69448710135831dda3fc7d0ffce54e9",
+        "z.bin": "b2222eb0439476d8e10dd810a8beef3361a5f91746890a7b43378caaef14c1a1",
+        "expected.bin": "a1dd135ac5a00cf4691198c9135bdfeba69448710135831dda3fc7d0ffce54e9",
+        "x.bin": "ec0908e78fe6080a1ceb877c824cb0b5ee655501fe1611fff6359e701e4cf7c2"
+      }
+    }
+  ],
+  "rejections": [
+    {
+      "check": "block-17",
+      "error": {
+        "code": "E_LAUNCH_LIMIT",
+        "phase": "launch",
+        "message": "launch exceeds target/profile limits",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "block-64",
+      "error": {
+        "code": "E_LAUNCH_LIMIT",
+        "phase": "launch",
+        "message": "launch exceeds target/profile limits",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "second-module",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "load",
+        "message": "unload the current module before loading another",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "write-out-of-range",
+      "error": {
+        "code": "E_ADDRESS_RANGE",
+        "phase": "transfer",
+        "message": "transfer exceeds allocation",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "read-out-of-range",
+      "error": {
+        "code": "E_ADDRESS_RANGE",
+        "phase": "transfer",
+        "message": "transfer exceeds allocation",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "foreign-buffer",
+      "error": {
+        "code": "E_INVALID_BUFFER",
+        "phase": "read",
+        "message": "foreign, retired or stale buffer",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "unaligned-pointer",
+      "error": {
+        "code": "E_ADDRESS_RANGE",
+        "phase": "launch",
+        "message": "invalid pointer range/alignment/access",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "missing-parameter",
+      "error": {
+        "code": "E_PARAM_LAYOUT",
+        "phase": "launch",
+        "message": "argument count mismatch",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "in-flight-free",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "free",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-unload",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "unload",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-read",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "read",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-write",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "write",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-second-launch",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "launch",
+        "message": "single-queue context has in-flight work",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "in-flight-close",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "close",
+        "message": "wait or successfully drain recovery before close",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 1,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "RUNNING"
+      }
+    },
+    {
+      "check": "timeout-close",
+      "error": {
+        "code": "E_BUSY",
+        "phase": "close",
+        "message": "wait or successfully drain recovery before close",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 97,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      }
+    },
+    {
+      "check": "timeout-alloc",
+      "error": {
+        "code": "E_UNAVAILABLE",
+        "phase": "alloc",
+        "message": "context is NEEDS_RECOVERY",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": 97,
+        "generation": 0,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "NEEDS_RECOVERY"
+      }
+    },
+    {
+      "check": "stale-buffer",
+      "error": {
+        "code": "E_INVALID_BUFFER",
+        "phase": "free",
+        "message": "foreign, retired or stale buffer",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "stale-event",
+      "error": {
+        "code": "E_EVENT",
+        "phase": "wait",
+        "message": "foreign or stale event",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    },
+    {
+      "check": "stale-module",
+      "error": {
+        "code": "E_MODULE_CORRUPT",
+        "phase": "launch",
+        "message": "foreign or unloaded module",
+        "run_id": "c-copy-smoke-v2",
+        "event_id": null,
+        "generation": 1,
+        "backend": "simx",
+        "source_location": null,
+        "native_status": null,
+        "evidence_path": null,
+        "device_state": "READY"
+      }
+    }
+  ],
+  "recovery": {
+    "status": "PASS",
+    "timeout": {
+      "code": "E_TIMEOUT",
+      "phase": "wait",
+      "message": "native Vortex2 operation failed",
+      "run_id": "c-copy-smoke-v2",
+      "event_id": 97,
+      "generation": 0,
+      "backend": "simx",
+      "source_location": null,
+      "native_status": 7,
+      "evidence_path": null,
+      "device_state": "NEEDS_RECOVERY"
+    },
+    "drained": {
+      "status": "RECOVERED",
+      "isolated": true,
+      "generation": 1,
+      "device_state": "READY"
+    },
+    "observed_hex": "ffffffff",
+    "expected_hex": "ffffffff"
+  },
+  "setup_host_timing_ns": {
+    "open": 33386707,
+    "load": 1985633
+  },
+  "caps": {
+    "threads": 4,
+    "warps": 4,
+    "cores": 1,
+    "isa_flags": 221200257320,
+    "clusters": 1,
+    "backend": "simx",
+    "device_state": "READY",
+    "generation": 0,
+    "safe_abort": false,
+    "max_modules": 1,
+    "first_error": null
+  },
+  "blocks": [
+    1,
+    4,
+    7,
+    16
+  ],
+  "timeout_caps": {
+    "threads": 4,
+    "warps": 4,
+    "cores": 1,
+    "isa_flags": 221200257320,
+    "clusters": 1,
+    "backend": "simx",
+    "device_state": "NEEDS_RECOVERY",
+    "generation": 0,
+    "safe_abort": false,
+    "max_modules": 1,
+    "first_error": {
+      "native_status": 7,
+      "phase": "wait"
+    }
+  },
+  "exit_code": 0,
+  "passed": 96,
+  "host_timing_summary": {
+    "h2d": {
+      "count": 96,
+      "min_ns": 127578,
+      "median_ns": 164941.5,
+      "max_ns": 1037510
+    },
+    "launch": {
+      "count": 96,
+      "min_ns": 45446,
+      "median_ns": 57310.5,
+      "max_ns": 111596
+    },
+    "wait": {
+      "count": 96,
+      "min_ns": 748842,
+      "median_ns": 3506317.5,
+      "max_ns": 284690867
+    },
+    "d2h": {
+      "count": 96,
+      "min_ns": 108928,
+      "median_ns": 149900.5,
+      "max_ns": 673020
+    },
+    "compare": {
+      "count": 96,
+      "min_ns": 606,
+      "median_ns": 984.5,
+      "max_ns": 2813
+    }
+  }
+}

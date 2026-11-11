@@ -2,9 +2,9 @@
 
 刘泽衡（[LiuZeheng123](https://github.com/LiuZeheng123)）的数字 GPGPU 项目工作仓库，保存 **C 分工：Runtime 与上板对接** 的代码、测试和实验记录。
 
-目标是让受支持的 PTX 程序经过编译，在 Vortex GPGPU 上执行，并由主机程序写入输入、发起计算、等待完成和读回结果。当前已跑通 **PTX vadd → Vortex2 Runtime → SimX**；U280 实板对接仍待完成。
+目标是让受支持的 PTX 程序经过编译，在 Vortex GPGPU 上执行，并由主机程序写入输入、发起计算、等待完成和读回结果。当前已跑通 **PTX copy / vadd / affine → Vortex2 Runtime → SimX**，覆盖 16 线程基线和独立 32 线程候选；U280 实板对接仍待完成。
 
-> 截至 2026-11-10：本阶段的软件联调完成，不代表整个项目、完整 PTX/CUDA 兼容或 U280 板上验证完成。
+> 截至 2026-11-11：三类程序共 1320/1320 组 SimX 用例通过，6 次实际超时恢复通过。该阶段结果不代表完整 PTX/CUDA 兼容、独立验收或 U280 板上验证完成。
 
 ## 来源与协作关系
 
@@ -24,27 +24,29 @@ PTX 源码 → 前端检查与代码生成 → 设备包装与编译 → kernel.
 | 检查范围 | 实际结果 |
 |---|---|
 | 固定版本原生 SimX demo | PASS，输出 `PASSED!`，退出码 0 |
-| PTX vadd 编译 | PASS，生成 ELF、vxbin、反汇编；包含 Vortex SIMT 指令 |
-| PTX vadd 在 SimX 执行 | **96/96 PASS**：长度边界、不同 block、非零偏移、哨兵与 u32 溢出 |
-| 超时恢复 | 实际超时后排空队列、失效旧句柄、重新分配并执行，PASS |
-| Linux 回归测试 | **130 通过、14 跳过、0 失败**，跳过原因保留在日志 |
+| 三类 PTX、两套配置的编译 | 6/6 PASS，分别生成 ELF、vxbin、反汇编；不混用运行库 |
+| 16 线程基线（1c / 4w / 4t） | copy 96、vadd 96、affine 288，共 **480/480 PASS** |
+| 32 线程候选（1c / 8w / 4t） | copy 168、vadd 168、affine 504，共 **840/840 PASS**；其中 block=32 为 120 组 |
+| 超时恢复 | 6/6 实际超时后排空队列、失效旧句柄、重新分配并执行，PASS |
+| Linux 回归测试 | **138 通过、14 跳过、0 失败**，跳过原因保留在日志 |
 | 本阶段 PTX 的处理器 RTL / XRT AFU / U280 | **NOT_RUN**，未进行 E 分工的独立接收 |
 
-96 组用例是 12 个数组长度 × 4 个 block 大小（1/4/7/16）× 2 套输入。当前基线为 RV64 / 1 core / 4 warps / 4 threads，不能据此认定 block32 已通过。
+用例覆盖 12 个数组长度、2 套输入、非零指针偏移、整个输入与输出分配区、哨兵和 u32 溢出；affine 另覆盖 alpha=0/1/0xffffffff。基线 block 为 1/4/7/16，候选另加 17/31/32。候选根配置与原基线分别保留，这不是 32-lane warp 兼容声明。
 
-实际运行环境为本机 **Ubuntu 24.04 WSL、glibc 2.39、G++ 13.3、Python 3.12、CMake 3.31.10**。数字服务器保存代码与证据副本；其 glibc 2.17 不能直接运行本次固定预编译工具链，所以本次结果不是服务器或 FPGA 的执行结果。
+实际运行环境为本机 **Ubuntu 24.04 WSL、glibc 2.39、G++ 13.3、Python 3.12、CMake 3.31.10**。数字服务器原环境为 glibc 2.17，不能直接运行本次固定预编译工具链；本轮结果来自 WSL，没有执行 FPGA。记录的 H2D、launch、wait、D2H 和比较耗时是主机墙钟时间，包含仿真开销，不作板卡性能或两配置性能优劣结论。
 
 ## 从哪里看起
 
 | 入口 | 内容 |
 |---|---|
-| [C 本阶段成果与复现](docs/C_RUNTIME_SIMX_20261110.md) | 实现、实验命令、环境与接收边界 |
+| [C 最新三类程序与 block32 验证](docs/C_RUNTIME_SUITE_20261111.md) | 1320 组用例、恢复、修复、耗时与复现 |
+| [C 首条 SimX 链路](docs/C_RUNTIME_SIMX_20261110.md) | 11 月 10 日 vadd 的历史阶段结果 |
 | [C 第一批记录](docs/C_RUNTIME_PROGRESS_20261110.md) | 模块包装与启动前检查 |
 | [当前状态](docs/STATUS.md) / [项目交接](docs/PROJECT_HANDOFF.md) | 最新进展与历史状态，以顶部新记录为准 |
 | [团队分工](docs/RESEARCH_PLAN.md) | A—E 分工与研究安排 |
 | [合作接口](docs/COLLABORATION_PROTOCOL.md) | 参数、模块、资源与接收约定 |
 | [PTX 子集规范](docs/PTX_COMPATIBILITY_PROFILE.md) | 白名单、语义和限制 |
-| [本阶段证据](results/c-runtime-simx-20261110/) | 编译产物、日志、原始输入输出和哈希清单 |
+| [本阶段证据](results/c-runtime-suite-20261111/) | 六组运行、六个模块、原始输入输出、失败记录与哈希 |
 
 ## 获取代码与运行检查
 
@@ -82,12 +84,14 @@ python3 -B scripts/bind_simx_runtime.py \
 export VORTEX_DRIVER=simx
 export VORTEX_PROFILING=0
 export LD_LIBRARY_PATH="$RUN_ROOT/build-native/sw/runtime${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-python3 -B scripts/run_ptx_simx.py \
+python3 -B scripts/run_ptx_suite.py --kernel vadd \
   --module "$RUN_ROOT/module-vadd" --binding "$RUN_ROOT/binding/binding.json" \
   --target-lock configs/target_lock.json --output "$RUN_ROOT/evidence/ptx-vadd"
 ```
 
-归档的 binding 包含原执行环境绝对路径和库哈希，**不能直接用于另一台机器**；新环境需重新构建并生成 binding。原环境的复跑方法与完整证据见 [C 实验记录](docs/C_RUNTIME_SIMX_20261110.md)。
+copy/affine 分别使用对应的 PTX 源文件、独立 module/build/output 目录及 `--kernel copy` / `--kernel affine`。32 线程需先以 `run_native_smoke.py --target-profile block32-v1` 构建独立运行库，再统一使用 `configs/candidates/block32-v1/` 下的 lock 和硬件配置构建模块、生成 binding；详见 [本轮复现](docs/C_RUNTIME_SUITE_20261111.md)。
+
+归档的 binding 包含原执行环境绝对路径和库哈希，**不能直接用于另一台机器**；新环境需重新构建并生成 binding。
 
 ## 核心目录
 
@@ -98,6 +102,8 @@ scripts/ptx_launch.py        参数和 buffer 生命周期检查
 scripts/ptx_runtime.py       真实 Vortex2 API、队列和资源管理
 scripts/bind_simx_runtime.py 构建、配置与动态库身份绑定
 scripts/run_ptx_simx.py      实际执行与结果捕获
+scripts/run_ptx_suite.py     三类 PTX、两套配置、拒绝/恢复和耗时记录
+scripts/verify_ptx_suite_results.py  从归档原始字节重新计算并核对结果
 ptx/samples/                PTX 示例
 configs/                    固定版本、ABI 与硬件配置
 tests/                      宿主单测和 ABI 检查
@@ -106,13 +112,19 @@ results/                    按运行编号保存的实验记录
 upstream/vortex/            固定上游 Git 子模块
 ```
 
-`results/c-runtime-simx-20261110/export.json` 保存导出文件的 SHA-256。各 `cases.zip` 保存输入、预期值与读回值，失败尝试也保留。完整 SDK、工具链缓存、动态库和大型 FPGA 产物按固定版本重建，不放入 Git。部分同学历史材料由原工作区保存，详见[历史证据索引](results/README.md)。
+每批结果的 `export.json` 保存导出文件 SHA-256。11 月 11 日的 `cases-*.tgz` 分块保存原始 `cases/<id>/` 文件，旧批次的 `cases.zip` 保持原样；失败尝试也保留。完整 SDK、工具链缓存、动态库和大型 FPGA 产物按固定版本重建，不放入 Git。部分同学历史材料由原工作区保存，详见[历史证据索引](results/README.md)。
+
+只核对归档（不需要 Vortex 工具链，也不等于重新执行设备）：
+
+```bash
+python3 -B scripts/verify_ptx_suite_results.py results/c-runtime-suite-20261111/c-affine-block32-v1-v1
+```
 
 ## 当前限制与下一步
 
 - Runtime 当前接通 SimX，单队列、单任务在途；本轮按每个 context 一个模块验证。
 - 恢复证明的是 SimX 队列排空与资源重建，未证明设备硬复位、故障 abort 或 PCIe/DMA 隔离。
-- 下一步增加 copy/affine 的真实 PTX 执行，接收 block32 候选与 E 独立用例，再对接 B 的 U280 平台。
+- 下一步由 E 使用独立答案接收三类 PTX 与 block32 候选；与 A/B 对接 PTX 的 RTL/AFU 与 U280 运行。当前尚无这些后端的本轮 PTX 结果。
 - A/B 历史 FPGA 构建和时序材料为参考成果；HOST 通路、平台约束与板上结果仍按团队最新证据接收。
 
 ## 后续保存与同步

@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "profile": "smoke",
+  "commands": [
+    {
+      "name": "binding",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/bind_simx_runtime.py",
+        "--summary",
+        "/home/liuzeheng/gpgpu-c-20261110/evidence/c-native-simx-v1/summary.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json",
+        "--hardware",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/native_smoke.json",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/binding-smoke-v2"
+      ],
+      "exit_code": 0,
+      "host_seconds": 0.4461258990000374,
+      "log": "binding.log"
+    },
+    {
+      "name": "copy-prepare",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/ptx_module.py",
+        "prepare",
+        "ptx/samples/copy_u32.ptx",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/copy-smoke-v2",
+        "--hardware",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/native_smoke.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json"
+      ],
+      "exit_code": 0,
+      "host_seconds": 0.3910783830000355,
+      "log": "copy-prepare.log"
+    },
+    {
+      "name": "copy-build",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/ptx_module.py",
+        "build",
+        "/home/liuzeheng/gpgpu-c-20261111/copy-smoke-v2",
+        "--vortex-source",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "--build-root",
+        "/home/liuzeheng/gpgpu-c-20261111/build-copy-smoke-v2",
+        "--tooldir",
+        "/home/liuzeheng/gpgpu-c-20261110/tools",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json"
+      ],
+      "exit_code": 0,
+      "host_seconds": 3.639521746000014,
+      "log": "copy-build.log"
+    },
+    {
+      "name": "copy-simx",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/run_ptx_suite.py",
+        "--kernel",
+        "copy",
+        "--module",
+        "/home/liuzeheng/gpgpu-c-20261111/copy-smoke-v2",
+        "--binding",
+        "/home/liuzeheng/gpgpu-c-20261111/binding-smoke-v2/binding.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/evidence/c-copy-smoke-v2"
+      ],
+      "exit_code": 0,
+      "host_seconds": 2.4850845670000012,
+      "log": "copy-simx.log"
+    },
+    {
+      "name": "vadd-prepare",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/ptx_module.py",
+        "prepare",
+        "ptx/samples/vadd_u32.ptx",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/vadd-smoke-v2",
+        "--hardware",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/native_smoke.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json"
+      ],
+      "exit_code": 0,
+      "host_seconds": 0.38099018299999443,
+      "log": "vadd-prepare.log"
+    },
+    {
+      "name": "vadd-build",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/ptx_module.py",
+        "build",
+        "/home/liuzeheng/gpgpu-c-20261111/vadd-smoke-v2",
+        "--vortex-source",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "--build-root",
+        "/home/liuzeheng/gpgpu-c-20261111/build-vadd-smoke-v2",
+        "--tooldir",
+        "/home/liuzeheng/gpgpu-c-20261110/tools",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json"
+      ],
+      "exit_code": 0,
+      "host_seconds": 3.009862462000001,
+      "log": "vadd-build.log"
+    },
+    {
+      "name": "vadd-simx",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/run_ptx_suite.py",
+        "--kernel",
+        "vadd",
+        "--module",
+        "/home/liuzeheng/gpgpu-c-20261111/vadd-smoke-v2",
+        "--binding",
+        "/home/liuzeheng/gpgpu-c-20261111/binding-smoke-v2/binding.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/evidence/c-vadd-smoke-v2"
+      ],
+      "exit_code": 0,
+      "host_seconds": 3.3248760629999765,
+      "log": "vadd-simx.log"
+    },
+    {
+      "name": "affine-prepare",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/ptx_module.py",
+        "prepare",
+        "ptx/samples/affine_u32.ptx",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/affine-smoke-v2",
+        "--hardware",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/native_smoke.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json"
+      ],
+      "exit_code": 0,
+      "host_seconds": 0.5625042089999965,
+      "log": "affine-prepare.log"
+    },
+    {
+      "name": "affine-build",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/ptx_module.py",
+        "build",
+        "/home/liuzeheng/gpgpu-c-20261111/affine-smoke-v2",
+        "--vortex-source",
+        "/home/liuzeheng/gpgpu-c-20261110/vortex",
+        "--build-root",
+        "/home/liuzeheng/gpgpu-c-20261111/build-affine-smoke-v2",
+        "--tooldir",
+        "/home/liuzeheng/gpgpu-c-20261110/tools",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json"
+      ],
+      "exit_code": 0,
+      "host_seconds": 3.2198175359999937,
+      "log": "affine-build.log"
+    },
+    {
+      "name": "affine-simx",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/run_ptx_suite.py",
+        "--kernel",
+        "affine",
+        "--module",
+        "/home/liuzeheng/gpgpu-c-20261111/affine-smoke-v2",
+        "--binding",
+        "/home/liuzeheng/gpgpu-c-20261111/binding-smoke-v2/binding.json",
+        "--target-lock",
+        "/mnt/c/Users/Lenovo/Desktop/\u601d\u653f\u5927\u8bfe\u9879\u76ee/work/GPGPU_U280_winter2026/configs/target_lock.json",
+        "--output",
+        "/home/liuzeheng/gpgpu-c-20261111/evidence/c-affine-smoke-v2"
+      ],
+      "exit_code": 0,
+      "host_seconds": 9.611633902999984,
+      "log": "affine-simx.log"
+    }
+  ],
+  "source_files": {
+    "scripts/ptx_frontend.py": "30fa692c0c2117858e720ab015c457325bfa095b6a25add2ef3c397bbbef5045",
+    "scripts/ptx_module.py": "9ae064c99cae2c194dd7fa636ea34d392b21bc822f9dd413963cf98cc3a76b87",
+    "scripts/ptx_launch.py": "51fbc4017a01762858c5c574d56c64b51550400dcbd0b0790d530dd59c27058c",
+    "scripts/ptx_runtime.py": "40abbc7185cdc58d97fc5ea100bd86313f5bb6561cd157db91211cad35166d8d",
+    "scripts/run_ptx_simx.py": "67e57ef0a720094fd83a6bd8ee7d19c4cb4ea1419d5cf9b86171f1fd882b0fe4",
+    "scripts/run_ptx_suite.py": "8ca886d0804e3415de190d87f45391749d6004919f02f918993962290a63d702",
+    "scripts/bind_simx_runtime.py": "26c5728a58f29dee5aec7e2caeb44dd760ae29a970f815956bc1fad9b1c78c99",
+    "tests/test_ptx_runtime.py": "7d7e52418b95c300122cef17a98b0a07945209ef6227050d215c82a70601307e",
+    "tests/test_ptx_suite.py": "032ba9fbfb565cece26015202364a0b0d98a0b421e2cfe08cbf42a53ede752ae"
+  }
+}

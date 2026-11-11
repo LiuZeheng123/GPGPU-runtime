@@ -1,0 +1,63 @@
+{
+  "schema_version": "ptx-vx-frontend-artifacts-v1",
+  "compiler_id": "ptx-vx-frontend-v1.2",
+  "profile": "ptx-vx-p0-v0.2-draft",
+  "abi_version": "ptx-vx-args-v1",
+  "entry": "vadd_u32",
+  "compiler_sha256": "30fa692c0c2117858e720ab015c457325bfa095b6a25add2ef3c397bbbef5045",
+  "params": [
+    {
+      "name": "x",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 0
+    },
+    {
+      "name": "y",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 8
+    },
+    {
+      "name": "z",
+      "type": "u64",
+      "kind": "pointer",
+      "space": "global",
+      "size": 8,
+      "align": 8,
+      "offset": 16
+    },
+    {
+      "name": "n",
+      "type": "u32",
+      "kind": "scalar",
+      "space": null,
+      "size": 4,
+      "align": 4,
+      "offset": 24
+    }
+  ],
+  "params_size": 32,
+  "params_align": 8,
+  "status": "FRONTEND_ONLY",
+  "loadable": false,
+  "image_file": null,
+  "target_lock_hash": "9bf1ecd89852e54dd402e669becbfd0910752ffd16ad9e7a9f9b20e77b6c4649",
+  "backend_execution": "NOT_RUN",
+  "independent_acceptance": "NOT_RUN",
+  "files": {
+    "source.ptx": "d5cb5a0a6d3745fede0c4375d5fb11e77babec02baa6b57a03ed914228aa7bc1",
+    "ir.json": "60a89114c7a1668a0c8726306bb962e986eed8395954db51d59d08745d5e46e9",
+    "kernel_body.hpp": "ed9907db690be18247a75c33a08faba0b9c5db41d624c0ea963d0bbb80bf5ff0",
+    "source_map.json": "a3d25e047ad6465ca445eb8ea3b49b32898ea721d42e08c69c8bc4340a523721",
+    "target_lock.json": "9bf1ecd89852e54dd402e669becbfd0910752ffd16ad9e7a9f9b20e77b6c4649",
+    "profile.json": "c9728b0faa726d9b59c215de9febd9efeb2072d09c58d819a3fc5dcd1d432041",
+    "abi.json": "0c7aee793286a2db2bd75f6522a89a2cab686d6b083bce214e7d9fa710959404"
+  }
+}
