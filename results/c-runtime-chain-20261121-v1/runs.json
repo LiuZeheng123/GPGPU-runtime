@@ -1,0 +1,14 @@
+[
+  {
+    "backend": "simx",
+    "exit_code": 0
+  },
+  {
+    "backend": "rtlsim",
+    "exit_code": 0
+  },
+  {
+    "backend": "xrtsim",
+    "exit_code": 0
+  }
+]
