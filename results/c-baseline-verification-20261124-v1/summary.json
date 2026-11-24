@@ -1,0 +1,506 @@
+{
+  "upstream_commit": "63e939bfd2c8b4edeb5c0fc51afb1b4e1eb6923e",
+  "vortex_commit": "7fe19369587c087f902c3e2bc2add612aa910a95",
+  "tag": "baseline-2026-11-23",
+  "physical_card": "not run on personal account",
+  "errors": {},
+  "archive": {
+    "status": "PASS",
+    "scope": "archived measurements",
+    "operator_cases": {
+      "simx": 48,
+      "rtlsim": 48,
+      "xrtsim": 48,
+      "u280-xrt": 48
+    },
+    "iris_pair_launches": 422,
+    "iris_pair_counter_reads": 3376,
+    "iris_timed_pairs": 180,
+    "iris_sizes": [
+      45,
+      150,
+      1024,
+      4096,
+      16381,
+      65533
+    ],
+    "iris_65533_cycle_ratio": 1.033872110427632,
+    "iris_65533_warp_instruction_ratio": 3.141240445430989,
+    "iris_five_fold_correct": 140,
+    "iris_five_fold_total": 150
+  },
+  "host": {
+    "total": 316,
+    "skipped": 22,
+    "passed": 294
+  },
+  "new_execution": {
+    "iris_image_sha256": "9ae0e644040d13d558b58d2e5c8dd502a71a82017202168161bf2e09267ddcdd",
+    "operator_images": {
+      "affine": "c5786453c9ecff60d3c393845cc5d7f1991adfdd039c8e2f071834d9b242b7a9",
+      "affine_variant": "c5786453c9ecff60d3c393845cc5d7f1991adfdd039c8e2f071834d9b242b7a9",
+      "copy": "04b44af7a488005465f6842031b5f0614daa80adbcd140f1ae93f67f53eba2c8",
+      "copy_variant": "04b44af7a488005465f6842031b5f0614daa80adbcd140f1ae93f67f53eba2c8",
+      "vadd": "7ee8195d2a47c30ccf6e823c835a05bcb3a6b17e856956919bfb4d09f21bfce7",
+      "vadd_variant": "7ee8195d2a47c30ccf6e823c835a05bcb3a6b17e856956919bfb4d09f21bfce7"
+    },
+    "iris": {
+      "simx": {
+        "status": "PASS",
+        "launches": 9,
+        "cases": [
+          {
+            "id": "test45",
+            "status": "PASS",
+            "samples": 45,
+            "distance_words": 135,
+            "class_words": 45,
+            "output_sha256": "38acd5621aae08245c9ee941bd69f96724148f1002a9c263a6b8d015a87f84e8",
+            "tail_rows": 19
+          },
+          {
+            "id": "empty",
+            "status": "PASS",
+            "samples": 0,
+            "distance_words": 0,
+            "class_words": 0,
+            "output_sha256": "66fb01c8a4d2cd4ff6e1d8c124e428e935f4f532756c1a1a7546d42750e5201e",
+            "tail_rows": 32
+          },
+          {
+            "id": "one",
+            "status": "PASS",
+            "samples": 1,
+            "distance_words": 3,
+            "class_words": 1,
+            "output_sha256": "74cf05775c309ab9a973ddbed8b6b240e78b17ac30d052ce842d311428782601",
+            "tail_rows": 31
+          },
+          {
+            "id": "n31",
+            "status": "PASS",
+            "samples": 31,
+            "distance_words": 93,
+            "class_words": 31,
+            "output_sha256": "415a2517d5c36e3b071379f2b43490a7711d107c64481c541be283c69d9c255b",
+            "tail_rows": 1
+          },
+          {
+            "id": "n32",
+            "status": "PASS",
+            "samples": 32,
+            "distance_words": 96,
+            "class_words": 32,
+            "output_sha256": "fa6193189bb4fb67b0a7c955e427641c7209360e19d77c4907cd599cba2fd29f",
+            "tail_rows": 0
+          },
+          {
+            "id": "n33",
+            "status": "PASS",
+            "samples": 33,
+            "distance_words": 99,
+            "class_words": 33,
+            "output_sha256": "b09d138bc9b361d1a4e3a850d449aeca2fcc3f47c39e44012841b1c0acee800c",
+            "tail_rows": 31
+          },
+          {
+            "id": "permuted",
+            "status": "PASS",
+            "samples": 45,
+            "distance_words": 135,
+            "class_words": 45,
+            "output_sha256": "467be6c1f9593d7503a750b4c7fcb9bdf99350dedaf6af260443ec54619cfca3",
+            "tail_rows": 19
+          },
+          {
+            "id": "ties",
+            "status": "PASS",
+            "samples": 2,
+            "distance_words": 6,
+            "class_words": 2,
+            "output_sha256": "833c73cb997a3dd387342e4f6768dcce94c622338917434b6ab1c836705bb5be",
+            "tail_rows": 30
+          },
+          {
+            "id": "endpoints",
+            "status": "PASS",
+            "samples": 2,
+            "distance_words": 6,
+            "class_words": 2,
+            "output_sha256": "1373cfd8db4cd9663f41f3f00c7e437092f3415abf39f8fe20ddeca444859ab9",
+            "tail_rows": 30
+          }
+        ],
+        "negative_controls": [
+          {
+            "backend": "simx",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 0,
+            "sample": 1,
+            "field": "D0",
+            "byte_offset": 16,
+            "expected": 2397,
+            "actual": 2396
+          },
+          {
+            "backend": "simx",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 0,
+            "sample": 1,
+            "field": "class",
+            "byte_offset": 28,
+            "expected": 0,
+            "actual": 1
+          },
+          {
+            "backend": "simx",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 45,
+            "sample": null,
+            "field": "tail",
+            "byte_offset": 736,
+            "expected": 3221356728,
+            "actual": 3221356729
+          }
+        ],
+        "capture_sha256": "70042338ddaa1ff80be55c5388820373d73260b73995a9961252e223f97fac64",
+        "full_buffer_snapshots": 54
+      },
+      "rtlsim": {
+        "status": "PASS",
+        "launches": 9,
+        "cases": [
+          {
+            "id": "test45",
+            "status": "PASS",
+            "samples": 45,
+            "distance_words": 135,
+            "class_words": 45,
+            "output_sha256": "38acd5621aae08245c9ee941bd69f96724148f1002a9c263a6b8d015a87f84e8",
+            "tail_rows": 19
+          },
+          {
+            "id": "empty",
+            "status": "PASS",
+            "samples": 0,
+            "distance_words": 0,
+            "class_words": 0,
+            "output_sha256": "66fb01c8a4d2cd4ff6e1d8c124e428e935f4f532756c1a1a7546d42750e5201e",
+            "tail_rows": 32
+          },
+          {
+            "id": "one",
+            "status": "PASS",
+            "samples": 1,
+            "distance_words": 3,
+            "class_words": 1,
+            "output_sha256": "74cf05775c309ab9a973ddbed8b6b240e78b17ac30d052ce842d311428782601",
+            "tail_rows": 31
+          },
+          {
+            "id": "n31",
+            "status": "PASS",
+            "samples": 31,
+            "distance_words": 93,
+            "class_words": 31,
+            "output_sha256": "415a2517d5c36e3b071379f2b43490a7711d107c64481c541be283c69d9c255b",
+            "tail_rows": 1
+          },
+          {
+            "id": "n32",
+            "status": "PASS",
+            "samples": 32,
+            "distance_words": 96,
+            "class_words": 32,
+            "output_sha256": "fa6193189bb4fb67b0a7c955e427641c7209360e19d77c4907cd599cba2fd29f",
+            "tail_rows": 0
+          },
+          {
+            "id": "n33",
+            "status": "PASS",
+            "samples": 33,
+            "distance_words": 99,
+            "class_words": 33,
+            "output_sha256": "b09d138bc9b361d1a4e3a850d449aeca2fcc3f47c39e44012841b1c0acee800c",
+            "tail_rows": 31
+          },
+          {
+            "id": "permuted",
+            "status": "PASS",
+            "samples": 45,
+            "distance_words": 135,
+            "class_words": 45,
+            "output_sha256": "467be6c1f9593d7503a750b4c7fcb9bdf99350dedaf6af260443ec54619cfca3",
+            "tail_rows": 19
+          },
+          {
+            "id": "ties",
+            "status": "PASS",
+            "samples": 2,
+            "distance_words": 6,
+            "class_words": 2,
+            "output_sha256": "833c73cb997a3dd387342e4f6768dcce94c622338917434b6ab1c836705bb5be",
+            "tail_rows": 30
+          },
+          {
+            "id": "endpoints",
+            "status": "PASS",
+            "samples": 2,
+            "distance_words": 6,
+            "class_words": 2,
+            "output_sha256": "1373cfd8db4cd9663f41f3f00c7e437092f3415abf39f8fe20ddeca444859ab9",
+            "tail_rows": 30
+          }
+        ],
+        "negative_controls": [
+          {
+            "backend": "rtlsim",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 0,
+            "sample": 1,
+            "field": "D0",
+            "byte_offset": 16,
+            "expected": 2397,
+            "actual": 2396
+          },
+          {
+            "backend": "rtlsim",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 0,
+            "sample": 1,
+            "field": "class",
+            "byte_offset": 28,
+            "expected": 0,
+            "actual": 1
+          },
+          {
+            "backend": "rtlsim",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 45,
+            "sample": null,
+            "field": "tail",
+            "byte_offset": 736,
+            "expected": 3221356728,
+            "actual": 3221356729
+          }
+        ],
+        "capture_sha256": "e56ed6de66011030cba312bdaa2ffe77360285ff79f6fb5b18519b95b6c0f29c",
+        "full_buffer_snapshots": 54
+      },
+      "xrtsim": {
+        "status": "PASS",
+        "launches": 9,
+        "cases": [
+          {
+            "id": "test45",
+            "status": "PASS",
+            "samples": 45,
+            "distance_words": 135,
+            "class_words": 45,
+            "output_sha256": "38acd5621aae08245c9ee941bd69f96724148f1002a9c263a6b8d015a87f84e8",
+            "tail_rows": 19
+          },
+          {
+            "id": "empty",
+            "status": "PASS",
+            "samples": 0,
+            "distance_words": 0,
+            "class_words": 0,
+            "output_sha256": "66fb01c8a4d2cd4ff6e1d8c124e428e935f4f532756c1a1a7546d42750e5201e",
+            "tail_rows": 32
+          },
+          {
+            "id": "one",
+            "status": "PASS",
+            "samples": 1,
+            "distance_words": 3,
+            "class_words": 1,
+            "output_sha256": "74cf05775c309ab9a973ddbed8b6b240e78b17ac30d052ce842d311428782601",
+            "tail_rows": 31
+          },
+          {
+            "id": "n31",
+            "status": "PASS",
+            "samples": 31,
+            "distance_words": 93,
+            "class_words": 31,
+            "output_sha256": "415a2517d5c36e3b071379f2b43490a7711d107c64481c541be283c69d9c255b",
+            "tail_rows": 1
+          },
+          {
+            "id": "n32",
+            "status": "PASS",
+            "samples": 32,
+            "distance_words": 96,
+            "class_words": 32,
+            "output_sha256": "fa6193189bb4fb67b0a7c955e427641c7209360e19d77c4907cd599cba2fd29f",
+            "tail_rows": 0
+          },
+          {
+            "id": "n33",
+            "status": "PASS",
+            "samples": 33,
+            "distance_words": 99,
+            "class_words": 33,
+            "output_sha256": "b09d138bc9b361d1a4e3a850d449aeca2fcc3f47c39e44012841b1c0acee800c",
+            "tail_rows": 31
+          },
+          {
+            "id": "permuted",
+            "status": "PASS",
+            "samples": 45,
+            "distance_words": 135,
+            "class_words": 45,
+            "output_sha256": "467be6c1f9593d7503a750b4c7fcb9bdf99350dedaf6af260443ec54619cfca3",
+            "tail_rows": 19
+          },
+          {
+            "id": "ties",
+            "status": "PASS",
+            "samples": 2,
+            "distance_words": 6,
+            "class_words": 2,
+            "output_sha256": "833c73cb997a3dd387342e4f6768dcce94c622338917434b6ab1c836705bb5be",
+            "tail_rows": 30
+          },
+          {
+            "id": "endpoints",
+            "status": "PASS",
+            "samples": 2,
+            "distance_words": 6,
+            "class_words": 2,
+            "output_sha256": "1373cfd8db4cd9663f41f3f00c7e437092f3415abf39f8fe20ddeca444859ab9",
+            "tail_rows": 30
+          }
+        ],
+        "negative_controls": [
+          {
+            "backend": "xrtsim",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 0,
+            "sample": 1,
+            "field": "D0",
+            "byte_offset": 16,
+            "expected": 2397,
+            "actual": 2396
+          },
+          {
+            "backend": "xrtsim",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 0,
+            "sample": 1,
+            "field": "class",
+            "byte_offset": 28,
+            "expected": 0,
+            "actual": 1
+          },
+          {
+            "backend": "xrtsim",
+            "case": "test45",
+            "role": "out",
+            "phase": "after",
+            "row": 45,
+            "sample": null,
+            "field": "tail",
+            "byte_offset": 736,
+            "expected": 3221356728,
+            "actual": 3221356729
+          }
+        ],
+        "capture_sha256": "fe3a95075b045cec4760c9e928b5abbc3b3eba70bab1faffeb54f04f07b7f839",
+        "full_buffer_snapshots": 54
+      }
+    },
+    "operators": {
+      "simx": 48,
+      "rtlsim": 48,
+      "xrtsim": 48
+    },
+    "iris_manifest_sha256": "34d9c44e029649b5a2306235c7fef6765beea0d02a4e7b290a85917104deaeb2"
+  },
+  "status": "PASS",
+  "iris_archived_u280_comparison": {
+    "status": "PASS",
+    "cases": 9,
+    "checks": 81,
+    "board_run": "iris-board-20261123-v1",
+    "sha256": {
+      "test45": {
+        "x.after.bin": "8ae0a04fa9cb31618bd8ba1b132ea65e732466d88945ecebcd4dc9551867f314",
+        "sums.after.bin": "3bca518df8c65b9cabdf7ce65ce950428dca19a0ff65cd61373dc46f93683705",
+        "out.after.bin": "38acd5621aae08245c9ee941bd69f96724148f1002a9c263a6b8d015a87f84e8"
+      },
+      "empty": {
+        "x.after.bin": "9bb0d77b5ae625ce13376762f3d4d19ce1695bee3ee33115a7e2ae551cb4c866",
+        "sums.after.bin": "4e2b08667a99e2cbb611ad488a33ea9370ea4a4149359e0022affb844d7cf286",
+        "out.after.bin": "66fb01c8a4d2cd4ff6e1d8c124e428e935f4f532756c1a1a7546d42750e5201e"
+      },
+      "one": {
+        "x.after.bin": "ae3ac617426d49c87378c1340e37ad1b16276e1bf292bafe5cae7fb1343f43c2",
+        "sums.after.bin": "ad297ab05e14ef4a5c8d07407fc52f493cadb23cb58908187d1ae9e580f5a272",
+        "out.after.bin": "74cf05775c309ab9a973ddbed8b6b240e78b17ac30d052ce842d311428782601"
+      },
+      "n31": {
+        "x.after.bin": "54962bf6974e2d78095d741015d56990171ee158d75422eebbe9111db4221cd5",
+        "sums.after.bin": "26201239a3cc20f200d4bf2439b5c1f8d46f49136bc7cf6c8b86bc767dd4670b",
+        "out.after.bin": "415a2517d5c36e3b071379f2b43490a7711d107c64481c541be283c69d9c255b"
+      },
+      "n32": {
+        "x.after.bin": "0be695015ad32b1a857becf252705de4119e6fdd73dce8ee1e4246cd7d0d8d92",
+        "sums.after.bin": "add1e8f499afcba3fc3f271c90a18398c8a9615288944a8d01fea4ab6defa2d8",
+        "out.after.bin": "fa6193189bb4fb67b0a7c955e427641c7209360e19d77c4907cd599cba2fd29f"
+      },
+      "n33": {
+        "x.after.bin": "9d2b3b2c253c759e348b0b848141b85d480552ae9c26289f83d9e0315c8661de",
+        "sums.after.bin": "04772b7897f2e399936280565c8af49f7eff7a5cb4716ad15d5d4dd9d3f8b81a",
+        "out.after.bin": "b09d138bc9b361d1a4e3a850d449aeca2fcc3f47c39e44012841b1c0acee800c"
+      },
+      "permuted": {
+        "x.after.bin": "b232d5cae57dd4d2192a1d3064715e24004fe33091ee9231185d3d12d2a5d977",
+        "sums.after.bin": "b8f1ce0941f5ca097c6be95dc5160fcedc018c78dade1c54499c00bd32fea5fd",
+        "out.after.bin": "467be6c1f9593d7503a750b4c7fcb9bdf99350dedaf6af260443ec54619cfca3"
+      },
+      "ties": {
+        "x.after.bin": "9ded37288929c290e4ffc2906adf95ac3c9cca820ff6086fef8068d21a130dbb",
+        "sums.after.bin": "803963c88e2df2a194bca3d4fe70ff0af5ba65f1f86e0c8fef35f249887a7dd9",
+        "out.after.bin": "833c73cb997a3dd387342e4f6768dcce94c622338917434b6ab1c836705bb5be"
+      },
+      "endpoints": {
+        "x.after.bin": "f79606ebe892c82b642f18a0e9e843a8ce90a95286ea9c54f2d8f39cff9434c9",
+        "sums.after.bin": "2c68e7246151a23f3ac2ef81972355303ade52168346727b4175f2f4d4d7fb81",
+        "out.after.bin": "1373cfd8db4cd9663f41f3f00c7e437092f3415abf39f8fe20ddeca444859ab9"
+      }
+    }
+  },
+  "skip_reasons": {
+    "'Archived physical D10/D12 binaries are required for identity-gate fixtures'": 4,
+    "'Windows negative preflight'": 1,
+    "'Archived D8 RTL input package is required'": 9,
+    "'archived local board/AFU evidence required'": 4,
+    "'Archived runtime input is required'": 1,
+    "'Archived D8 configuration flags are required'": 1,
+    "'Pinned Vortex submodule is required'": 1,
+    "'Archived Vivado reports are required'": 1
+  },
+  "archive_file": {
+    "file": "captures.zip",
+    "sha256": "113254decf06085e21f01de531c8173e8f715a0bed8f8254880fe10f680df728",
+    "entries": 1429
+  }
+}
